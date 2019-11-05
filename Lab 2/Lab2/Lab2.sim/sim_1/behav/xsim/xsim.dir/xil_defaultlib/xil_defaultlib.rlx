@@ -1,0 +1,9 @@
+0.6
+2019.1
+May 24 2019
+15:06:07
+C:/Users/Julian/Documents/Work/CSE 100/Lab 2/Lab2/Lab2.sim/sim_1/behav/xsim/glbl.v,1558713910,verilog,,,,glbl,,,,,,,,
+C:/Users/Julian/Documents/Work/CSE 100/Lab 2/Lab2/Lab2.srcs/sources_1/new/carryAdder.v,1570654992,verilog,,C:/Users/Julian/Documents/Work/CSE 100/Lab 2/Lab2/Lab2.srcs/sources_1/new/fullAdder.v,,carryAdder,,,,,,,,
+C:/Users/Julian/Documents/Work/CSE 100/Lab 2/Lab2/Lab2.srcs/sources_1/new/fullAdder.v,1570740734,verilog,,C:/Users/Julian/Documents/Work/CSE 100/Lab 2/Lab2/Lab2.srcs/sources_1/new/sevenSeg.v,,fullAdder,,,,,,,,
+C:/Users/Julian/Documents/Work/CSE 100/Lab 2/Lab2/Lab2.srcs/sources_1/new/sevenSeg.v,1570659252,verilog,,C:/Users/Julian/Documents/Work/CSE 100/Lab 2/Lab2/lab2_tests.v,,sevenSeg,,,,,,,,
+C:/Users/Julian/Documents/Work/CSE 100/Lab 2/Lab2/lab2_tests.v,1570657434,verilog,,,,lab2_tests,,,,,,,,

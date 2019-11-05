@@ -1,0 +1,23 @@
+#-----------------------------------------------------------
+# Vivado v2019.1 (64-bit)
+# SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
+# IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+# Start of session at: Mon Oct  7 20:32:05 2019
+# Process ID: 10816
+# Current directory: C:/Users/OWNER/OneDrive/School Work/CSE 100/Lab 1/HelloWorld
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent20336 C:\Users\OWNER\OneDrive\School Work\CSE 100\Lab 1\HelloWorld\HelloWorld.xpr
+# Log file: C:/Users/OWNER/OneDrive/School Work/CSE 100/Lab 1/HelloWorld/vivado.log
+# Journal file: C:/Users/OWNER/OneDrive/School Work/CSE 100/Lab 1/HelloWorld\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project {C:/Users/OWNER/OneDrive/School Work/CSE 100/Lab 1/HelloWorld/HelloWorld.xpr}
+INFO: [Project 1-313] Project file moved from 'C:/Users/Julian/Documents/Work/CSE 100/Lab 1/HelloWorld' since last save.
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/Xilinx/Vivado/2019.1/data/ip'.
+open_project: Time (s): cpu = 00:00:27 ; elapsed = 00:00:37 . Memory (MB): peak = 707.320 ; gain = 112.895
+update_compile_order -fileset sources_1
+exit
+INFO: [Common 17-206] Exiting Vivado at Mon Oct  7 20:34:48 2019...

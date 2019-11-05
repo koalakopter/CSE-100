@@ -1,0 +1,19 @@
+#-----------------------------------------------------------
+# Vivado v2019.1 (64-bit)
+# SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
+# IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+# Start of session at: Thu Oct 17 20:34:29 2019
+# Process ID: 10104
+# Current directory: C:/Users/Julian/Documents/Work/CSE 100/Lab 3/Lab 3
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent9348 C:\Users\Julian\Documents\Work\CSE 100\Lab 3\Lab 3\Lab 3.xpr
+# Log file: C:/Users/Julian/Documents/Work/CSE 100/Lab 3/Lab 3/vivado.log
+# Journal file: C:/Users/Julian/Documents/Work/CSE 100/Lab 3/Lab 3\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project {C:/Users/Julian/Documents/Work/CSE 100/Lab 3/Lab 3/Lab 3.xpr}
+update_compile_order -fileset sources_1
+archive_project {C:/Users/Julian/Documents/Work/CSE 100/Lab 3/Lab 3.xpr.zip} -temp_dir {C:/Users/Julian/Documents/Work/CSE 100/Lab 3/Lab 3/.Xil/Vivado-10104-JULIAN-SURFACE} -force -include_local_ip_cache
+launch_simulation
+source simulator.tcl
+run 1 us
+close_sim

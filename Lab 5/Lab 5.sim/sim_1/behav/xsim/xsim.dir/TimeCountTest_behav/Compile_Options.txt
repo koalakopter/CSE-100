@@ -1,0 +1,1 @@
+-wto "0d366662182e4828a81114f9f1528286" --incr --debug "typical" --relax --mt "2" -L "xil_defaultlib" -L "unisims_ver" -L "unimacro_ver" -L "secureip" --snapshot "TimeCountTest_behav" "xil_defaultlib.TimeCountTest" "xil_defaultlib.glbl" -log "elaborate.log" 

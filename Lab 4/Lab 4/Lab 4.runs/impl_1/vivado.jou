@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2019.1 (64-bit)
+# SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
+# IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+# Start of session at: Thu Oct 31 12:59:10 2019
+# Process ID: 29276
+# Current directory: C:/Users/Julian/Documents/Work/CSE 100/Lab 4/Lab 4/Lab 4.runs/impl_1
+# Command line: vivado.exe -log toppo.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source toppo.tcl -notrace
+# Log file: C:/Users/Julian/Documents/Work/CSE 100/Lab 4/Lab 4/Lab 4.runs/impl_1/toppo.vdi
+# Journal file: C:/Users/Julian/Documents/Work/CSE 100/Lab 4/Lab 4/Lab 4.runs/impl_1\vivado.jou
+#-----------------------------------------------------------
+source toppo.tcl -notrace

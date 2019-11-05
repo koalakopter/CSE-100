@@ -1,0 +1,6 @@
+0.6
+2019.1
+May 24 2019
+15:06:07
+C:/Users/Julian/Documents/Work/CSE 100/Lab 4/Lab 4/Lab 4.sim/sim_1/synth/func/xsim/testTC_func_synth.v,1572548219,verilog,,C:/Users/Julian/Documents/Work/CSE 100/Lab 4/Lab 4/testTC.v,,CB4CE_MXILINX_clkcntrl4;CB4CE_MXILINX_clkcntrl4_3;CB4CE_MXILINX_clkcntrl4_4;CB4CE_MXILINX_clkcntrl4_5;FTCE_MXILINX_clkcntrl4;FTCE_MXILINX_clkcntrl4_10;FTCE_MXILINX_clkcntrl4_11;FTCE_MXILINX_clkcntrl4_12;FTCE_MXILINX_clkcntrl4_13;FTCE_MXILINX_clkcntrl4_14;FTCE_MXILINX_clkcntrl4_15;FTCE_MXILINX_clkcntrl4_16;FTCE_MXILINX_clkcntrl4_17;FTCE_MXILINX_clkcntrl4_18;FTCE_MXILINX_clkcntrl4_19;FTCE_MXILINX_clkcntrl4_20;FTCE_MXILINX_clkcntrl4_6;FTCE_MXILINX_clkcntrl4_7;FTCE_MXILINX_clkcntrl4_8;FTCE_MXILINX_clkcntrl4_9;clk_wiz_0;clkcntrl4;countUD16L;countUD3L;countUD3L_1;countUD5L;countUD5L_2;edgeDetector;edgeDetector_0;glbl;lab4_clks;ringCounter;toppo,,,,,,,,
+C:/Users/Julian/Documents/Work/CSE 100/Lab 4/Lab 4/testTC.v,1572494793,verilog,,,,testTC,,,,,,,,

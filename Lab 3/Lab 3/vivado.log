@@ -1,0 +1,166 @@
+#-----------------------------------------------------------
+# Vivado v2019.1 (64-bit)
+# SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
+# IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+# Start of session at: Thu Oct 17 20:34:29 2019
+# Process ID: 10104
+# Current directory: C:/Users/Julian/Documents/Work/CSE 100/Lab 3/Lab 3
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent9348 C:\Users\Julian\Documents\Work\CSE 100\Lab 3\Lab 3\Lab 3.xpr
+# Log file: C:/Users/Julian/Documents/Work/CSE 100/Lab 3/Lab 3/vivado.log
+# Journal file: C:/Users/Julian/Documents/Work/CSE 100/Lab 3/Lab 3\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project {C:/Users/Julian/Documents/Work/CSE 100/Lab 3/Lab 3/Lab 3.xpr}
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2019.1/data/ip'.
+open_project: Time (s): cpu = 00:00:26 ; elapsed = 00:00:17 . Memory (MB): peak = 737.684 ; gain = 129.895
+update_compile_order -fileset sources_1
+archive_project {C:/Users/Julian/Documents/Work/CSE 100/Lab 3/Lab 3.xpr.zip} -temp_dir {C:/Users/Julian/Documents/Work/CSE 100/Lab 3/Lab 3/.Xil/Vivado-10104-JULIAN-SURFACE} -force -include_local_ip_cache
+INFO: [Coretcl 2-137] starting archive...
+INFO: [Coretcl 2-1499] Saving project copy to temporary location 'C:/Users/Julian/Documents/Work/CSE 100/Lab 3/Lab 3/.Xil/Vivado-10104-JULIAN-SURFACE' for archiving project
+Scanning sources...
+Finished scanning sources
+INFO: [Coretcl 2-1211] Creating project copy for archival...
+INFO: [ProjectBase 1-495] The host OS only allows 260 characters in a normal path. The project is stored in a path with more than 80 characters. If you experience any problem with archiving the project, please consider setting environment variable $TEMP to a shorter path.
+Current project path is 'C:/Users/Julian/Documents/Work/CSE 100/Lab 3/Lab 3/.Xil/Vivado-10104-JULIAN-SURFACE/PrjAr/_X_'.
+INFO: [Coretcl 2-1213] Including run results for 'synth_1'
+INFO: [Coretcl 2-1213] Including run results for 'impl_1'
+INFO: [Coretcl 2-1212] Importing remotely added design sources and verilog include files (if any)...
+INFO: [filemgmt 20-348] Importing the appropriate files for fileset: 'constrs_1'
+INFO: [filemgmt 20-334] All file(s) are already imported in fileset: 'sim_1'
+INFO: [filemgmt 20-348] Importing the appropriate files for fileset: 'sim_1'
+INFO: [filemgmt 20-348] Importing the appropriate files for fileset: 'sources_1'
+INFO: [Coretcl 2-1209] Adding archive summary file to the project...
+INFO: [Coretcl 2-1214] Preparing project files for archive...
+INFO: [Coretcl 2-1210] Compressing project files and data...
+INFO: [Coretcl 2-1215] Project archived (C:/Users/Julian/Documents/Work/CSE 100/Lab 3/Lab 3.xpr.zip)
+INFO: [Coretcl 2-1216] To view the archive summary log in GUI, double click on 'Design Sources->Text->archive_project_summary.txt', or open this file from the archived project directory.
+archive_project: Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 745.980 ; gain = 1.766
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/Julian/Documents/Work/CSE 100/Lab 3/Lab 3/Lab 3.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'simulator' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/Julian/Documents/Work/CSE 100/Lab 3/Lab 3/Lab 3.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj simulator_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Julian/Documents/Work/CSE 100/Lab 3/Lab 3/Lab 3.srcs/sources_1/new/carryAdder.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module carryAdder
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Julian/Documents/Work/CSE 100/Lab 3/Lab 3/Lab 3.srcs/sources_1/new/fullAdder.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module fullAdder
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Julian/Documents/Work/CSE 100/Lab 3/Lab 3/lab3_digsel.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module clk_wiz_0
+INFO: [VRFC 10-311] analyzing module clkcntrl4
+INFO: [VRFC 10-311] analyzing module lab3_digsel
+INFO: [VRFC 10-2458] undeclared symbol clk, assumed default net type wire [C:/Users/Julian/Documents/Work/CSE 100/Lab 3/Lab 3/lab3_digsel.v:237]
+INFO: [VRFC 10-311] analyzing module FTCE_MXILINX_clkcntrl4
+INFO: [VRFC 10-311] analyzing module CB4CE_MXILINX_clkcntrl4
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Julian/Documents/Work/CSE 100/Lab 3/Lab 3/Lab 3.srcs/sources_1/new/m2_1x8.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module m2_1x8
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Julian/Documents/Work/CSE 100/Lab 3/Lab 3/Lab 3.srcs/sources_1/new/m4_1e.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module m4_1e
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Julian/Documents/Work/CSE 100/Lab 3/Lab 3/Lab 3.srcs/sources_1/new/m8_1e.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module m8_1e
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Julian/Documents/Work/CSE 100/Lab 3/Lab 3/Lab 3.srcs/sources_1/new/main.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module main
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Julian/Documents/Work/CSE 100/Lab 3/Lab 3/Lab 3.srcs/sources_1/new/sevenSeg.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module hex7seg
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Julian/Documents/Work/CSE 100/Lab 3/Lab 3/Lab 3.srcs/sources_1/new/signChanger.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module signChanger
+WARNING: [VRFC 10-965] invalid size of integer constant literal [C:/Users/Julian/Documents/Work/CSE 100/Lab 3/Lab 3/Lab 3.srcs/sources_1/new/signChanger.v:46]
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Julian/Documents/Work/CSE 100/Lab 3/Lab 3/Lab 3.srcs/sim_1/new/simulator.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module simulator
+INFO: [USF-XSim-69] 'compile' step finished in '4' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/Julian/Documents/Work/CSE 100/Lab 3/Lab 3/Lab 3.sim/sim_1/behav/xsim'
+"xelab -wto 6033025429b34e91a6337a4c514da6b1 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot simulator_behav xil_defaultlib.simulator xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2019.1
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe -wto 6033025429b34e91a6337a4c514da6b1 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot simulator_behav xil_defaultlib.simulator xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+WARNING: [VRFC 10-3091] actual bit length 256 differs from formal bit length 8 for port 'b' [C:/Users/Julian/Documents/Work/CSE 100/Lab 3/Lab 3/Lab 3.srcs/sources_1/new/signChanger.v:46]
+WARNING: [VRFC 10-3091] actual bit length 7 differs from formal bit length 8 for port 'in0' [C:/Users/Julian/Documents/Work/CSE 100/Lab 3/Lab 3/Lab 3.srcs/sources_1/new/main.v:54]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module unisims_ver.IBUF
+Compiling module unisims_ver.MMCME2_ADV(CLKFBOUT_MULT_F=9.125...
+Compiling module unisims_ver.BUFG
+Compiling module xil_defaultlib.clk_wiz_0
+Compiling module unisims_ver.GND
+Compiling module unisims_ver.x_lut2_mux4
+Compiling module unisims_ver.LUT2
+Compiling module unisims_ver.XOR2
+Compiling module unisims_ver.FDCE_default
+Compiling module xil_defaultlib.FTCE_MXILINX_clkcntrl4
+Compiling module unisims_ver.LUT4
+Compiling module unisims_ver.AND4
+Compiling module unisims_ver.x_lut3_mux8
+Compiling module unisims_ver.LUT3
+Compiling module unisims_ver.AND3
+Compiling module unisims_ver.AND2
+Compiling module unisims_ver.VCC
+Compiling module xil_defaultlib.CB4CE_MXILINX_clkcntrl4
+Compiling module unisims_ver.BUF
+Compiling module xil_defaultlib.clkcntrl4
+Compiling module unisims_ver.STARTUPE2
+Compiling module xil_defaultlib.lab3_digsel
+Compiling module xil_defaultlib.m4_1e
+Compiling module xil_defaultlib.fullAdder
+Compiling module xil_defaultlib.carryAdder
+Compiling module xil_defaultlib.m2_1x8
+Compiling module xil_defaultlib.signChanger
+Compiling module xil_defaultlib.m8_1e
+Compiling module xil_defaultlib.hex7seg
+Compiling module xil_defaultlib.main
+Compiling module xil_defaultlib.simulator
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot simulator_behav
+
+****** Webtalk v2019.1 (64-bit)
+  **** SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
+  **** IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+    ** Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+
+source C:/Users/Julian/Documents/Work/CSE -notrace
+invalid command name "%"
+    while executing
+"% Total    % Received % Xferd  Average Speed   Time    Time     Time  Current"
+    (file "C:/Users/Julian/Documents/Work/CSE" line 1)
+INFO: [Common 17-206] Exiting Webtalk at Thu Oct 17 20:38:50 2019...
+run_program: Time (s): cpu = 00:00:04 ; elapsed = 00:00:14 . Memory (MB): peak = 745.980 ; gain = 0.000
+INFO: [USF-XSim-69] 'elaborate' step finished in '14' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/Julian/Documents/Work/CSE 100/Lab 3/Lab 3/Lab 3.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "simulator_behav -key {Behavioral:sim_1:Functional:simulator} -tclbatch {simulator.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2019.1
+Time resolution is 1 ps
+source simulator.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+xsim: Time (s): cpu = 00:00:14 ; elapsed = 00:00:07 . Memory (MB): peak = 789.387 ; gain = 37.746
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'simulator_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:23 ; elapsed = 00:00:28 . Memory (MB): peak = 789.387 ; gain = 43.406
+run 1 us
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+close_sim: Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 795.082 ; gain = 0.000
+exit
+INFO: [Common 17-206] Exiting Vivado at Fri Oct 18 08:00:18 2019...

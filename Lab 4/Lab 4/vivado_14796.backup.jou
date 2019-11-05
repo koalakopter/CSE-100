@@ -1,0 +1,31 @@
+#-----------------------------------------------------------
+# Vivado v2019.1 (64-bit)
+# SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
+# IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+# Start of session at: Thu Oct 31 12:32:21 2019
+# Process ID: 14796
+# Current directory: C:/Users/Julian/Documents/Work/CSE 100/Lab 4/Lab 4
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent35256 C:\Users\Julian\Documents\Work\CSE 100\Lab 4\Lab 4\Lab 4.xpr
+# Log file: C:/Users/Julian/Documents/Work/CSE 100/Lab 4/Lab 4/vivado.log
+# Journal file: C:/Users/Julian/Documents/Work/CSE 100/Lab 4/Lab 4\vivado.jou
+#-----------------------------------------------------------
+start_guioopen_project {C:/Users/Julian/Documents/Work/CSE 100/Lab 4/Lab 4/Lab 4.xpr}uupdate_compile_order -fileset sources_1launch_simulation
+source mainTest.tcl
+run 1 us
+run 1 us
+run 1 us
+run 1 us
+relaunch_sim
+run 1 us
+run 1 us
+run 1 us
+run 1 us
+relaunch_sim
+run 1 us
+run 1 us
+run 1 us
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream
+wait_on_run impl_1
+reset_run impl_1 -prev_step 
+relaunch_sim

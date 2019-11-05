@@ -1,0 +1,16 @@
+0.6
+2019.1
+May 24 2019
+15:06:07
+C:/Users/Julian/Documents/Work/CSE 100/Lab 3/Lab 3/Lab 3.srcs/sources_1/new/m8_1e.v,1571279324,verilog,,C:/Users/Julian/Documents/Work/CSE 100/Lab 4/Lab 4/Lab 4.srcs/sources_1/new/ringCount.v,,m8_1e,,,,,,,,
+C:/Users/Julian/Documents/Work/CSE 100/Lab 3/Lab 3/Lab 3.srcs/sources_1/new/sevenSeg.v,1572544544,verilog,,C:/Users/Julian/Documents/Work/CSE 100/Lab 4/Lab 4/Lab 4.srcs/sources_1/new/toppo.v,,sevenSeg,,,,,,,,
+C:/Users/Julian/Documents/Work/CSE 100/Lab 4/Lab 4/Lab 4.sim/sim_1/behav/xsim/glbl.v,1558713910,verilog,,,,glbl,,,,,,,,
+C:/Users/Julian/Documents/Work/CSE 100/Lab 4/Lab 4/Lab 4.srcs/sim_1/new/mainTest.v,1572499109,verilog,,,,mainTest,,,,,,,,
+C:/Users/Julian/Documents/Work/CSE 100/Lab 4/Lab 4/Lab 4.srcs/sources_1/new/countUD16L.v,1572389576,verilog,,C:/Users/Julian/Documents/Work/CSE 100/Lab 4/Lab 4/Lab 4.srcs/sources_1/new/countUD3L.v,,countUD16L,,,,,,,,
+C:/Users/Julian/Documents/Work/CSE 100/Lab 4/Lab 4/Lab 4.srcs/sources_1/new/countUD3L.v,1572309049,verilog,,C:/Users/Julian/Documents/Work/CSE 100/Lab 4/Lab 4/Lab 4.srcs/sources_1/new/countUD5L.v,,countUD3L,,,,,,,,
+C:/Users/Julian/Documents/Work/CSE 100/Lab 4/Lab 4/Lab 4.srcs/sources_1/new/countUD5L.v,1572221087,verilog,,C:/Users/Julian/Documents/Work/CSE 100/Lab 4/Lab 4/Lab 4.srcs/sources_1/new/edgeDetector.v,,countUD5L,,,,,,,,
+C:/Users/Julian/Documents/Work/CSE 100/Lab 4/Lab 4/Lab 4.srcs/sources_1/new/edgeDetector.v,1572458402,verilog,,C:/Users/Julian/Documents/Work/CSE 100/Lab 4/Lab 4/Lab 4.srcs/sources_1/new/lab4_clks.v,,edgeDetector,,,,,,,,
+C:/Users/Julian/Documents/Work/CSE 100/Lab 4/Lab 4/Lab 4.srcs/sources_1/new/lab4_clks.v,1572473207,verilog,,C:/Users/Julian/Documents/Work/CSE 100/Lab 3/Lab 3/Lab 3.srcs/sources_1/new/m8_1e.v,,CB4CE_MXILINX_clkcntrl4;FTCE_MXILINX_clkcntrl4;clk_wiz_0;clkcntrl4;lab4_clks,,,,,,,,
+C:/Users/Julian/Documents/Work/CSE 100/Lab 4/Lab 4/Lab 4.srcs/sources_1/new/ringCount.v,1572498137,verilog,,C:/Users/Julian/Documents/Work/CSE 100/Lab 4/Lab 4/Lab 4.srcs/sources_1/new/selector.v,,ringCounter,,,,,,,,
+C:/Users/Julian/Documents/Work/CSE 100/Lab 4/Lab 4/Lab 4.srcs/sources_1/new/selector.v,1572390664,verilog,,C:/Users/Julian/Documents/Work/CSE 100/Lab 3/Lab 3/Lab 3.srcs/sources_1/new/sevenSeg.v,,selector,,,,,,,,
+C:/Users/Julian/Documents/Work/CSE 100/Lab 4/Lab 4/Lab 4.srcs/sources_1/new/toppo.v,1572550893,verilog,,C:/Users/Julian/Documents/Work/CSE 100/Lab 4/Lab 4/Lab 4.srcs/sim_1/new/mainTest.v,,toppo,,,,,,,,

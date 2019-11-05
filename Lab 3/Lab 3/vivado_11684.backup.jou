@@ -1,0 +1,58 @@
+#-----------------------------------------------------------
+# Vivado v2019.1 (64-bit)
+# SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
+# IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+# Start of session at: Wed Oct 16 16:24:07 2019
+# Process ID: 11684
+# Current directory: D:/Users/Julian/Documents/UCSC Year THREE/CSE 100/Lab 3/Lab 3
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent15776 D:\Users\Julian\Documents\UCSC Year THREE\CSE 100\Lab 3\Lab 3\Lab 3.xpr
+# Log file: D:/Users/Julian/Documents/UCSC Year THREE/CSE 100/Lab 3/Lab 3/vivado.log
+# Journal file: D:/Users/Julian/Documents/UCSC Year THREE/CSE 100/Lab 3/Lab 3\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project {D:/Users/Julian/Documents/UCSC Year THREE/CSE 100/Lab 3/Lab 3/Lab 3.xpr}
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+add_files -norecurse {{D:/Users/Julian/Documents/UCSC Year THREE/CSE 100/Lab 3/Lab 3/lab3_digsel.v}}
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+file mkdir D:/Users/Julian/Documents/UCSC Year THREE/CSE 100/Lab 3/Lab 3/Lab 3.srcs/sim_1/new
+file mkdir D:/Users/Julian/Documents/UCSC Year THREE/CSE 100/Lab 3/Lab 3/Lab 3.srcs/sim_1/new
+file mkdir D:/Users/Julian/Documents/UCSC Year THREE/CSE 100/Lab 3/Lab 3/Lab 3.srcs/sim_1/new
+file mkdir D:/Users/Julian/Documents/UCSC Year THREE/CSE 100/Lab 3/Lab 3/Lab 3.srcs/sim_1/new
+file mkdir D:/Users/Julian/Documents/UCSC Year THREE/CSE 100/Lab 3/Lab 3/Lab 3.srcs/sim_1/new
+set_property SOURCE_SET sources_1 [get_filesets sim_1]
+file mkdir D:/Users/Julian/Documents/UCSC Year THREE/CSE 100/Lab 3/Lab 3/Lab 3.srcs/sim_1/new
+file mkdir {D:/Users/Julian/Documents/UCSC Year THREE/CSE 100/Lab 3/Lab 3/Lab 3.srcs/sim_1/new}
+close [ open {D:/Users/Julian/Documents/UCSC Year THREE/CSE 100/Lab 3/Lab 3/Lab 3.srcs/sim_1/new/simulator.v} w ]
+add_files -fileset sim_1 {{D:/Users/Julian/Documents/UCSC Year THREE/CSE 100/Lab 3/Lab 3/Lab 3.srcs/sim_1/new/simulator.v}}
+update_compile_order -fileset sim_1
+launch_simulation
+update_compile_order -fileset sim_1
+launch_simulation
+source simulator.tcl
+relaunch_sim
+relaunch_sim
+relaunch_sim
+relaunch_sim
+run all
+relaunch_sim
+relaunch_sim
+relaunch_sim
+relaunch_sim
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+relaunch_sim
+relaunch_sim
+relaunch_sim
+relaunch_sim
+relaunch_sim
+run 0.5 us
+relaunch_sim
+relaunch_sim
+relaunch_sim

@@ -1,0 +1,38 @@
+#-----------------------------------------------------------
+# Vivado v2019.1 (64-bit)
+# SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
+# IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+# Start of session at: Thu Oct 10 13:52:26 2019
+# Process ID: 19908
+# Current directory: C:/Users/Julian/Documents/Work/CSE 100/Lab 2/Lab2
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent12604 C:\Users\Julian\Documents\Work\CSE 100\Lab 2\Lab2\Lab2.xpr
+# Log file: C:/Users/Julian/Documents/Work/CSE 100/Lab 2/Lab2/vivado.log
+# Journal file: C:/Users/Julian/Documents/Work/CSE 100/Lab 2/Lab2\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project {C:/Users/Julian/Documents/Work/CSE 100/Lab 2/Lab2/Lab2.xpr}
+update_compile_order -fileset sources_1
+launch_simulation
+source lab2_tests.tcl
+run 1 us
+relaunch_sim
+run all
+run 0.1 us
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream
+wait_on_run impl_1
+open_hw
+connect_hw_server
+open_hw_target
+set_property PROGRAM.FILE {C:/Users/Julian/Documents/Work/CSE 100/Lab 2/Lab2/Lab2.runs/impl_1/carryAdder.bit} [get_hw_devices xc7a35t_0]
+current_hw_device [get_hw_devices xc7a35t_0]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7a35t_0] 0]
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/Julian/Documents/Work/CSE 100/Lab 2/Lab2/Lab2.runs/impl_1/carryAdder.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+save_wave_config {C:/Users/Julian/Documents/Work/CSE 100/Lab 2/Lab2/lab2_tests_behav.wcfg}
+add_files -fileset sim_1 -norecurse {{C:/Users/Julian/Documents/Work/CSE 100/Lab 2/Lab2/lab2_tests_behav.wcfg}}
+set_property xsim.view {{C:/Users/Julian/Documents/Work/CSE 100/Lab 2/Lab2/lab2_tests_behav.wcfg}} [get_filesets sim_1]
+close_sim

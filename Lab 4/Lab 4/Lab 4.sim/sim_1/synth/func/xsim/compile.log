@@ -1,0 +1,36 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Julian/Documents/Work/CSE 100/Lab 4/Lab 4/Lab 4.sim/sim_1/synth/func/xsim/testTC_func_synth.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module CB4CE_MXILINX_clkcntrl4
+INFO: [VRFC 10-311] analyzing module CB4CE_MXILINX_clkcntrl4_3
+INFO: [VRFC 10-311] analyzing module CB4CE_MXILINX_clkcntrl4_4
+INFO: [VRFC 10-311] analyzing module CB4CE_MXILINX_clkcntrl4_5
+INFO: [VRFC 10-311] analyzing module FTCE_MXILINX_clkcntrl4
+INFO: [VRFC 10-311] analyzing module FTCE_MXILINX_clkcntrl4_10
+INFO: [VRFC 10-311] analyzing module FTCE_MXILINX_clkcntrl4_11
+INFO: [VRFC 10-311] analyzing module FTCE_MXILINX_clkcntrl4_12
+INFO: [VRFC 10-311] analyzing module FTCE_MXILINX_clkcntrl4_13
+INFO: [VRFC 10-311] analyzing module FTCE_MXILINX_clkcntrl4_14
+INFO: [VRFC 10-311] analyzing module FTCE_MXILINX_clkcntrl4_15
+INFO: [VRFC 10-311] analyzing module FTCE_MXILINX_clkcntrl4_16
+INFO: [VRFC 10-311] analyzing module FTCE_MXILINX_clkcntrl4_17
+INFO: [VRFC 10-311] analyzing module FTCE_MXILINX_clkcntrl4_18
+INFO: [VRFC 10-311] analyzing module FTCE_MXILINX_clkcntrl4_19
+INFO: [VRFC 10-311] analyzing module FTCE_MXILINX_clkcntrl4_20
+INFO: [VRFC 10-311] analyzing module FTCE_MXILINX_clkcntrl4_6
+INFO: [VRFC 10-311] analyzing module FTCE_MXILINX_clkcntrl4_7
+INFO: [VRFC 10-311] analyzing module FTCE_MXILINX_clkcntrl4_8
+INFO: [VRFC 10-311] analyzing module FTCE_MXILINX_clkcntrl4_9
+INFO: [VRFC 10-311] analyzing module clk_wiz_0
+INFO: [VRFC 10-311] analyzing module clkcntrl4
+INFO: [VRFC 10-311] analyzing module countUD16L
+INFO: [VRFC 10-311] analyzing module countUD3L
+INFO: [VRFC 10-311] analyzing module countUD3L_1
+INFO: [VRFC 10-311] analyzing module countUD5L
+INFO: [VRFC 10-311] analyzing module countUD5L_2
+INFO: [VRFC 10-311] analyzing module edgeDetector
+INFO: [VRFC 10-311] analyzing module edgeDetector_0
+INFO: [VRFC 10-311] analyzing module lab4_clks
+INFO: [VRFC 10-311] analyzing module ringCounter
+INFO: [VRFC 10-311] analyzing module toppo
+INFO: [VRFC 10-311] analyzing module glbl
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Julian/Documents/Work/CSE 100/Lab 4/Lab 4/testTC.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module testTC
