@@ -1,0 +1,20 @@
+#-----------------------------------------------------------
+# Vivado v2019.1 (64-bit)
+# SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
+# IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+# Start of session at: Tue Nov  5 11:39:00 2019
+# Process ID: 37036
+# Current directory: C:/Users/Julian/Documents/Work/CSE 100/Lab 5/Lab 5
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent30984 C:\Users\Julian\Documents\Work\CSE 100\Lab 5\Lab 5\Lab 5.xpr
+# Log file: C:/Users/Julian/Documents/Work/CSE 100/Lab 5/Lab 5/vivado.log
+# Journal file: C:/Users/Julian/Documents/Work/CSE 100/Lab 5/Lab 5\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project {C:/Users/Julian/Documents/Work/CSE 100/Lab 5/Lab 5/Lab 5.xpr}
+update_compile_order -fileset sources_1
+launch_simulation
+source rngTest.tcl
+run 1 us
+close [ open {C:/Users/Julian/Documents/Work/CSE 100/Lab 5/Lab 5/Lab 5.srcs/sources_1/new/stateMachine.v} w ]
+add_files {{C:/Users/Julian/Documents/Work/CSE 100/Lab 5/Lab 5/Lab 5.srcs/sources_1/new/stateMachine.v}}
+update_compile_order -fileset sources_1

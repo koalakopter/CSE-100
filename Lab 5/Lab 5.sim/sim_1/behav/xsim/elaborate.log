@@ -1,18 +1,15 @@
 Vivado Simulator 2019.1
 Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
-Running: D:/Xilinx/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe -wto 0d366662182e4828a81114f9f1528286 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot TimeCountTest_behav xil_defaultlib.TimeCountTest xil_defaultlib.glbl -log elaborate.log 
+Running: D:/Xilinx/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe -wto 0d366662182e4828a81114f9f1528286 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot stateMachineTest_behav xil_defaultlib.stateMachineTest xil_defaultlib.glbl -log elaborate.log 
 Using 2 slave threads.
 Starting static elaboration
-WARNING: [VRFC 10-3091] actual bit length 8 differs from formal bit length 16 for port 'q' [D:/Users/Julian/Documents/UCSC Year THREE/CSE 100/Lab 5/Lab 5/Lab 5.srcs/sources_1/new/timeCounter.v:37]
 Completed static elaboration
 Starting simulation data flow analysis
 Completed simulation data flow analysis
 Time Resolution for simulation is 1ps
+Compiling module unisims_ver.FDRE(INIT=1'b1)
 Compiling module unisims_ver.FDRE_default
-Compiling module xil_defaultlib.countUD3L
-Compiling module xil_defaultlib.countUD5L
-Compiling module xil_defaultlib.countUD16L
-Compiling module xil_defaultlib.timeCounter
-Compiling module xil_defaultlib.TimeCountTest
+Compiling module xil_defaultlib.stateMachine
+Compiling module xil_defaultlib.stateMachineTest
 Compiling module xil_defaultlib.glbl
-Built simulation snapshot TimeCountTest_behav
+Built simulation snapshot stateMachineTest_behav
