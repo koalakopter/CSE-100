@@ -72,12 +72,14 @@ module stateMachine(
     assign d[7] = (q[2] & btnU & btnD & ~timeUp) | (q[7] & ~btnC);
     
     //outputs for state machine
-    assign showtime = (q[1] & ~lastled) | (q[2] & sw0);
-    assign loadtime = q[1];
-    assign runtime = q[2];
+    //assign showtime = (q[1] & ~lastled) | (q[2] & sw0);
+    assign showtime = (q[1] & ~lastled);
+    assign loadtime = btnC & (q[0] | q[5] | q[6] | q[7]);
+    assign runtime = q[2] | q[3] | q[4];
     assign incU = q[7] | q[6];
     assign incD = q[7] | q[5];
-    assign showScore = q[0] | q[5] | q[6] | q[7];
+    //assign showScore = q[0] | q[5] | q[6] | q[7];
+    assign showScore = q[0];
     assign flashU = q[7] | q[6];
     assign flashD = q[7] | q[5];
     

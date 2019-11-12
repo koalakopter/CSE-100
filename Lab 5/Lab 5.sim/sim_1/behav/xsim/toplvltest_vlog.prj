@@ -1,0 +1,25 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  \
+"../../../../Lab 5.srcs/sources_1/new/LFSR.v" \
+"../../../../../../Lab 4/Lab 4/Lab 4.srcs/sources_1/new/countUD16L.v" \
+"../../../../../../Lab 4/Lab 4/Lab 4.srcs/sources_1/new/countUD3L.v" \
+"../../../../Lab 5.srcs/sources_1/new/countUD4L.v" \
+"../../../../../../Lab 4/Lab 4/Lab 4.srcs/sources_1/new/countUD5L.v" \
+"../../../../../../Lab 4/Lab 4/Lab 4.srcs/sources_1/new/edgeDetector.v" \
+"../../../../lab5_clks.v" \
+"../../../../../../Lab 3/Lab 3/Lab 3.srcs/sources_1/new/m8_1e.v" \
+"../../../../../../Lab 4/Lab 4/Lab 4.srcs/sources_1/new/ringCount.v" \
+"../../../../../../Lab 4/Lab 4/Lab 4.srcs/sources_1/new/selector.v" \
+"../../../../../../Lab 3/Lab 3/Lab 3.srcs/sources_1/new/sevenSeg.v" \
+"../../../../Lab 5.srcs/sources_1/new/shifter16.v" \
+"../../../../Lab 5.srcs/sources_1/new/stateMachine.v" \
+"../../../../Lab 5.srcs/sources_1/new/synchronizer.v" \
+"../../../../Lab 5.srcs/sources_1/new/timeCounter.v" \
+"../../../../Lab 5.srcs/sources_1/new/toppo.v" \
+"../../../../Lab 5.srcs/sim_1/new/topLevelSim.v" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

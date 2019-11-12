@@ -45,12 +45,12 @@ module rngTest();
     initial
     begin
     //start
-    reset = 1'b1;
+    reset = 1'b0;
     
     #200
     reset = 1'b0;
     #500
-    reset = 1'b1;
+    reset = 1'b0;
     #200
     reset = 1'b0;
     

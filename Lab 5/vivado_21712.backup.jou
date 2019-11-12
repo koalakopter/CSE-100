@@ -1,0 +1,177 @@
+#-----------------------------------------------------------
+# Vivado v2019.1 (64-bit)
+# SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
+# IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+# Start of session at: Wed Nov  6 14:42:23 2019
+# Process ID: 21712
+# Current directory: D:/Users/Julian/Documents/UCSC Year THREE/CSE 100/Lab 5/Lab 5
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent21896 D:\Users\Julian\Documents\UCSC Year THREE\CSE 100\Lab 5\Lab 5\Lab 5.xpr
+# Log file: D:/Users/Julian/Documents/UCSC Year THREE/CSE 100/Lab 5/Lab 5/vivado.log
+# Journal file: D:/Users/Julian/Documents/UCSC Year THREE/CSE 100/Lab 5/Lab 5\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project {D:/Users/Julian/Documents/UCSC Year THREE/CSE 100/Lab 5/Lab 5/Lab 5.xpr}
+update_compile_order -fileset sources_1
+launch_simulation
+source toplvltest.tcl
+run 10 us
+run 10 us
+relaunch_sim
+run 20 us
+relaunch_sim
+run 20 us
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top rngTest [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode All [current_project]
+update_compile_order -fileset sim_1
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top randomNumGen [current_fileset]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode All [current_project]
+update_compile_order -fileset sources_1
+close_sim
+launch_simulation
+source rngTest.tcl
+run 20 us
+run 20 us
+run 20 us
+run 20 us
+run 20 us
+run 20 us
+run 20 us
+run 20 us
+run 20 us
+run 20 us
+relaunch_sim
+relaunch_sim
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top toplvltest [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode All [current_project]
+update_compile_order -fileset sim_1
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top toppo [current_fileset]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode All [current_project]
+update_compile_order -fileset sources_1
+close_sim
+launch_simulation
+source toplvltest.tcl
+run 20 us
+relaunch_sim
+run 20 us
+relaunch_sim
+run 20 us
+close_sim
+launch_simulation
+source toplvltest.tcl
+relaunch_sim
+run 20 us
+relaunch_sim
+run 20 us
+relaunch_sim
+run 20 us
+run 20 us
+relaunch_sim
+run 20 us
+run 20 us
+run 20 us
+run 20 us
+run 20 us
+relaunch_sim
+run 50 us
+relaunch_sim
+run 50 us
+relaunch_sim
+run 50 us
+run 50 us
+run 50 us
+run 50 us
+run 50 us
+run 50 us
+relaunch_sim
+run 500 us
+relaunch_sim
+run 500 us
+relaunch_sim
+run 500 us
+relaunch_sim
+run 500 us
+relaunch_sim
+run 500 us
+run 500 us
+relaunch_sim
+run 500 us
+relaunch_sim
+run 300 us
+relaunch_sim
+run 300 us
+run 300 us
+relaunch_sim
+run 300 us
+relaunch_sim
+run 300 us
+relaunch_sim
+run 300 us
+relaunch_sim
+run 300 us
+relaunch_sim
+run 300 us
+relaunch_sim
+run 300 us
+relaunch_sim
+run 300 us
+relaunch_sim
+run 300 us
+relaunch_sim
+run 300 us
+relaunch_sim
+run 300 us
+relaunch_sim
+run 300 us
+relaunch_sim
+run 300 us
+run 300 us
+relaunch_sim
+run 300 us
+run 300 us
+close_sim
+launch_simulation
+source toplvltest.tcl
+relaunch_sim
+relaunch_sim
+relaunch_sim
+run 300 us
+relaunch_sim
+run 300 us
+remove_forces { {/toplvltest/UUT/ring/out} }
+relaunch_sim
+run 300 us
+relaunch_sim
+run 300 us
+relaunch_sim
+run 300 us
+relaunch_sim
+run 300 us
+relaunch_sim
+run 300 us
+relaunch_sim
+run 300 us
+relaunch_sim
+run 300 us
+relaunch_sim
+run 300 us
+relaunch_sim
+relaunch_sim
+run 300 us
+relaunch_sim
+run 300 us
+relaunch_sim
+run 300 us

@@ -6266,3 +6266,4 @@ selectCodeEditor("toppo.v", 758, 273); // cl (w, cl)
 // TclEventType: DG_GRAPH_STALE
 // TclEventType: FILE_SET_CHANGE
 // HMemoryUtils.trashcanNow. Engine heap size: 697 MB. GUI used memory: 69 MB. Current time: 11/6/19, 7:46:16 AM PST
+// HMemoryUtils.trashcanNow. Engine heap size: 697 MB. GUI used memory: 69 MB. Current time: 11/6/19, 8:16:17 AM PST
