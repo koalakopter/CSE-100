@@ -29,7 +29,8 @@ module countUD8L(
    
     output [7:0] q,
     output utc,
-    output dtc
+    output dtc,
+    output negative
 
     );
     
@@ -37,8 +38,10 @@ module countUD8L(
     wire utc0, dtc0;
     wire utc1, dtc1;
     countUD4L count0to3 (.Up(Up), .Dw(Dw), .LD(LD), .clock(clock), .d(d[3:0]), .q(q[3:0]), .utc(utc0), .dtc(dtc0));   
-    countUD4L count4to7 (.Up(Up & utc0), .Dw(Dw & dtc0), .LD(LD), .clock(clock), .d(d[3:0]), .q(q[3:0]), .utc(utc0), .dtc(dtc0));   
+    countUD4L count4to7 (.Up(Up & utc0), .Dw(Dw & dtc0), .LD(LD), .clock(clock), .d(d[7:4]), .q(q[7:4]), .utc(utc1), .dtc(dtc1));   
     
     assign utc = utc0 & utc1;
     assign dtc = dtc0 & dtc1;
+    //let's say value is negative if value is higher than 7F
+    assign negative = q[7];
 endmodule

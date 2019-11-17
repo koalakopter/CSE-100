@@ -1,0 +1,1846 @@
+/*
+
+Xilinx Vivado v2019.1 (64-bit) [Major: 2019, Minor: 1]
+SW Build: 2552052 on Fri May 24 14:49:42 MDT 2019
+IP Build: 2548770 on Fri May 24 18:01:18 MDT 2019
+
+Process ID (PID): 6316
+License: Customer
+
+Current time: 	Tue Nov 12 11:59:48 PST 2019
+Time zone: 	Pacific Standard Time (America/Los_Angeles)
+
+OS: Windows 10
+OS Version: 10.0
+OS Architecture: amd64
+Available processors (cores): 8
+
+Screen size: 2736x1824
+Screen resolution (DPI): 200
+Available screens: 1
+Available disk space: 23 GB
+Default font: family=Segoe UI,name=Segoe UI,style=plain,size=24
+
+Java version: 	9.0.4 64-bit
+Java home: 	C:/Xilinx/Vivado/2019.1/tps/win64/jre9.0.4
+Java executable location: 	C:/Xilinx/Vivado/2019.1/tps/win64/jre9.0.4/bin/java.exe
+Java initial memory (-Xms): 	128 MB
+Java maximum memory (-Xmx):	 3 GB
+
+
+User name: 	Julian
+User home directory: C:/Users/Julian
+User working directory: C:/Users/Julian/Documents/Work/CSE 100/Lab 6/Lab6
+User country: 	US
+User language: 	en
+User locale: 	en_US
+
+RDI_BASEROOT: C:/Xilinx/Vivado
+HDI_APPROOT: C:/Xilinx/Vivado/2019.1
+RDI_DATADIR: C:/Xilinx/Vivado/2019.1/data
+RDI_BINDIR: C:/Xilinx/Vivado/2019.1/bin
+
+Vivado preferences file location: C:/Users/Julian/AppData/Roaming/Xilinx/Vivado/2019.1/vivado.xml
+Vivado preferences directory: C:/Users/Julian/AppData/Roaming/Xilinx/Vivado/2019.1/
+Vivado layouts directory: C:/Users/Julian/AppData/Roaming/Xilinx/Vivado/2019.1/layouts
+PlanAhead jar file location: 	C:/Xilinx/Vivado/2019.1/lib/classes/planAhead.jar
+Vivado log file location: 	C:/Users/Julian/Documents/Work/CSE 100/Lab 6/Lab6/vivado.log
+Vivado journal file location: 	C:/Users/Julian/Documents/Work/CSE 100/Lab 6/Lab6/vivado.jou
+Engine tmp dir: 	C:/Users/Julian/Documents/Work/CSE 100/Lab 6/Lab6/.Xil/Vivado-6316-JULIAN-SURFACE
+
+Xilinx Environment Variables
+----------------------------
+XILINX: C:/Xilinx/Vivado/2019.1/ids_lite/ISE
+XILINX_DSP: C:/Xilinx/Vivado/2019.1/ids_lite/ISE
+XILINX_PLANAHEAD: C:/Xilinx/Vivado/2019.1
+XILINX_SDK: C:/Xilinx/SDK/2019.1
+XILINX_VIVADO: C:/Xilinx/Vivado/2019.1
+XILINX_VIVADO_HLS: C:/Xilinx/Vivado/2019.1
+
+
+GUI allocated memory:	140 MB
+GUI max memory:		3,072 MB
+Engine allocated memory: 576 MB
+
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+
+*/
+
+// TclEventType: START_GUI
+// Tcl Message: start_gui 
+// TclEventType: PROJECT_OPEN_DIALOG
+// by (cl):  Open Project : addNotify
+// Opening Vivado Project: C:\Users\Julian\Documents\Work\CSE 100\Lab 6\Lab6\Lab6.xpr. Version: Vivado v2019.1 
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// Tcl Message: open_project {C:/Users/Julian/Documents/Work/CSE 100/Lab 6/Lab6/Lab6.xpr} 
+// HMemoryUtils.trashcanNow. Engine heap size: 590 MB. GUI used memory: 64 MB. Current time: 11/12/19, 11:59:50 AM PST
+// TclEventType: MSGMGR_MOVEMSG
+// TclEventType: FILE_SET_NEW
+// TclEventType: RUN_CURRENT
+// TclEventType: PROJECT_DASHBOARD_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_NEW
+// Tcl Message: open_project {C:/Users/Julian/Documents/Work/CSE 100/Lab 6/Lab6/Lab6.xpr} 
+// Tcl Message: INFO: [Project 1-313] Project file moved from 'D:/Users/Julian/Documents/UCSC Year THREE/CSE 100/Lab 6/Lab6' since last save. 
+// Tcl Message: Scanning sources... Finished scanning sources 
+// Tcl Message: INFO: [IP_Flow 19-234] Refreshing IP repositories INFO: [IP_Flow 19-1704] No user IP repositories specified 
+// TclEventType: PROJECT_NEW
+// [GUI Memory]: 76 MB (+77499kb) [00:00:35]
+// [Engine Memory]: 650 MB (+529758kb) [00:00:35]
+// [GUI Memory]: 88 MB (+8557kb) [00:00:36]
+// [GUI Memory]: 112 MB (+20511kb) [00:00:37]
+// WARNING: HEventQueue.dispatchEvent() is taking  6432 ms.
+// Tcl Message: INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2019.1/data/ip'. 
+// Tcl Message: open_project: Time (s): cpu = 00:00:28 ; elapsed = 00:00:14 . Memory (MB): peak = 707.113 ; gain = 101.367 
+// Project name: Lab6; location: C:/Users/Julian/Documents/Work/CSE 100/Lab 6/Lab6; part: xc7a35tcpg236-1
+dismissDialog("Open Project"); // by (cl)
+// [Engine Memory]: 685 MB (+2870kb) [00:00:47]
+// Tcl Message: update_compile_order -fileset sources_1 
+// [GUI Memory]: 120 MB (+1910kb) [00:00:49]
+// PAPropertyPanels.initPanels (toppo.v) elapsed time: 0.2s
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, toppo (toppo.v)]", 1, true); // B (F, cl) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, toppo (toppo.v)]", 1, true, false, false, false, false, true); // B (F, cl) - Double Click - Node
+// HMemoryUtils.trashcanNow. Engine heap size: 704 MB. GUI used memory: 71 MB. Current time: 11/12/19, 12:00:11 PM PST
+// WARNING: HTimer (ActiveMsgMonitor Process Messages Timer) is taking 226ms to process. Increasing delay to 2000 ms.
+// [GUI Memory]: 126 MB (+153kb) [00:13:37]
+// WARNING: HEventQueue.dispatchEvent() is taking  241604 ms.
+// Elapsed time: 1106 seconds
+selectCodeEditor("toppo.v", 1077, 535); // cl (w, cl)
+selectCodeEditor("toppo.v", 1052, 521); // cl (w, cl)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 17 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, stateMachine (stateMachine.v)]", 6, false); // B (F, cl)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, stateMachine (stateMachine.v)]", 6, false, false, false, false, false, true); // B (F, cl) - Double Click
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, stateMachine (stateMachine.v)]", 6, false); // B (F, cl)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "toppo.v", 1); // k (j, cl)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "stateMachine.v", 2); // k (j, cl)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "toppo.v", 1); // k (j, cl)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "stateMachine.v", 2); // k (j, cl)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "toppo.v", 1); // k (j, cl)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "stateMachine.v", 2); // k (j, cl)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "toppo.v", 1); // k (j, cl)
+// Elapsed time: 15 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "stateMachine.v", 2); // k (j, cl)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "toppo.v", 1); // k (j, cl)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "stateMachine.v", 2); // k (j, cl)
+selectCodeEditor("stateMachine.v", 50, 305); // cl (w, cl)
+selectCodeEditor("stateMachine.v", 57, 213); // cl (w, cl)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "toppo.v", 1); // k (j, cl)
+// Elapsed time: 10 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "stateMachine.v", 2); // k (j, cl)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "toppo.v", 1); // k (j, cl)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "stateMachine.v", 2); // k (j, cl)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "toppo.v", 1); // k (j, cl)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "stateMachine.v", 2); // k (j, cl)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "toppo.v", 1); // k (j, cl)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "stateMachine.v", 2); // k (j, cl)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "toppo.v", 1); // k (j, cl)
+// Elapsed time: 13 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "stateMachine.v", 2); // k (j, cl)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "toppo.v", 1); // k (j, cl)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "stateMachine.v", 2); // k (j, cl)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "toppo.v", 1); // k (j, cl)
+selectCodeEditor("toppo.v", 482, 523); // cl (w, cl)
+// Elapsed time: 12 seconds
+selectCodeEditor("toppo.v", 752, 511); // cl (w, cl)
+selectCodeEditor("toppo.v", 1042, 507); // cl (w, cl)
+selectCodeEditor("toppo.v", 787, 666); // cl (w, cl)
+selectCodeEditor("toppo.v", 734, 479); // cl (w, cl)
+selectCodeEditor("toppo.v", 396, 543); // cl (w, cl)
+selectCodeEditor("toppo.v", 389, 511); // cl (w, cl)
+// Elapsed time: 25 seconds
+selectCodeEditor("toppo.v", 674, 507); // cl (w, cl)
+selectCodeEditor("toppo.v", 962, 514); // cl (w, cl)
+selectCodeEditor("toppo.v", 865, 504); // cl (w, cl)
+selectCodeEditor("toppo.v", 1045, 514); // cl (w, cl)
+selectCodeEditor("toppo.v", 1197, 510); // cl (w, cl)
+selectCodeEditor("toppo.v", 860, 564); // cl (w, cl)
+selectCodeEditor("toppo.v", 368, 575); // cl (w, cl)
+selectCodeEditor("toppo.v", 309, 531); // cl (w, cl)
+// Elapsed time: 59 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, countUD8L (countUD8L.v)]", 4, true); // B (F, cl) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, countUD8L (countUD8L.v)]", 4, true, false, false, false, false, true); // B (F, cl) - Double Click - Node
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "toppo.v", 1); // k (j, cl)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "countUD8L.v", 3); // k (j, cl)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "toppo.v", 1); // k (j, cl)
+// [GUI Memory]: 133 MB (+616kb) [00:24:01]
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "countUD8L.v", 3); // k (j, cl)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "toppo.v", 1); // k (j, cl)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "countUD8L.v", 3); // k (j, cl)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "toppo.v", 1); // k (j, cl)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "countUD8L.v", 3); // k (j, cl)
+closeView(PAResourceOtoP.PAViews_PROJECT_SUMMARY, "Project Summary"); // v
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "toppo.v", 0); // k (j, cl)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "countUD8L.v", 2); // k (j, cl)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "toppo.v", 0); // k (j, cl)
+// Elapsed time: 15 seconds
+selectCodeEditor("toppo.v", 878, 461); // cl (w, cl)
+selectCodeEditor("toppo.v", 355, 570); // cl (w, cl)
+selectCodeEditor("toppo.v", 1136, 610); // cl (w, cl)
+selectCodeEditor("toppo.v", 815, 548); // cl (w, cl)
+selectCodeEditor("toppo.v", 569, 580); // cl (w, cl)
+selectCodeEditor("toppo.v", 472, 634); // cl (w, cl)
+selectCodeEditor("toppo.v", 647, 628); // cl (w, cl)
+selectCodeEditor("toppo.v", 776, 649); // cl (w, cl)
+selectCodeEditor("toppo.v", 922, 639); // cl (w, cl)
+selectCodeEditor("toppo.v", 1072, 639); // cl (w, cl)
+selectCodeEditor("toppo.v", 953, 551); // cl (w, cl)
+selectCodeEditor("toppo.v", 1101, 545); // cl (w, cl)
+selectCodeEditor("toppo.v", 756, 466); // cl (w, cl)
+selectCodeEditor("toppo.v", 536, 498); // cl (w, cl)
+// Elapsed time: 35 seconds
+selectCodeEditor("toppo.v", 827, 583); // cl (w, cl)
+selectCodeEditor("toppo.v", 974, 546); // cl (w, cl)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: update_compile_order -fileset sources_1 
+selectCodeEditor("toppo.v", 1190, 548); // cl (w, cl)
+// Elapsed time: 26 seconds
+selectCodeEditor("toppo.v", 347, 544); // cl (w, cl)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, signChanger (signChanger.v)]", 6, true); // B (F, cl) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, signChanger (signChanger.v)]", 6, true, false, false, false, false, true); // B (F, cl) - Double Click - Node
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "toppo.v", 0); // k (j, cl)
+selectCodeEditor("toppo.v", 439, 607); // cl (w, cl)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "signChanger.v", 3); // k (j, cl)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "toppo.v", 0); // k (j, cl)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "signChanger.v", 3); // k (j, cl)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "toppo.v", 0); // k (j, cl)
+selectCodeEditor("toppo.v", 558, 606); // cl (w, cl)
+selectCodeEditor("toppo.v", 396, 620); // cl (w, cl)
+// Elapsed time: 18 seconds
+selectCodeEditor("toppo.v", 584, 609); // cl (w, cl)
+selectCodeEditor("toppo.v", 575, 567); // cl (w, cl)
+selectCodeEditor("toppo.v", 389, 507); // cl (w, cl)
+// Elapsed time: 41 seconds
+selectCodeEditor("toppo.v", 1112, 586); // cl (w, cl)
+selectCodeEditor("toppo.v", 1020, 551); // cl (w, cl)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: update_compile_order -fileset sources_1 
+// HMemoryUtils.trashcanNow. Engine heap size: 707 MB. GUI used memory: 73 MB. Current time: 11/12/19, 12:30:15 PM PST
+// Elapsed time: 170 seconds
+selectButton(PAResourceCommand.PACommandNames_ADD_SOURCES, "Sources_add_sources"); // B (f, cl)
+// Run Command: PAResourceCommand.PACommandNames_ADD_SOURCES
+// c (cl): Add Sources: addNotify
+selectRadioButton(PAResourceAtoD.AddSrcWizard_SPECIFY_OR_CREATE_CONSTRAINT_FILES, "Add or create constraints"); // a (o, c)
+selectButton("NEXT", "Next >"); // JButton (j, c)
+selectButton(PAResourceAtoD.ConstraintsChooserPanel_ADD_FILES, "Add Files"); // a (E, c)
+setFileChooser("C:/Users/Julian/Documents/Work/CSE 100/Lab 5/Lab 5/Basys3_Master.xdc");
+selectButton("FINISH", "Finish"); // JButton (j, c)
+// 'h' command handler elapsed time: 9 seconds
+dismissDialog("Add Sources"); // c (cl)
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: add_files -fileset constrs_1 -norecurse {{C:/Users/Julian/Documents/Work/CSE 100/Lab 5/Lab 5/Basys3_Master.xdc}} 
+// Elapsed time: 77 seconds
+selectButton(PAResourceCommand.PACommandNames_ADD_SOURCES, "Sources_add_sources"); // B (f, cl)
+// Run Command: PAResourceCommand.PACommandNames_ADD_SOURCES
+// c (cl): Add Sources: addNotify
+selectRadioButton(PAResourceAtoD.AddSrcWizard_SPECIFY_HDL_NETLIST_BLOCK_DESIGN, "Add or create design sources"); // a (o, c)
+selectButton("NEXT", "Next >"); // JButton (j, c)
+selectButton(PAResourceQtoS.SrcChooserPanel_ADD_HDL_AND_NETLIST_FILES_TO_YOUR_PROJECT, "Add Files"); // a (E, c)
+// Elapsed time: 27 seconds
+String[] filenames31467 = {"C:/Users/Julian/Documents/Work/CSE 100/Lab 4/Lab 4/Lab 4.srcs/sources_1/new/ringCount.v", "C:/Users/Julian/Documents/Work/CSE 100/Lab 4/Lab 4/Lab 4.srcs/sources_1/new/selector.v"};
+setFileChooser(filenames31467);
+selectButton("FINISH", "Finish"); // JButton (j, c)
+// 'h' command handler elapsed time: 35 seconds
+dismissDialog("Add Sources"); // c (cl)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: add_files -norecurse {{C:/Users/Julian/Documents/Work/CSE 100/Lab 4/Lab 4/Lab 4.srcs/sources_1/new/selector.v} {C:/Users/Julian/Documents/Work/CSE 100/Lab 4/Lab 4/Lab 4.srcs/sources_1/new/ringCount.v}} 
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: update_compile_order -fileset sources_1 
+selectCodeEditor("toppo.v", 989, 546); // cl (w, cl)
+selectButton(PAResourceCommand.PACommandNames_ADD_SOURCES, "Sources_add_sources"); // B (f, cl)
+// Run Command: PAResourceCommand.PACommandNames_ADD_SOURCES
+// c (cl): Add Sources: addNotify
+selectButton("NEXT", "Next >"); // JButton (j, c)
+selectButton(PAResourceQtoS.SrcChooserPanel_ADD_HDL_AND_NETLIST_FILES_TO_YOUR_PROJECT, "Add Files"); // a (E, c)
+// Elapsed time: 17 seconds
+String[] filenames16706 = {"C:/Users/Julian/Documents/Work/CSE 100/Lab 3/Lab 3/Lab 3.srcs/sources_1/new/m8_1e.v", "C:/Users/Julian/Documents/Work/CSE 100/Lab 3/Lab 3/Lab 3.srcs/sources_1/new/sevenSeg.v"};
+setFileChooser(filenames16706);
+selectButton("FINISH", "Finish"); // JButton (j, c)
+// 'h' command handler elapsed time: 25 seconds
+// TclEventType: DG_GRAPH_STALE
+dismissDialog("Add Sources"); // c (cl)
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: add_files -norecurse {{C:/Users/Julian/Documents/Work/CSE 100/Lab 3/Lab 3/Lab 3.srcs/sources_1/new/sevenSeg.v} {C:/Users/Julian/Documents/Work/CSE 100/Lab 3/Lab 3/Lab 3.srcs/sources_1/new/m8_1e.v}} 
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: update_compile_order -fileset sources_1 
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, sevenSeg (sevenSeg.v)]", 7); // B (F, cl)
+collapseTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, sevenSeg (sevenSeg.v)]", 7); // B (F, cl)
+// Elapsed time: 22 seconds
+selectCodeEditor("toppo.v", 257, 336); // cl (w, cl)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("toppo.v", 1007, 534); // cl (w, cl)
+// Elapsed time: 25 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, ringCounter (ringCount.v)]", 8, false); // B (F, cl)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, ringCounter (ringCount.v)]", 8, false, false, false, false, false, true); // B (F, cl) - Double Click
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "toppo.v", 0); // k (j, cl)
+// Elapsed time: 12 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "ringCount.v", 4); // k (j, cl)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "toppo.v", 0); // k (j, cl)
+selectCodeEditor("toppo.v", 353, 443); // cl (w, cl)
+// Elapsed time: 23 seconds
+selectCodeEditor("toppo.v", 952, 518); // cl (w, cl)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: update_compile_order -fileset sources_1 
+// Elapsed time: 42 seconds
+selectCodeEditor("toppo.v", 1119, 529); // cl (w, cl)
+selectCodeEditor("toppo.v", 1102, 517); // cl (w, cl)
+// Elapsed time: 10 seconds
+closeView(PAResourceOtoP.PAViews_CODE, "Code"); // B
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, selector (selector.v)]", 9, false); // B (F, cl)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, selector (selector.v)]", 9, false, false, false, false, false, true); // B (F, cl) - Double Click
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "toppo.v", 0); // k (j, cl)
+selectCodeEditor("toppo.v", 264, 578); // cl (w, cl)
+// Elapsed time: 36 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "selector.v", 4); // k (j, cl)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "toppo.v", 0); // k (j, cl)
+// Elapsed time: 11 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, sevenSeg (sevenSeg.v)]", 8, true); // B (F, cl) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, sevenSeg (sevenSeg.v)]", 8, true); // B (F, cl) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, sevenSeg (sevenSeg.v), D : m8_1e (m8_1e.v)]", 12, false, false, false, false, false, true); // B (F, cl) - Double Click
+// Elapsed time: 10 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "toppo.v", 0); // k (j, cl)
+// Elapsed time: 18 seconds
+selectCodeEditor("toppo.v", 327, 574); // cl (w, cl)
+selectCodeEditor("toppo.v", 249, 527); // cl (w, cl)
+selectCodeEditor("toppo.v", 249, 527); // cl (w, cl)
+selectCodeEditor("toppo.v", 228, 549); // cl (w, cl)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "selector.v", 4); // k (j, cl)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "toppo.v", 0); // k (j, cl)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "selector.v", 4); // k (j, cl)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "toppo.v", 0); // k (j, cl)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "selector.v", 4); // k (j, cl)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "toppo.v", 0); // k (j, cl)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "selector.v", 4); // k (j, cl)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "toppo.v", 0); // k (j, cl)
+selectCodeEditor("toppo.v", 1092, 491); // cl (w, cl)
+selectCodeEditor("toppo.v", 1030, 510); // cl (w, cl)
+selectCodeEditor("toppo.v", 286, 529); // cl (w, cl)
+selectCodeEditor("toppo.v", 595, 576); // cl (w, cl)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "sevenSeg.v", 5); // k (j, cl)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "selector.v", 4); // k (j, cl)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "toppo.v", 0); // k (j, cl)
+selectCodeEditor("toppo.v", 310, 548); // cl (w, cl)
+selectCodeEditor("toppo.v", 635, 577); // cl (w, cl)
+// Elapsed time: 41 seconds
+selectCodeEditor("toppo.v", 961, 388); // cl (w, cl)
+// Elapsed time: 84 seconds
+selectCodeEditor("toppo.v", 556, 419); // cl (w, cl)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: update_compile_order -fileset sources_1 
+// Elapsed time: 267 seconds
+selectCodeEditor("toppo.v", 544, 489); // cl (w, cl)
+selectCodeEditor("toppo.v", 154, 341); // cl (w, cl)
+selectCodeEditor("toppo.v", 164, 388); // cl (w, cl)
+selectCodeEditor("toppo.v", 413, 376); // cl (w, cl)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("toppo.v", 148, 344); // cl (w, cl)
+selectCodeEditor("toppo.v", 749, 427); // cl (w, cl)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("toppo.v", 298, 357); // cl (w, cl)
+selectCodeEditor("toppo.v", 260, 318); // cl (w, cl)
+selectCodeEditor("toppo.v", 429, 459); // cl (w, cl)
+selectCodeEditor("toppo.v", 548, 479); // cl (w, cl)
+// Elapsed time: 42 seconds
+selectCodeEditor("toppo.v", 1255, 493); // cl (w, cl)
+selectCodeEditor("toppo.v", 1200, 476); // cl (w, cl)
+// Elapsed time: 72 seconds
+selectCodeEditor("toppo.v", 1244, 316); // cl (w, cl)
+collapseTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, sevenSeg (sevenSeg.v)]", 11); // B (F, cl)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, sevenSeg (sevenSeg.v)]", 11, true); // B (F, cl) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, sevenSeg (sevenSeg.v), D : m8_1e (m8_1e.v)]", 15, false, false, false, false, false, true); // B (F, cl) - Double Click
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "toppo.v", 0); // k (j, cl)
+// Elapsed time: 13 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "sevenSeg.v", 5); // k (j, cl)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "toppo.v", 0); // k (j, cl)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "sevenSeg.v", 5); // k (j, cl)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "toppo.v", 0); // k (j, cl)
+selectCodeEditor("toppo.v", 292, 339); // cl (w, cl)
+selectCodeEditor("toppo.v", 636, 419); // cl (w, cl)
+// Elapsed time: 73 seconds
+selectCodeEditor("toppo.v", 920, 206); // cl (w, cl)
+// Elapsed time: 108 seconds
+collapseTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, sevenSeg (sevenSeg.v)]", 11); // B (F, cl)
+// Elapsed time: 30 seconds
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Syntax Error Files]", 1); // B (F, cl)
+selectCodeEditor("toppo.v", 670, 316); // cl (w, cl)
+selectCodeEditor("toppo.v", 462, 456); // cl (w, cl)
+// Elapsed time: 22 seconds
+selectCodeEditor("toppo.v", 161, 442); // cl (w, cl)
+selectCodeEditor("toppo.v", 711, 443); // cl (w, cl)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: update_compile_order -fileset sources_1 
+// Elapsed time: 134 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "sevenSeg.v", 5); // k (j, cl)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "toppo.v", 0); // k (j, cl)
+// Elapsed time: 69 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "sevenSeg.v", 5); // k (j, cl)
+// Elapsed time: 26 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, toppo (toppo.v), segments : sevenSeg (sevenSeg.v)]", 10, true); // B (F, cl) - Node
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, toppo (toppo.v), segments : sevenSeg (sevenSeg.v)]", 10); // B (F, cl)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, toppo (toppo.v), segments : sevenSeg (sevenSeg.v), C : m8_1e (m8_1e.v)]", 13, false); // B (F, cl)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, toppo (toppo.v), segments : sevenSeg (sevenSeg.v), C : m8_1e (m8_1e.v)]", 13, false, false, false, false, false, true); // B (F, cl) - Double Click
+closeView(PAResourceOtoP.PAViews_CODE, "Code"); // B
+selectCodeEditor("sevenSeg.v", 347, 106); // cl (w, cl)
+selectCodeEditor("sevenSeg.v", 281, 124); // cl (w, cl)
+selectCodeEditor("sevenSeg.v", 270, 139); // cl (w, cl)
+selectCodeEditor("sevenSeg.v", 1159, 349); // cl (w, cl)
+selectCodeEditor("sevenSeg.v", 1153, 351); // cl (w, cl)
+selectCodeEditor("sevenSeg.v", 1153, 351, false, false, false, false, true); // cl (w, cl) - Double Click
+typeControlKey((HResource) null, "sevenSeg.v", 'c'); // cl (w, cl)
+selectCodeEditor("sevenSeg.v", 1179, 389); // cl (w, cl)
+selectCodeEditor("sevenSeg.v", 1177, 413); // cl (w, cl)
+selectCodeEditor("sevenSeg.v", 1183, 439); // cl (w, cl)
+selectCodeEditor("sevenSeg.v", 1143, 472); // cl (w, cl)
+selectCodeEditor("sevenSeg.v", 1148, 508); // cl (w, cl)
+selectCodeEditor("sevenSeg.v", 1171, 545); // cl (w, cl)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 26 seconds
+selectCodeEditor("sevenSeg.v", 1160, 485); // cl (w, cl)
+selectCodeEditor("sevenSeg.v", 962, 167); // cl (w, cl)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "toppo.v", 0); // k (j, cl)
+selectCodeEditor("toppo.v", 499, 319); // cl (w, cl)
+selectCodeEditor("toppo.v", 522, 315); // cl (w, cl)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 80 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "sevenSeg.v", 5); // k (j, cl)
+// Elapsed time: 13 seconds
+selectCodeEditor("sevenSeg.v", 1209, 775); // cl (w, cl)
+selectCodeEditor("sevenSeg.v", 179, 173); // cl (w, cl)
+selectCodeEditor("sevenSeg.v", 179, 173, false, false, false, false, true); // cl (w, cl) - Double Click
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "toppo.v", 0); // k (j, cl)
+selectCodeEditor("toppo.v", 577, 538); // cl (w, cl)
+selectCodeEditor("toppo.v", 577, 538, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("toppo.v", 939, 337); // cl (w, cl)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "sevenSeg.v", 5); // k (j, cl)
+selectCodeEditor("sevenSeg.v", 1154, 571); // cl (w, cl)
+selectCodeEditor("sevenSeg.v", 1154, 571, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("sevenSeg.v", 1142, 497); // cl (w, cl)
+selectCodeEditor("sevenSeg.v", 1142, 497, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("sevenSeg.v", 1148, 537); // cl (w, cl)
+selectCodeEditor("sevenSeg.v", 1148, 537, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("sevenSeg.v", 1145, 581); // cl (w, cl)
+selectCodeEditor("sevenSeg.v", 1145, 581, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("sevenSeg.v", 1111, 615); // cl (w, cl)
+selectCodeEditor("sevenSeg.v", 1111, 615, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("sevenSeg.v", 1118, 647); // cl (w, cl)
+selectCodeEditor("sevenSeg.v", 1118, 647, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("sevenSeg.v", 1126, 670); // cl (w, cl)
+selectCodeEditor("sevenSeg.v", 1126, 670, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("sevenSeg.v", 1121, 670); // cl (w, cl)
+selectCodeEditor("sevenSeg.v", 829, 774); // cl (w, cl)
+selectCodeEditor("sevenSeg.v", 716, 730); // cl (w, cl)
+// HMemoryUtils.trashcanNow. Engine heap size: 707 MB. GUI used memory: 73 MB. Current time: 11/12/19, 1:00:15 PM PST
+// Elapsed time: 152 seconds
+selectCodeEditor("sevenSeg.v", 398, 795); // cl (w, cl)
+selectCodeEditor("sevenSeg.v", 326, 755); // cl (w, cl)
+selectCodeEditor("sevenSeg.v", 223, 786); // cl (w, cl)
+// Elapsed time: 27 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, toppo (toppo.v), segments : sevenSeg (sevenSeg.v), C : m8_1e (m8_1e.v)]", 13, false); // B (F, cl)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, toppo (toppo.v), segments : sevenSeg (sevenSeg.v), C : m8_1e (m8_1e.v)]", 13, false, false, false, false, false, true); // B (F, cl) - Double Click
+// Elapsed time: 22 seconds
+closeView(PAResourceOtoP.PAViews_CODE, "Code"); // B
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "toppo.v", 0); // k (j, cl)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "sevenSeg.v", 4); // k (j, cl)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "m8_1e.v", 5); // k (j, cl)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "sevenSeg.v", 4); // k (j, cl)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "m8_1e.v", 5); // k (j, cl)
+// Elapsed time: 14 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "sevenSeg.v", 4); // k (j, cl)
+// Elapsed time: 20 seconds
+selectCodeEditor("sevenSeg.v", 370, 875); // cl (w, cl)
+selectCodeEditor("sevenSeg.v", 336, 805); // cl (w, cl)
+selectCodeEditor("sevenSeg.v", 303, 783); // cl (w, cl)
+// WARNING: HEventQueue.dispatchEvent() is taking  927381 ms.
+// Elapsed time: 1034 seconds
+selectCodeEditor("sevenSeg.v", 337, 643); // cl (w, cl)
+selectCodeEditor("sevenSeg.v", 430, 754); // cl (w, cl)
+selectCodeEditor("sevenSeg.v", 209, 607); // cl (w, cl)
+selectCodeEditor("sevenSeg.v", 209, 607, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("sevenSeg.v", 1184, 520); // cl (w, cl)
+selectCodeEditor("sevenSeg.v", 1184, 520, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("sevenSeg.v", 1192, 537); // cl (w, cl)
+selectCodeEditor("sevenSeg.v", 1192, 537, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("sevenSeg.v", 1212, 553); // cl (w, cl)
+selectCodeEditor("sevenSeg.v", 1190, 578); // cl (w, cl)
+selectCodeEditor("sevenSeg.v", 1190, 578, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("sevenSeg.v", 1180, 607); // cl (w, cl)
+selectCodeEditor("sevenSeg.v", 1180, 607, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("sevenSeg.v", 1116, 649); // cl (w, cl)
+selectCodeEditor("sevenSeg.v", 1116, 649, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("sevenSeg.v", 1134, 680); // cl (w, cl)
+selectCodeEditor("sevenSeg.v", 1137, 683, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("sevenSeg.v", 1179, 700); // cl (w, cl)
+selectCodeEditor("sevenSeg.v", 1179, 700, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("sevenSeg.v", 1023, 632); // cl (w, cl)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+collapseTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, toppo (toppo.v), segments : sevenSeg (sevenSeg.v)]", 10); // B (F, cl)
+selectButton(PAResourceCommand.PACommandNames_ADD_SOURCES, "Sources_add_sources"); // B (f, cl)
+// Run Command: PAResourceCommand.PACommandNames_ADD_SOURCES
+// c (cl): Add Sources: addNotify
+selectButton("NEXT", "Next >"); // JButton (j, c)
+selectButton(PAResourceQtoS.SrcChooserPanel_CREATE_FILE, "Create File"); // a (E, c)
+// F (c): Create Source File: addNotify
+setText(PAResourceAtoD.CreateSrcFileDialog_FILE_NAME, "negativeSign"); // Y (Q, F)
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (F)
+dismissDialog("Create Source File"); // F (c)
+selectButton("FINISH", "Finish"); // JButton (j, c)
+// 'h' command handler elapsed time: 10 seconds
+dismissDialog("Add Sources"); // c (cl)
+// Tcl Message: close [ open {C:/Users/Julian/Documents/Work/CSE 100/Lab 6/Lab6/Lab6.srcs/sources_1/new/negativeSign.v} w ] 
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: add_files {{C:/Users/Julian/Documents/Work/CSE 100/Lab 6/Lab6/Lab6.srcs/sources_1/new/negativeSign.v}} 
+// I (cl): Define Module: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (I)
+// TclEventType: FILE_SET_CHANGE
+selectButton("OptionPane.button", "Yes"); // JButton (A, H)
+dismissDialog("Define Module"); // I (cl)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: update_compile_order -fileset sources_1 
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, negativeSign (negativeSign.v)]", 11, false); // B (F, cl)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, negativeSign (negativeSign.v)]", 11, false, false, false, false, false, true); // B (F, cl) - Double Click
+selectCodeEditor("negativeSign.v", 200, 742); // cl (w, cl)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "sevenSeg.v", 4); // k (j, cl)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "negativeSign.v", 6); // k (j, cl)
+selectCodeEditor("negativeSign.v", 135, 759); // cl (w, cl)
+selectCodeEditor("negativeSign.v", 476, 818); // cl (w, cl)
+// Elapsed time: 99 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "sevenSeg.v", 4); // k (j, cl)
+selectCodeEditor("sevenSeg.v", 871, 564); // cl (w, cl)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "negativeSign.v", 6); // k (j, cl)
+// Elapsed time: 71 seconds
+selectCodeEditor("negativeSign.v", 69, 747); // cl (w, cl)
+selectCodeEditor("negativeSign.v", 49, 784); // cl (w, cl)
+// Elapsed time: 58 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "m8_1e.v", 5); // k (j, cl)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "negativeSign.v", 6); // k (j, cl)
+// Elapsed time: 71 seconds
+selectCodeEditor("negativeSign.v", 810, 279); // cl (w, cl)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("negativeSign.v", 531, 768); // cl (w, cl)
+// Elapsed time: 12 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "sevenSeg.v", 4); // k (j, cl)
+closeView(PAResourceOtoP.PAViews_CODE, "Code"); // B
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "toppo.v", 0); // k (j, cl)
+selectCodeEditor("toppo.v", 624, 532); // cl (w, cl)
+selectCodeEditor("toppo.v", 624, 532, false, false, false, false, true); // cl (w, cl) - Double Click
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "negativeSign.v", 5); // k (j, cl)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "sevenSeg.v", 3); // k (j, cl)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "toppo.v", 0); // k (j, cl)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "sevenSeg.v", 3); // k (j, cl)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "toppo.v", 0); // k (j, cl)
+// Elapsed time: 14 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "m8_1e.v", 4); // k (j, cl)
+// Elapsed time: 33 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "toppo.v", 0); // k (j, cl)
+// WARNING: HEventQueue.dispatchEvent() is taking  1157 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  1841 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 707 MB. GUI used memory: 73 MB. Current time: 11/12/19, 3:21:37 PM PST
+// WARNING: HSwingWorker (Monitor File Timestamp Swing Worker) is taking 2653 ms to process. Increasing delay to 2000 ms.
+// WARNING: HSwingWorker (Refresh Filesets Swing Worker) is taking 6675528 ms. Increasing delay to 20026584 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 707 MB. GUI used memory: 73 MB. Current time: 11/12/19, 3:21:38 PM PST
+// Elapsed time: 6751 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "stateMachine.v", 1); // k (j, cl)
+// Elapsed time: 345 seconds
+selectCodeEditor("stateMachine.v", 1129, 153); // cl (w, cl)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 37 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "toppo.v", 0); // k (j, cl)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 41 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "stateMachine.v", 1); // k (j, cl)
+// Elapsed time: 53 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "toppo.v", 0); // k (j, cl)
+// Elapsed time: 74 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, toppo (toppo.v), funStates : stateMachine (stateMachine.v)]", 4, false); // B (F, cl)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, toppo (toppo.v), funStates : stateMachine (stateMachine.v)]", 4, false, false, false, false, false, true); // B (F, cl) - Double Click
+// Elapsed time: 16 seconds
+selectCodeEditor("stateMachine.v", 148, 667); // cl (w, cl)
+selectCodeEditor("stateMachine.v", 211, 675); // cl (w, cl)
+selectCodeEditor("stateMachine.v", 155, 676); // cl (w, cl)
+selectCodeEditor("stateMachine.v", 212, 676); // cl (w, cl)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "toppo.v", 0); // k (j, cl)
+selectCodeEditor("toppo.v", 517, 446); // cl (w, cl)
+selectCodeEditor("toppo.v", 620, 446); // cl (w, cl)
+selectCodeEditor("toppo.v", 741, 451); // cl (w, cl)
+selectCodeEditor("toppo.v", 809, 458); // cl (w, cl)
+// Elapsed time: 67 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "stateMachine.v", 1); // k (j, cl)
+// Elapsed time: 13 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "toppo.v", 0); // k (j, cl)
+// Elapsed time: 93 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "negativeSign.v", 5); // k (j, cl)
+// Elapsed time: 37 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "stateMachine.v", 1); // k (j, cl)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "negativeSign.v", 5); // k (j, cl)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 68 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "toppo.v", 0); // k (j, cl)
+// Elapsed time: 237 seconds
+selectCodeEditor("toppo.v", 814, 596); // cl (w, cl)
+// Elapsed time: 56 seconds
+selectCodeEditor("toppo.v", 419, 507); // cl (w, cl)
+selectCodeEditor("toppo.v", 419, 507, false, false, false, false, true); // cl (w, cl) - Double Click
+// Elapsed time: 24 seconds
+selectCodeEditor("toppo.v", 1031, 805); // cl (w, cl)
+selectCodeEditor("toppo.v", 1032, 513); // cl (w, cl)
+selectCodeEditor("toppo.v", 1181, 517); // cl (w, cl)
+selectCodeEditor("toppo.v", 1196, 517); // cl (w, cl)
+selectCodeEditor("toppo.v", 657, 478); // cl (w, cl)
+selectCodeEditor("toppo.v", 1189, 516); // cl (w, cl)
+selectCodeEditor("toppo.v", 824, 671); // cl (w, cl)
+selectCodeEditor("toppo.v", 1254, 508); // cl (w, cl)
+selectCodeEditor("toppo.v", 756, 677); // cl (w, cl)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 65 seconds
+selectCodeEditor("toppo.v", 341, 683); // cl (w, cl)
+selectCodeEditor("toppo.v", 314, 684); // cl (w, cl)
+// Elapsed time: 31 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "sevenSeg.v", 3); // k (j, cl)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "toppo.v", 0); // k (j, cl)
+// Elapsed time: 14 seconds
+selectCodeEditor("toppo.v", 1026, 515); // cl (w, cl)
+selectCodeEditor("toppo.v", 427, 438); // cl (w, cl)
+selectCodeEditor("toppo.v", 401, 410); // cl (w, cl)
+// Elapsed time: 38 seconds
+selectCodeEditor("toppo.v", 912, 517); // cl (w, cl)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 85 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "stateMachine.v", 1); // k (j, cl)
+selectCodeEditor("stateMachine.v", 215, 588); // cl (w, cl)
+selectCodeEditor("stateMachine.v", 214, 669); // cl (w, cl)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "toppo.v", 0); // k (j, cl)
+// Elapsed time: 82 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "sevenSeg.v", 3); // k (j, cl)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "toppo.v", 0); // k (j, cl)
+// Elapsed time: 17 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "selector.v", 2); // k (j, cl)
+// Elapsed time: 44 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "toppo.v", 0); // k (j, cl)
+// HMemoryUtils.trashcanNow. Engine heap size: 707 MB. GUI used memory: 73 MB. Current time: 11/12/19, 3:51:38 PM PST
+// Elapsed time: 231 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "selector.v", 2); // k (j, cl)
+// Elapsed time: 18 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "toppo.v", 0); // k (j, cl)
+// Elapsed time: 48 seconds
+selectCodeEditor("toppo.v", 484, 425); // cl (w, cl)
+selectCodeEditor("toppo.v", 427, 627); // cl (w, cl)
+selectCodeEditor("toppo.v", 734, 341); // cl (w, cl)
+selectCodeEditor("toppo.v", 645, 354); // cl (w, cl)
+selectCodeEditor("toppo.v", 490, 485); // cl (w, cl)
+// Elapsed time: 43 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "sevenSeg.v", 3); // k (j, cl)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "stateMachine.v", 1); // k (j, cl)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, toppo (toppo.v), segments : sevenSeg (sevenSeg.v)]", 11, true); // B (F, cl) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, toppo (toppo.v), segments : sevenSeg (sevenSeg.v), C : m8_1e (m8_1e.v)]", 14, false, false, false, false, false, true); // B (F, cl) - Double Click
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "stateMachine.v", 1); // k (j, cl)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "selector.v", 2); // k (j, cl)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "stateMachine.v", 1); // k (j, cl)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "toppo.v", 0); // k (j, cl)
+// Elapsed time: 15 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, toppo (toppo.v), segments : sevenSeg (sevenSeg.v)]", 11, true); // B (F, cl) - Node
+collapseTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, toppo (toppo.v), segments : sevenSeg (sevenSeg.v)]", 11); // B (F, cl)
+// Elapsed time: 97 seconds
+selectCodeEditor("toppo.v", 406, 617); // cl (w, cl)
+selectCodeEditor("toppo.v", 401, 641); // cl (w, cl)
+selectCodeEditor("toppo.v", 665, 601); // cl (w, cl)
+selectCodeEditor("toppo.v", 675, 475); // cl (w, cl)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "stateMachine.v", 1); // k (j, cl)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "toppo.v", 0); // k (j, cl)
+selectCodeEditor("toppo.v", 271, 485); // cl (w, cl)
+// Elapsed time: 17 seconds
+selectCodeEditor("toppo.v", 594, 640); // cl (w, cl)
+// Elapsed time: 31 seconds
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, toppo (toppo.v), flip : signChanger (signChanger.v)]", 7); // B (F, cl)
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, toppo (toppo.v), flip : signChanger (signChanger.v), cadd : carryAdder (carryAdder.v)]", 8); // B (F, cl)
+collapseTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, toppo (toppo.v), flip : signChanger (signChanger.v), cadd : carryAdder (carryAdder.v)]", 8); // B (F, cl)
+// Elapsed time: 82 seconds
+selectCodeEditor("toppo.v", 502, 479); // cl (w, cl)
+selectCodeEditor("toppo.v", 956, 503); // cl (w, cl)
+selectCodeEditor("toppo.v", 914, 477); // cl (w, cl)
+// Elapsed time: 20 seconds
+selectCodeEditor("toppo.v", 674, 480); // cl (w, cl)
+// Elapsed time: 14 seconds
+selectCodeEditor("toppo.v", 971, 706); // cl (w, cl)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+collapseTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, toppo (toppo.v)]", 1); // B (F, cl)
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Constraints]", 3); // B (F, cl)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Constraints, constrs_1, Basys3_Master.xdc]", 5, false); // B (F, cl)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Constraints, constrs_1, Basys3_Master.xdc]", 5, false, false, false, false, false, true); // B (F, cl) - Double Click
+selectCodeEditor("Basys3_Master.xdc", 1, 386); // cl (w, cl)
+selectCodeEditor("Basys3_Master.xdc", 60, 409); // cl (w, cl)
+selectCodeEditor("Basys3_Master.xdc", 42, 351); // cl (w, cl)
+// Elapsed time: 12 seconds
+selectCodeEditor("Basys3_Master.xdc", 11, 674); // cl (w, cl)
+selectCodeEditor("Basys3_Master.xdc", 54, 691); // cl (w, cl)
+// Elapsed time: 28 seconds
+selectCodeEditor("Basys3_Master.xdc", 18, 390); // cl (w, cl)
+// Elapsed time: 13 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "toppo.v", 0); // k (j, cl)
+selectCodeEditor("toppo.v", 714, 645); // cl (w, cl)
+// Elapsed time: 15 seconds
+selectCodeEditor("toppo.v", 194, 151); // cl (w, cl)
+selectCodeEditor("toppo.v", 194, 151, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("toppo.v", 443, 155); // cl (w, cl)
+selectCodeEditor("toppo.v", 443, 155, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("toppo.v", 571, 147); // cl (w, cl)
+selectCodeEditor("toppo.v", 571, 147, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("toppo.v", 345, 687); // cl (w, cl)
+// Elapsed time: 21 seconds
+selectCodeEditor("toppo.v", 650, 644); // cl (w, cl)
+selectCodeEditor("toppo.v", 650, 644, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("toppo.v", 718, 147); // cl (w, cl)
+selectCodeEditor("toppo.v", 718, 147, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("toppo.v", 778, 447); // cl (w, cl)
+// Elapsed time: 18 seconds
+selectCodeEditor("toppo.v", 552, 541); // cl (w, cl)
+selectCodeEditor("toppo.v", 664, 541); // cl (w, cl)
+// Elapsed time: 27 seconds
+selectCodeEditor("toppo.v", 193, 414); // cl (w, cl)
+// Elapsed time: 14 seconds
+selectCodeEditor("toppo.v", 655, 416); // cl (w, cl)
+selectCodeEditor("toppo.v", 581, 404); // cl (w, cl)
+// Elapsed time: 66 seconds
+selectCodeEditor("toppo.v", 393, 442); // cl (w, cl)
+selectCodeEditor("toppo.v", 1050, 515); // cl (w, cl)
+// Elapsed time: 15 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "stateMachine.v", 1); // k (j, cl)
+selectCodeEditor("stateMachine.v", 457, 873); // cl (w, cl)
+// Elapsed time: 46 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "toppo.v", 0); // k (j, cl)
+// Elapsed time: 107 seconds
+selectCodeEditor("toppo.v", 814, 547); // cl (w, cl)
+selectCodeEditor("toppo.v", 929, 536); // cl (w, cl)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("toppo.v", 657, 482); // cl (w, cl)
+// Elapsed time: 19 seconds
+selectCodeEditor("toppo.v", 562, 612); // cl (w, cl)
+selectCodeEditor("toppo.v", 711, 600); // cl (w, cl)
+selectCodeEditor("toppo.v", 887, 611); // cl (w, cl)
+selectCodeEditor("toppo.v", 771, 499); // cl (w, cl)
+selectCodeEditor("toppo.v", 608, 701); // cl (w, cl)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 23 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Basys3_Master.xdc", 6); // k (j, cl)
+selectCodeEditor("Basys3_Master.xdc", 653, 373); // cl (w, cl)
+selectCodeEditor("Basys3_Master.xdc", 774, 412); // cl (w, cl)
+selectCodeEditor("Basys3_Master.xdc", 643, 443); // cl (w, cl)
+selectCodeEditor("Basys3_Master.xdc", 781, 479); // cl (w, cl)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "toppo.v", 0); // k (j, cl)
+// Elapsed time: 104 seconds
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Program and Debug, Generate Bitstream]", 20, false); // u (O, cl)
+// Run Command: PAResourceCommand.PACommandNames_RUN_BITGEN
+// A (cl): No Implementation Results Available: addNotify
+selectButton(RDIResource.BaseDialog_YES, "Yes"); // a (A)
+// by (cl):  Resetting Runs : addNotify
+dismissDialog("No Implementation Results Available"); // A (cl)
+dismissDialog("Resetting Runs"); // by (cl)
+// by (cl):  Generate Bitstream : addNotify
+// TclEventType: RUN_LAUNCH
+// Tcl Message: launch_runs impl_1 -to_step write_bitstream 
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// Tcl Message: [Tue Nov 12 16:11:39 2019] Launched synth_1... Run output will be captured here: C:/Users/Julian/Documents/Work/CSE 100/Lab 6/Lab6/Lab6.runs/synth_1/runme.log [Tue Nov 12 16:11:39 2019] Launched impl_1... Run output will be captured here: C:/Users/Julian/Documents/Work/CSE 100/Lab 6/Lab6/Lab6.runs/impl_1/runme.log 
+dismissDialog("Generate Bitstream"); // by (cl)
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_FAILED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// ah (cl): Synthesis Failed: addNotify
+// TclEventType: RUN_STATUS_CHANGE
+// Elapsed time: 38 seconds
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (ah)
+// Run Command: PAResourceCommand.PACommandNames_MESSAGE_WINDOW
+dismissDialog("Synthesis Failed"); // ah (cl)
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, toppo (toppo.v)]", 1); // B (F, cl)
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, toppo (toppo.v), flip : signChanger (signChanger.v)]", 6); // B (F, cl)
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, toppo (toppo.v), flip : signChanger (signChanger.v), cadd : carryAdder (carryAdder.v)]", 7); // B (F, cl)
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, toppo (toppo.v), flip : signChanger (signChanger.v), cadd : carryAdder (carryAdder.v), f1 : fullAdder (fullAdder.v)]", 8); // B (F, cl)
+selectButton(PAResourceCommand.PACommandNames_ADD_SOURCES, "Sources_add_sources"); // B (f, cl)
+// Run Command: PAResourceCommand.PACommandNames_ADD_SOURCES
+// c (cl): Add Sources: addNotify
+selectButton("NEXT", "Next >"); // JButton (j, c)
+selectButton(PAResourceQtoS.SrcChooserPanel_ADD_HDL_AND_NETLIST_FILES_TO_YOUR_PROJECT, "Add Files"); // a (E, c)
+setFileChooser("C:/Users/Julian/Documents/Work/CSE 100/Lab 3/Lab 3/Lab 3.srcs/sources_1/new/m4_1e.v");
+selectButton("FINISH", "Finish"); // JButton (j, c)
+// 'h' command handler elapsed time: 9 seconds
+// TclEventType: DG_GRAPH_STALE
+dismissDialog("Add Sources"); // c (cl)
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: add_files -norecurse {{C:/Users/Julian/Documents/Work/CSE 100/Lab 3/Lab 3/Lab 3.srcs/sources_1/new/m4_1e.v}} 
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: update_compile_order -fileset sources_1 
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Program and Debug, Generate Bitstream]", 20, false); // u (O, cl)
+// Run Command: PAResourceCommand.PACommandNames_RUN_BITGEN
+// A (cl): No Implementation Results Available: addNotify
+selectButton(RDIResource.BaseDialog_YES, "Yes"); // a (A)
+// by (cl):  Resetting Runs : addNotify
+// TclEventType: RUN_MODIFY
+dismissDialog("No Implementation Results Available"); // A (cl)
+// TclEventType: RUN_RESET
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// Tcl Message: reset_run synth_1 
+dismissDialog("Resetting Runs"); // by (cl)
+// TclEventType: RUN_LAUNCH
+// by (cl):  Generate Bitstream : addNotify
+// TclEventType: RUN_LAUNCH
+// Tcl Message: launch_runs impl_1 -to_step write_bitstream 
+// TclEventType: RUN_MODIFY
+// Tcl Message: [Tue Nov 12 16:12:49 2019] Launched synth_1... Run output will be captured here: C:/Users/Julian/Documents/Work/CSE 100/Lab 6/Lab6/Lab6.runs/synth_1/runme.log [Tue Nov 12 16:12:49 2019] Launched impl_1... Run output will be captured here: C:/Users/Julian/Documents/Work/CSE 100/Lab 6/Lab6/Lab6.runs/impl_1/runme.log 
+dismissDialog("Generate Bitstream"); // by (cl)
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// ah (cl): Bitstream Generation Completed: addNotify
+// Elapsed time: 137 seconds
+selectRadioButton(PAResourceCommand.PACommandNames_OPEN_HARDWARE_MANAGER, "Open Hardware Manager"); // a (Q, ah)
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (ah)
+// Run Command: PAResourceCommand.PACommandNames_OPEN_HARDWARE_MANAGER
+// Tcl Command: 'rdi::info_commands get_hw_probes'
+// Tcl Command: 'load_features labtools'
+// TclEventType: LOAD_FEATURE
+// by (cl):  Open Hardware Manager : addNotify
+// TclEventType: HW_SESSION_OPEN
+// WARNING: HEventQueue.dispatchEvent() is taking  1180 ms.
+// Tcl Message: open_hw 
+dismissDialog("Open Hardware Manager"); // by (cl)
+// Elapsed time: 17 seconds
+selectButton(PAResourceOtoP.ProgramDebugTab_OPEN_TARGET, "Open target"); // h (cS, cl)
+selectMenuItem(PAResourceCommand.PACommandNames_AUTO_CONNECT_TARGET, "Auto Connect"); // ah (an, cl)
+// Run Command: PAResourceCommand.PACommandNames_AUTO_CONNECT_TARGET
+// by (cl):  Auto Connect : addNotify
+// Tcl Message: connect_hw_server 
+// Tcl Message: INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121 
+// Tcl Message: INFO: [Labtools 27-2222] Launching hw_server... 
+// Tcl Message: INFO: [Labtools 27-2221] Launch Output:  ****** Xilinx hw_server v2019.1   **** Build date : May 24 2019 at 15:13:31     ** Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.   
+// TclEventType: HW_SERVER_UPDATE
+// Tcl Message: connect_hw_server: Time (s): cpu = 00:00:01 ; elapsed = 00:00:06 . Memory (MB): peak = 798.922 ; gain = 4.023 
+// TclEventType: HW_TARGET_CHANGE
+// TclEventType: HW_TARGET_CLOSE
+// TclEventType: HW_DEVICE_CHANGE
+// TclEventType: HW_SYSMON_ADD
+// TclEventType: HW_TARGET_UPDATE
+// WARNING: HEventQueue.dispatchEvent() is taking  5145 ms.
+// Tcl Message: open_hw_target 
+// Tcl Message: INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210183A2838AA 
+// HMemoryUtils.trashcanNow. Engine heap size: 1,628 MB. GUI used memory: 96 MB. Current time: 11/12/19, 4:15:41 PM PST
+// Tcl Message: open_hw_target: Time (s): cpu = 00:00:06 ; elapsed = 00:00:05 . Memory (MB): peak = 1925.914 ; gain = 1126.992 
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: set_property PROGRAM.FILE {C:/Users/Julian/Documents/Work/CSE 100/Lab 6/Lab6/Lab6.runs/impl_1/toppo.bit} [get_hw_devices xc7a35t_0] 
+// Tcl Message: current_hw_device [get_hw_devices xc7a35t_0] 
+// TclEventType: HW_DEVICE_CHANGE
+// TclEventType: HW_SYSMON_CHANGE
+// Tcl Message: refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7a35t_0] 0] 
+// TclEventType: HW_DEVICE_UPDATE
+// [Engine Memory]: 1,630 MB (+954993kb) [04:16:22]
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: INFO: [Labtools 27-1435] Device xc7a35t (JTAG device index = 0) is not programmed (DONE status = 0). 
+// Elapsed time: 12 seconds
+dismissDialog("Auto Connect"); // by (cl)
+selectButton(PAResourceOtoP.ProgramDebugTab_PROGRAM_DEVICE, "Program device"); // h (cS, cl)
+// Run Command: PAResourceCommand.PACommandNames_PROGRAM_FPGA
+// bC (cl): Program Device: addNotify
+selectButton(PAResourceOtoP.ProgramFpgaDialog_PROGRAM, "Program"); // a (bC)
+// by (cl):  Program Device : addNotify
+// TclEventType: HW_DEVICE_CHANGE
+dismissDialog("Program Device"); // bC (cl)
+// Tcl Message: set_property PROBES.FILE {} [get_hw_devices xc7a35t_0] 
+// Tcl Message: set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0] 
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: set_property PROGRAM.FILE {C:/Users/Julian/Documents/Work/CSE 100/Lab 6/Lab6/Lab6.runs/impl_1/toppo.bit} [get_hw_devices xc7a35t_0] 
+// Tcl Message: program_hw_devices [get_hw_devices xc7a35t_0] 
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: INFO: [Labtools 27-3164] End of startup status: HIGH 
+// TclEventType: HW_DEVICE_CHANGE
+// TclEventType: HW_SYSMON_CHANGE
+// TclEventType: HW_DEVICE_UPDATE
+// TclEventType: HW_DEVICE_CHANGE
+// TclEventType: HW_DEVICE_PROBES_CHANGE
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// TclEventType: HW_DEVICE_PROBES_CHANGE
+// Tcl Message: refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0] 
+// Tcl Message: INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it. 
+// 'I' command handler elapsed time: 3 seconds
+dismissDialog("Program Device"); // by (cl)
+// Elapsed time: 35 seconds
+selectCodeEditor("toppo.v", 75, 436); // cl (w, cl)
+selectCodeEditor("toppo.v", 724, 487); // cl (w, cl)
+selectCodeEditor("toppo.v", 51, 489); // cl (w, cl)
+selectCodeEditor("toppo.v", 56, 483); // cl (w, cl)
+selectCodeEditor("toppo.v", 277, 557); // cl (w, cl)
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Program and Debug, Generate Bitstream]", 20, false); // u (O, cl)
+// Run Command: PAResourceCommand.PACommandNames_RUN_BITGEN
+// al (cl): Save Project: addNotify
+selectButton(PAResourceQtoS.SaveProjectUtils_SAVE, "Save"); // a (al)
+// by (cl):  Save Constraints : addNotify
+// TclEventType: DG_GRAPH_STALE
+dismissDialog("Save Project"); // al (cl)
+// TclEventType: FILE_SET_CHANGE
+selectButton("OptionPane.button", "OK"); // JButton (A, G)
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// Tcl Message: reset_run impl_1 -prev_step  
+// by (cl):  Generate Bitstream : addNotify
+// Tcl Message: launch_runs impl_1 -to_step write_bitstream 
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// Tcl Message: [Tue Nov 12 16:16:54 2019] Launched impl_1... Run output will be captured here: C:/Users/Julian/Documents/Work/CSE 100/Lab 6/Lab6/Lab6.runs/impl_1/runme.log 
+dismissDialog("Generate Bitstream"); // by (cl)
+// [GUI Memory]: 140 MB (+757kb) [04:17:35]
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// ah (cl): Bitstream Generation Completed: addNotify
+// Elapsed time: 67 seconds
+selectButton(RDIResource.BaseDialog_CANCEL, "Cancel"); // a (ah)
+dismissDialog("Bitstream Generation Completed"); // ah (cl)
+selectButton(PAResourceOtoP.ProgramDebugTab_PROGRAM_DEVICE, "Program device"); // h (cS, cl)
+// Run Command: PAResourceCommand.PACommandNames_PROGRAM_FPGA
+// bC (cl): Program Device: addNotify
+selectButton(PAResourceOtoP.ProgramFpgaDialog_PROGRAM, "Program"); // a (bC)
+// by (cl):  Program Device : addNotify
+dismissDialog("Program Device"); // bC (cl)
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: set_property PROBES.FILE {} [get_hw_devices xc7a35t_0] 
+// Tcl Message: set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0] 
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: set_property PROGRAM.FILE {C:/Users/Julian/Documents/Work/CSE 100/Lab 6/Lab6/Lab6.runs/impl_1/toppo.bit} [get_hw_devices xc7a35t_0] 
+// Tcl Message: program_hw_devices [get_hw_devices xc7a35t_0] 
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: INFO: [Labtools 27-3164] End of startup status: HIGH 
+// TclEventType: HW_DEVICE_CHANGE
+// TclEventType: HW_SYSMON_CHANGE
+// TclEventType: HW_DEVICE_UPDATE
+// TclEventType: HW_DEVICE_CHANGE
+// TclEventType: HW_DEVICE_PROBES_CHANGE
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// TclEventType: HW_DEVICE_PROBES_CHANGE
+// Tcl Message: refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0] 
+// Tcl Message: INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it. 
+// 'I' command handler elapsed time: 3 seconds
+dismissDialog("Program Device"); // by (cl)
+selectButton(PAResourceOtoP.ProgramDebugTab_PROGRAM_DEVICE, "Program device"); // h (cS, cl)
+// Run Command: PAResourceCommand.PACommandNames_PROGRAM_FPGA
+// bC (cl): Program Device: addNotify
+selectButton(PAResourceOtoP.ProgramFpgaDialog_PROGRAM, "Program"); // a (bC)
+// by (cl):  Program Device : addNotify
+// TclEventType: HW_DEVICE_CHANGE
+dismissDialog("Program Device"); // bC (cl)
+// Tcl Message: set_property PROBES.FILE {} [get_hw_devices xc7a35t_0] 
+// Tcl Message: set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0] 
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: set_property PROGRAM.FILE {C:/Users/Julian/Documents/Work/CSE 100/Lab 6/Lab6/Lab6.runs/impl_1/toppo.bit} [get_hw_devices xc7a35t_0] 
+// Tcl Message: program_hw_devices [get_hw_devices xc7a35t_0] 
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: INFO: [Labtools 27-3164] End of startup status: HIGH 
+// TclEventType: HW_DEVICE_CHANGE
+// TclEventType: HW_SYSMON_CHANGE
+// TclEventType: HW_DEVICE_UPDATE
+// TclEventType: HW_DEVICE_CHANGE
+// TclEventType: HW_DEVICE_PROBES_CHANGE
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// TclEventType: HW_DEVICE_PROBES_CHANGE
+// Tcl Message: refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0] 
+// Tcl Message: INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it. 
+// 'I' command handler elapsed time: 5 seconds
+dismissDialog("Program Device"); // by (cl)
+// Elapsed time: 14 seconds
+selectCodeEditor("toppo.v", 600, 352); // cl (w, cl)
+// Elapsed time: 24 seconds
+selectCodeEditor("toppo.v", 906, 247); // cl (w, cl)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 30 seconds
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Program and Debug, Generate Bitstream]", 20, false); // u (O, cl)
+// Run Command: PAResourceCommand.PACommandNames_RUN_BITGEN
+// A (cl): Synthesis is Out-of-date: addNotify
+selectButton(RDIResource.BaseDialog_YES, "Yes"); // a (A)
+// by (cl):  Resetting Runs : addNotify
+// TclEventType: RUN_MODIFY
+dismissDialog("Synthesis is Out-of-date"); // A (cl)
+// TclEventType: RUN_RESET
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_RESET
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// Tcl Message: reset_run synth_1 
+dismissDialog("Resetting Runs"); // by (cl)
+// TclEventType: RUN_LAUNCH
+// by (cl):  Generate Bitstream : addNotify
+// TclEventType: RUN_MODIFY
+// Tcl Message: launch_runs impl_1 -to_step write_bitstream 
+// Tcl Message: [Tue Nov 12 16:19:29 2019] Launched synth_1... Run output will be captured here: C:/Users/Julian/Documents/Work/CSE 100/Lab 6/Lab6/Lab6.runs/synth_1/runme.log [Tue Nov 12 16:19:29 2019] Launched impl_1... Run output will be captured here: C:/Users/Julian/Documents/Work/CSE 100/Lab 6/Lab6/Lab6.runs/impl_1/runme.log 
+dismissDialog("Generate Bitstream"); // by (cl)
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// Elapsed time: 56 seconds
+selectCodeEditor("toppo.v", 394, 136); // cl (w, cl)
+// TclEventType: RUN_STEP_COMPLETED
+// TclEventType: RUN_FAILED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+selectCodeEditor("toppo.v", 306, 477); // cl (w, cl)
+// ah (cl): Implementation Failed: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (ah)
+// Run Command: PAResourceCommand.PACommandNames_MESSAGE_WINDOW
+dismissDialog("Implementation Failed"); // ah (cl)
+// HMemoryUtils.trashcanNow. Engine heap size: 1,668 MB. GUI used memory: 79 MB. Current time: 11/12/19, 4:20:53 PM PST
+// Elapsed time: 13 seconds
+collapseTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Implementation, Opt Design]", 4); // ah (O, cl)
+expandTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Implementation, Opt Design]", 4); // ah (O, cl)
+collapseTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Implementation, Opt Design]", 4); // ah (O, cl)
+collapseTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Implementation]", 3); // ah (O, cl)
+expandTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Implementation]", 3); // ah (O, cl)
+expandTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Implementation, Opt Design]", 4); // ah (O, cl)
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Implementation, Opt Design, [Vivado_Tcl 4-78] Error(s) found during DRC. Opt_design not run.. ]", 9, false); // ah (O, cl)
+// Elapsed time: 16 seconds
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Implementation, Opt Design, DRC, Netlist, Net, [DRC MDRV-1] Multiple Driver Nets: Net turkeyCount/count0to3/UNCONN_OUT has multiple drivers: turkeyCount/count4to7/flip3/Q, and turkeyCount/count0to3/flip3/Q.. ]", 8, true); // ah (O, cl) - Node
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Implementation, Opt Design, DRC, Netlist, Net, [DRC MDRV-1] Multiple Driver Nets: Net turkeyCount/count0to3/UNCONN_OUT has multiple drivers: turkeyCount/count4to7/flip3/Q, and turkeyCount/count0to3/flip3/Q.. , [DRC MDRV-1] Multiple Driver Nets: Net turkeyCount/count4to7/dtc0 has multiple drivers: turkeyCount/count4to7/flip3_i_3__0/O, and turkeyCount/count4to7/flip3_i_4__0/O.. ]", 12, false, false, false, false, false, true); // ah (O, cl) - Double Click
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Implementation, Opt Design, DRC, Netlist, Net, [DRC MDRV-1] Multiple Driver Nets: Net turkeyCount/count0to3/UNCONN_OUT has multiple drivers: turkeyCount/count4to7/flip3/Q, and turkeyCount/count0to3/flip3/Q.. , [DRC MDRV-1] Multiple Driver Nets: Net turkeyCount/count4to7/dtc0 has multiple drivers: turkeyCount/count4to7/flip3_i_3__0/O, and turkeyCount/count4to7/flip3_i_4__0/O.. ]", 12, false); // ah (O, cl)
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Implementation, Opt Design, DRC, Netlist, Net, [DRC MDRV-1] Multiple Driver Nets: Net turkeyCount/count0to3/UNCONN_OUT has multiple drivers: turkeyCount/count4to7/flip3/Q, and turkeyCount/count0to3/flip3/Q.. , [DRC MDRV-1] Multiple Driver Nets: Net turkeyCount/count4to7/utc0 has multiple drivers: turkeyCount/count4to7/flip3_i_6/O, and turkeyCount/count4to7/flip3_i_5/O.. ]", 13, false); // ah (O, cl)
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Implementation, Opt Design, DRC, Netlist, Net, [DRC MDRV-1] Multiple Driver Nets: Net turkeyCount/count0to3/UNCONN_OUT has multiple drivers: turkeyCount/count4to7/flip3/Q, and turkeyCount/count0to3/flip3/Q.. , [DRC MDRV-1] Multiple Driver Nets: Net turkeyCount/count4to7/dtc0 has multiple drivers: turkeyCount/count4to7/flip3_i_3__0/O, and turkeyCount/count4to7/flip3_i_4__0/O.. ]", 12, false); // ah (O, cl)
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Implementation, Opt Design, DRC, Netlist, Net, [DRC MDRV-1] Multiple Driver Nets: Net turkeyCount/count0to3/UNCONN_OUT has multiple drivers: turkeyCount/count4to7/flip3/Q, and turkeyCount/count0to3/flip3/Q.. , [DRC MDRV-1] Multiple Driver Nets: Net turkeyCount/count0to3/UNCONN_OUT_2 has multiple drivers: turkeyCount/count0to3/flip0/Q, and turkeyCount/count4to7/flip0/Q.. ]", 11, false); // ah (O, cl)
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Implementation, Opt Design, DRC, Netlist, Net, [DRC MDRV-1] Multiple Driver Nets: Net turkeyCount/count0to3/UNCONN_OUT has multiple drivers: turkeyCount/count4to7/flip3/Q, and turkeyCount/count0to3/flip3/Q.. , [DRC MDRV-1] Multiple Driver Nets: Net turkeyCount/count0to3/UNCONN_OUT_1 has multiple drivers: turkeyCount/count4to7/flip1/Q, and turkeyCount/count0to3/flip1/Q.. ]", 10, false); // ah (O, cl)
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Implementation, Opt Design, DRC, Netlist, Net, [DRC MDRV-1] Multiple Driver Nets: Net turkeyCount/count0to3/UNCONN_OUT has multiple drivers: turkeyCount/count4to7/flip3/Q, and turkeyCount/count0to3/flip3/Q.. , [DRC MDRV-1] Multiple Driver Nets: Net turkeyCount/count4to7/dtc0 has multiple drivers: turkeyCount/count4to7/flip3_i_3__0/O, and turkeyCount/count4to7/flip3_i_4__0/O.. ]", 12, false); // ah (O, cl)
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Implementation, Opt Design, DRC, Netlist, Net, [DRC MDRV-1] Multiple Driver Nets: Net turkeyCount/count0to3/UNCONN_OUT has multiple drivers: turkeyCount/count4to7/flip3/Q, and turkeyCount/count0to3/flip3/Q.. , [DRC MDRV-1] Multiple Driver Nets: Net turkeyCount/count0to3/UNCONN_OUT_0 has multiple drivers: turkeyCount/count4to7/flip2/Q, and turkeyCount/count0to3/flip2/Q.. ]", 9, false); // ah (O, cl)
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Project Manager]", 0, true); // u (O, cl) - Node
+// Run Command: PAResourceCommand.PACommandNames_GOTO_PROJECT_MANAGER
+collapseTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, toppo (toppo.v), flip : signChanger (signChanger.v)]", 6); // B (F, cl)
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, toppo (toppo.v), turkeyCount : countUD8L (countUD8L.v)]", 5); // B (F, cl)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, toppo (toppo.v), turkeyCount : countUD8L (countUD8L.v), count0to3 : countUD4L (countUD4L.v)]", 6, false); // B (F, cl)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, toppo (toppo.v), turkeyCount : countUD8L (countUD8L.v), count0to3 : countUD4L (countUD4L.v)]", 6, false, false, false, false, false, true); // B (F, cl) - Double Click
+// Elapsed time: 10 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, toppo (toppo.v), turkeyCount : countUD8L (countUD8L.v), count4to7 : countUD4L (countUD4L.v)]", 7, false); // B (F, cl)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, toppo (toppo.v), turkeyCount : countUD8L (countUD8L.v), count4to7 : countUD4L (countUD4L.v)]", 7, false, false, false, false, false, true); // B (F, cl) - Double Click
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, toppo (toppo.v), turkeyCount : countUD8L (countUD8L.v), count0to3 : countUD4L (countUD4L.v)]", 6, false); // B (F, cl)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, toppo (toppo.v), turkeyCount : countUD8L (countUD8L.v), count0to3 : countUD4L (countUD4L.v)]", 6, false, false, false, false, false, true); // B (F, cl) - Double Click
+// Elapsed time: 16 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, toppo (toppo.v), turkeyCount : countUD8L (countUD8L.v), count4to7 : countUD4L (countUD4L.v)]", 7, false); // B (F, cl)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, toppo (toppo.v), turkeyCount : countUD8L (countUD8L.v), count4to7 : countUD4L (countUD4L.v)]", 7, false, false, false, false, false, true); // B (F, cl) - Double Click
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "toppo.v", 0); // k (j, cl)
+// Elapsed time: 60 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "stateMachine.v", 1); // k (j, cl)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "toppo.v", 0); // k (j, cl)
+// Elapsed time: 22 seconds
+selectCheckBox(PAResourceItoN.MsgView_CRITICAL_WARNINGS, (String) null, false); // g (aR, cl): FALSE
+// Elapsed time: 14 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, toppo (toppo.v), turkeyCount : countUD8L (countUD8L.v)]", 5, true); // B (F, cl) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, toppo (toppo.v), turkeyCount : countUD8L (countUD8L.v)]", 5, true, false, false, false, false, true); // B (F, cl) - Double Click - Node
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, toppo (toppo.v), turkeyCount : countUD8L (countUD8L.v)]", 5); // B (F, cl)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, toppo (toppo.v), turkeyCount : countUD8L (countUD8L.v), count0to3 : countUD4L (countUD4L.v)]", 6, false); // B (F, cl)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, toppo (toppo.v), turkeyCount : countUD8L (countUD8L.v), count0to3 : countUD4L (countUD4L.v)]", 6, false, false, false, false, false, true); // B (F, cl) - Double Click
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, toppo (toppo.v), turkeyCount : countUD8L (countUD8L.v)]", 5, true); // B (F, cl) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, toppo (toppo.v), turkeyCount : countUD8L (countUD8L.v)]", 5, true, false, false, false, false, true); // B (F, cl) - Double Click - Node
+// Elapsed time: 24 seconds
+selectCodeEditor("countUD8L.v", 863, 379); // cl (w, cl)
+// Elapsed time: 18 seconds
+selectCodeEditor("countUD8L.v", 1045, 473); // cl (w, cl)
+selectCodeEditor("countUD8L.v", 1219, 481); // cl (w, cl)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Program and Debug, Generate Bitstream]", 20, false); // u (O, cl)
+// Run Command: PAResourceCommand.PACommandNames_RUN_BITGEN
+// A (cl): Synthesis is Out-of-date: addNotify
+selectButton(RDIResource.BaseDialog_YES, "Yes"); // a (A)
+// by (cl):  Resetting Runs : addNotify
+// TclEventType: RUN_MODIFY
+dismissDialog("Synthesis is Out-of-date"); // A (cl)
+// TclEventType: RUN_RESET
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_RESET
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// Tcl Message: reset_run synth_1 
+dismissDialog("Resetting Runs"); // by (cl)
+// TclEventType: RUN_LAUNCH
+// by (cl):  Generate Bitstream : addNotify
+// TclEventType: RUN_MODIFY
+// Tcl Message: launch_runs impl_1 -to_step write_bitstream 
+// Tcl Message: [Tue Nov 12 16:25:08 2019] Launched synth_1... Run output will be captured here: C:/Users/Julian/Documents/Work/CSE 100/Lab 6/Lab6/Lab6.runs/synth_1/runme.log [Tue Nov 12 16:25:08 2019] Launched impl_1... Run output will be captured here: C:/Users/Julian/Documents/Work/CSE 100/Lab 6/Lab6/Lab6.runs/impl_1/runme.log 
+dismissDialog("Generate Bitstream"); // by (cl)
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// TclEventType: RUN_FAILED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// ah (cl): Implementation Failed: addNotify
+// Elapsed time: 63 seconds
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (ah)
+// Run Command: PAResourceCommand.PACommandNames_MESSAGE_WINDOW
+dismissDialog("Implementation Failed"); // ah (cl)
+selectCheckBox(PAResourceItoN.MsgView_CRITICAL_WARNINGS, (String) null, false); // g (aR, cl): FALSE
+// HMemoryUtils.trashcanNow. Engine heap size: 1,727 MB. GUI used memory: 81 MB. Current time: 11/12/19, 4:26:18 PM PST
+// Elapsed time: 37 seconds
+selectCodeEditor("countUD8L.v", 918, 517); // cl (w, cl)
+selectCodeEditor("countUD8L.v", 733, 533); // cl (w, cl)
+selectCodeEditor("countUD8L.v", 717, 514); // cl (w, cl)
+// [Engine Memory]: 1,727 MB (+16561kb) [04:27:42]
+selectCodeEditor("countUD8L.v", 879, 505); // cl (w, cl)
+selectCodeEditor("countUD8L.v", 826, 532); // cl (w, cl)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "toppo.v", 0); // k (j, cl)
+// Elapsed time: 104 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, toppo (toppo.v), turkeyCount : countUD8L (countUD8L.v)]", 5, true); // B (F, cl) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, toppo (toppo.v), turkeyCount : countUD8L (countUD8L.v)]", 5, true, false, false, false, false, true); // B (F, cl) - Double Click - Node
+selectCodeEditor("countUD8L.v", 388, 655); // cl (w, cl)
+selectCodeEditor("countUD8L.v", 622, 626); // cl (w, cl)
+selectCodeEditor("countUD8L.v", 481, 635); // cl (w, cl)
+// Elapsed time: 23 seconds
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Program and Debug, Generate Bitstream]", 20, false); // u (O, cl)
+// Run Command: PAResourceCommand.PACommandNames_RUN_BITGEN
+// A (cl): Synthesis is Out-of-date: addNotify
+dismissDialog("Synthesis is Out-of-date"); // A (cl)
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Program and Debug, Generate Bitstream]", 20, false); // u (O, cl)
+// Run Command: PAResourceCommand.PACommandNames_RUN_BITGEN
+// A (cl): Synthesis is Out-of-date: addNotify
+selectButton(RDIResource.BaseDialog_YES, "Yes"); // a (A)
+// by (cl):  Resetting Runs : addNotify
+// TclEventType: RUN_MODIFY
+dismissDialog("Synthesis is Out-of-date"); // A (cl)
+// TclEventType: RUN_RESET
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_RESET
+// TclEventType: RUN_STATUS_CHANGE
+// Tcl Message: reset_run synth_1 
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+dismissDialog("Resetting Runs"); // by (cl)
+// TclEventType: RUN_LAUNCH
+// by (cl):  Generate Bitstream : addNotify
+// Tcl Message: launch_runs impl_1 -to_step write_bitstream 
+// TclEventType: RUN_MODIFY
+// Tcl Message: [Tue Nov 12 16:29:44 2019] Launched synth_1... Run output will be captured here: C:/Users/Julian/Documents/Work/CSE 100/Lab 6/Lab6/Lab6.runs/synth_1/runme.log [Tue Nov 12 16:29:44 2019] Launched impl_1... Run output will be captured here: C:/Users/Julian/Documents/Work/CSE 100/Lab 6/Lab6/Lab6.runs/impl_1/runme.log 
+dismissDialog("Generate Bitstream"); // by (cl)
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// Elapsed time: 104 seconds
+selectCodeEditor("countUD8L.v", 909, 570); // cl (w, cl)
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// ah (cl): Bitstream Generation Completed: addNotify
+// Elapsed time: 47 seconds
+selectRadioButton(PAResourceCommand.PACommandNames_OPEN_HARDWARE_MANAGER, "Open Hardware Manager"); // a (Q, ah)
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (ah)
+// Run Command: PAResourceCommand.PACommandNames_OPEN_HARDWARE_MANAGER
+// Tcl Command: 'rdi::info_commands get_hw_probes'
+// WARNING: HEventQueue.dispatchEvent() is taking  1293 ms.
+dismissDialog("Bitstream Generation Completed"); // ah (cl)
+selectButton(PAResourceOtoP.ProgramDebugTab_PROGRAM_DEVICE, "Program device"); // h (cS, cl)
+// Run Command: PAResourceCommand.PACommandNames_PROGRAM_FPGA
+// bC (cl): Program Device: addNotify
+selectButton(PAResourceOtoP.ProgramFpgaDialog_PROGRAM, "Program"); // a (bC)
+// by (cl):  Program Device : addNotify
+// TclEventType: HW_DEVICE_CHANGE
+dismissDialog("Program Device"); // bC (cl)
+// Tcl Message: set_property PROBES.FILE {} [get_hw_devices xc7a35t_0] 
+// Tcl Message: set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0] 
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: set_property PROGRAM.FILE {C:/Users/Julian/Documents/Work/CSE 100/Lab 6/Lab6/Lab6.runs/impl_1/toppo.bit} [get_hw_devices xc7a35t_0] 
+// Tcl Message: program_hw_devices [get_hw_devices xc7a35t_0] 
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: INFO: [Labtools 27-3164] End of startup status: HIGH 
+// TclEventType: HW_DEVICE_CHANGE
+// TclEventType: HW_SYSMON_CHANGE
+// TclEventType: HW_DEVICE_UPDATE
+// TclEventType: HW_DEVICE_CHANGE
+// TclEventType: HW_DEVICE_PROBES_CHANGE
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// TclEventType: HW_DEVICE_PROBES_CHANGE
+// Tcl Message: refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0] 
+// Tcl Message: INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it. 
+// 'I' command handler elapsed time: 3 seconds
+dismissDialog("Program Device"); // by (cl)
+// Elapsed time: 83 seconds
+selectCodeEditor("toppo.v", 939, 539); // cl (w, cl)
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Project Manager]", 0, true); // u (O, cl) - Node
+// Run Command: PAResourceCommand.PACommandNames_GOTO_PROJECT_MANAGER
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "toppo.v", 0); // k (j, cl)
+// Elapsed time: 29 seconds
+selectCodeEditor("toppo.v", 626, 242); // cl (w, cl)
+collapseTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, toppo (toppo.v), turkeyCount : countUD8L (countUD8L.v)]", 5); // B (F, cl)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, toppo (toppo.v), sync : synchronizer (synchronizer.v)]", 3, false); // B (F, cl)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, toppo (toppo.v), sync : synchronizer (synchronizer.v)]", 3, false, false, false, false, false, true); // B (F, cl) - Double Click
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "negativeSign.v", 5); // k (j, cl)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Basys3_Master.xdc", 6); // k (j, cl)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "toppo.v", 0); // k (j, cl)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "negativeSign.v", 5); // k (j, cl)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "synchronizer.v", 9); // k (j, cl)
+selectCodeEditor("synchronizer.v", 174, 305); // cl (w, cl)
+selectCodeEditor("synchronizer.v", 53, 622); // cl (w, cl)
+selectCodeEditor("synchronizer.v", 609, 475); // cl (w, cl)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// WARNING: HTimer (FileMgr Design Graph Update Timer) is taking 439ms to process. Increasing delay to 3000 ms.
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "toppo.v", 0); // k (j, cl)
+selectCodeEditor("toppo.v", 757, 443); // cl (w, cl)
+selectCodeEditor("toppo.v", 818, 472); // cl (w, cl)
+selectCodeEditor("toppo.v", 792, 439); // cl (w, cl)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Program and Debug, Generate Bitstream]", 20, false); // u (O, cl)
+// Run Command: PAResourceCommand.PACommandNames_RUN_BITGEN
+// A (cl): Synthesis is Out-of-date: addNotify
+selectButton(RDIResource.BaseDialog_CANCEL, "Cancel"); // a (A)
+dismissDialog("Synthesis is Out-of-date"); // A (cl)
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Program and Debug, Generate Bitstream]", 20, false); // u (O, cl)
+// Run Command: PAResourceCommand.PACommandNames_RUN_BITGEN
+// A (cl): Synthesis is Out-of-date: addNotify
+selectButton(RDIResource.BaseDialog_YES, "Yes"); // a (A)
+// by (cl):  Resetting Runs : addNotify
+// TclEventType: RUN_MODIFY
+dismissDialog("Synthesis is Out-of-date"); // A (cl)
+// TclEventType: RUN_RESET
+// TclEventType: RUN_STATUS_CHANGE
+// Tcl Message: reset_run synth_1 
+// TclEventType: RUN_RESET
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+dismissDialog("Resetting Runs"); // by (cl)
+// TclEventType: RUN_LAUNCH
+// Tcl Message: launch_runs impl_1 -to_step write_bitstream 
+// by (cl):  Generate Bitstream : addNotify
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// Tcl Message: [Tue Nov 12 16:35:38 2019] Launched synth_1... Run output will be captured here: C:/Users/Julian/Documents/Work/CSE 100/Lab 6/Lab6/Lab6.runs/synth_1/runme.log [Tue Nov 12 16:35:38 2019] Launched impl_1... Run output will be captured here: C:/Users/Julian/Documents/Work/CSE 100/Lab 6/Lab6/Lab6.runs/impl_1/runme.log 
+// TclEventType: RUN_STATUS_CHANGE
+dismissDialog("Generate Bitstream"); // by (cl)
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// ah (cl): Bitstream Generation Completed: addNotify
+// Elapsed time: 187 seconds
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (ah)
+// Run Command: PAResourceCommand.PACommandNames_OPEN_HARDWARE_MANAGER
+// Tcl Command: 'rdi::info_commands get_hw_probes'
+// WARNING: HEventQueue.dispatchEvent() is taking  1162 ms.
+dismissDialog("Bitstream Generation Completed"); // ah (cl)
+selectButton(PAResourceOtoP.ProgramDebugTab_PROGRAM_DEVICE, "Program device"); // h (cS, cl)
+// Run Command: PAResourceCommand.PACommandNames_PROGRAM_FPGA
+// bC (cl): Program Device: addNotify
+selectButton(PAResourceOtoP.ProgramFpgaDialog_PROGRAM, "Program"); // a (bC)
+// by (cl):  Program Device : addNotify
+dismissDialog("Program Device"); // bC (cl)
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: set_property PROBES.FILE {} [get_hw_devices xc7a35t_0] 
+// Tcl Message: set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0] 
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: set_property PROGRAM.FILE {C:/Users/Julian/Documents/Work/CSE 100/Lab 6/Lab6/Lab6.runs/impl_1/toppo.bit} [get_hw_devices xc7a35t_0] 
+// Tcl Message: program_hw_devices [get_hw_devices xc7a35t_0] 
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: INFO: [Labtools 27-3164] End of startup status: HIGH 
+// TclEventType: HW_DEVICE_CHANGE
+// TclEventType: HW_SYSMON_CHANGE
+// TclEventType: HW_DEVICE_UPDATE
+// TclEventType: HW_DEVICE_CHANGE
+// TclEventType: HW_DEVICE_PROBES_CHANGE
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// TclEventType: HW_DEVICE_PROBES_CHANGE
+// Tcl Message: refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0] 
+// Tcl Message: INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it. 
+// 'I' command handler elapsed time: 3 seconds
+dismissDialog("Program Device"); // by (cl)
+// Elapsed time: 75 seconds
+selectCodeEditor("toppo.v", 1197, 384); // cl (w, cl)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 35 seconds
+selectButton(PAResourceOtoP.ProgramDebugTab_PROGRAM_DEVICE, "Program device"); // h (cS, cl)
+// Run Command: PAResourceCommand.PACommandNames_PROGRAM_FPGA
+// bC (cl): Program Device: addNotify
+dismissDialog("Program Device"); // bC (cl)
+// Elapsed time: 23 seconds
+selectCodeEditor("toppo.v", 719, 457); // cl (w, cl)
+selectCodeEditor("toppo.v", 719, 457, false, false, false, false, true); // cl (w, cl) - Double Click
+// Elapsed time: 11 seconds
+selectCodeEditor("toppo.v", 583, 441); // cl (w, cl)
+selectCodeEditor("toppo.v", 583, 441, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("toppo.v", 731, 441); // cl (w, cl)
+selectCodeEditor("toppo.v", 731, 441, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("toppo.v", 816, 424); // cl (w, cl)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 11 seconds
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Program and Debug, Generate Bitstream]", 20, false); // u (O, cl)
+// Run Command: PAResourceCommand.PACommandNames_RUN_BITGEN
+// A (cl): Synthesis is Out-of-date: addNotify
+selectButton(RDIResource.BaseDialog_YES, "Yes"); // a (A)
+// by (cl):  Resetting Runs : addNotify
+// TclEventType: RUN_MODIFY
+dismissDialog("Synthesis is Out-of-date"); // A (cl)
+// TclEventType: RUN_RESET
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_RESET
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// Tcl Message: reset_run synth_1 
+dismissDialog("Resetting Runs"); // by (cl)
+// by (cl):  Generate Bitstream : addNotify
+// Tcl Message: launch_runs impl_1 -to_step write_bitstream 
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_MODIFY
+// Tcl Message: [Tue Nov 12 16:41:49 2019] Launched synth_1... Run output will be captured here: C:/Users/Julian/Documents/Work/CSE 100/Lab 6/Lab6/Lab6.runs/synth_1/runme.log [Tue Nov 12 16:41:49 2019] Launched impl_1... Run output will be captured here: C:/Users/Julian/Documents/Work/CSE 100/Lab 6/Lab6/Lab6.runs/impl_1/runme.log 
+dismissDialog("Generate Bitstream"); // by (cl)
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// WARNING: HTimer (ExpRunMgr Pending Runs Timer) is taking 545ms to process. Increasing delay to 3000 ms.
+// TclEventType: RUN_STEP_COMPLETED
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// ah (cl): Bitstream Generation Completed: addNotify
+// [GUI Memory]: 150 MB (+3333kb) [04:45:50]
+// Elapsed time: 202 seconds
+selectButton(RDIResource.BaseDialog_CANCEL, "Cancel"); // a (ah)
+dismissDialog("Bitstream Generation Completed"); // ah (cl)
+selectButton(PAResourceOtoP.ProgramDebugTab_PROGRAM_DEVICE, "Program device"); // h (cS, cl)
+// Run Command: PAResourceCommand.PACommandNames_PROGRAM_FPGA
+// bC (cl): Program Device: addNotify
+selectButton(PAResourceOtoP.ProgramFpgaDialog_PROGRAM, "Program"); // a (bC)
+// by (cl):  Program Device : addNotify
+dismissDialog("Program Device"); // bC (cl)
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: set_property PROBES.FILE {} [get_hw_devices xc7a35t_0] 
+// Tcl Message: set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0] 
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: set_property PROGRAM.FILE {C:/Users/Julian/Documents/Work/CSE 100/Lab 6/Lab6/Lab6.runs/impl_1/toppo.bit} [get_hw_devices xc7a35t_0] 
+// Tcl Message: program_hw_devices [get_hw_devices xc7a35t_0] 
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: INFO: [Labtools 27-3164] End of startup status: HIGH 
+// TclEventType: HW_DEVICE_CHANGE
+// TclEventType: HW_SYSMON_CHANGE
+// TclEventType: HW_DEVICE_UPDATE
+// TclEventType: HW_DEVICE_CHANGE
+// TclEventType: HW_DEVICE_PROBES_CHANGE
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// TclEventType: HW_DEVICE_PROBES_CHANGE
+// Tcl Message: refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0] 
+// Tcl Message: INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it. 
+// 'I' command handler elapsed time: 3 seconds
+dismissDialog("Program Device"); // by (cl)
+// Elapsed time: 29 seconds
+selectCodeEditor("toppo.v", 626, 246); // cl (w, cl)
+selectCodeEditor("toppo.v", 581, 246); // cl (w, cl)
+selectCodeEditor("toppo.v", 771, 240); // cl (w, cl)
+// Elapsed time: 17 seconds
+selectCodeEditor("toppo.v", 305, 444); // cl (w, cl)
+selectCodeEditor("toppo.v", 305, 444, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("toppo.v", 322, 476); // cl (w, cl)
+selectCodeEditor("toppo.v", 322, 476, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("toppo.v", 712, 429); // cl (w, cl)
+// Elapsed time: 27 seconds
+selectCodeEditor("toppo.v", 770, 384); // cl (w, cl)
+// Elapsed time: 10 seconds
+selectCodeEditor("toppo.v", 778, 432); // cl (w, cl)
+selectCodeEditor("toppo.v", 448, 268); // cl (w, cl)
+selectCodeEditor("toppo.v", 442, 255); // cl (w, cl)
+selectCodeEditor("toppo.v", 674, 246); // cl (w, cl)
+selectCodeEditor("toppo.v", 674, 246, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("toppo.v", 831, 270); // cl (w, cl)
+selectCodeEditor("toppo.v", 831, 270, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("toppo.v", 827, 248); // cl (w, cl)
+selectCodeEditor("toppo.v", 827, 248, false, false, false, false, true); // cl (w, cl) - Double Click
+// Elapsed time: 10 seconds
+selectCodeEditor("toppo.v", 1146, 311); // cl (w, cl)
+selectCodeEditor("toppo.v", 1146, 311, false, false, false, false, true); // cl (w, cl) - Double Click
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("toppo.v", 600, 550); // cl (w, cl)
+// Elapsed time: 148 seconds
+selectCodeEditor("toppo.v", 485, 368); // cl (w, cl)
+// Elapsed time: 33 seconds
+selectCodeEditor("toppo.v", 437, 412); // cl (w, cl)
+// Elapsed time: 10 seconds
+selectCodeEditor("toppo.v", 484, 323); // cl (w, cl)
+selectCodeEditor("toppo.v", 484, 323); // cl (w, cl)
+selectCodeEditor("toppo.v", 484, 323); // cl (w, cl)
+selectCodeEditor("toppo.v", 483, 323); // cl (w, cl)
+// Elapsed time: 35 seconds
+selectCodeEditor("toppo.v", 803, 400); // cl (w, cl)
+selectCodeEditor("toppo.v", 509, 309); // cl (w, cl)
+selectCodeEditor("toppo.v", 479, 310); // cl (w, cl)
+// Elapsed time: 19 seconds
+selectCodeEditor("toppo.v", 623, 371); // cl (w, cl)
+selectCodeEditor("toppo.v", 649, 366); // cl (w, cl)
+selectCodeEditor("toppo.v", 710, 506); // cl (w, cl)
+selectCodeEditor("toppo.v", 710, 506, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("toppo.v", 685, 417); // cl (w, cl)
+// Elapsed time: 22 seconds
+selectCodeEditor("toppo.v", 420, 266); // cl (w, cl)
+selectCodeEditor("toppo.v", 524, 190); // cl (w, cl)
+selectCodeEditor("toppo.v", 521, 219); // cl (w, cl)
+// Elapsed time: 34 seconds
+selectCodeEditor("toppo.v", 451, 543); // cl (w, cl)
+selectCodeEditor("toppo.v", 530, 474); // cl (w, cl)
+selectCodeEditor("toppo.v", 530, 474, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("toppo.v", 530, 474); // cl (w, cl)
+selectCodeEditor("toppo.v", 846, 449); // cl (w, cl)
+selectCodeEditor("toppo.v", 939, 411); // cl (w, cl)
+selectCodeEditor("toppo.v", 1091, 466); // cl (w, cl)
+selectCodeEditor("toppo.v", 426, 369); // cl (w, cl)
+selectCodeEditor("toppo.v", 986, 491); // cl (w, cl)
+selectCodeEditor("toppo.v", 779, 556); // cl (w, cl)
+selectCodeEditor("toppo.v", 427, 447); // cl (w, cl)
+selectCodeEditor("toppo.v", 666, 604); // cl (w, cl)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("toppo.v", 645, 337); // cl (w, cl)
+selectCodeEditor("toppo.v", 650, 429); // cl (w, cl)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Program and Debug]", 19, true); // u (O, cl) - Node
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Program and Debug]", 19, true); // u (O, cl) - Node
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Program and Debug, Generate Bitstream]", 20, false); // u (O, cl)
+// Run Command: PAResourceCommand.PACommandNames_RUN_BITGEN
+// A (cl): Synthesis is Out-of-date: addNotify
+selectButton(RDIResource.BaseDialog_YES, "Yes"); // a (A)
+// by (cl):  Resetting Runs : addNotify
+// TclEventType: RUN_MODIFY
+dismissDialog("Synthesis is Out-of-date"); // A (cl)
+// TclEventType: RUN_RESET
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_RESET
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// Tcl Message: reset_run synth_1 
+dismissDialog("Resetting Runs"); // by (cl)
+// TclEventType: RUN_LAUNCH
+// by (cl):  Generate Bitstream : addNotify
+// TclEventType: RUN_LAUNCH
+// Tcl Message: launch_runs impl_1 -to_step write_bitstream 
+// TclEventType: RUN_MODIFY
+// Tcl Message: [Tue Nov 12 16:53:53 2019] Launched synth_1... Run output will be captured here: C:/Users/Julian/Documents/Work/CSE 100/Lab 6/Lab6/Lab6.runs/synth_1/runme.log [Tue Nov 12 16:53:53 2019] Launched impl_1... Run output will be captured here: C:/Users/Julian/Documents/Work/CSE 100/Lab 6/Lab6/Lab6.runs/impl_1/runme.log 
+dismissDialog("Generate Bitstream"); // by (cl)
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// HMemoryUtils.trashcanNow. Engine heap size: 1,727 MB. GUI used memory: 88 MB. Current time: 11/12/19, 4:56:19 PM PST
+// TclEventType: RUN_STEP_COMPLETED
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// ah (cl): Bitstream Generation Completed: addNotify
+// Elapsed time: 183 seconds
+selectButton(RDIResource.BaseDialog_CANCEL, "Cancel"); // a (ah)
+dismissDialog("Bitstream Generation Completed"); // ah (cl)
+selectButton(PAResourceOtoP.ProgramDebugTab_PROGRAM_DEVICE, "Program device"); // h (cS, cl)
+// Run Command: PAResourceCommand.PACommandNames_PROGRAM_FPGA
+// bC (cl): Program Device: addNotify
+selectButton(PAResourceOtoP.ProgramFpgaDialog_PROGRAM, "Program"); // a (bC)
+// by (cl):  Program Device : addNotify
+// TclEventType: HW_DEVICE_CHANGE
+dismissDialog("Program Device"); // bC (cl)
+// Tcl Message: set_property PROBES.FILE {} [get_hw_devices xc7a35t_0] 
+// Tcl Message: set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0] 
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: set_property PROGRAM.FILE {C:/Users/Julian/Documents/Work/CSE 100/Lab 6/Lab6/Lab6.runs/impl_1/toppo.bit} [get_hw_devices xc7a35t_0] 
+// Tcl Message: program_hw_devices [get_hw_devices xc7a35t_0] 
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: INFO: [Labtools 27-3164] End of startup status: HIGH 
+// TclEventType: HW_DEVICE_CHANGE
+// TclEventType: HW_SYSMON_CHANGE
+// TclEventType: HW_DEVICE_UPDATE
+// TclEventType: HW_DEVICE_CHANGE
+// TclEventType: HW_DEVICE_PROBES_CHANGE
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// TclEventType: HW_DEVICE_PROBES_CHANGE
+// Tcl Message: refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0] 
+// Tcl Message: INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it. 
+// 'I' command handler elapsed time: 3 seconds
+dismissDialog("Program Device"); // by (cl)
+// Elapsed time: 82 seconds
+selectCodeEditor("toppo.v", 1028, 594); // cl (w, cl)
+selectCodeEditor("toppo.v", 1028, 594, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("toppo.v", 759, 350); // cl (w, cl)
+selectCodeEditor("toppo.v", 608, 345); // cl (w, cl)
+// Elapsed time: 98 seconds
+selectCodeEditor("toppo.v", 868, 514); // cl (w, cl)
+// Elapsed time: 14 seconds
+selectCodeEditor("toppo.v", 629, 361); // cl (w, cl)
+// Elapsed time: 138 seconds
+selectCodeEditor("toppo.v", 642, 335); // cl (w, cl)
+selectCodeEditor("toppo.v", 631, 346); // cl (w, cl)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 28 seconds
+selectCodeEditor("toppo.v", 976, 313); // cl (w, cl)
+// Elapsed time: 27 seconds
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Project Manager]", 0, true); // u (O, cl) - Node
+// Run Command: PAResourceCommand.PACommandNames_GOTO_PROJECT_MANAGER
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, toppo (toppo.v), flip : signChanger (signChanger.v)]", 6); // B (F, cl)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, toppo (toppo.v), flip : signChanger (signChanger.v), choose : m2_1x8 (m2_1x8.v)]", 8, false); // B (F, cl)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, toppo (toppo.v), flip : signChanger (signChanger.v), choose : m2_1x8 (m2_1x8.v)]", 8, false, false, false, false, false, true); // B (F, cl) - Double Click
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "toppo.v", 0); // k (j, cl)
+selectCodeEditor("toppo.v", 408, 334); // cl (w, cl)
+// Elapsed time: 32 seconds
+selectCodeEditor("toppo.v", 143, 463); // cl (w, cl)
+// Elapsed time: 59 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "m2_1x8.v", 10); // k (j, cl)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "toppo.v", 0); // k (j, cl)
+// Elapsed time: 13 seconds
+selectCodeEditor("toppo.v", 644, 328); // cl (w, cl)
+selectCodeEditor("toppo.v", 644, 328, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("toppo.v", 392, 476); // cl (w, cl)
+selectCodeEditor("toppo.v", 550, 303); // cl (w, cl)
+selectCodeEditor("toppo.v", 553, 466); // cl (w, cl)
+// Elapsed time: 170 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "negativeSign.v", 5); // k (j, cl)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "toppo.v", 0); // k (j, cl)
+closeView(PAResourceOtoP.PAViews_CODE, "Code"); // B
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "m2_1x8.v", 9); // k (j, cl)
+// Elapsed time: 12 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "toppo.v", 0); // k (j, cl)
+selectCodeEditor("toppo.v", 390, 475); // cl (w, cl)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Basys3_Master.xdc", 5); // k (j, cl)
+// Elapsed time: 26 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "toppo.v", 0); // k (j, cl)
+// Elapsed time: 53 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "m2_1x8.v", 9); // k (j, cl)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "toppo.v", 0); // k (j, cl)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "m2_1x8.v", 9); // k (j, cl)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "toppo.v", 0); // k (j, cl)
+selectCodeEditor("toppo.v", 645, 106); // cl (w, cl)
+selectCodeEditor("toppo.v", 423, 114); // cl (w, cl)
+// Elapsed time: 45 seconds
+selectCodeEditor("toppo.v", 416, 109); // cl (w, cl)
+// Elapsed time: 96 seconds
+selectCodeEditor("toppo.v", 424, 191); // cl (w, cl)
+selectCodeEditor("toppo.v", 524, 230); // cl (w, cl)
+selectCodeEditor("toppo.v", 534, 253); // cl (w, cl)
+selectCodeEditor("toppo.v", 768, 259); // cl (w, cl)
+selectCodeEditor("toppo.v", 843, 259); // cl (w, cl)
+selectCodeEditor("toppo.v", 534, 241); // cl (w, cl)
+selectCodeEditor("toppo.v", 418, 249); // cl (w, cl)
+// Elapsed time: 12 seconds
+selectCodeEditor("toppo.v", 594, 248); // cl (w, cl)
+// Elapsed time: 17 seconds
+selectCodeEditor("toppo.v", 664, 247); // cl (w, cl)
+selectCodeEditor("toppo.v", 1015, 258); // cl (w, cl)
+// Elapsed time: 36 seconds
+selectCodeEditor("toppo.v", 195, 207); // cl (w, cl)
+// Elapsed time: 14 seconds
+selectCodeEditor("toppo.v", 1083, 230); // cl (w, cl)
+selectCodeEditor("toppo.v", 1089, 245); // cl (w, cl)
+// Elapsed time: 57 seconds
+selectCodeEditor("toppo.v", 794, 497); // cl (w, cl)
+// Elapsed time: 10 seconds
+selectCodeEditor("toppo.v", 1009, 413); // cl (w, cl)
+// PAResourceOtoP.PAViews_MESSAGES: Messages: close view
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 146 seconds
+selectCodeEditor("toppo.v", 194, 343); // cl (w, cl)
+selectCodeEditor("toppo.v", 194, 343, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("toppo.v", 147, 345); // cl (w, cl)
+// Elapsed time: 70 seconds
+selectCodeEditor("toppo.v", 1008, 409); // cl (w, cl)
+// Elapsed time: 80 seconds
+selectCodeEditor("toppo.v", 961, 568); // cl (w, cl)
+selectCodeEditor("toppo.v", 1220, 420); // cl (w, cl)
+selectCodeEditor("toppo.v", 1220, 420, false, false, false, false, true); // cl (w, cl) - Double Click
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 27 seconds
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Program and Debug, Generate Bitstream]", 20, false); // u (O, cl)
+// Run Command: PAResourceCommand.PACommandNames_RUN_BITGEN
+// A (cl): Synthesis is Out-of-date: addNotify
+selectButton(RDIResource.BaseDialog_YES, "Yes"); // a (A)
+// by (cl):  Resetting Runs : addNotify
+// TclEventType: RUN_MODIFY
+dismissDialog("Synthesis is Out-of-date"); // A (cl)
+// TclEventType: RUN_RESET
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_RESET
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// Tcl Message: reset_run synth_1 
+dismissDialog("Resetting Runs"); // by (cl)
+// TclEventType: RUN_LAUNCH
+// by (cl):  Generate Bitstream : addNotify
+// Tcl Message: launch_runs impl_1 -to_step write_bitstream 
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// Tcl Message: [Tue Nov 12 17:21:45 2019] Launched synth_1... Run output will be captured here: C:/Users/Julian/Documents/Work/CSE 100/Lab 6/Lab6/Lab6.runs/synth_1/runme.log [Tue Nov 12 17:21:45 2019] Launched impl_1... Run output will be captured here: C:/Users/Julian/Documents/Work/CSE 100/Lab 6/Lab6/Lab6.runs/impl_1/runme.log 
+dismissDialog("Generate Bitstream"); // by (cl)
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// TclEventType: RUN_FAILED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// ah (cl): Implementation Failed: addNotify
+// Elapsed time: 113 seconds
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (ah)
+// Run Command: PAResourceCommand.PACommandNames_MESSAGE_WINDOW
+dismissDialog("Implementation Failed"); // ah (cl)
+// Elapsed time: 14 seconds
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Implementation, Opt Design, DRC, Netlist, Net, [DRC MDRV-1] Multiple Driver Nets: Net turkeyCount/count0to3/UNCONN_OUT has multiple drivers: anodes/seg_OBUF[6]_inst_i_7/O, turkeyCount/count0to3/seg_OBUF[6]_inst_i_1/O, turkeyCount/count0to3/seg_OBUF[6]_inst_i_4/O, turkeyCount/count0to3/seg_OBUF[6]_inst_i_3/O, turkeyCount/count0to3/seg_OBUF[6]_inst_i_2/O, turkeyCount/count0to3/seg_OBUF[6]_inst_i_6/O, and turkeyCount/count0to3/seg_OBUF[6]_inst_i_5/O.. ]", 8, false); // ah (O, cl)
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Implementation, Opt Design, DRC, Netlist, Net, [DRC MDRV-1] Multiple Driver Nets: Net turkeyCount/count0to3/UNCONN_OUT has multiple drivers: anodes/seg_OBUF[6]_inst_i_7/O, turkeyCount/count0to3/seg_OBUF[6]_inst_i_1/O, turkeyCount/count0to3/seg_OBUF[6]_inst_i_4/O, turkeyCount/count0to3/seg_OBUF[6]_inst_i_3/O, turkeyCount/count0to3/seg_OBUF[6]_inst_i_2/O, turkeyCount/count0to3/seg_OBUF[6]_inst_i_6/O, and turkeyCount/count0to3/seg_OBUF[6]_inst_i_5/O.. ]", 8, false, false, false, false, false, true); // ah (O, cl) - Double Click
+// Elapsed time: 17 seconds
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, toppo (toppo.v), turkeyCount : countUD8L (countUD8L.v)]", 5); // B (F, cl)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, toppo (toppo.v), turkeyCount : countUD8L (countUD8L.v), count0to3 : countUD4L (countUD4L.v)]", 6, false); // B (F, cl)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, toppo (toppo.v), turkeyCount : countUD8L (countUD8L.v), count0to3 : countUD4L (countUD4L.v)]", 6, false, false, false, false, false, true); // B (F, cl) - Double Click
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, toppo (toppo.v), turkeyCount : countUD8L (countUD8L.v)]", 5, true); // B (F, cl) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, toppo (toppo.v), turkeyCount : countUD8L (countUD8L.v)]", 5, true, false, false, false, false, true); // B (F, cl) - Double Click - Node
+selectCodeEditor("countUD8L.v", 509, 741); // cl (w, cl)
+// Elapsed time: 10 seconds
+selectCodeEditor("countUD8L.v", 1070, 669); // cl (w, cl)
+// Elapsed time: 40 seconds
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Implementation, Opt Design, DRC, Netlist, Net, [DRC MDRV-1] Multiple Driver Nets: Net turkeyCount/count0to3/UNCONN_OUT has multiple drivers: anodes/seg_OBUF[6]_inst_i_7/O, turkeyCount/count0to3/seg_OBUF[6]_inst_i_1/O, turkeyCount/count0to3/seg_OBUF[6]_inst_i_4/O, turkeyCount/count0to3/seg_OBUF[6]_inst_i_3/O, turkeyCount/count0to3/seg_OBUF[6]_inst_i_2/O, turkeyCount/count0to3/seg_OBUF[6]_inst_i_6/O, and turkeyCount/count0to3/seg_OBUF[6]_inst_i_5/O.. ]", 8, false); // ah (O, cl)
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Implementation, Opt Design, DRC, Netlist, Net, [DRC MDRV-1] Multiple Driver Nets: Net turkeyCount/count0to3/UNCONN_OUT has multiple drivers: anodes/seg_OBUF[6]_inst_i_7/O, turkeyCount/count0to3/seg_OBUF[6]_inst_i_1/O, turkeyCount/count0to3/seg_OBUF[6]_inst_i_4/O, turkeyCount/count0to3/seg_OBUF[6]_inst_i_3/O, turkeyCount/count0to3/seg_OBUF[6]_inst_i_2/O, turkeyCount/count0to3/seg_OBUF[6]_inst_i_6/O, and turkeyCount/count0to3/seg_OBUF[6]_inst_i_5/O.. ]", 8, false, false, false, false, false, true); // ah (O, cl) - Double Click
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, toppo (toppo.v), turkeyCount : countUD8L (countUD8L.v)]", 5, true); // B (F, cl) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, toppo (toppo.v), turkeyCount : countUD8L (countUD8L.v)]", 5, true, false, false, false, false, true); // B (F, cl) - Double Click - Node
+// Elapsed time: 12 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "toppo.v", 0); // k (j, cl)
+// Elapsed time: 12 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, toppo (toppo.v), turkeyCount : countUD8L (countUD8L.v)]", 5, true); // B (F, cl) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, toppo (toppo.v), turkeyCount : countUD8L (countUD8L.v)]", 5, true, false, false, false, false, true); // B (F, cl) - Double Click - Node
+// Elapsed time: 37 seconds
+selectCodeEditor("countUD8L.v", 835, 435); // cl (w, cl)
+// HMemoryUtils.trashcanNow. Engine heap size: 1,727 MB. GUI used memory: 96 MB. Current time: 11/12/19, 5:26:19 PM PST
+// Elapsed time: 58 seconds
+selectCodeEditor("countUD8L.v", 763, 607); // cl (w, cl)
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Program and Debug, Generate Bitstream]", 20, false); // u (O, cl)
+// Run Command: PAResourceCommand.PACommandNames_RUN_BITGEN
+// A (cl): No Implementation Results Available: addNotify
+selectButton(RDIResource.BaseDialog_YES, "Yes"); // a (A)
+// by (cl):  Resetting Runs : addNotify
+// TclEventType: RUN_MODIFY
+dismissDialog("No Implementation Results Available"); // A (cl)
+// TclEventType: RUN_RESET
+// Tcl Message: reset_run impl_1 
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+dismissDialog("Resetting Runs"); // by (cl)
+// TclEventType: RUN_LAUNCH
+// Tcl Message: launch_runs impl_1 -to_step write_bitstream 
+// by (cl):  Generate Bitstream : addNotify
+// TclEventType: RUN_MODIFY
+// Tcl Message: [Tue Nov 12 17:27:21 2019] Launched impl_1... Run output will be captured here: C:/Users/Julian/Documents/Work/CSE 100/Lab 6/Lab6/Lab6.runs/impl_1/runme.log 
+dismissDialog("Generate Bitstream"); // by (cl)
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// TclEventType: RUN_FAILED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// Elapsed time: 38 seconds
+selectCodeEditor("countUD8L.v", 960, 303); // cl (w, cl)
+// ah (cl): Implementation Failed: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (ah)
+// Run Command: PAResourceCommand.PACommandNames_MESSAGE_WINDOW
+dismissDialog("Implementation Failed"); // ah (cl)
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Implementation, Opt Design, DRC, Netlist, Net, [DRC MDRV-1] Multiple Driver Nets: Net turkeyCount/count0to3/UNCONN_OUT has multiple drivers: anodes/seg_OBUF[6]_inst_i_7/O, turkeyCount/count0to3/seg_OBUF[6]_inst_i_1/O, turkeyCount/count0to3/seg_OBUF[6]_inst_i_4/O, turkeyCount/count0to3/seg_OBUF[6]_inst_i_2/O, turkeyCount/count0to3/seg_OBUF[6]_inst_i_5/O, turkeyCount/count0to3/seg_OBUF[6]_inst_i_3/O, and turkeyCount/count0to3/seg_OBUF[6]_inst_i_6/O.. ]", 8, false); // ah (O, cl)
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Implementation, Opt Design, DRC, Netlist, Net, [DRC MDRV-1] Multiple Driver Nets: Net turkeyCount/count0to3/UNCONN_OUT has multiple drivers: anodes/seg_OBUF[6]_inst_i_7/O, turkeyCount/count0to3/seg_OBUF[6]_inst_i_1/O, turkeyCount/count0to3/seg_OBUF[6]_inst_i_4/O, turkeyCount/count0to3/seg_OBUF[6]_inst_i_2/O, turkeyCount/count0to3/seg_OBUF[6]_inst_i_5/O, turkeyCount/count0to3/seg_OBUF[6]_inst_i_3/O, and turkeyCount/count0to3/seg_OBUF[6]_inst_i_6/O.. ]", 8, false, false, false, false, false, true); // ah (O, cl) - Double Click
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "toppo.v", 0); // k (j, cl)
+// Elapsed time: 49 seconds
+selectCodeEditor("toppo.v", 48, 300); // cl (w, cl)
+selectCodeEditor("toppo.v", 269, 200); // cl (w, cl)
+// Elapsed time: 58 seconds
+selectCodeEditor("toppo.v", 899, 256); // cl (w, cl)
+selectCodeEditor("toppo.v", 412, 198); // cl (w, cl)
+// Elapsed time: 56 seconds
+selectCodeEditor("toppo.v", 598, 274); // cl (w, cl)
+selectCodeEditor("toppo.v", 515, 184); // cl (w, cl)
+// Elapsed time: 79 seconds
+selectCodeEditor("toppo.v", 808, 238); // cl (w, cl)
+selectCodeEditor("toppo.v", 808, 238, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("toppo.v", 698, 214); // cl (w, cl)
+selectCodeEditor("toppo.v", 573, 151); // cl (w, cl)
+selectCodeEditor("toppo.v", 490, 182); // cl (w, cl)
+// Elapsed time: 22 seconds
+selectCodeEditor("toppo.v", 458, 185); // cl (w, cl)
+selectCodeEditor("toppo.v", 74, 312); // cl (w, cl)
+selectCodeEditor("toppo.v", 469, 303); // cl (w, cl)
+selectCodeEditor("toppo.v", 630, 309); // cl (w, cl)
+selectCodeEditor("toppo.v", 1048, 321); // cl (w, cl)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 23 seconds
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Program and Debug, Generate Bitstream]", 20, false); // u (O, cl)
+// Run Command: PAResourceCommand.PACommandNames_RUN_BITGEN
+// A (cl): Synthesis is Out-of-date: addNotify
+selectButton(RDIResource.BaseDialog_YES, "Yes"); // a (A)
+// by (cl):  Resetting Runs : addNotify
+// TclEventType: RUN_MODIFY
+dismissDialog("Synthesis is Out-of-date"); // A (cl)
+// TclEventType: RUN_RESET
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_RESET
+// Tcl Message: reset_run synth_1 
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+dismissDialog("Resetting Runs"); // by (cl)
+// TclEventType: RUN_LAUNCH
+// by (cl):  Generate Bitstream : addNotify
+// TclEventType: RUN_LAUNCH
+// Tcl Message: launch_runs impl_1 -to_step write_bitstream 
+// TclEventType: RUN_MODIFY
+// Tcl Message: [Tue Nov 12 17:33:33 2019] Launched synth_1... Run output will be captured here: C:/Users/Julian/Documents/Work/CSE 100/Lab 6/Lab6/Lab6.runs/synth_1/runme.log [Tue Nov 12 17:33:33 2019] Launched impl_1... Run output will be captured here: C:/Users/Julian/Documents/Work/CSE 100/Lab 6/Lab6/Lab6.runs/impl_1/runme.log 
+// TclEventType: RUN_STATUS_CHANGE
+dismissDialog("Generate Bitstream"); // by (cl)
+// Elapsed time: 42 seconds
+selectCodeEditor("toppo.v", 814, 304); // cl (w, cl)
+selectCodeEditor("toppo.v", 1020, 326); // cl (w, cl)
+selectCodeEditor("toppo.v", 1196, 306); // cl (w, cl)
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// Elapsed time: 36 seconds
+selectCodeEditor("toppo.v", 568, 226); // cl (w, cl)
+// TclEventType: RUN_STEP_COMPLETED
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// ah (cl): Bitstream Generation Completed: addNotify
+// Elapsed time: 102 seconds
+selectRadioButton(PAResourceCommand.PACommandNames_WRITE_CONFIG_MEMORY_FILE, "Generate Memory Configuration File"); // a (Q, ah)
+selectRadioButton(PAResourceCommand.PACommandNames_OPEN_HARDWARE_MANAGER, "Open Hardware Manager"); // a (Q, ah)
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (ah)
+// Run Command: PAResourceCommand.PACommandNames_OPEN_HARDWARE_MANAGER
+// Tcl Command: 'rdi::info_commands get_hw_probes'
+dismissDialog("Bitstream Generation Completed"); // ah (cl)
+selectButton(PAResourceOtoP.ProgramDebugTab_PROGRAM_DEVICE, "Program device"); // h (cS, cl)
+// Run Command: PAResourceCommand.PACommandNames_PROGRAM_FPGA
+// bC (cl): Program Device: addNotify
+selectButton(PAResourceOtoP.ProgramFpgaDialog_PROGRAM, "Program"); // a (bC)
+// by (cl):  Program Device : addNotify
+dismissDialog("Program Device"); // bC (cl)
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: set_property PROBES.FILE {} [get_hw_devices xc7a35t_0] 
+// Tcl Message: set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0] 
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: set_property PROGRAM.FILE {C:/Users/Julian/Documents/Work/CSE 100/Lab 6/Lab6/Lab6.runs/impl_1/toppo.bit} [get_hw_devices xc7a35t_0] 
+// Tcl Message: program_hw_devices [get_hw_devices xc7a35t_0] 
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: INFO: [Labtools 27-3164] End of startup status: HIGH 
+// TclEventType: HW_DEVICE_CHANGE
+// TclEventType: HW_SYSMON_CHANGE
+// TclEventType: HW_DEVICE_UPDATE
+// TclEventType: HW_DEVICE_CHANGE
+// TclEventType: HW_DEVICE_PROBES_CHANGE
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// TclEventType: HW_DEVICE_PROBES_CHANGE
+// Tcl Message: refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0] 
+// Tcl Message: INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it. 
+// 'I' command handler elapsed time: 3 seconds
+dismissDialog("Program Device"); // by (cl)
+// Elapsed time: 50 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "sevenSeg.v", 3); // k (j, cl)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "toppo.v", 0); // k (j, cl)
+selectCodeEditor("toppo.v", 1191, 416); // cl (w, cl)
+selectCodeEditor("toppo.v", 759, 415); // cl (w, cl)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: HW_TARGET_NEEDS_CLOSE
+// TclEventType: HW_TARGET_CLOSE
+// TclEventType: HW_SYSMON_DELETE
+// TclEventType: HW_TARGET_NEEDS_CLOSE
+// TclEventType: HW_SYSMON_DELETE
+// TclEventType: HW_TARGET_UPDATE
+// TclEventType: HW_TARGET_NEEDS_CLOSE
+// TclEventType: HW_TARGET_UPDATE
+// TclEventType: DEBUG_PROBE_DELETE
+// Tcl Message: ERROR: [Labtoolstcl 44-513] HW Target shutdown. Closing target: localhost:3121/xilinx_tcf/Digilent/210183A2838AA 
+// n (cl): Close Hardware Target: addNotify
+// TclEventType: HW_SERVER_UPDATE
+// WARNING: HEventQueue.dispatchEvent() is taking  450806 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  12091979 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 1,727 MB. GUI used memory: 91 MB. Current time: 11/12/19, 9:07:07 PM PST
+// WARNING: HSwingWorker (Update Runs Swing Worker) is taking 1876 ms. Increasing delay to 3000 ms.
+// Elapsed time: 12579 seconds
+selectButton(PAResourceAtoD.CmdMsgDialog_OK, "OK"); // f (n)
+dismissDialog("Close Hardware Target"); // n (cl)
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Synthesis, [Synth 8-6859] multi-driven net on pin C:/Users/Julian/Documents/Work/CSE 100/Lab 3/Lab 3/Lab 3.srcs/sources_1/new/fullAdder.v-36.10 with 1st driver pin 'fullAdder:/e' [C:/Users/Julian/Documents/Work/CSE 100/Lab 3/Lab 3/Lab 3.srcs/sources_1/new/fullAdder.v:36]. ]", 4, true); // ah (O, cl) - Node
