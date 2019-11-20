@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="impl_1" LaunchPart="xc7a35tcpg236-1" LaunchTime="1573608812">
+<GenRun Id="impl_1" LaunchPart="xc7a35tcpg236-1" LaunchTime="1573678909">
   <File Type="BITSTR-BMM" Name="toppo_bd.bmm"/>
   <File Type="OPT-METHODOLOGY-DRC" Name="toppo_methodology_drc_opted.rpt"/>
   <File Type="INIT-TIMING" Name="toppo_timing_summary_init.rpt"/>

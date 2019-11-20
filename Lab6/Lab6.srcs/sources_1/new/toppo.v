@@ -54,14 +54,14 @@ module toppo(
     wire [7:0] display; 
     signChanger flip (.sign(negative), .b(turkeyOut), .d(display));
     
-    //timer!
-    wire [3:0] timeOut;
-    countUD4L timer (.clock(clock), .Up(qring[3] & ~timeOut[2]), .LD(reset), .d(8'h00), .q(timeOut));
-    
     //quarter second counter
     wire [3:0] qring;
     ringCounter quarter (.clock(clock), .avanti(qsec), .out(qring));
-
+    
+    //timer!
+    wire [3:0] timeOut;
+    countUD4L timer (.clock(clock), .Up(qsec & qring[2] & ~timeOut[2] & showtime), .Dw(1'b0), .LD(reset & showtime), .d(4'h0), .q(timeOut));
+   
     //display logic
     wire [3:0] ringOut;
     ringCounter anodes (.clock(clock), .avanti(digsel), .out(ringOut));
@@ -72,7 +72,7 @@ module toppo(
     sevenSeg segments (.n(selectOut), .enable(1'b1), .s(segOut));
     //negative sign logic
     wire [7:0] negsign;
-    m2_1x8 negativeSign (.in0(segOut), .in1({1'b1, 1'b0, 1'b1, 1'b1, 1'b1, 1'b1, 1'b1}), .sel(negative & ringOut[2]), .o(seg[6:0])); 
+    m2_1x8 negativeSign (.in0(segOut), .in1({1'b0, 1'b1, 1'b1, 1'b1, 1'b1, 1'b1, 1'b1}), .sel(negative & ringOut[2]), .o(seg[6:0])); 
     //assign seg[6:0] = {6{negative}} & {6{selectOut[2]}} & ({1'b1, 1'b1, 1'b1, 1'b1, 1'b1, 1'b1, 1'b1, 1'b0});
     //anode stuff
     wire an3;

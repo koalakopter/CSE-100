@@ -1,0 +1,13 @@
+0.6
+2019.1
+May 24 2019
+15:06:07
+D:/Users/Julian/Documents/UCSC Year THREE/CSE 100/Lab 7/Lab 7/Lab 7.sim/sim_1/behav/xsim/glbl.v,1558713910,verilog,,,,glbl,,,,,,,,
+D:/Users/Julian/Documents/UCSC Year THREE/CSE 100/Lab 7/Lab 7/Lab 7.srcs/sources_1/new/VGA_Control.v,1574234037,verilog,,D:/Users/Julian/Documents/UCSC Year THREE/CSE 100/Lab 7/Lab 7/Lab 7.srcs/sources_1/new/countUD16L.v,,VGA_Control,,,,,,,,
+D:/Users/Julian/Documents/UCSC Year THREE/CSE 100/Lab 7/Lab 7/Lab 7.srcs/sources_1/new/countUD16L.v,1572389576,verilog,,D:/Users/Julian/Documents/UCSC Year THREE/CSE 100/Lab 7/Lab 7/Lab 7.srcs/sources_1/new/countUD3L.v,,countUD16L,,,,,,,,
+D:/Users/Julian/Documents/UCSC Year THREE/CSE 100/Lab 7/Lab 7/Lab 7.srcs/sources_1/new/countUD3L.v,1572309049,verilog,,D:/Users/Julian/Documents/UCSC Year THREE/CSE 100/Lab 7/Lab 7/Lab 7.srcs/sources_1/new/countUD5L.v,,countUD3L,,,,,,,,
+D:/Users/Julian/Documents/UCSC Year THREE/CSE 100/Lab 7/Lab 7/Lab 7.srcs/sources_1/new/countUD5L.v,1572221087,verilog,,D:/Users/Julian/Documents/UCSC Year THREE/CSE 100/Lab 7/Lab 7/lab7_clks.v,,countUD5L,,,,,,,,
+D:/Users/Julian/Documents/UCSC Year THREE/CSE 100/Lab 7/Lab 7/Lab 7.srcs/sources_1/new/theWall.v,1574235852,verilog,,D:/Users/Julian/Documents/UCSC Year THREE/CSE 100/Lab 7/Lab 7/Lab 7.srcs/sources_1/new/toppo.v,,theWall,,,,,,,,
+D:/Users/Julian/Documents/UCSC Year THREE/CSE 100/Lab 7/Lab 7/Lab 7.srcs/sources_1/new/toppo.v,1574235873,verilog,,D:/Users/Julian/Documents/UCSC Year THREE/CSE 100/Lab 7/Lab 7/test2.v,,toppo,,,,,,,,
+D:/Users/Julian/Documents/UCSC Year THREE/CSE 100/Lab 7/Lab 7/lab7_clks.v,1574207197,verilog,,D:/Users/Julian/Documents/UCSC Year THREE/CSE 100/Lab 7/Lab 7/Lab 7.srcs/sources_1/new/theWall.v,,CB4CE_MXILINX_clkcntrl4;FTCE_MXILINX_clkcntrl4;clk_wiz_0;clkcntrl4;lab7_clks,,,,,,,,
+D:/Users/Julian/Documents/UCSC Year THREE/CSE 100/Lab 7/Lab 7/test2.v,1574227333,verilog,,,,check_the_rgb_signals;check_the_sync_signals;testSyncs,,,,,,,,

@@ -2,20 +2,166 @@
 # Vivado v2019.1 (64-bit)
 # SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
 # IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
-# Start of session at: Tue Nov 12 21:11:39 2019
-# Process ID: 10780
-# Current directory: D:/Users/Julian/Documents/UCSC Year THREE/CSE 100/Lab 6/Lab6
-# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent18696 D:\Users\Julian\Documents\UCSC Year THREE\CSE 100\Lab 6\Lab6\Lab6.xpr
-# Log file: D:/Users/Julian/Documents/UCSC Year THREE/CSE 100/Lab 6/Lab6/vivado.log
-# Journal file: D:/Users/Julian/Documents/UCSC Year THREE/CSE 100/Lab 6/Lab6\vivado.jou
+# Start of session at: Wed Nov 13 10:32:20 2019
+# Process ID: 7416
+# Current directory: C:/Users/Julian/Documents/Work/CSE 100/Lab 6/Lab6
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent18168 C:\Users\Julian\Documents\Work\CSE 100\Lab 6\Lab6\Lab6.xpr
+# Log file: C:/Users/Julian/Documents/Work/CSE 100/Lab 6/Lab6/vivado.log
+# Journal file: C:/Users/Julian/Documents/Work/CSE 100/Lab 6/Lab6\vivado.jou
 #-----------------------------------------------------------
 start_gui
-open_project {D:/Users/Julian/Documents/UCSC Year THREE/CSE 100/Lab 6/Lab6/Lab6.xpr}
-INFO: [Project 1-313] Project file moved from 'C:/Users/Julian/Documents/Work/CSE 100/Lab 6/Lab6' since last save.
+open_project {C:/Users/Julian/Documents/Work/CSE 100/Lab 6/Lab6/Lab6.xpr}
 Scanning sources...
 Finished scanning sources
 INFO: [IP_Flow 19-234] Refreshing IP repositories
 INFO: [IP_Flow 19-1704] No user IP repositories specified
-INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/Xilinx/Vivado/2019.1/data/ip'.
-open_project: Time (s): cpu = 00:00:18 ; elapsed = 00:00:07 . Memory (MB): peak = 794.320 ; gain = 124.191
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2019.1/data/ip'.
+open_project: Time (s): cpu = 00:00:17 ; elapsed = 00:00:15 . Memory (MB): peak = 756.910 ; gain = 139.176
 update_compile_order -fileset sources_1
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream
+[Wed Nov 13 10:33:16 2019] Launched synth_1...
+Run output will be captured here: C:/Users/Julian/Documents/Work/CSE 100/Lab 6/Lab6/Lab6.runs/synth_1/runme.log
+[Wed Nov 13 10:33:16 2019] Launched impl_1...
+Run output will be captured here: C:/Users/Julian/Documents/Work/CSE 100/Lab 6/Lab6/Lab6.runs/impl_1/runme.log
+open_hw
+connect_hw_server
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+INFO: [Labtools 27-2222] Launching hw_server...
+INFO: [Labtools 27-2221] Launch Output:
+
+****** Xilinx hw_server v2019.1
+  **** Build date : May 24 2019 at 15:13:31
+    ** Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+
+
+connect_hw_server: Time (s): cpu = 00:00:01 ; elapsed = 00:00:05 . Memory (MB): peak = 773.234 ; gain = 1.660
+open_hw_target
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210183A2829DA
+open_hw_target: Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1886.320 ; gain = 1113.086
+set_property PROGRAM.FILE {C:/Users/Julian/Documents/Work/CSE 100/Lab 6/Lab6/Lab6.runs/impl_1/toppo.bit} [get_hw_devices xc7a35t_0]
+current_hw_device [get_hw_devices xc7a35t_0]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7a35t_0] 0]
+INFO: [Labtools 27-1435] Device xc7a35t (JTAG device index = 0) is not programmed (DONE status = 0).
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/Julian/Documents/Work/CSE 100/Lab 6/Lab6/Lab6.runs/impl_1/toppo.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream
+[Wed Nov 13 10:39:21 2019] Launched synth_1...
+Run output will be captured here: C:/Users/Julian/Documents/Work/CSE 100/Lab 6/Lab6/Lab6.runs/synth_1/runme.log
+[Wed Nov 13 10:39:21 2019] Launched impl_1...
+Run output will be captured here: C:/Users/Julian/Documents/Work/CSE 100/Lab 6/Lab6/Lab6.runs/impl_1/runme.log
+launch_runs: Time (s): cpu = 00:00:01 ; elapsed = 00:00:08 . Memory (MB): peak = 1925.742 ; gain = 0.480
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/Julian/Documents/Work/CSE 100/Lab 6/Lab6/Lab6.runs/impl_1/toppo.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream
+[Wed Nov 13 10:48:42 2019] Launched synth_1...
+Run output will be captured here: C:/Users/Julian/Documents/Work/CSE 100/Lab 6/Lab6/Lab6.runs/synth_1/runme.log
+[Wed Nov 13 10:48:42 2019] Launched impl_1...
+Run output will be captured here: C:/Users/Julian/Documents/Work/CSE 100/Lab 6/Lab6/Lab6.runs/impl_1/runme.log
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/Julian/Documents/Work/CSE 100/Lab 6/Lab6/Lab6.runs/impl_1/toppo.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream
+[Wed Nov 13 11:00:03 2019] Launched synth_1...
+Run output will be captured here: C:/Users/Julian/Documents/Work/CSE 100/Lab 6/Lab6/Lab6.runs/synth_1/runme.log
+[Wed Nov 13 11:00:03 2019] Launched impl_1...
+Run output will be captured here: C:/Users/Julian/Documents/Work/CSE 100/Lab 6/Lab6/Lab6.runs/impl_1/runme.log
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/Julian/Documents/Work/CSE 100/Lab 6/Lab6/Lab6.runs/impl_1/toppo.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+ERROR: [Labtoolstcl 44-513] HW Target shutdown. Closing target: localhost:3121/xilinx_tcf/Digilent/210183A2829DA
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream
+[Wed Nov 13 12:47:49 2019] Launched synth_1...
+Run output will be captured here: C:/Users/Julian/Documents/Work/CSE 100/Lab 6/Lab6/Lab6.runs/synth_1/runme.log
+[Wed Nov 13 12:47:49 2019] Launched impl_1...
+Run output will be captured here: C:/Users/Julian/Documents/Work/CSE 100/Lab 6/Lab6/Lab6.runs/impl_1/runme.log
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210183A2829DA
+INFO: [Labtools 27-1435] Device xc7a35t (JTAG device index = 0) is not programmed (DONE status = 0).
+WARNING: [Labtoolstcl 44-129] No matching hw_ila_data was found.
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/Julian/Documents/Work/CSE 100/Lab 6/Lab6/Lab6.runs/impl_1/toppo.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream
+[Wed Nov 13 12:55:19 2019] Launched synth_1...
+Run output will be captured here: C:/Users/Julian/Documents/Work/CSE 100/Lab 6/Lab6/Lab6.runs/synth_1/runme.log
+[Wed Nov 13 12:55:19 2019] Launched impl_1...
+Run output will be captured here: C:/Users/Julian/Documents/Work/CSE 100/Lab 6/Lab6/Lab6.runs/impl_1/runme.log
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/Julian/Documents/Work/CSE 100/Lab 6/Lab6/Lab6.runs/impl_1/toppo.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream
+[Wed Nov 13 13:01:50 2019] Launched synth_1...
+Run output will be captured here: C:/Users/Julian/Documents/Work/CSE 100/Lab 6/Lab6/Lab6.runs/synth_1/runme.log
+[Wed Nov 13 13:01:50 2019] Launched impl_1...
+Run output will be captured here: C:/Users/Julian/Documents/Work/CSE 100/Lab 6/Lab6/Lab6.runs/impl_1/runme.log
+open_run impl_1
+INFO: [Device 21-403] Loading part xc7a35tcpg236-1
+INFO: [Common 17-41] Interrupt caught. Command should exit soon.
+INFO: [Netlist 29-17] Analyzing 2 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2019.1
+open_run: Time (s): cpu = 00:00:34 ; elapsed = 00:00:53 . Memory (MB): peak = 2189.207 ; gain = 219.633
+INFO: [Common 17-344] 'open_run' was cancelled
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/Julian/Documents/Work/CSE 100/Lab 6/Lab6/Lab6.runs/impl_1/toppo.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+ERROR: [Labtoolstcl 44-513] HW Target shutdown. Closing target: localhost:3121/xilinx_tcf/Digilent/210183A2829DA
+archive_project {C:/Users/Julian/Documents/Work/CSE 100/Lab 6/Lab6.xpr.zip} -temp_dir {C:/Users/Julian/Documents/Work/CSE 100/Lab 6/Lab6/.Xil/Vivado-7416-JULIAN-SURFACE} -force -include_local_ip_cache -include_config_settings
+INFO: [Coretcl 2-137] starting archive...
+INFO: [Coretcl 2-1499] Saving project copy to temporary location 'C:/Users/Julian/Documents/Work/CSE 100/Lab 6/Lab6/.Xil/Vivado-7416-JULIAN-SURFACE' for archiving project
+Scanning sources...
+Finished scanning sources
+INFO: [Coretcl 2-1211] Creating project copy for archival...
+INFO: [ProjectBase 1-495] The host OS only allows 260 characters in a normal path. The project is stored in a path with more than 80 characters. If you experience any problem with archiving the project, please consider setting environment variable $TEMP to a shorter path.
+Current project path is 'C:/Users/Julian/Documents/Work/CSE 100/Lab 6/Lab6/.Xil/Vivado-7416-JULIAN-SURFACE/PrjAr/_X_'.
+INFO: [Coretcl 2-1213] Including run results for 'synth_1'
+INFO: [Coretcl 2-1213] Including run results for 'impl_1'
+INFO: [Coretcl 2-1212] Importing remotely added design sources and verilog include files (if any)...
+INFO: [filemgmt 20-348] Importing the appropriate files for fileset: 'constrs_1'
+INFO: [filemgmt 20-334] All file(s) are already imported in fileset: 'sim_1'
+INFO: [filemgmt 20-348] Importing the appropriate files for fileset: 'sim_1'
+INFO: [filemgmt 20-348] Importing the appropriate files for fileset: 'sources_1'
+INFO: [Coretcl 2-1209] Adding archive summary file to the project...
+INFO: [Coretcl 2-1214] Preparing project files for archive...
+INFO: [Coretcl 2-1210] Compressing project files and data...
+INFO: [Coretcl 2-1215] Project archived (C:/Users/Julian/Documents/Work/CSE 100/Lab 6/Lab6.xpr.zip)
+INFO: [Coretcl 2-1216] To view the archive summary log in GUI, double click on 'Design Sources->Text->archive_project_summary.txt', or open this file from the archived project directory.
+archive_project: Time (s): cpu = 00:00:07 ; elapsed = 00:00:14 . Memory (MB): peak = 2204.023 ; gain = 13.859
+exit
+INFO: [Common 17-206] Exiting Vivado at Thu Nov 14 20:07:30 2019...
