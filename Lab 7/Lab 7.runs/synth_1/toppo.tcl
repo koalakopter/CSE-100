@@ -18,6 +18,8 @@ proc create_report { reportName command } {
   }
 }
 set_param chipscope.maxJobs 1
+set_param xicom.use_bs_reader 1
+set_msg_config -id {Common 17-41} -limit 10000000
 create_project -in_memory -part xc7a35tcpg236-1
 
 set_param project.singleFileAddWarning.threshold 0
@@ -32,10 +34,22 @@ set_property ip_output_repo {c:/Users/Julian/Documents/Work/CSE 100/Lab 7/Lab 7.
 set_property ip_cache_permissions {read write} [current_project]
 read_verilog -library xil_defaultlib {
   {C:/Users/Julian/Documents/Work/CSE 100/Lab 7/Lab 7.srcs/sources_1/new/VGA_Control.v}
-  {C:/Users/Julian/Documents/Work/CSE 100/Lab 4/Lab 4/Lab 4.srcs/sources_1/new/countUD16L.v}
-  {C:/Users/Julian/Documents/Work/CSE 100/Lab 4/Lab 4/Lab 4.srcs/sources_1/new/countUD3L.v}
-  {C:/Users/Julian/Documents/Work/CSE 100/Lab 4/Lab 4/Lab 4.srcs/sources_1/new/countUD5L.v}
+  {C:/Users/Julian/Documents/Work/CSE 100/Lab 7/Lab 7.srcs/sources_1/new/birb.v}
+  {C:/Users/Julian/Documents/Work/CSE 100/Lab 7/Lab 7.srcs/sources_1/new/birb2.v}
+  {C:/Users/Julian/Documents/Work/CSE 100/Lab 7/Lab 7.srcs/sources_1/new/countUD16L.v}
+  {C:/Users/Julian/Documents/Work/CSE 100/Lab 7/Lab 7.srcs/sources_1/new/countUD3L.v}
+  {C:/Users/Julian/Documents/Work/CSE 100/Lab 7/Lab 7.srcs/sources_1/new/countUD5L.v}
+  {C:/Users/Julian/Documents/Work/CSE 100/Lab 7/Lab 7.srcs/sources_1/new/edgeDetector.v}
   {C:/Users/Julian/Documents/Work/CSE 100/Lab 7/lab7_clks.v}
+  {C:/Users/Julian/Documents/Work/CSE 100/Lab 3/Lab 3/Lab 3.srcs/sources_1/new/m2_1x8.v}
+  {C:/Users/Julian/Documents/Work/CSE 100/Lab 3/Lab 3/Lab 3.srcs/sources_1/new/m8_1e.v}
+  {C:/Users/Julian/Documents/Work/CSE 100/Lab 7/Lab 7.srcs/sources_1/new/net.v}
+  {C:/Users/Julian/Documents/Work/CSE 100/Lab 7/Lab 7.srcs/sources_1/new/netnet.v}
+  {C:/Users/Julian/Documents/Work/CSE 100/Lab 7/Lab 7.srcs/sources_1/new/ringCount.v}
+  {C:/Users/Julian/Documents/Work/CSE 100/Lab 7/Lab 7.srcs/sources_1/new/selector.v}
+  {C:/Users/Julian/Documents/Work/CSE 100/Lab 3/Lab 3/Lab 3.srcs/sources_1/new/sevenSeg.v}
+  {C:/Users/Julian/Documents/Work/CSE 100/Lab 5/Lab 5/Lab 5.srcs/sources_1/new/synchronizer.v}
+  {C:/Users/Julian/Documents/Work/CSE 100/Lab 7/Lab 7.srcs/sources_1/new/theWall.v}
   {C:/Users/Julian/Documents/Work/CSE 100/Lab 7/Lab 7.srcs/sources_1/new/toppo.v}
 }
 # Mark all dcp files as not used in implementation to prevent them from being

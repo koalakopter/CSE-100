@@ -1,0 +1,1081 @@
+/*
+
+Xilinx Vivado v2019.1 (64-bit) [Major: 2019, Minor: 1]
+SW Build: 2552052 on Fri May 24 14:49:42 MDT 2019
+IP Build: 2548770 on Fri May 24 18:01:18 MDT 2019
+
+Process ID (PID): 19252
+License: Customer
+
+Current time: 	Wed Nov 20 19:36:03 PST 2019
+Time zone: 	Pacific Standard Time (America/Los_Angeles)
+
+OS: Windows 10
+OS Version: 10.0
+OS Architecture: amd64
+Available processors (cores): 8
+
+Screen size: 1920x1080
+Screen resolution (DPI): 110
+Available screens: 1
+Available disk space: 108 GB
+Default font: family=Segoe UI,name=Segoe UI,style=plain,size=13
+
+Java version: 	9.0.4 64-bit
+Java home: 	D:/Xilinx/Vivado/2019.1/tps/win64/jre9.0.4
+Java executable location: 	D:/Xilinx/Vivado/2019.1/tps/win64/jre9.0.4/bin/java.exe
+Java initial memory (-Xms): 	128 MB
+Java maximum memory (-Xmx):	 3 GB
+
+
+User name: 	OWNER
+User home directory: C:/Users/OWNER
+User working directory: D:/Users/Julian/Documents/UCSC Year THREE/CSE 100/Lab 7/Lab 7
+User country: 	US
+User language: 	en
+User locale: 	en_US
+
+RDI_BASEROOT: D:/Xilinx/Vivado
+HDI_APPROOT: D:/Xilinx/Vivado/2019.1
+RDI_DATADIR: D:/Xilinx/Vivado/2019.1/data
+RDI_BINDIR: D:/Xilinx/Vivado/2019.1/bin
+
+Vivado preferences file location: C:/Users/OWNER/AppData/Roaming/Xilinx/Vivado/2019.1/vivado.xml
+Vivado preferences directory: C:/Users/OWNER/AppData/Roaming/Xilinx/Vivado/2019.1/
+Vivado layouts directory: C:/Users/OWNER/AppData/Roaming/Xilinx/Vivado/2019.1/layouts
+PlanAhead jar file location: 	D:/Xilinx/Vivado/2019.1/lib/classes/planAhead.jar
+Vivado log file location: 	D:/Users/Julian/Documents/UCSC Year THREE/CSE 100/Lab 7/Lab 7/vivado.log
+Vivado journal file location: 	D:/Users/Julian/Documents/UCSC Year THREE/CSE 100/Lab 7/Lab 7/vivado.jou
+Engine tmp dir: 	D:/Users/Julian/Documents/UCSC Year THREE/CSE 100/Lab 7/Lab 7/.Xil/Vivado-19252-JULIAN-PC
+
+Xilinx Environment Variables
+----------------------------
+XILINX: D:/Xilinx/Vivado/2019.1/ids_lite/ISE
+XILINX_DSP: D:/Xilinx/Vivado/2019.1/ids_lite/ISE
+XILINX_PLANAHEAD: D:/Xilinx/Vivado/2019.1
+XILINX_SDK: D:/Xilinx/SDK/2019.1
+XILINX_VIVADO: D:/Xilinx/Vivado/2019.1
+XILINX_VIVADO_HLS: D:/Xilinx/Vivado/2019.1
+
+
+GUI allocated memory:	128 MB
+GUI max memory:		3,072 MB
+Engine allocated memory: 577 MB
+
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+
+*/
+
+// TclEventType: START_GUI
+// Tcl Message: start_gui 
+// TclEventType: PROJECT_OPEN_DIALOG
+// by (cl):  Open Project : addNotify
+// Opening Vivado Project: D:\Users\Julian\Documents\UCSC Year THREE\CSE 100\Lab 7\Lab 7\Lab 7.xpr. Version: Vivado v2019.1 
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// Tcl Message: open_project {D:/Users/Julian/Documents/UCSC Year THREE/CSE 100/Lab 7/Lab 7/Lab 7.xpr} 
+// HMemoryUtils.trashcanNow. Engine heap size: 577 MB. GUI used memory: 48 MB. Current time: 11/20/19, 7:36:05 PM PST
+// TclEventType: MSGMGR_MOVEMSG
+// TclEventType: FILE_SET_NEW
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_CURRENT
+// TclEventType: PROJECT_DASHBOARD_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_NEW
+// Tcl Message: open_project {D:/Users/Julian/Documents/UCSC Year THREE/CSE 100/Lab 7/Lab 7/Lab 7.xpr} 
+// Tcl Message: INFO: [Project 1-313] Project file moved from 'C:/Users/Julian/Documents/Work/CSE 100/Lab 7' since last save. 
+// Tcl Message: Scanning sources... Finished scanning sources 
+// Tcl Message: INFO: [IP_Flow 19-234] Refreshing IP repositories INFO: [IP_Flow 19-1704] No user IP repositories specified 
+// TclEventType: PROJECT_NEW
+// [GUI Memory]: 74 MB (+75074kb) [00:00:26]
+// [Engine Memory]: 627 MB (+505510kb) [00:00:26]
+// [GUI Memory]: 88 MB (+10776kb) [00:00:27]
+// [GUI Memory]: 95 MB (+2978kb) [00:00:29]
+// WARNING: HEventQueue.dispatchEvent() is taking  6189 ms.
+// Tcl Message: INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/Xilinx/Vivado/2019.1/data/ip'. 
+// [GUI Memory]: 110 MB (+10780kb) [00:00:30]
+// [Engine Memory]: 662 MB (+3886kb) [00:00:30]
+// Tcl Message: open_project: Time (s): cpu = 00:00:20 ; elapsed = 00:00:14 . Memory (MB): peak = 690.582 ; gain = 93.031 
+// Project name: Lab 7; location: D:/Users/Julian/Documents/UCSC Year THREE/CSE 100/Lab 7/Lab 7; part: xc7a35tcpg236-1
+// [Engine Memory]: 710 MB (+16203kb) [00:00:32]
+dismissDialog("Open Project"); // by (cl)
+// a (cl): Critical Messages: addNotify
+// HMemoryUtils.trashcanNow. Engine heap size: 710 MB. GUI used memory: 55 MB. Current time: 11/20/19, 7:36:21 PM PST
+// Tcl Message: update_compile_order -fileset sources_1 
+// Elapsed time: 35 seconds
+selectButton(PAResourceAtoD.CmdMsgDialog_OK, "OK"); // f (a)
+dismissDialog("Critical Messages"); // a (cl)
+selectTab((HResource) null, (HResource) null, "Messages", 1); // aK (aH, cl)
+// Elapsed time: 17 seconds
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Non-module Files]", 1); // B (F, cl)
+selectButton(PAResourceCommand.PACommandNames_ADD_SOURCES, "Sources_add_sources"); // B (f, cl)
+// Run Command: PAResourceCommand.PACommandNames_ADD_SOURCES
+// c (cl): Add Sources: addNotify
+selectButton("CANCEL", "Cancel"); // JButton (j, c)
+dismissDialog("Add Sources"); // c (cl)
+// PAPropertyPanels.initPanels (countUD16L.v) elapsed time: 0.2s
+// Elapsed time: 28 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Non-module Files, countUD16L.v]", 2, false); // B (F, cl)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Non-module Files, countUD16L.v]", 2, false, false, false, false, false, true); // B (F, cl) - Double Click
+// ad (cl): Unable to Open File: addNotify
+selectButton(PAResourceOtoP.OpenFileAction_OK, "OK"); // a (ad)
+dismissDialog("Unable to Open File"); // ad (cl)
+selectButton(PAResourceCommand.PACommandNames_ADD_SOURCES, "Sources_add_sources"); // B (f, cl)
+// Run Command: PAResourceCommand.PACommandNames_ADD_SOURCES
+// c (cl): Add Sources: addNotify
+selectButton("NEXT", "Next >"); // JButton (j, c)
+selectButton(PAResourceQtoS.SrcChooserPanel_ADD_HDL_AND_NETLIST_FILES_TO_YOUR_PROJECT, "Add Files"); // a (E, c)
+String[] filenames31467 = {"D:/Users/Julian/Documents/UCSC Year THREE/CSE 100/Lab 7/Lab 7/Lab 7.srcs/sources_1/new/countUD16L.v", "D:/Users/Julian/Documents/UCSC Year THREE/CSE 100/Lab 7/Lab 7/Lab 7.srcs/sources_1/new/countUD3L.v", "D:/Users/Julian/Documents/UCSC Year THREE/CSE 100/Lab 7/Lab 7/Lab 7.srcs/sources_1/new/countUD5L.v", "D:/Users/Julian/Documents/UCSC Year THREE/CSE 100/Lab 7/Lab 7/Lab 7.srcs/sources_1/new/edgeDetector.v", "D:/Users/Julian/Documents/UCSC Year THREE/CSE 100/Lab 7/Lab 7/Lab 7.srcs/sources_1/new/ringCount.v", "D:/Users/Julian/Documents/UCSC Year THREE/CSE 100/Lab 7/Lab 7/Lab 7.srcs/sources_1/new/selector.v"};
+setFileChooser(filenames31467);
+selectButton("FINISH", "Finish"); // JButton (j, c)
+// 'h' command handler elapsed time: 12 seconds
+dismissDialog("Add Sources"); // c (cl)
+// Tcl Message: add_files -norecurse {{D:/Users/Julian/Documents/UCSC Year THREE/CSE 100/Lab 7/Lab 7/Lab 7.srcs/sources_1/new/countUD5L.v} {D:/Users/Julian/Documents/UCSC Year THREE/CSE 100/Lab 7/Lab 7/Lab 7.srcs/sources_1/new/ringCount.v} {D:/Users/Julian/Documents/UCSC Year THREE/CSE 100/Lab 7/Lab 7/Lab 7.srcs/sources_1/new/countUD3L.v} {D:/Users/Julian/Documents/UCSC Year THREE/CSE 100/Lab 7/Lab 7/Lab 7.srcs/sources_1/new/selector.v} {D:/Users/Julian/Documents/UCSC Year THREE/CSE 100/Lab 7/Lab 7/Lab 7.srcs/sources_1/new/countUD16L.v} {D:/Users/Julian/Documents/UCSC Year THREE/CSE 100/Lab 7/Lab 7/Lab 7.srcs/sources_1/new/edgeDetector.v}} 
+// Elapsed time: 689 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Non-module Files, countUD16L.v]", 2, false, false, false, false, true, false); // B (F, cl) - Popup Trigger
+selectMenu(PAResourceCommand.PACommandNames_AUTO_UPDATE_HIER, "Hierarchy Update"); // ae (an, cl)
+selectMenu(PAResourceQtoS.SrcMenu_IP_HIERARCHY, "IP Hierarchy"); // ae (an, cl)
+selectMenuItem(PAResourceQtoS.SrcMenu_REFRESH_HIERARCHY, "Refresh Hierarchy"); // ah (an, cl)
+collapseTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Non-module Files]", 1); // B (F, cl)
+// HMemoryUtils.trashcanNow. Engine heap size: 839 MB. GUI used memory: 58 MB. Current time: 11/20/19, 7:49:55 PM PST
+// Elapsed time: 25 seconds
+selectButton(PAResourceCommand.PACommandNames_ADD_SOURCES, "Sources_add_sources"); // B (f, cl)
+// Run Command: PAResourceCommand.PACommandNames_ADD_SOURCES
+// c (cl): Add Sources: addNotify
+selectButton("NEXT", "Next >"); // JButton (j, c)
+selectButton(PAResourceQtoS.SrcChooserPanel_ADD_HDL_AND_NETLIST_FILES_TO_YOUR_PROJECT, "Add Files"); // a (E, c)
+// [Engine Memory]: 839 MB (+97699kb) [00:14:32]
+// Elapsed time: 21 seconds
+String[] filenames16706 = {"D:/Users/Julian/Documents/UCSC Year THREE/CSE 100/Lab 4/Lab 4/Lab 4.srcs/sources_1/new/adder.v", "D:/Users/Julian/Documents/UCSC Year THREE/CSE 100/Lab 4/Lab 4/Lab 4.srcs/sources_1/new/countUD16L.v", "D:/Users/Julian/Documents/UCSC Year THREE/CSE 100/Lab 4/Lab 4/Lab 4.srcs/sources_1/new/countUD3L.v", "D:/Users/Julian/Documents/UCSC Year THREE/CSE 100/Lab 4/Lab 4/Lab 4.srcs/sources_1/new/countUD5L.v", "D:/Users/Julian/Documents/UCSC Year THREE/CSE 100/Lab 4/Lab 4/Lab 4.srcs/sources_1/new/edgeDetector.v", "D:/Users/Julian/Documents/UCSC Year THREE/CSE 100/Lab 4/Lab 4/Lab 4.srcs/sources_1/new/ringCount.v", "D:/Users/Julian/Documents/UCSC Year THREE/CSE 100/Lab 4/Lab 4/Lab 4.srcs/sources_1/new/selector.v"};
+setFileChooser(filenames16706);
+selectButton("FINISH", "Finish"); // JButton (j, c)
+// 'h' command handler elapsed time: 25 seconds
+dismissDialog("Add Sources"); // c (cl)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: add_files -norecurse {{D:/Users/Julian/Documents/UCSC Year THREE/CSE 100/Lab 4/Lab 4/Lab 4.srcs/sources_1/new/edgeDetector.v} {D:/Users/Julian/Documents/UCSC Year THREE/CSE 100/Lab 4/Lab 4/Lab 4.srcs/sources_1/new/selector.v} {D:/Users/Julian/Documents/UCSC Year THREE/CSE 100/Lab 4/Lab 4/Lab 4.srcs/sources_1/new/countUD16L.v} {D:/Users/Julian/Documents/UCSC Year THREE/CSE 100/Lab 4/Lab 4/Lab 4.srcs/sources_1/new/adder.v} {D:/Users/Julian/Documents/UCSC Year THREE/CSE 100/Lab 4/Lab 4/Lab 4.srcs/sources_1/new/countUD5L.v} {D:/Users/Julian/Documents/UCSC Year THREE/CSE 100/Lab 4/Lab 4/Lab 4.srcs/sources_1/new/ringCount.v} {D:/Users/Julian/Documents/UCSC Year THREE/CSE 100/Lab 4/Lab 4/Lab 4.srcs/sources_1/new/countUD3L.v}} 
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: update_compile_order -fileset sources_1 
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Non-module Files]", 1); // B (F, cl)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Non-module Files, countUD16L.v]", 2, false); // B (F, cl)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Non-module Files, ringCount.v]", 6, false, true, false, false, false, false); // B (F, cl) - Shift Key
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, toppo (toppo.v)]", 7); // B (F, cl)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Non-module Files, countUD5L.v]", 4, false, false, false, false, true, false); // B (F, cl) - Popup Trigger
+selectMenu(PAResourceCommand.PACommandNames_AUTO_UPDATE_HIER, "Hierarchy Update"); // ae (an, cl)
+selectMenu(PAResourceQtoS.SrcMenu_IP_HIERARCHY, "IP Hierarchy"); // ae (an, cl)
+selectMenu(PAResourceQtoS.SrcMenu_IP_HIERARCHY, "IP Hierarchy"); // ae (an, cl)
+selectMenu(PAResourceCommand.PACommandNames_AUTO_UPDATE_HIER, "Hierarchy Update"); // ae (an, cl)
+selectMenuItem(RDIResourceCommand.RDICommands_DELETE, "Remove File from Project..."); // ah (an, cl)
+// Run Command: RDIResourceCommand.RDICommands_DELETE
+// aE (cl): Remove Sources: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (aE)
+dismissDialog("Remove Sources"); // aE (cl)
+// Tcl Message: export_ip_user_files -of_objects  [get_files {{D:/Users/Julian/Documents/UCSC Year THREE/CSE 100/Lab 7/Lab 4/Lab 4/Lab 4.srcs/sources_1/new/ringCount.v}}] -no_script -reset -force -quiet 
+// Tcl Message: export_ip_user_files -of_objects  [get_files {{D:/Users/Julian/Documents/UCSC Year THREE/CSE 100/Lab 7/Lab 4/Lab 4/Lab 4.srcs/sources_1/new/edgeDetector.v}}] -no_script -reset -force -quiet 
+// aE (cl): Remove Sources: addNotify
+// by (aE):  Remove Sources : addNotify
+// Tcl Message: export_ip_user_files -of_objects  [get_files {{D:/Users/Julian/Documents/UCSC Year THREE/CSE 100/Lab 7/Lab 4/Lab 4/Lab 4.srcs/sources_1/new/countUD5L.v}}] -no_script -reset -force -quiet 
+// Tcl Message: export_ip_user_files -of_objects  [get_files {{D:/Users/Julian/Documents/UCSC Year THREE/CSE 100/Lab 7/Lab 4/Lab 4/Lab 4.srcs/sources_1/new/countUD3L.v}}] -no_script -reset -force -quiet 
+// Tcl Message: export_ip_user_files -of_objects  [get_files {{D:/Users/Julian/Documents/UCSC Year THREE/CSE 100/Lab 7/Lab 4/Lab 4/Lab 4.srcs/sources_1/new/countUD16L.v}}] -no_script -reset -force -quiet 
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: remove_files  {{D:/Users/Julian/Documents/UCSC Year THREE/CSE 100/Lab 7/Lab 4/Lab 4/Lab 4.srcs/sources_1/new/ringCount.v} {D:/Users/Julian/Documents/UCSC Year THREE/CSE 100/Lab 7/Lab 4/Lab 4/Lab 4.srcs/sources_1/new/edgeDetector.v} {D:/Users/Julian/Documents/UCSC Year THREE/CSE 100/Lab 7/Lab 4/Lab 4/Lab 4.srcs/sources_1/new/countUD5L.v} {D:/Users/Julian/Documents/UCSC Year THREE/CSE 100/Lab 7/Lab 4/Lab 4/Lab 4.srcs/sources_1/new/countUD3L.v} {D:/Users/Julian/Documents/UCSC Year THREE/CSE 100/Lab 7/Lab 4/Lab 4/Lab 4.srcs/sources_1/new/countUD16L.v}} 
+dismissDialog("Remove Sources"); // by (aE)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, toppo (toppo.v), bird1 : birb (birb.v)]", 11, true); // B (F, cl) - Node
+// [GUI Memory]: 116 MB (+220kb) [00:15:12]
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, toppo (toppo.v)]", 1, true); // B (F, cl) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, toppo (toppo.v)]", 1, true, false, false, false, false, true); // B (F, cl) - Double Click - Node
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, toppo (toppo.v)]", 1); // B (F, cl)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, toppo (toppo.v), bird1 : birb (birb.v)]", 5, true); // B (F, cl) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, toppo (toppo.v), bird1 : birb (birb.v)]", 5, true, false, false, false, false, true); // B (F, cl) - Double Click - Node
+collapseTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, toppo (toppo.v), bird1 : birb (birb.v)]", 5); // B (F, cl)
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, toppo (toppo.v), bird1 : birb (birb.v)]", 5); // B (F, cl)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, toppo (toppo.v), bird1 : birb (birb.v), position : birb2 (birb2.v)]", 6, false); // B (F, cl)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, toppo (toppo.v), bird1 : birb (birb.v), position : birb2 (birb2.v)]", 6, false, false, false, false, false, true); // B (F, cl) - Double Click
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "birb.v", 2); // k (j, cl)
+// WARNING: HTimer (StateMonitor Timer) is taking 666ms to process. Increasing delay to 4000 ms.
+// Elapsed time: 1242 seconds
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Synthesis, [Synth 8-6157] synthesizing module 'toppo' [C:/Users/Julian/Documents/Work/CSE 100/Lab 7/Lab 7.srcs/sources_1/new/toppo.v:23]. ]", 18, true, false, false, false, true, false); // ah (O, cl) - Popup Trigger - Node
+selectMenu(PAResourceItoN.MsgTreePanel_MESSAGE_SEVERITY, "Message Severity"); // ae (K, Popup.HeavyWeightWindow)
+selectMenu(PAResourceItoN.MsgTreePanel_MESSAGE_SEVERITY, "Message Severity"); // ae (K, Popup.HeavyWeightWindow)
+selectMenuItem(PAResourceItoN.MsgTreePanel_DISCARD_USER_CREATED_MESSAGES, "Discard User Created Messages"); // ah (K, Popup.HeavyWeightWindow)
+selectButton(PAResourceEtoH.FileSetPanel_MESSAGES, "24"); // h (f, cl)
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Analysis Results, sim_1, [HDL 9-3756] overwriting previous definition of module 'countUD16L' [D:/Users/Julian/Documents/UCSC Year THREE/CSE 100/Lab 7/Lab 7/Lab 7.srcs/sources_1/new/countUD16L.v:23]. ]", 2, true); // ah (O, cl) - Node
+messagesViewCrossProbe(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "src;-;D:\Users\Julian\Documents\UCSC Year THREE\CSE 100\Lab 7\Lab 7\Lab 7.srcs\sources_1\new\countUD16L.v;-;;-;16;-;line;-;23;-;;-;16;-;"); // ah (O, cl)
+// Elapsed time: 10 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, toppo (toppo.v), stuffISee : VGA_Control (VGA_Control.v), Hori : countUD16L (countUD16L.v)]", 4, true); // B (F, cl) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, toppo (toppo.v), stuffISee : VGA_Control (VGA_Control.v), Hori : countUD16L (countUD16L.v), count0to2 : countUD3L (countUD3L.v)]", 5, false, false, false, false, false, true); // B (F, cl) - Double Click
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, toppo (toppo.v), stuffISee : VGA_Control (VGA_Control.v), Hori : countUD16L (countUD16L.v)]", 4, true); // B (F, cl) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, toppo (toppo.v), stuffISee : VGA_Control (VGA_Control.v), Hori : countUD16L (countUD16L.v)]", 4, true, false, false, false, false, true); // B (F, cl) - Double Click - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, countUD16L (countUD16L.v)]", 10, false); // B (F, cl)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, countUD16L (countUD16L.v)]", 10, false, false, false, false, false, true); // B (F, cl) - Double Click
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, adder (adder.v)]", 9, false); // B (F, cl)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, countUD16L (countUD16L.v)]", 10, false); // B (F, cl)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, countUD3L (countUD3L.v)]", 11, false, false, true, false, false, false); // B (F, cl) - Control Key
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, countUD5L (countUD5L.v)]", 12, false, false, true, false, false, false); // B (F, cl) - Control Key
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, edgeDetector (edgeDetector.v)]", 13, false, false, true, false, false, false); // B (F, cl) - Control Key
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, edgeDetector (edgeDetector.v)]", 13, false, false, false, false, true, false); // B (F, cl) - Popup Trigger
+selectMenu(PAResourceCommand.PACommandNames_AUTO_UPDATE_HIER, "Hierarchy Update"); // ae (an, cl)
+selectMenu(PAResourceQtoS.SrcMenu_IP_HIERARCHY, "IP Hierarchy"); // ae (an, cl)
+selectMenu(PAResourceQtoS.SrcMenu_IP_HIERARCHY, "IP Hierarchy"); // ae (an, cl)
+selectMenu(PAResourceCommand.PACommandNames_AUTO_UPDATE_HIER, "Hierarchy Update"); // ae (an, cl)
+selectMenuItem(RDIResourceCommand.RDICommands_DELETE, "Remove File from Project..."); // ah (an, cl)
+// Run Command: RDIResourceCommand.RDICommands_DELETE
+// aE (cl): Remove Sources: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (aE)
+dismissDialog("Remove Sources"); // aE (cl)
+// Tcl Message: export_ip_user_files -of_objects  [get_files {{D:/Users/Julian/Documents/UCSC Year THREE/CSE 100/Lab 4/Lab 4/Lab 4.srcs/sources_1/new/countUD16L.v}}] -no_script -reset -force -quiet 
+// Tcl Message: export_ip_user_files -of_objects  [get_files {{D:/Users/Julian/Documents/UCSC Year THREE/CSE 100/Lab 4/Lab 4/Lab 4.srcs/sources_1/new/countUD3L.v}}] -no_script -reset -force -quiet 
+// Tcl Message: export_ip_user_files -of_objects  [get_files {{D:/Users/Julian/Documents/UCSC Year THREE/CSE 100/Lab 4/Lab 4/Lab 4.srcs/sources_1/new/countUD5L.v}}] -no_script -reset -force -quiet 
+// Tcl Message: export_ip_user_files -of_objects  [get_files {{D:/Users/Julian/Documents/UCSC Year THREE/CSE 100/Lab 4/Lab 4/Lab 4.srcs/sources_1/new/edgeDetector.v}}] -no_script -reset -force -quiet 
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: remove_files  {{D:/Users/Julian/Documents/UCSC Year THREE/CSE 100/Lab 4/Lab 4/Lab 4.srcs/sources_1/new/countUD16L.v} {D:/Users/Julian/Documents/UCSC Year THREE/CSE 100/Lab 4/Lab 4/Lab 4.srcs/sources_1/new/countUD3L.v} {D:/Users/Julian/Documents/UCSC Year THREE/CSE 100/Lab 4/Lab 4/Lab 4.srcs/sources_1/new/countUD5L.v} {D:/Users/Julian/Documents/UCSC Year THREE/CSE 100/Lab 4/Lab 4/Lab 4.srcs/sources_1/new/edgeDetector.v}} 
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, countUD16L (countUD16L.v)]", 10, false); // B (F, cl)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, adder (adder.v)]", 9, false, false, false, false, true, false); // B (F, cl) - Popup Trigger
+selectMenu(PAResourceCommand.PACommandNames_AUTO_UPDATE_HIER, "Hierarchy Update"); // ae (an, cl)
+selectMenu(PAResourceQtoS.SrcMenu_IP_HIERARCHY, "IP Hierarchy"); // ae (an, cl)
+selectMenu(PAResourceQtoS.SrcMenu_IP_HIERARCHY, "IP Hierarchy"); // ae (an, cl)
+selectMenuItem(PAResourceQtoS.SrcMenu_REFRESH_HIERARCHY, "Refresh Hierarchy"); // ah (an, cl)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, ringCounter (ringCount.v)]", 11, false); // B (F, cl)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, selector (selector.v)]", 13, false, false, true, false, false, false); // B (F, cl) - Control Key
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, selector (selector.v)]", 13, false, false, false, false, true, false); // B (F, cl) - Popup Trigger
+selectMenuItem(RDIResourceCommand.RDICommands_DELETE, "Remove File from Project..."); // ah (an, cl)
+// Run Command: RDIResourceCommand.RDICommands_DELETE
+// aE (cl): Remove Sources: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (aE)
+dismissDialog("Remove Sources"); // aE (cl)
+// Tcl Message: export_ip_user_files -of_objects  [get_files {{D:/Users/Julian/Documents/UCSC Year THREE/CSE 100/Lab 4/Lab 4/Lab 4.srcs/sources_1/new/ringCount.v}}] -no_script -reset -force -quiet 
+// Tcl Message: export_ip_user_files -of_objects  [get_files {{D:/Users/Julian/Documents/UCSC Year THREE/CSE 100/Lab 4/Lab 4/Lab 4.srcs/sources_1/new/selector.v}}] -no_script -reset -force -quiet 
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: remove_files  {{D:/Users/Julian/Documents/UCSC Year THREE/CSE 100/Lab 4/Lab 4/Lab 4.srcs/sources_1/new/ringCount.v} {D:/Users/Julian/Documents/UCSC Year THREE/CSE 100/Lab 4/Lab 4/Lab 4.srcs/sources_1/new/selector.v}} 
+// [GUI Memory]: 122 MB (+442kb) [00:40:13]
+// HMemoryUtils.trashcanNow. Engine heap size: 839 MB. GUI used memory: 63 MB. Current time: 11/20/19, 8:19:56 PM PST
+// HMemoryUtils.trashcanNow. Engine heap size: 839 MB. GUI used memory: 58 MB. Current time: 11/20/19, 8:49:56 PM PST
+// HMemoryUtils.trashcanNow. Engine heap size: 839 MB. GUI used memory: 57 MB. Current time: 11/20/19, 9:19:56 PM PST
+// HMemoryUtils.trashcanNow. Engine heap size: 839 MB. GUI used memory: 56 MB. Current time: 11/20/19, 9:49:57 PM PST
+// Elapsed time: 5937 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "birb.v", 2); // k (j, cl)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "birb2.v", 3); // k (j, cl)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "birb.v", 2); // k (j, cl)
+// Elapsed time: 52 seconds
+selectCodeEditor("birb.v", 471, 148); // cl (w, cl)
+selectCodeEditor("birb.v", 498, 206); // cl (w, cl)
+selectCodeEditor("birb.v", 806, 321); // cl (w, cl)
+// Elapsed time: 10 seconds
+selectCodeEditor("birb.v", 376, 305); // cl (w, cl)
+selectCodeEditor("birb.v", 325, 307); // cl (w, cl)
+// Elapsed time: 1538 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, toppo (toppo.v), stuffISee : VGA_Control (VGA_Control.v), Hori : countUD16L (countUD16L.v)]", 4, true); // B (F, cl) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, toppo (toppo.v), stuffISee : VGA_Control (VGA_Control.v), Hori : countUD16L (countUD16L.v)]", 4, true, false, false, false, false, true); // B (F, cl) - Double Click - Node
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "birb.v", 2); // k (j, cl)
+selectCodeEditor("birb.v", 240, 280); // cl (w, cl)
+selectCodeEditor("birb.v", 270, 293); // cl (w, cl)
+// Elapsed time: 20 seconds
+selectCodeEditor("birb.v", 302, 270); // cl (w, cl)
+selectCodeEditor("birb.v", 354, 337); // cl (w, cl)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "countUD16L.v", 4); // k (j, cl)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "birb.v", 2); // k (j, cl)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "countUD16L.v", 4); // k (j, cl)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "birb.v", 2); // k (j, cl)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "countUD16L.v", 4); // k (j, cl)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "birb.v", 2); // k (j, cl)
+selectCodeEditor("birb.v", 585, 342); // cl (w, cl)
+typeControlKey((HResource) null, "birb.v", 'c'); // cl (w, cl)
+selectCodeEditor("birb.v", 206, 351); // cl (w, cl)
+typeControlKey((HResource) null, "birb.v", 'v'); // cl (w, cl)
+selectCodeEditor("birb.v", 204, 367); // cl (w, cl)
+selectCodeEditor("birb.v", 168, 385); // cl (w, cl)
+selectCodeEditor("birb.v", 234, 368); // cl (w, cl)
+selectCodeEditor("birb.v", 276, 343); // cl (w, cl)
+selectCodeEditor("birb.v", 390, 250); // cl (w, cl)
+selectCodeEditor("birb.v", 248, 238); // cl (w, cl)
+// HMemoryUtils.trashcanNow. Engine heap size: 839 MB. GUI used memory: 56 MB. Current time: 11/20/19, 10:19:57 PM PST
+// Elapsed time: 11 seconds
+selectCodeEditor("birb.v", 166, 264); // cl (w, cl)
+// Elapsed time: 17 seconds
+selectCodeEditor("birb.v", 525, 320); // cl (w, cl)
+// Elapsed time: 11 seconds
+selectCodeEditor("birb.v", 492, 327); // cl (w, cl)
+// Elapsed time: 216 seconds
+selectCodeEditor("birb.v", 517, 326); // cl (w, cl)
+selectCodeEditor("birb.v", 532, 317); // cl (w, cl)
+// Elapsed time: 25 seconds
+selectCodeEditor("birb.v", 543, 364); // cl (w, cl)
+// Elapsed time: 14 seconds
+selectCodeEditor("birb.v", 603, 266); // cl (w, cl)
+selectCodeEditor("birb.v", 641, 263); // cl (w, cl)
+typeControlKey((HResource) null, "birb.v", 'c'); // cl (w, cl)
+selectCodeEditor("birb.v", 515, 280); // cl (w, cl)
+typeControlKey((HResource) null, "birb.v", 'v'); // cl (w, cl)
+selectCodeEditor("birb.v", 581, 274); // cl (w, cl)
+selectCodeEditor("birb.v", 482, 212); // cl (w, cl)
+selectCodeEditor("birb.v", 503, 262); // cl (w, cl)
+selectCodeEditor("birb.v", 471, 246); // cl (w, cl)
+selectCodeEditor("birb.v", 689, 254); // cl (w, cl)
+// Elapsed time: 15 seconds
+selectCodeEditor("birb.v", 249, 177); // cl (w, cl)
+selectCodeEditor("birb.v", 263, 146); // cl (w, cl)
+// Elapsed time: 28 seconds
+selectCodeEditor("birb.v", 486, 167); // cl (w, cl)
+selectCodeEditor("birb.v", 486, 167, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("birb.v", 473, 189); // cl (w, cl)
+selectCodeEditor("birb.v", 473, 189, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("birb.v", 478, 189); // cl (w, cl)
+selectCodeEditor("birb.v", 479, 189, false, false, false, false, true); // cl (w, cl) - Double Click
+// Elapsed time: 93 seconds
+selectCodeEditor("birb.v", 259, 162); // cl (w, cl)
+selectCodeEditor("birb.v", 304, 164); // cl (w, cl)
+selectCodeEditor("birb.v", 265, 146); // cl (w, cl)
+// Elapsed time: 165 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "birb2.v", 3); // k (j, cl)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "birb.v", 2); // k (j, cl)
+// Elapsed time: 44 seconds
+collapseTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, toppo (toppo.v), stuffISee : VGA_Control (VGA_Control.v)]", 3); // B (F, cl)
+// Elapsed time: 218 seconds
+selectCodeEditor("birb.v", 509, 268); // cl (w, cl)
+selectCodeEditor("birb.v", 479, 257); // cl (w, cl)
+selectCodeEditor("birb.v", 725, 309); // cl (w, cl)
+// Elapsed time: 30 seconds
+selectCodeEditor("birb.v", 167, 160); // cl (w, cl)
+selectCodeEditor("birb.v", 167, 160, false, false, false, false, true); // cl (w, cl) - Double Click
+// Elapsed time: 25 seconds
+selectCodeEditor("birb.v", 191, 265); // cl (w, cl)
+selectCodeEditor("birb.v", 223, 260); // cl (w, cl)
+selectCodeEditor("birb.v", 196, 224); // cl (w, cl)
+selectCodeEditor("birb.v", 192, 223, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("birb.v", 507, 170); // cl (w, cl)
+selectCodeEditor("birb.v", 174, 208); // cl (w, cl)
+selectCodeEditor("birb.v", 201, 236); // cl (w, cl)
+selectCodeEditor("birb.v", 206, 182); // cl (w, cl)
+selectCodeEditor("birb.v", 235, 138); // cl (w, cl)
+// Elapsed time: 24 seconds
+selectCodeEditor("birb.v", 364, 288); // cl (w, cl)
+selectCodeEditor("birb.v", 369, 284); // cl (w, cl)
+// Elapsed time: 25 seconds
+selectCodeEditor("birb.v", 592, 280); // cl (w, cl)
+// Elapsed time: 21 seconds
+selectCodeEditor("birb.v", 655, 269); // cl (w, cl)
+selectCodeEditor("birb.v", 368, 279); // cl (w, cl)
+selectCodeEditor("birb.v", 345, 298); // cl (w, cl)
+selectCodeEditor("birb.v", 351, 298); // cl (w, cl)
+// Elapsed time: 18 seconds
+selectCodeEditor("birb.v", 568, 375); // cl (w, cl)
+selectCodeEditor("birb.v", 563, 306); // cl (w, cl)
+selectCodeEditor("birb.v", 566, 299); // cl (w, cl)
+// Elapsed time: 11 seconds
+selectCodeEditor("birb.v", 633, 328); // cl (w, cl)
+// Elapsed time: 10 seconds
+selectCodeEditor("birb.v", 514, 304); // cl (w, cl)
+selectCodeEditor("birb.v", 592, 320); // cl (w, cl)
+// Elapsed time: 16 seconds
+selectCodeEditor("birb.v", 27, 185); // cl (w, cl)
+selectCodeEditor("birb.v", 39, 189); // cl (w, cl)
+selectCodeEditor("birb.v", 240, 213); // cl (w, cl)
+selectCodeEditor("birb.v", 334, 297); // cl (w, cl)
+selectCodeEditor("birb.v", 179, 169); // cl (w, cl)
+selectCodeEditor("birb.v", 180, 92); // cl (w, cl)
+// Elapsed time: 11 seconds
+selectCodeEditor("birb.v", 225, 131); // cl (w, cl)
+selectCodeEditor("birb.v", 461, 259); // cl (w, cl)
+selectCodeEditor("birb.v", 156, 226); // cl (w, cl)
+selectCodeEditor("birb.v", 504, 110); // cl (w, cl)
+selectCodeEditor("birb.v", 504, 110, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("birb.v", 492, 148); // cl (w, cl)
+selectCodeEditor("birb.v", 492, 148, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("birb.v", 489, 203); // cl (w, cl)
+selectCodeEditor("birb.v", 489, 203, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("birb.v", 488, 241); // cl (w, cl)
+selectCodeEditor("birb.v", 488, 254); // cl (w, cl)
+selectCodeEditor("birb.v", 488, 253, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("birb.v", 488, 246); // cl (w, cl)
+selectCodeEditor("birb.v", 488, 246, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("birb.v", 713, 237); // cl (w, cl)
+selectCodeEditor("birb.v", 713, 237, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("birb.v", 701, 201); // cl (w, cl)
+selectCodeEditor("birb.v", 701, 201, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("birb.v", 719, 171); // cl (w, cl)
+selectCodeEditor("birb.v", 699, 170); // cl (w, cl)
+selectCodeEditor("birb.v", 699, 170, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("birb.v", 699, 130); // cl (w, cl)
+selectCodeEditor("birb.v", 699, 130, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("birb.v", 799, 175); // cl (w, cl)
+// Elapsed time: 22 seconds
+selectCodeEditor("birb.v", 804, 187); // cl (w, cl)
+// Elapsed time: 52 seconds
+selectCodeEditor("birb.v", 890, 190); // cl (w, cl)
+selectCodeEditor("birb.v", 1054, 196); // cl (w, cl)
+selectCodeEditor("birb.v", 888, 181); // cl (w, cl)
+selectCodeEditor("birb.v", 1043, 187); // cl (w, cl)
+selectCodeEditor("birb.v", 1055, 192); // cl (w, cl)
+// Elapsed time: 16 seconds
+selectCodeEditor("birb.v", 1024, 251); // cl (w, cl)
+selectCodeEditor("birb.v", 814, 196); // cl (w, cl)
+selectCodeEditor("birb.v", 822, 196); // cl (w, cl)
+selectCodeEditor("birb.v", 491, 203); // cl (w, cl)
+// Elapsed time: 10 seconds
+selectCodeEditor("birb.v", 342, 279); // cl (w, cl)
+selectCodeEditor("birb.v", 340, 218); // cl (w, cl)
+selectCodeEditor("birb.v", 228, 211); // cl (w, cl)
+selectCodeEditor("birb.v", 147, 213); // cl (w, cl)
+selectCodeEditor("birb.v", 132, 213); // cl (w, cl)
+selectCodeEditor("birb.v", 459, 212); // cl (w, cl)
+selectCodeEditor("birb.v", 172, 204); // cl (w, cl)
+selectCodeEditor("birb.v", 189, 204); // cl (w, cl)
+// Elapsed time: 13 seconds
+selectCodeEditor("birb.v", 218, 233); // cl (w, cl)
+// Elapsed time: 25 seconds
+selectCodeEditor("birb.v", 185, 186); // cl (w, cl)
+// Elapsed time: 28 seconds
+selectCodeEditor("birb.v", 464, 190); // cl (w, cl)
+selectCodeEditor("birb.v", 404, 275); // cl (w, cl)
+selectCodeEditor("birb.v", 424, 275); // cl (w, cl)
+selectCodeEditor("birb.v", 431, 259); // cl (w, cl)
+selectCodeEditor("birb.v", 487, 276); // cl (w, cl)
+typeControlKey((HResource) null, "birb.v", 'c'); // cl (w, cl)
+selectCodeEditor("birb.v", 824, 320); // cl (w, cl)
+typeControlKey((HResource) null, "birb.v", 'v'); // cl (w, cl)
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey((HResource) null, "birb.v", 'v'); // cl (w, cl)
+selectCodeEditor("birb.v", 800, 312); // cl (w, cl)
+selectCodeEditor("birb.v", 154, 331); // cl (w, cl)
+selectCodeEditor("birb.v", 474, 326); // cl (w, cl)
+selectCodeEditor("birb.v", 540, 348); // cl (w, cl)
+selectCodeEditor("birb.v", 540, 348, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("birb.v", 534, 343); // cl (w, cl)
+selectCodeEditor("birb.v", 518, 330); // cl (w, cl)
+selectCodeEditor("birb.v", 191, 285); // cl (w, cl)
+selectCodeEditor("birb.v", 191, 325); // cl (w, cl)
+selectCodeEditor("birb.v", 553, 347); // cl (w, cl)
+selectCodeEditor("birb.v", 594, 279); // cl (w, cl)
+typeControlKey((HResource) null, "birb.v", 'c'); // cl (w, cl)
+selectCodeEditor("birb.v", 813, 311); // cl (w, cl)
+typeControlKey((HResource) null, "birb.v", 'v'); // cl (w, cl)
+selectCodeEditor("birb.v", 155, 337); // cl (w, cl)
+selectCodeEditor("birb.v", 607, 338); // cl (w, cl)
+selectCodeEditor("birb.v", 487, 327); // cl (w, cl)
+selectCodeEditor("birb.v", 599, 327); // cl (w, cl)
+typeControlKey((HResource) null, "birb.v", 'c'); // cl (w, cl)
+selectCodeEditor("birb.v", 896, 373); // cl (w, cl)
+typeControlKey((HResource) null, "birb.v", 'v'); // cl (w, cl)
+selectCodeEditor("birb.v", 12, 385); // cl (w, cl)
+selectCodeEditor("birb.v", 19, 384); // cl (w, cl)
+selectCodeEditor("birb.v", 155, 394); // cl (w, cl)
+selectCodeEditor("birb.v", 414, 286); // cl (w, cl)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("birb.v", 544, 235); // cl (w, cl)
+// Elapsed time: 157 seconds
+selectCodeEditor("birb.v", 116, 196); // cl (w, cl)
+selectCodeEditor("birb.v", 129, 194); // cl (w, cl)
+selectCodeEditor("birb.v", 94, 194); // cl (w, cl)
+selectCodeEditor("birb.v", 70, 195); // cl (w, cl)
+selectCodeEditor("birb.v", 97, 195); // cl (w, cl)
+selectCodeEditor("birb.v", 86, 125); // cl (w, cl)
+selectCodeEditor("birb.v", 86, 125, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("birb.v", 86, 139); // cl (w, cl)
+selectCodeEditor("birb.v", 86, 139, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("birb.v", 86, 230); // cl (w, cl)
+selectCodeEditor("birb.v", 76, 250); // cl (w, cl)
+selectCodeEditor("birb.v", 76, 245); // cl (w, cl)
+selectCodeEditor("birb.v", 81, 244); // cl (w, cl)
+selectCodeEditor("birb.v", 185, 243); // cl (w, cl)
+selectCodeEditor("birb.v", 94, 238); // cl (w, cl)
+selectCodeEditor("birb.v", 79, 257); // cl (w, cl)
+selectCodeEditor("birb.v", 78, 253, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("birb.v", 78, 240); // cl (w, cl)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "toppo.v", 1); // k (j, cl)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "birb.v", 2); // k (j, cl)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "birb2.v", 3); // k (j, cl)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Project Summary", 0); // k (j, cl)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "toppo.v", 1); // k (j, cl)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "birb.v", 2); // k (j, cl)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "toppo.v", 1); // k (j, cl)
+selectCodeEditor("toppo.v", 525, 164); // cl (w, cl)
+selectCodeEditor("toppo.v", 518, 177); // cl (w, cl)
+selectCodeEditor("toppo.v", 518, 177); // cl (w, cl)
+typeControlKey((HResource) null, "toppo.v", 'c'); // cl (w, cl)
+selectCodeEditor("toppo.v", 91, 198); // cl (w, cl)
+typeControlKey((HResource) null, "toppo.v", 'v'); // cl (w, cl)
+selectCodeEditor("toppo.v", 456, 205); // cl (w, cl)
+selectCodeEditor("toppo.v", 463, 205); // cl (w, cl)
+// Elapsed time: 10 seconds
+selectCodeEditor("toppo.v", 544, 264); // cl (w, cl)
+selectCodeEditor("toppo.v", 546, 216); // cl (w, cl)
+selectCodeEditor("toppo.v", 501, 196); // cl (w, cl)
+selectCodeEditor("toppo.v", 462, 209); // cl (w, cl)
+selectCodeEditor("toppo.v", 280, 200); // cl (w, cl)
+selectCodeEditor("toppo.v", 658, 105); // cl (w, cl)
+selectCodeEditor("toppo.v", 665, 221); // cl (w, cl)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "birb.v", 2); // k (j, cl)
+selectCodeEditor("birb.v", 413, 254); // cl (w, cl)
+// Elapsed time: 22 seconds
+selectCodeEditor("birb.v", 468, 250); // cl (w, cl)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "toppo.v", 1); // k (j, cl)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "birb.v", 2); // k (j, cl)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "toppo.v", 1); // k (j, cl)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "birb.v", 2); // k (j, cl)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "toppo.v", 1); // k (j, cl)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "birb.v", 2); // k (j, cl)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "toppo.v", 1); // k (j, cl)
+selectCodeEditor("toppo.v", 582, 330); // cl (w, cl)
+selectCodeEditor("toppo.v", 680, 339); // cl (w, cl)
+selectCodeEditor("toppo.v", 602, 339); // cl (w, cl)
+selectCodeEditor("toppo.v", 649, 348); // cl (w, cl)
+selectCodeEditor("toppo.v", 692, 347); // cl (w, cl)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "birb.v", 2); // k (j, cl)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "toppo.v", 1); // k (j, cl)
+selectCodeEditor("toppo.v", 678, 350); // cl (w, cl)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "birb.v", 2); // k (j, cl)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "toppo.v", 1); // k (j, cl)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "birb.v", 2); // k (j, cl)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "toppo.v", 1); // k (j, cl)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "birb.v", 2); // k (j, cl)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "toppo.v", 1); // k (j, cl)
+selectCodeEditor("toppo.v", 593, 287); // cl (w, cl)
+selectCodeEditor("toppo.v", 381, 220); // cl (w, cl)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "birb.v", 2); // k (j, cl)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "toppo.v", 1); // k (j, cl)
+selectCodeEditor("toppo.v", 797, 375); // cl (w, cl)
+selectCodeEditor("toppo.v", 575, 383); // cl (w, cl)
+selectCodeEditor("toppo.v", 538, 368); // cl (w, cl)
+selectCodeEditor("toppo.v", 412, 299); // cl (w, cl)
+selectCodeEditor("toppo.v", 414, 303); // cl (w, cl)
+selectCodeEditor("toppo.v", 415, 309); // cl (w, cl)
+selectCodeEditor("toppo.v", 382, 292); // cl (w, cl)
+selectCodeEditor("toppo.v", 311, 254); // cl (w, cl)
+// Elapsed time: 12 seconds
+selectCodeEditor("toppo.v", 989, 366); // cl (w, cl)
+selectCodeEditor("toppo.v", 628, 321); // cl (w, cl)
+selectCodeEditor("toppo.v", 595, 295); // cl (w, cl)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "birb.v", 2); // k (j, cl)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "toppo.v", 1); // k (j, cl)
+selectButton(PAResourceCommand.PACommandNames_ADD_SOURCES, "Sources_add_sources"); // B (f, cl)
+// Run Command: PAResourceCommand.PACommandNames_ADD_SOURCES
+// c (cl): Add Sources: addNotify
+// HMemoryUtils.trashcanNow. Engine heap size: 839 MB. GUI used memory: 57 MB. Current time: 11/20/19, 10:49:57 PM PST
+selectRadioButton(PAResourceAtoD.AddSrcWizard_SPECIFY_OR_CREATE_CONSTRAINT_FILES, "Add or create constraints"); // a (o, c)
+selectRadioButton(PAResourceAtoD.AddSrcWizard_SPECIFY_HDL_NETLIST_BLOCK_DESIGN, "Add or create design sources"); // a (o, c)
+selectButton("NEXT", "Next >"); // JButton (j, c)
+selectButton(PAResourceQtoS.SrcChooserPanel_ADD_HDL_AND_NETLIST_FILES_TO_YOUR_PROJECT, "Add Files"); // a (E, c)
+dismissFileChooser();
+selectButton(PAResourceQtoS.SrcChooserPanel_ADD_HDL_AND_NETLIST_FILES_TO_YOUR_PROJECT, "Add Files"); // a (E, c)
+// Elapsed time: 51 seconds
+String[] filenames29306 = {"D:/Users/Julian/Documents/UCSC Year THREE/CSE 100/Lab 5/Lab 5/Lab 5.srcs/sources_1/new/LFSR.v", "D:/Users/Julian/Documents/UCSC Year THREE/CSE 100/Lab 5/Lab 5/Lab 5.srcs/sources_1/new/synchronizer.v"};
+setFileChooser(filenames29306);
+selectButton("FINISH", "Finish"); // JButton (j, c)
+// 'h' command handler elapsed time: 67 seconds
+dismissDialog("Add Sources"); // c (cl)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: add_files -norecurse {{D:/Users/Julian/Documents/UCSC Year THREE/CSE 100/Lab 5/Lab 5/Lab 5.srcs/sources_1/new/LFSR.v} {D:/Users/Julian/Documents/UCSC Year THREE/CSE 100/Lab 5/Lab 5/Lab 5.srcs/sources_1/new/synchronizer.v}} 
+selectButton(PAResourceCommand.PACommandNames_ADD_SOURCES, "Sources_add_sources"); // B (f, cl)
+// Run Command: PAResourceCommand.PACommandNames_ADD_SOURCES
+// c (cl): Add Sources: addNotify
+selectButton("NEXT", "Next >"); // JButton (j, c)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: update_compile_order -fileset sources_1 
+selectButton(PAResourceQtoS.SrcChooserPanel_ADD_HDL_AND_NETLIST_FILES_TO_YOUR_PROJECT, "Add Files"); // a (E, c)
+// Elapsed time: 27 seconds
+String[] filenames17995 = {"D:/Users/Julian/Documents/UCSC Year THREE/CSE 100/Lab 3/Lab 3/Lab 3.srcs/sources_1/new/m8_1e.v", "D:/Users/Julian/Documents/UCSC Year THREE/CSE 100/Lab 3/Lab 3/Lab 3.srcs/sources_1/new/sevenSeg.v"};
+setFileChooser(filenames17995);
+selectButton("FINISH", "Finish"); // JButton (j, c)
+// 'h' command handler elapsed time: 30 seconds
+dismissDialog("Add Sources"); // c (cl)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: add_files -norecurse {{D:/Users/Julian/Documents/UCSC Year THREE/CSE 100/Lab 3/Lab 3/Lab 3.srcs/sources_1/new/sevenSeg.v} {D:/Users/Julian/Documents/UCSC Year THREE/CSE 100/Lab 3/Lab 3/Lab 3.srcs/sources_1/new/m8_1e.v}} 
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: update_compile_order -fileset sources_1 
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, adder (adder.v)]", 10, false); // B (F, cl)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, adder (adder.v)]", 10, false, false, false, false, false, true); // B (F, cl) - Double Click
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, adder (adder.v)]", 10, false); // B (F, cl)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, adder (adder.v)]", 10, false, false, false, false, true, false); // B (F, cl) - Popup Trigger
+selectMenuItem(RDIResourceCommand.RDICommands_DELETE, "Remove File from Project..."); // ah (an, cl)
+// Run Command: RDIResourceCommand.RDICommands_DELETE
+// aE (cl): Remove Sources: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (aE)
+dismissDialog("Remove Sources"); // aE (cl)
+// Tcl Message: export_ip_user_files -of_objects  [get_files {{D:/Users/Julian/Documents/UCSC Year THREE/CSE 100/Lab 4/Lab 4/Lab 4.srcs/sources_1/new/adder.v}}] -no_script -reset -force -quiet 
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: remove_files  {{D:/Users/Julian/Documents/UCSC Year THREE/CSE 100/Lab 4/Lab 4/Lab 4.srcs/sources_1/new/adder.v}} 
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, toppo (toppo.v), bird1 : birb (birb.v), vertical : countUD16L (countUD16L.v)]", 7); // B (F, cl)
+collapseTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, toppo (toppo.v), bird1 : birb (birb.v), vertical : countUD16L (countUD16L.v)]", 7); // B (F, cl)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, toppo (toppo.v), bird1 : birb (birb.v)]", 5, true); // B (F, cl) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, toppo (toppo.v), bird1 : birb (birb.v)]", 5, true, false, false, false, false, true); // B (F, cl) - Double Click - Node
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "toppo.v", 1); // k (j, cl)
+selectCodeEditor("toppo.v", 352, 299); // cl (w, cl)
+selectCodeEditor("toppo.v", 386, 279); // cl (w, cl)
+// Elapsed time: 25 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, synchronizer (synchronizer.v)]", 11, false); // B (F, cl)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, synchronizer (synchronizer.v)]", 11, false); // B (F, cl)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, synchronizer (synchronizer.v)]", 11, false, false, false, false, false, true); // B (F, cl) - Double Click
+selectCodeEditor("synchronizer.v", 109, 211); // cl (w, cl)
+selectCodeEditor("synchronizer.v", 50, 384); // cl (w, cl)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "toppo.v", 1); // k (j, cl)
+// Elapsed time: 63 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "synchronizer.v", 5); // k (j, cl)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "toppo.v", 1); // k (j, cl)
+// Elapsed time: 27 seconds
+selectCodeEditor("toppo.v", 221, 330); // cl (w, cl)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "synchronizer.v", 5); // k (j, cl)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "toppo.v", 1); // k (j, cl)
+// Elapsed time: 32 seconds
+selectCodeEditor("toppo.v", 107, 207); // cl (w, cl)
+selectCodeEditor("toppo.v", 430, 279); // cl (w, cl)
+selectCodeEditor("toppo.v", 503, 252); // cl (w, cl)
+selectCodeEditor("toppo.v", 698, 282); // cl (w, cl)
+selectCodeEditor("toppo.v", 132, 258); // cl (w, cl)
+// Elapsed time: 38 seconds
+selectCodeEditor("toppo.v", 230, 255); // cl (w, cl)
+selectCodeEditor("toppo.v", 189, 99); // cl (w, cl)
+selectCodeEditor("toppo.v", 270, 98); // cl (w, cl)
+// Elapsed time: 13 seconds
+selectCodeEditor("toppo.v", 44, 108); // cl (w, cl)
+selectCodeEditor("toppo.v", 44, 105, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("toppo.v", 54, 97); // cl (w, cl)
+selectCodeEditor("toppo.v", 482, 209); // cl (w, cl)
+selectCodeEditor("toppo.v", 751, 267); // cl (w, cl)
+selectCodeEditor("toppo.v", 751, 267, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("toppo.v", 718, 336); // cl (w, cl)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "birb.v", 2); // k (j, cl)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "countUD16L.v", 4); // k (j, cl)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: update_compile_order -fileset sources_1 
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "toppo.v", 1); // k (j, cl)
+// Elapsed time: 19 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "countUD16L.v", 4); // k (j, cl)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "toppo.v", 1); // k (j, cl)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "countUD16L.v", 4); // k (j, cl)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "toppo.v", 1); // k (j, cl)
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Program and Debug, Generate Bitstream]", 20, false); // u (O, cl)
+// Run Command: PAResourceCommand.PACommandNames_RUN_BITGEN
+// A (cl): Synthesis is Out-of-date: addNotify
+selectButton(RDIResource.BaseDialog_YES, "Yes"); // a (A)
+// by (cl):  Resetting Runs : addNotify
+dismissDialog("Synthesis is Out-of-date"); // A (cl)
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_RESET
+// Tcl Message: reset_run synth_1 
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_RESET
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// f (cl): Launch Runs: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (f)
+// 'cx' command handler elapsed time: 3 seconds
+dismissDialog("Launch Runs"); // f (cl)
+// Tcl Message: launch_runs impl_1 -to_step write_bitstream -jobs 4 
+// by (cl):  Generate Bitstream : addNotify
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_MODIFY
+// Tcl Message: [Wed Nov 20 22:56:53 2019] Launched synth_1... Run output will be captured here: D:/Users/Julian/Documents/UCSC Year THREE/CSE 100/Lab 7/Lab 7/Lab 7.runs/synth_1/runme.log [Wed Nov 20 22:56:53 2019] Launched impl_1... Run output will be captured here: D:/Users/Julian/Documents/UCSC Year THREE/CSE 100/Lab 7/Lab 7/Lab 7.runs/impl_1/runme.log 
+dismissDialog("Generate Bitstream"); // by (cl)
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_FAILED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// ah (cl): Synthesis Failed: addNotify
+// TclEventType: RUN_STATUS_CHANGE
+// Elapsed time: 75 seconds
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (ah)
+// Run Command: PAResourceCommand.PACommandNames_MESSAGE_WINDOW
+dismissDialog("Synthesis Failed"); // ah (cl)
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Synthesis, [Synth 8-448] named port connection 'Hcurr' does not exist for instance 'bird1' of module 'birb' [D:/Users/Julian/Documents/UCSC Year THREE/CSE 100/Lab 7/Lab 7/Lab 7.srcs/sources_1/new/toppo.v:76]. ]", 1, true); // ah (O, cl) - Node
+messagesViewCrossProbe(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "src;-;D:\Users\Julian\Documents\UCSC Year THREE\CSE 100\Lab 7\Lab 7\Lab 7.srcs\sources_1\new\toppo.v;-;;-;16;-;line;-;76;-;;-;16;-;"); // ah (O, cl)
+selectCodeEditor("toppo.v", 463, 281); // cl (w, cl)
+selectCodeEditor("toppo.v", 463, 281, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("toppo.v", 421, 281); // cl (w, cl)
+selectCodeEditor("toppo.v", 379, 276); // cl (w, cl)
+selectCodeEditor("toppo.v", 392, 274); // cl (w, cl)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "birb.v", 2); // k (j, cl)
+selectCodeEditor("birb.v", 132, 337); // cl (w, cl)
+selectCodeEditor("birb.v", 35, 103); // cl (w, cl)
+selectCodeEditor("birb.v", 42, 300); // cl (w, cl)
+selectCodeEditor("birb.v", 28, 97); // cl (w, cl)
+selectCodeEditor("birb.v", 220, 169); // cl (w, cl)
+selectCodeEditor("birb.v", 29, 211); // cl (w, cl)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "toppo.v", 1); // k (j, cl)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "birb.v", 2); // k (j, cl)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "toppo.v", 1); // k (j, cl)
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Program and Debug, Generate Bitstream]", 20, false); // u (O, cl)
+// Run Command: PAResourceCommand.PACommandNames_RUN_BITGEN
+// A (cl): No Implementation Results Available: addNotify
+selectButton(RDIResource.BaseDialog_YES, "Yes"); // a (A)
+// by (cl):  Resetting Runs : addNotify
+// TclEventType: RUN_MODIFY
+dismissDialog("No Implementation Results Available"); // A (cl)
+// TclEventType: RUN_RESET
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// Tcl Message: reset_run synth_1 
+// f (cl): Launch Runs: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (f)
+dismissDialog("Launch Runs"); // f (cl)
+// TclEventType: RUN_LAUNCH
+// Tcl Message: launch_runs impl_1 -to_step write_bitstream -jobs 4 
+// TclEventType: RUN_LAUNCH
+// by (cl):  Generate Bitstream : addNotify
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_STATUS_CHANGE
+// Tcl Message: [Wed Nov 20 22:59:06 2019] Launched synth_1... Run output will be captured here: D:/Users/Julian/Documents/UCSC Year THREE/CSE 100/Lab 7/Lab 7/Lab 7.runs/synth_1/runme.log [Wed Nov 20 22:59:06 2019] Launched impl_1... Run output will be captured here: D:/Users/Julian/Documents/UCSC Year THREE/CSE 100/Lab 7/Lab 7/Lab 7.runs/impl_1/runme.log 
+dismissDialog("Generate Bitstream"); // by (cl)
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_FAILED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// ah (cl): Implementation Failed: addNotify
+// Elapsed time: 75 seconds
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (ah)
+// Run Command: PAResourceCommand.PACommandNames_MESSAGE_WINDOW
+dismissDialog("Implementation Failed"); // ah (cl)
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Implementation, Opt Design, DRC, Netlist, Net, [DRC MDRV-1] Multiple Driver Nets: Net stuffISee/Vert/count3to7/fps has multiple drivers: stuffISee/Hori/count3to7/flip2_i_3__5/O, and stuffISee/Vert/count3to7/flip2_i_4__3/O.. ]", 7, false); // ah (O, cl)
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Implementation, Opt Design, DRC, Netlist, Net, [DRC MDRV-1] Multiple Driver Nets: Net stuffISee/Vert/count3to7/fps has multiple drivers: stuffISee/Hori/count3to7/flip2_i_3__5/O, and stuffISee/Vert/count3to7/flip2_i_4__3/O.. ]", 7, false, false, false, false, false, true); // ah (O, cl) - Double Click
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Synthesis, [Synth 8-6859] multi-driven net on pin fps with 1st driver pin 'i_170/O' [D:/Users/Julian/Documents/UCSC Year THREE/CSE 100/Lab 7/Lab 7/Lab 7.srcs/sources_1/new/VGA_Control.v:58]. ]", 1, true); // ah (O, cl) - Node
+messagesViewCrossProbe(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "src;-;D:\Users\Julian\Documents\UCSC Year THREE\CSE 100\Lab 7\Lab 7\Lab 7.srcs\sources_1\new\VGA_Control.v;-;;-;16;-;line;-;58;-;;-;16;-;"); // ah (O, cl)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "toppo.v", 1); // k (j, cl)
+selectCodeEditor("toppo.v", 84, 155); // cl (w, cl)
+selectCodeEditor("toppo.v", 84, 155, false, false, false, false, true); // cl (w, cl) - Double Click
+// Elapsed time: 21 seconds
+selectCodeEditor("toppo.v", 283, 188); // cl (w, cl)
+selectCodeEditor("toppo.v", 315, 196); // cl (w, cl)
+selectCodeEditor("toppo.v", 312, 228); // cl (w, cl)
+selectCodeEditor("toppo.v", 299, 198); // cl (w, cl)
+selectCodeEditor("toppo.v", 296, 203); // cl (w, cl)
+selectCodeEditor("toppo.v", 304, 211); // cl (w, cl)
+selectCodeEditor("toppo.v", 348, 210); // cl (w, cl)
+selectCodeEditor("toppo.v", 381, 210); // cl (w, cl)
+selectCodeEditor("toppo.v", 437, 208); // cl (w, cl)
+// Elapsed time: 10 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "VGA_Control.v", 6); // k (j, cl)
+selectCodeEditor("VGA_Control.v", 484, 262); // cl (w, cl)
+selectCodeEditor("VGA_Control.v", 379, 253); // cl (w, cl)
+selectCodeEditor("VGA_Control.v", 325, 250); // cl (w, cl)
+selectCodeEditor("VGA_Control.v", 325, 250, false, false, false, false, true); // cl (w, cl) - Double Click
+// Elapsed time: 17 seconds
+selectCodeEditor("VGA_Control.v", 432, 328); // cl (w, cl)
+selectCodeEditor("VGA_Control.v", 417, 220); // cl (w, cl)
+// Elapsed time: 11 seconds
+selectCodeEditor("VGA_Control.v", 400, 247); // cl (w, cl)
+// Elapsed time: 36 seconds
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, toppo (toppo.v), stuffISee : VGA_Control (VGA_Control.v)]", 4); // B (F, cl)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, toppo (toppo.v), stuffISee : VGA_Control (VGA_Control.v), Hori : countUD16L (countUD16L.v)]", 5, true); // B (F, cl) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, toppo (toppo.v), stuffISee : VGA_Control (VGA_Control.v), Hori : countUD16L (countUD16L.v), count0to2 : countUD3L (countUD3L.v)]", 6, false, false, false, false, false, true); // B (F, cl) - Double Click
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "VGA_Control.v", 6); // k (j, cl)
+// Elapsed time: 19 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Project Summary", 0); // k (j, cl)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "toppo.v", 1); // k (j, cl)
+selectCodeEditor("toppo.v", 114, 254); // cl (w, cl)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Simulation, Run Simulation]", 10, false); // u (O, cl)
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources]", 19); // B (F, cl)
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1]", 20); // B (F, cl)
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Simulation, Run Simulation]", 10, false); // u (O, cl)
+selectMenuItem(PAResourceCommand.PACommandNames_SIMULATION_RUN_BEHAVIORAL, "Run Behavioral Simulation"); // ah (an, cl)
+// Run Command: PAResourceCommand.PACommandNames_SIMULATION_RUN_BEHAVIORAL
+// e (cl):  Run Simulation : addNotify
+// TclEventType: LAUNCH_SIM
+// TclEventType: FILE_SET_OPTIONS_CHANGE
+// Tcl Message: launch_simulation 
+// Tcl Message: INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/Users/Julian/Documents/UCSC Year THREE/CSE 100/Lab 7/Lab 7/Lab 7.sim/sim_1/behav/xsim' INFO: [SIM-utils-51] Simulation object is 'sim_1' INFO: [SIM-utils-54] Inspecting design source files for 'testSyncs' in fileset 'sim_1'... INFO: [USF-XSim-97] Finding global include files... INFO: [USF-XSim-98] Fetching design files from 'sim_1'... INFO: [USF-XSim-2] XSim::Compile design 
+// Tcl Message: INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/Users/Julian/Documents/UCSC Year THREE/CSE 100/Lab 7/Lab 7/Lab 7.sim/sim_1/behav/xsim' 
+// Tcl Message: "xvlog --incr --relax -prj testSyncs_vlog.prj" 
+// TclEventType: LAUNCH_SIM_LOG
+// Tcl Message: INFO: [USF-XSim-69] 'compile' step finished in '3' seconds INFO: [USF-XSim-3] XSim::Elaborate design INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'D:/Users/Julian/Documents/UCSC Year THREE/CSE 100/Lab 7/Lab 7/Lab 7.sim/sim_1/behav/xsim' 
+// Tcl Message: "xelab -wto 5ef4be9cbd7440319a233a4a2391f005 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot testSyncs_behav xil_defaultlib.testSyncs xil_defaultlib.glbl -log elaborate.log" 
+// Tcl Message: Built simulation snapshot testSyncs_behav 
+// TclEventType: LAUNCH_SIM
+// TclEventType: LOAD_FEATURE
+// Tcl Message:  ****** Webtalk v2019.1 (64-bit)   **** SW Build 2552052 on Fri May 24 14:49:42 MDT 2019   **** IP Build 2548770 on Fri May 24 18:01:18 MDT 2019     ** Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.  source D:/Users/Julian/Documents/UCSC -notrace couldn't read file "D:/Users/Julian/Documents/UCSC": permission denied INFO: [Common 17-206] Exiting Webtalk at Wed Nov 20 23:03:33 2019... 
+// Tcl Message: run_program: Time (s): cpu = 00:00:00 ; elapsed = 00:00:11 . Memory (MB): peak = 858.035 ; gain = 0.000 
+// Tcl Message: INFO: [USF-XSim-69] 'elaborate' step finished in '11' seconds INFO: [USF-XSim-4] XSim::Simulate design INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'D:/Users/Julian/Documents/UCSC Year THREE/CSE 100/Lab 7/Lab 7/Lab 7.sim/sim_1/behav/xsim' INFO: [USF-XSim-98] *** Running xsim 
+// Tcl Message:    with args "testSyncs_behav -key {Behavioral:sim_1:Functional:testSyncs} -tclbatch {testSyncs.tcl} -log {simulate.log}" 
+// Tcl Message: INFO: [USF-XSim-8] Loading simulator feature 
+// Tcl Message: Vivado Simulator 2019.1 
+// TclEventType: SIMULATION_CREATE_SIMULATION_OBJECT
+// TclEventType: SIMULATION_UPDATE_SIMULATION_STATE
+// TclEventType: SIMULATION_UPDATE_SCOPE_TREE
+// TclEventType: SIMULATION_UPDATE_STACKS
+// TclEventType: SIMULATION_UPDATE_OBJECT_TREE
+// TclEventType: SIMULATION_UPDATE_PROTOCOL_INSTANCE_TREE
+// WARNING: HEventQueue.dispatchEvent() is taking  1879 ms.
+// Tcl Message: Time resolution is 1 ps 
+// TclEventType: SIMULATION_UPDATE_SCOPE_TREE
+// TclEventType: SIMULATION_UPDATE_STACKS
+// TclEventType: SIMULATION_UPDATE_OBJECT_TREE
+// TclEventType: SIMULATION_UPDATE_PROTOCOL_INSTANCE_TREE
+// TclEventType: SIMULATION_UPDATE_SCOPE_TREE
+// TclEventType: SIMULATION_UPDATE_STACKS
+// TclEventType: SIMULATION_UPDATE_OBJECT_TREE
+// TclEventType: SIMULATION_UPDATE_PROTOCOL_INSTANCE_TREE
+// Elapsed time: 18 seconds
+closeView(PAResourceOtoP.PAViews_PROJECT_SUMMARY, "Project Summary"); // v
+// TclEventType: SIMULATION_UPDATE_SCOPE_TREE
+// TclEventType: SIMULATION_UPDATE_STACKS
+// TclEventType: SIMULATION_UPDATE_OBJECT_TREE
+// TclEventType: SIMULATION_UPDATE_PROTOCOL_INSTANCE_TREE
+// TclEventType: SIMULATION_UPDATE_SCOPE_TREE
+// TclEventType: SIMULATION_UPDATE_STACKS
+// TclEventType: SIMULATION_UPDATE_OBJECT_TREE
+// TclEventType: SIMULATION_UPDATE_PROTOCOL_INSTANCE_TREE
+// TclEventType: WAVEFORM_UPDATE_TITLE
+// TclEventType: WAVEFORM_OPEN_WCFG
+// TclEventType: SIMULATION_UPDATE_SCOPE_TREE
+// TclEventType: SIMULATION_UPDATE_STACKS
+// TclEventType: SIMULATION_UPDATE_OBJECT_TREE
+// TclEventType: SIMULATION_UPDATE_PROTOCOL_INSTANCE_TREE
+// TclEventType: WAVEFORM_OPEN_WCFG
+// TclEventType: WAVEFORM_DELAYED_MODEL_EVENT
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// Waveform: addNotify
+// TclEventType: WAVEFORM_MODEL_EVENT
+// Tcl Message: source testSyncs.tcl 
+// Tcl Message: # set curr_wave [current_wave_config] # if { [string length $curr_wave] == 0 } { #   if { [llength [get_objects]] > 0} { #     add_wave / #     set_property needs_save false [current_wave_config] #   } else { #      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console." #   } # } 
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_MODEL_EVENT
+// HMemoryUtils.trashcanNow. Engine heap size: 839 MB. GUI used memory: 69 MB. Current time: 11/20/19, 11:03:39 PM PST
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_UPDATE_TITLE
+// TclEventType: WAVEFORM_DELAYED_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_TITLE
+// TclEventType: SIMULATION_UPDATE_SIMULATION_STATE
+// TclEventType: SIMULATION_CLEAR_CURRENT_LINE
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: SIMULATION_UPDATE_LATEST_TIME
+// TclEventType: SIMULATION_OBJECT_TREE_RESTORED
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: SIMULATION_UPDATE_LATEST_TIME
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: SIMULATION_CURRENT_SCOPE_CHANGED
+// TclEventType: SIMULATION_CURRENT_STACK_CHANGED
+// TclEventType: SIMULATION_UPDATE_STACK_FRAMES
+// TclEventType: SIMULATION_CURRENT_STACK_FRAME_CHANGED
+// TclEventType: SIMULATION_UPDATE_LOCALS
+// TclEventType: SIMULATION_UPDATE_SCOPE_TREE
+// TclEventType: SIMULATION_UPDATE_STACKS
+// TclEventType: SIMULATION_UPDATE_OBJECT_TREE
+// TclEventType: SIMULATION_UPDATE_SIMULATION_STATE
+// Tcl Message: # run 1000ns 
+// Tcl Message: xsim: Time (s): cpu = 00:00:11 ; elapsed = 00:00:06 . Memory (MB): peak = 899.359 ; gain = 41.324 
+// Tcl Message: INFO: [USF-XSim-96] XSim completed. Design snapshot 'testSyncs_behav' loaded. INFO: [USF-XSim-97] XSim simulation ran for 1000ns 
+// Tcl Message: launch_simulation: Time (s): cpu = 00:00:13 ; elapsed = 00:00:21 . Memory (MB): peak = 899.359 ; gain = 41.324 
+// 'd' command handler elapsed time: 21 seconds
+dismissDialog("Run Simulation"); // e (cl)
+selectGraphicalView(RDIResource.RDIViews_WAVEFORM_VIEWER, 163, 156); // n (o, cl)
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_MODEL_EVENT
+selectButton(PAResourceCommand.PACommandNames_SIMULATION_LIVE_RUN, "simulation_live_run_for_time"); // B (f, cl)
+// Run Command: PAResourceCommand.PACommandNames_SIMULATION_LIVE_RUN
+// TclEventType: SIMULATION_UPDATE_SIMULATION_STATE
+// TclEventType: SIMULATION_CLEAR_CURRENT_LINE
+// Tcl Message: run 1 ms 
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: SIMULATION_UPDATE_LATEST_TIME
+// HMemoryUtils.trashcanNow. Engine heap size: 839 MB. GUI used memory: 68 MB. Current time: 11/20/19, 11:03:45 PM PST
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: SIMULATION_UPDATE_LATEST_TIME
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: SIMULATION_UPDATE_LATEST_TIME
+selectGraphicalView(RDIResource.RDIViews_WAVEFORM_VIEWER, 109, 335); // n (o, cl)
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// HMemoryUtils.trashcanNow. Engine heap size: 839 MB. GUI used memory: 68 MB. Current time: 11/20/19, 11:03:48 PM PST
+// TclEventType: SIMULATION_UPDATE_LATEST_TIME
+selectGraphicalView(RDIResource.RDIViews_WAVEFORM_VIEWER, 323, 332); // n (o, cl)
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: SIMULATION_UPDATE_LATEST_TIME
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: SIMULATION_UPDATE_LATEST_TIME
+selectButton(RDIResource.WaveformView_NEXT_TRANSITION, "Waveform Viewer_waveformNextTransition"); // B (f, cl)
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: SIMULATION_UPDATE_LATEST_TIME
+// HMemoryUtils.trashcanNow. Engine heap size: 839 MB. GUI used memory: 67 MB. Current time: 11/20/19, 11:03:51 PM PST
+selectButton(RDIResource.WaveformView_NEXT_TRANSITION, "Waveform Viewer_waveformNextTransition"); // B (f, cl)
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: SIMULATION_UPDATE_LATEST_TIME
+selectButton(RDIResource.WaveformView_NEXT_TRANSITION, "Waveform Viewer_waveformNextTransition"); // B (f, cl)
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: SIMULATION_UPDATE_LATEST_TIME
+// TclEventType: SIMULATION_OBJECT_TREE_RESTORED
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: SIMULATION_UPDATE_LATEST_TIME
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_DELAYED_MODEL_EVENT
+// TclEventType: SIMULATION_CURRENT_SCOPE_CHANGED
+// TclEventType: SIMULATION_CURRENT_STACK_CHANGED
+// TclEventType: SIMULATION_UPDATE_STACK_FRAMES
+// TclEventType: SIMULATION_CURRENT_STACK_FRAME_CHANGED
+// TclEventType: SIMULATION_UPDATE_LOCALS
+// TclEventType: SIMULATION_UPDATE_SCOPE_TREE
+// TclEventType: SIMULATION_UPDATE_STACKS
+// TclEventType: SIMULATION_UPDATE_OBJECT_TREE
+// TclEventType: SIMULATION_UPDATE_SIMULATION_STATE
+// Tcl Message: run: Time (s): cpu = 00:00:05 ; elapsed = 00:00:09 . Memory (MB): peak = 901.152 ; gain = 0.000 
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// HMemoryUtils.trashcanNow. Engine heap size: 839 MB. GUI used memory: 67 MB. Current time: 11/20/19, 11:03:55 PM PST
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_MODEL_EVENT
+selectGraphicalView(RDIResource.RDIViews_WAVEFORM_VIEWER, 313, 319); // n (o, cl)
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+selectGraphicalView(RDIResource.RDIViews_WAVEFORM_VIEWER, 226, 410); // n (o, cl)
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// HMemoryUtils.trashcanNow. Engine heap size: 839 MB. GUI used memory: 67 MB. Current time: 11/20/19, 11:03:57 PM PST
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// HMemoryUtils.trashcanNow. Engine heap size: 839 MB. GUI used memory: 67 MB. Current time: 11/20/19, 11:03:58 PM PST
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_CLOSE_WCFG
+closeView(RDIResource.RDIViews_WAVEFORM_VIEWER, "Untitled 1"); // w
+selectButton(PAResourceTtoZ.TaskBanner_CLOSE, (String) null); // k (aA, cl)
+closeTask("Simulation", "Behavioral Simulation - Functional - sim_1 - testSyncs", "DesignTask.SIMULATION");
+// A (cl): Confirm Close: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (A)
+// by (cl):  Close : addNotify
+// TclEventType: SIMULATION_CLOSE_SIMULATION
+dismissDialog("Confirm Close"); // A (cl)
+// WARNING: HEventQueue.dispatchEvent() is taking  1982 ms.
+// Tcl Message: close_sim 
+// Tcl Message: INFO: [Simtcl 6-16] Simulation closed 
+// Tcl Message: close_sim: Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 901.152 ; gain = 0.000 
+dismissDialog("Close"); // by (cl)
+// Elapsed time: 18 seconds
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Program and Debug, Generate Bitstream]", 20, false); // u (O, cl)
+// Run Command: PAResourceCommand.PACommandNames_RUN_BITGEN
+// A (cl): Synthesis is Out-of-date: addNotify
+selectButton(RDIResource.BaseDialog_YES, "Yes"); // a (A)
+// by (cl):  Resetting Runs : addNotify
+// TclEventType: RUN_MODIFY
+dismissDialog("Synthesis is Out-of-date"); // A (cl)
+// TclEventType: RUN_RESET
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_RESET
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// Tcl Message: reset_run synth_1 
+// f (cl): Launch Runs: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (f)
+// 'cx' command handler elapsed time: 3 seconds
+dismissDialog("Launch Runs"); // f (cl)
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_STATUS_CHANGE
+// by (cl):  Generate Bitstream : addNotify
+// TclEventType: RUN_STATUS_CHANGE
+// Tcl Message: launch_runs impl_1 -to_step write_bitstream -jobs 4 
+// Tcl Message: [Wed Nov 20 23:04:31 2019] Launched synth_1... Run output will be captured here: D:/Users/Julian/Documents/UCSC Year THREE/CSE 100/Lab 7/Lab 7/Lab 7.runs/synth_1/runme.log [Wed Nov 20 23:04:31 2019] Launched impl_1... Run output will be captured here: D:/Users/Julian/Documents/UCSC Year THREE/CSE 100/Lab 7/Lab 7/Lab 7.runs/impl_1/runme.log 
+dismissDialog("Generate Bitstream"); // by (cl)
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// ah (cl): Bitstream Generation Completed: addNotify
+// Elapsed time: 358 seconds
+selectButton(RDIResource.BaseDialog_CANCEL, "Cancel"); // a (ah)
+dismissDialog("Bitstream Generation Completed"); // ah (cl)
+// Elapsed time: 627 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "toppo.v", 2); // k (j, cl)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "birb.v", 1); // k (j, cl)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "toppo.v", 2); // k (j, cl)
+// Elapsed time: 13 seconds
+selectCodeEditor("toppo.v", 573, 287); // cl (w, cl)
+selectCodeEditor("toppo.v", 220, 178); // cl (w, cl)
+selectCodeEditor("toppo.v", 67, 184); // cl (w, cl)
+selectCodeEditor("toppo.v", 158, 289); // cl (w, cl)
+selectCodeEditor("toppo.v", 158, 273); // cl (w, cl)
+// Elapsed time: 34 seconds
+selectCodeEditor("toppo.v", 618, 182); // cl (w, cl)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Program and Debug, Generate Bitstream]", 20, false); // u (O, cl)
+// HMemoryUtils.trashcanNow. Engine heap size: 839 MB. GUI used memory: 68 MB. Current time: 11/20/19, 11:34:02 PM PST
+// HMemoryUtils.trashcanNow. Engine heap size: 839 MB. GUI used memory: 67 MB. Current time: 11/21/19, 12:04:03 AM PST
+// WARNING: HEventQueue.dispatchEvent() is taking  28541699 ms.
+// WARNING: HTimer (HSTRUtils Dump STR Log Timer) is taking 1689ms to process. Increasing delay to 4000 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  2777 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 839 MB. GUI used memory: 67 MB. Current time: 11/21/19, 8:03:51 AM PST
+// WARNING: HEventQueue.dispatchEvent() is taking  3756 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 839 MB. GUI used memory: 66 MB. Current time: 11/21/19, 8:33:50 AM PST
+// HMemoryUtils.trashcanNow. Engine heap size: 839 MB. GUI used memory: 66 MB. Current time: 11/21/19, 9:03:51 AM PST
+// HMemoryUtils.trashcanNow. Engine heap size: 839 MB. GUI used memory: 66 MB. Current time: 11/21/19, 9:33:51 AM PST

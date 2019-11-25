@@ -50,7 +50,7 @@ module countUD16L(
     */
     countUD3L count0to2 (.Up(Up), .Dw(Dw), .LD(LD), .clock(clock), .d(d[2:0]), .q(q[2:0]), .utc(utc0), .dtc(dtc0));
     countUD5L count3to7 (.Up(Up & utc0), .Dw(Dw & dtc0), .LD(LD), .clock(clock), .d(d[7:3]), .q(q[7:3]), .utc(utc1), .dtc(dtc1));
-    countUD5L count8to12 (.Up(Up & utc0 & utc1), .Dw(Dw & dtc & dtc1), .LD(LD), .clock(clock), .d(d[12:8]), .q(q[12:8]), .utc(utc2), .dtc(dtc2));
+    countUD5L count8to12 (.Up(Up & utc0 & utc1), .Dw(Dw & dtc0 & dtc1), .LD(LD), .clock(clock), .d(d[12:8]), .q(q[12:8]), .utc(utc2), .dtc(dtc2));
     countUD3L count13to15 (.Up(Up & utc0 & utc1 & utc2), .Dw(Dw & dtc0 & dtc1 & dtc2), .LD(LD), .clock(clock), .d(d[15:13]), .q(q[15:13]), .utc(utc3), .dtc(dtc3));
     
     

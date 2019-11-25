@@ -1,0 +1,1677 @@
+/*
+
+Xilinx Vivado v2019.1 (64-bit) [Major: 2019, Minor: 1]
+SW Build: 2552052 on Fri May 24 14:49:42 MDT 2019
+IP Build: 2548770 on Fri May 24 18:01:18 MDT 2019
+
+Process ID (PID): 16164
+License: Customer
+
+Current time: 	Wed Nov 20 08:36:29 PST 2019
+Time zone: 	Pacific Standard Time (America/Los_Angeles)
+
+OS: Windows 10
+OS Version: 10.0
+OS Architecture: amd64
+Available processors (cores): 8
+
+Screen size: 2736x1824
+Screen resolution (DPI): 200
+Available screens: 1
+Available disk space: 52 GB
+Default font: family=Segoe UI,name=Segoe UI,style=plain,size=24
+
+Java version: 	9.0.4 64-bit
+Java home: 	C:/Xilinx/Vivado/2019.1/tps/win64/jre9.0.4
+Java executable location: 	C:/Xilinx/Vivado/2019.1/tps/win64/jre9.0.4/bin/java.exe
+Java initial memory (-Xms): 	128 MB
+Java maximum memory (-Xmx):	 3 GB
+
+
+User name: 	Julian
+User home directory: C:/Users/Julian
+User working directory: C:/Users/Julian/Documents/Work/CSE 100/Lab 7
+User country: 	US
+User language: 	en
+User locale: 	en_US
+
+RDI_BASEROOT: C:/Xilinx/Vivado
+HDI_APPROOT: C:/Xilinx/Vivado/2019.1
+RDI_DATADIR: C:/Xilinx/Vivado/2019.1/data
+RDI_BINDIR: C:/Xilinx/Vivado/2019.1/bin
+
+Vivado preferences file location: C:/Users/Julian/AppData/Roaming/Xilinx/Vivado/2019.1/vivado.xml
+Vivado preferences directory: C:/Users/Julian/AppData/Roaming/Xilinx/Vivado/2019.1/
+Vivado layouts directory: C:/Users/Julian/AppData/Roaming/Xilinx/Vivado/2019.1/layouts
+PlanAhead jar file location: 	C:/Xilinx/Vivado/2019.1/lib/classes/planAhead.jar
+Vivado log file location: 	C:/Users/Julian/Documents/Work/CSE 100/Lab 7/vivado.log
+Vivado journal file location: 	C:/Users/Julian/Documents/Work/CSE 100/Lab 7/vivado.jou
+Engine tmp dir: 	C:/Users/Julian/Documents/Work/CSE 100/Lab 7/.Xil/Vivado-16164-JULIAN-SURFACE
+
+Xilinx Environment Variables
+----------------------------
+XILINX: C:/Xilinx/Vivado/2019.1/ids_lite/ISE
+XILINX_DSP: C:/Xilinx/Vivado/2019.1/ids_lite/ISE
+XILINX_PLANAHEAD: C:/Xilinx/Vivado/2019.1
+XILINX_SDK: C:/Xilinx/SDK/2019.1
+XILINX_VIVADO: C:/Xilinx/Vivado/2019.1
+XILINX_VIVADO_HLS: C:/Xilinx/Vivado/2019.1
+
+
+GUI allocated memory:	384 MB
+GUI max memory:		3,072 MB
+Engine allocated memory: 653 MB
+
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+
+*/
+
+// TclEventType: START_GUI
+// Tcl Message: start_gui 
+// TclEventType: PROJECT_OPEN_DIALOG
+// by (cl):  Open Project : addNotify
+// Opening Vivado Project: C:\Users\Julian\Documents\Work\CSE 100\Lab 7\Lab 7.xpr. Version: Vivado v2019.1 
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// Tcl Message: open_project {C:/Users/Julian/Documents/Work/CSE 100/Lab 7/Lab 7.xpr} 
+// TclEventType: MSGMGR_MOVEMSG
+// TclEventType: FILE_SET_NEW
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_CURRENT
+// TclEventType: PROJECT_DASHBOARD_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_NEW
+// Tcl Message: open_project {C:/Users/Julian/Documents/Work/CSE 100/Lab 7/Lab 7.xpr} 
+// Tcl Message: INFO: [Project 1-313] Project file moved from 'D:/Users/Julian/Documents/UCSC Year THREE/CSE 100/Lab 7/Lab 7' since last save. 
+// Tcl Message: Scanning sources... Finished scanning sources 
+// Tcl Message: INFO: [IP_Flow 19-234] Refreshing IP repositories INFO: [IP_Flow 19-1704] No user IP repositories specified 
+// HMemoryUtils.trashcanNow. Engine heap size: 656 MB. GUI used memory: 65 MB. Current time: 11/20/19, 8:36:31 AM PST
+// TclEventType: PROJECT_NEW
+// [GUI Memory]: 85 MB (+87098kb) [00:00:15]
+// [Engine Memory]: 687 MB (+569268kb) [00:00:15]
+// [GUI Memory]: 100 MB (+10697kb) [00:00:16]
+// [GUI Memory]: 122 MB (+18329kb) [00:00:16]
+// [Engine Memory]: 734 MB (+12638kb) [00:00:18]
+// WARNING: HEventQueue.dispatchEvent() is taking  4126 ms.
+// Tcl Message: INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2019.1/data/ip'. 
+// Tcl Message: open_project: Time (s): cpu = 00:00:16 ; elapsed = 00:00:08 . Memory (MB): peak = 890.281 ; gain = 32.316 
+// Project name: Lab 7; location: C:/Users/Julian/Documents/Work/CSE 100/Lab 7; part: xc7a35tcpg236-1
+dismissDialog("Open Project"); // by (cl)
+// [GUI Memory]: 130 MB (+1236kb) [00:00:21]
+// [Engine Memory]: 795 MB (+25718kb) [00:00:21]
+// Tcl Message: update_compile_order -fileset sources_1 
+// PAPropertyPanels.initPanels (toppo.v) elapsed time: 0.2s
+// Elapsed time: 10 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, toppo (toppo.v)]", 1, true); // B (F, cl) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, toppo (toppo.v)]", 1, true, false, false, false, false, true); // B (F, cl) - Double Click - Node
+// WARNING: HEventQueue.dispatchEvent() is taking  2762 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  2505447 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 799 MB. GUI used memory: 73 MB. Current time: 11/20/19, 9:19:07 AM PST
+// WARNING: HTimer (ActiveMsgMonitor Process Messages Timer) is taking 330ms to process. Increasing delay to 2000 ms.
+// Elapsed time: 3913 seconds
+selectCodeEditor("toppo.v", 354, 218); // cl (w, cl)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// WARNING: HTimer (FileMgr Design Graph Update Timer) is taking 562ms to process. Increasing delay to 3000 ms.
+// Elapsed time: 64 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, toppo (toppo.v), trump : theWall (theWall.v)]", 4, false); // B (F, cl)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, toppo (toppo.v), trump : theWall (theWall.v)]", 4, false, false, false, false, false, true); // B (F, cl) - Double Click
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, toppo (toppo.v), trump : theWall (theWall.v)]", 4, false); // B (F, cl)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "toppo.v", 1); // k (j, cl)
+// Elapsed time: 71 seconds
+selectCodeEditor("toppo.v", 650, 567); // cl (w, cl)
+// Elapsed time: 18 seconds
+selectCodeEditor("toppo.v", 274, 636); // cl (w, cl)
+selectCodeEditor("toppo.v", 666, 643); // cl (w, cl)
+selectCodeEditor("toppo.v", 583, 595); // cl (w, cl)
+selectCodeEditor("toppo.v", 467, 637); // cl (w, cl)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 44 seconds
+selectCodeEditor("toppo.v", 117, 608); // cl (w, cl)
+selectCodeEditor("toppo.v", 402, 592); // cl (w, cl)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 91 seconds
+selectTab(PAResourceEtoH.FileSetView_TABBED_PANE, (HResource) null, "Libraries", 1); // i (N, cl)
+selectTab(PAResourceEtoH.FileSetView_TABBED_PANE, (HResource) null, "Hierarchy", 0); // i (N, cl)
+// HMemoryUtils.trashcanNow. Engine heap size: 799 MB. GUI used memory: 68 MB. Current time: 11/20/19, 9:49:06 AM PST
+// HMemoryUtils.trashcanNow. Engine heap size: 799 MB. GUI used memory: 69 MB. Current time: 11/20/19, 10:19:06 AM PST
+// WARNING: HEventQueue.dispatchEvent() is taking  6092117 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 799 MB. GUI used memory: 69 MB. Current time: 11/20/19, 12:04:00 PM PST
+// WARNING: HEventQueue.dispatchEvent() is taking  1287 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  182578 ms.
+// WARNING: HSwingWorker (Refresh Filesets Swing Worker) is taking 182566 ms. Increasing delay to 547698 ms.
+// WARNING: HSwingWorker (Refresh Filesets Swing Worker) is taking 34 ms. Decreasing delay to 2034 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 799 MB. GUI used memory: 67 MB. Current time: 11/20/19, 12:34:02 PM PST
+// WARNING: HEventQueue.dispatchEvent() is taking  68088 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 799 MB. GUI used memory: 67 MB. Current time: 11/20/19, 1:04:06 PM PST
+// WARNING: HEventQueue.dispatchEvent() is taking  3116 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  204691 ms.
+// Elapsed time: 12598 seconds
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Program and Debug, Open Hardware Manager]", 21, true); // u (O, cl) - Node
+// Run Command: PAResourceCommand.PACommandNames_OPEN_HARDWARE_MANAGER
+// Tcl Command: 'rdi::info_commands get_hw_probes'
+// Tcl Command: 'load_features labtools'
+// TclEventType: LOAD_FEATURE
+// by (cl):  Open Hardware Manager : addNotify
+// TclEventType: HW_SESSION_OPEN
+// WARNING: HEventQueue.dispatchEvent() is taking  1580 ms.
+// Tcl Message: open_hw 
+closeView(PAResourceOtoP.PAViews_PROJECT_SUMMARY, "Project Summary"); // v
+dismissDialog("Open Hardware Manager"); // by (cl)
+selectButton(PAResourceOtoP.ProgramDebugTab_OPEN_TARGET, "Open target"); // h (cS, cl)
+selectMenuItem(PAResourceCommand.PACommandNames_AUTO_CONNECT_TARGET, "Auto Connect"); // ah (an, cl)
+// Run Command: PAResourceCommand.PACommandNames_AUTO_CONNECT_TARGET
+// by (cl):  Auto Connect : addNotify
+// Tcl Message: connect_hw_server 
+// Tcl Message: INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121 
+// Tcl Message: INFO: [Labtools 27-2222] Launching hw_server... 
+// Tcl Message: INFO: [Labtools 27-2221] Launch Output:  ****** Xilinx hw_server v2019.1   **** Build date : May 24 2019 at 15:13:31     ** Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.   
+// TclEventType: HW_SERVER_UPDATE
+// Tcl Message: connect_hw_server: Time (s): cpu = 00:00:01 ; elapsed = 00:00:06 . Memory (MB): peak = 890.281 ; gain = 0.000 
+// TclEventType: HW_TARGET_CHANGE
+// TclEventType: HW_TARGET_CLOSE
+// TclEventType: HW_DEVICE_CHANGE
+// TclEventType: HW_SYSMON_ADD
+// TclEventType: HW_TARGET_UPDATE
+// WARNING: HEventQueue.dispatchEvent() is taking  5175 ms.
+// Tcl Message: open_hw_target 
+// Tcl Message: INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210183A2837FA 
+// HMemoryUtils.trashcanNow. Engine heap size: 1,502 MB. GUI used memory: 72 MB. Current time: 11/20/19, 1:17:35 PM PST
+// Tcl Message: open_hw_target: Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1969.504 ; gain = 1079.223 
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: set_property PROGRAM.FILE {C:/Users/Julian/Documents/Work/CSE 100/Lab 7/Lab 7.runs/impl_1/toppo.bit} [get_hw_devices xc7a35t_0] 
+// Tcl Message: current_hw_device [get_hw_devices xc7a35t_0] 
+// TclEventType: HW_DEVICE_CHANGE
+// TclEventType: HW_SYSMON_CHANGE
+// TclEventType: HW_DEVICE_UPDATE
+// [Engine Memory]: 1,520 MB (+718074kb) [04:41:18]
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7a35t_0] 0] 
+// Tcl Message: INFO: [Labtools 27-1435] Device xc7a35t (JTAG device index = 0) is not programmed (DONE status = 0). 
+// Elapsed time: 12 seconds
+dismissDialog("Auto Connect"); // by (cl)
+selectButton(PAResourceOtoP.ProgramDebugTab_PROGRAM_DEVICE, "Program device"); // h (cS, cl)
+// Run Command: PAResourceCommand.PACommandNames_PROGRAM_FPGA
+// bC (cl): Program Device: addNotify
+selectButton(PAResourceOtoP.ProgramFpgaDialog_SPECIFY_BITSTREAM_FILE, (String) null); // q (al, bC)
+setFileChooser("C:/Users/Julian/Documents/Work/CSE 100/Lab 7/Lab 7.runs/impl_1/toppo.bit");
+selectButton(PAResourceOtoP.ProgramFpgaDialog_PROGRAM, "Program"); // a (bC)
+// by (cl):  Program Device : addNotify
+dismissDialog("Program Device"); // bC (cl)
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: set_property PROBES.FILE {} [get_hw_devices xc7a35t_0] 
+// Tcl Message: set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0] 
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: set_property PROGRAM.FILE {C:/Users/Julian/Documents/Work/CSE 100/Lab 7/Lab 7.runs/impl_1/toppo.bit} [get_hw_devices xc7a35t_0] 
+// Tcl Message: program_hw_devices [get_hw_devices xc7a35t_0] 
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: INFO: [Labtools 27-3164] End of startup status: HIGH 
+// TclEventType: HW_DEVICE_CHANGE
+// TclEventType: HW_SYSMON_CHANGE
+// TclEventType: HW_DEVICE_UPDATE
+// TclEventType: HW_DEVICE_CHANGE
+// TclEventType: HW_DEVICE_PROBES_CHANGE
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// TclEventType: HW_DEVICE_PROBES_CHANGE
+// Tcl Message: refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0] 
+// Tcl Message: INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it. 
+// 'I' command handler elapsed time: 13 seconds
+dismissDialog("Program Device"); // by (cl)
+// Elapsed time: 85 seconds
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Project Manager]", 0, true); // u (O, cl) - Node
+// Run Command: PAResourceCommand.PACommandNames_GOTO_PROJECT_MANAGER
+// HMemoryUtils.trashcanNow. Engine heap size: 1,546 MB. GUI used memory: 76 MB. Current time: 11/20/19, 1:19:23 PM PST
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, birb (birb.v)]", 5, false); // B (F, cl)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, birb (birb.v)]", 5, false, false, false, false, false, true); // B (F, cl) - Double Click
+// Elapsed time: 32 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "toppo.v", 1); // k (j, cl)
+selectCodeEditor("toppo.v", 1294, 510); // cl (w, cl)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 49 seconds
+selectCodeEditor("toppo.v", 57, 589); // cl (w, cl)
+selectCodeEditor("toppo.v", 254, 551); // cl (w, cl)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("toppo.v", 450, 570); // cl (w, cl)
+selectCodeEditor("toppo.v", 754, 572); // cl (w, cl)
+// Elapsed time: 63 seconds
+selectCodeEditor("toppo.v", 892, 555); // cl (w, cl)
+selectCodeEditor("toppo.v", 843, 569); // cl (w, cl)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, birb (birb.v)]", 5, false); // B (F, cl)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, birb (birb.v)]", 5, false, false, false, false, false, true); // B (F, cl) - Double Click
+selectCodeEditor("birb.v", 306, 516); // cl (w, cl)
+// Elapsed time: 50 seconds
+selectCodeEditor("birb.v", 291, 580); // cl (w, cl)
+selectCodeEditor("birb.v", 881, 398); // cl (w, cl)
+// Elapsed time: 40 seconds
+selectCodeEditor("birb.v", 257, 583); // cl (w, cl)
+// Elapsed time: 24 seconds
+selectCodeEditor("birb.v", 153, 615); // cl (w, cl)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "theWall.v", 2); // k (j, cl)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "birb.v", 3); // k (j, cl)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 111 seconds
+selectCodeEditor("birb.v", 188, 516); // cl (w, cl)
+selectCodeEditor("birb.v", 221, 544); // cl (w, cl)
+selectCodeEditor("birb.v", 152, 545); // cl (w, cl)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "toppo.v", 1); // k (j, cl)
+selectCodeEditor("toppo.v", 57, 575); // cl (w, cl)
+selectCodeEditor("toppo.v", 771, 545); // cl (w, cl)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "birb.v", 3); // k (j, cl)
+selectCodeEditor("birb.v", 281, 537); // cl (w, cl)
+selectCodeEditor("birb.v", 243, 501); // cl (w, cl)
+// Elapsed time: 23 seconds
+selectCodeEditor("birb.v", 190, 508); // cl (w, cl)
+selectCodeEditor("birb.v", 190, 508, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("birb.v", 204, 550); // cl (w, cl)
+selectCodeEditor("birb.v", 204, 550, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("birb.v", 269, 298); // cl (w, cl)
+selectCodeEditor("birb.v", 199, 251); // cl (w, cl)
+selectCodeEditor("birb.v", 196, 271); // cl (w, cl)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 222 seconds
+selectCodeEditor("birb.v", 298, 453); // cl (w, cl)
+selectCodeEditor("birb.v", 259, 507); // cl (w, cl)
+// Elapsed time: 14 seconds
+selectCodeEditor("birb.v", 189, 540); // cl (w, cl)
+selectCodeEditor("birb.v", 346, 379); // cl (w, cl)
+selectCodeEditor("birb.v", 275, 330); // cl (w, cl)
+// Elapsed time: 40 seconds
+selectCodeEditor("birb.v", 143, 272); // cl (w, cl)
+selectCodeEditor("birb.v", 144, 299); // cl (w, cl)
+selectCodeEditor("birb.v", 148, 533); // cl (w, cl)
+selectCodeEditor("birb.v", 157, 577); // cl (w, cl)
+selectCodeEditor("birb.v", 380, 579); // cl (w, cl)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 137 seconds
+selectCodeEditor("birb.v", 310, 595); // cl (w, cl)
+// Elapsed time: 25 seconds
+typeControlKey((HResource) null, "birb.v", 'v'); // cl (w, cl)
+selectCodeEditor("birb.v", 124, 451); // cl (w, cl)
+selectCodeEditor("birb.v", 162, 444); // cl (w, cl)
+selectCodeEditor("birb.v", 455, 614); // cl (w, cl)
+selectCodeEditor("birb.v", 425, 614); // cl (w, cl)
+selectCodeEditor("birb.v", 565, 604); // cl (w, cl)
+selectCodeEditor("birb.v", 414, 614); // cl (w, cl)
+selectCodeEditor("birb.v", 695, 602); // cl (w, cl)
+selectCodeEditor("birb.v", 459, 606); // cl (w, cl)
+selectCodeEditor("birb.v", 691, 605); // cl (w, cl)
+selectCodeEditor("birb.v", 572, 608); // cl (w, cl)
+selectCodeEditor("birb.v", 586, 607); // cl (w, cl)
+selectCodeEditor("birb.v", 815, 614); // cl (w, cl)
+// Elapsed time: 12 seconds
+selectCodeEditor("birb.v", 583, 604); // cl (w, cl)
+selectCodeEditor("birb.v", 1037, 610); // cl (w, cl)
+selectCodeEditor("birb.v", 1042, 596); // cl (w, cl)
+selectCodeEditor("birb.v", 1213, 612); // cl (w, cl)
+selectCodeEditor("birb.v", 666, 567); // cl (w, cl)
+// Elapsed time: 52 seconds
+selectCodeEditor("birb.v", 129, 577); // cl (w, cl)
+selectCodeEditor("birb.v", 263, 585); // cl (w, cl)
+// Elapsed time: 27 seconds
+selectCodeEditor("birb.v", 476, 552); // cl (w, cl)
+selectCodeEditor("birb.v", 365, 557); // cl (w, cl)
+selectCodeEditor("birb.v", 476, 554); // cl (w, cl)
+selectCodeEditor("birb.v", 638, 548); // cl (w, cl)
+selectCodeEditor("birb.v", 799, 540); // cl (w, cl)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 57 seconds
+selectCodeEditor("birb.v", 375, 613); // cl (w, cl)
+// Elapsed time: 45 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "theWall.v", 2); // k (j, cl)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "birb.v", 3); // k (j, cl)
+// Elapsed time: 20 seconds
+selectCodeEditor("birb.v", 179, 476); // cl (w, cl)
+selectCodeEditor("birb.v", 285, 482); // cl (w, cl)
+selectCodeEditor("birb.v", 211, 583); // cl (w, cl)
+selectCodeEditor("birb.v", 334, 476); // cl (w, cl)
+selectCodeEditor("birb.v", 726, 499); // cl (w, cl)
+selectCodeEditor("birb.v", 190, 505); // cl (w, cl)
+selectCodeEditor("birb.v", 284, 508); // cl (w, cl)
+selectCodeEditor("birb.v", 154, 643); // cl (w, cl)
+// Elapsed time: 16 seconds
+selectCodeEditor("birb.v", 172, 485); // cl (w, cl)
+selectCodeEditor("birb.v", 172, 485, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("birb.v", 278, 464); // cl (w, cl)
+selectCodeEditor("birb.v", 278, 464, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("birb.v", 198, 611); // cl (w, cl)
+selectCodeEditor("birb.v", 256, 631); // cl (w, cl)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "toppo.v", 1); // k (j, cl)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "theWall.v", 2); // k (j, cl)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "birb.v", 3); // k (j, cl)
+selectCodeEditor("birb.v", 489, 540); // cl (w, cl)
+selectCodeEditor("birb.v", 357, 282); // cl (w, cl)
+selectCodeEditor("birb.v", 412, 534); // cl (w, cl)
+// Elapsed time: 72 seconds
+selectCodeEditor("birb.v", 271, 609); // cl (w, cl)
+selectCodeEditor("birb.v", 454, 625); // cl (w, cl)
+selectCodeEditor("birb.v", 516, 622); // cl (w, cl)
+// Elapsed time: 23 seconds
+selectCodeEditor("birb.v", 753, 617); // cl (w, cl)
+// Elapsed time: 85 seconds
+selectCodeEditor("birb.v", 378, 262); // cl (w, cl)
+// Elapsed time: 36 seconds
+selectCodeEditor("birb.v", 555, 507); // cl (w, cl)
+// Elapsed time: 198 seconds
+selectCodeEditor("birb.v", 816, 513); // cl (w, cl)
+selectCodeEditor("birb.v", 966, 509); // cl (w, cl)
+selectCodeEditor("birb.v", 848, 521); // cl (w, cl)
+// Elapsed time: 26 seconds
+selectCodeEditor("birb.v", 991, 560); // cl (w, cl)
+selectCodeEditor("birb.v", 1275, 515); // cl (w, cl)
+// HMemoryUtils.trashcanNow. Engine heap size: 1,565 MB. GUI used memory: 77 MB. Current time: 11/20/19, 1:49:23 PM PST
+// Elapsed time: 313 seconds
+selectCodeEditor("birb.v", 1017, 508); // cl (w, cl)
+selectCodeEditor("birb.v", 1017, 508, false, false, false, false, true); // cl (w, cl) - Double Click
+// Elapsed time: 35 seconds
+selectCodeEditor("birb.v", 744, 523); // cl (w, cl)
+selectCodeEditor("birb.v", 761, 518); // cl (w, cl)
+// Elapsed time: 10 seconds
+selectCodeEditor("birb.v", 1027, 512); // cl (w, cl)
+// Elapsed time: 14 seconds
+selectCodeEditor("birb.v", 1119, 514); // cl (w, cl)
+selectCodeEditor("birb.v", 1142, 514); // cl (w, cl)
+selectCodeEditor("birb.v", 1285, 504); // cl (w, cl)
+selectCodeEditor("birb.v", 568, 596); // cl (w, cl)
+selectCodeEditor("birb.v", 162, 556); // cl (w, cl)
+// WARNING: HEventQueue.dispatchEvent() is taking  33999 ms.
+// Elapsed time: 190 seconds
+selectCodeEditor("birb.v", 580, 667); // cl (w, cl)
+selectCodeEditor("birb.v", 1134, 657); // cl (w, cl)
+selectCodeEditor("birb.v", 1117, 676); // cl (w, cl)
+// Elapsed time: 252 seconds
+selectCodeEditor("birb.v", 348, 672); // cl (w, cl)
+// Elapsed time: 22 seconds
+selectCodeEditor("birb.v", 347, 704); // cl (w, cl)
+selectCodeEditor("birb.v", 347, 704); // cl (w, cl)
+selectCodeEditor("birb.v", 149, 676); // cl (w, cl)
+selectCodeEditor("birb.v", 149, 676); // cl (w, cl)
+selectCodeEditor("birb.v", 97, 706); // cl (w, cl)
+selectCodeEditor("birb.v", 97, 706, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("birb.v", 93, 713); // cl (w, cl)
+selectCodeEditor("birb.v", 411, 694); // cl (w, cl)
+// Elapsed time: 59 seconds
+selectCodeEditor("birb.v", 301, 690); // cl (w, cl)
+selectCodeEditor("birb.v", 301, 690, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("birb.v", 533, 672); // cl (w, cl)
+// Elapsed time: 140 seconds
+selectCodeEditor("birb.v", 176, 777); // cl (w, cl)
+selectCodeEditor("birb.v", 176, 777, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("birb.v", 270, 776); // cl (w, cl)
+selectCodeEditor("birb.v", 202, 813); // cl (w, cl)
+// [GUI Memory]: 139 MB (+3341kb) [05:30:40]
+// Elapsed time: 32 seconds
+selectCodeEditor("birb.v", 343, 683); // cl (w, cl)
+// Elapsed time: 273 seconds
+selectCodeEditor("birb.v", 386, 684); // cl (w, cl)
+// Elapsed time: 16 seconds
+selectCodeEditor("birb.v", 66, 669); // cl (w, cl)
+selectCodeEditor("birb.v", 55, 674); // cl (w, cl)
+// Elapsed time: 185 seconds
+selectCodeEditor("birb.v", 325, 670); // cl (w, cl)
+// Elapsed time: 226 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "theWall.v", 2); // k (j, cl)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "birb.v", 3); // k (j, cl)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "toppo.v", 1); // k (j, cl)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "theWall.v", 2); // k (j, cl)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "toppo.v", 1); // k (j, cl)
+// Elapsed time: 11 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "birb.v", 3); // k (j, cl)
+// HMemoryUtils.trashcanNow. Engine heap size: 1,565 MB. GUI used memory: 81 MB. Current time: 11/20/19, 2:19:25 PM PST
+// Elapsed time: 15 seconds
+selectCodeEditor("birb.v", 169, 694); // cl (w, cl)
+selectCodeEditor("birb.v", 169, 694); // cl (w, cl)
+selectCodeEditor("birb.v", 164, 684); // cl (w, cl)
+selectCodeEditor("birb.v", 275, 682); // cl (w, cl)
+// Elapsed time: 189 seconds
+selectCodeEditor("birb.v", 250, 677); // cl (w, cl)
+selectCodeEditor("birb.v", 764, 681); // cl (w, cl)
+// Elapsed time: 269 seconds
+selectCodeEditor("birb.v", 994, 674); // cl (w, cl)
+selectCodeEditor("birb.v", 989, 675); // cl (w, cl)
+selectCodeEditor("birb.v", 1066, 681); // cl (w, cl)
+// Elapsed time: 10 seconds
+selectCodeEditor("birb.v", 984, 683); // cl (w, cl)
+selectCodeEditor("birb.v", 1240, 677); // cl (w, cl)
+selectCodeEditor("birb.v", 989, 671); // cl (w, cl)
+selectCodeEditor("birb.v", 1352, 664); // cl (w, cl)
+selectCodeEditor("birb.v", 1293, 635); // cl (w, cl)
+selectCodeEditor("birb.v", 1348, 683); // cl (w, cl)
+// Elapsed time: 21 seconds
+selectCodeEditor("birb.v", 1270, 647); // cl (w, cl)
+selectCodeEditor("birb.v", 1376, 676); // cl (w, cl)
+selectCodeEditor("birb.v", 1376, 676, false, false, false, false, true); // cl (w, cl) - Double Click
+typeControlKey((HResource) null, "birb.v", 'c'); // cl (w, cl)
+selectCodeEditor("birb.v", 1411, 694); // cl (w, cl)
+selectCodeEditor("birb.v", 1396, 682); // cl (w, cl)
+typeControlKey((HResource) null, "birb.v", 'v'); // cl (w, cl)
+selectCodeEditor("birb.v", 186, 717); // cl (w, cl)
+selectCodeEditor("birb.v", 186, 717, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("birb.v", 285, 720); // cl (w, cl)
+// Elapsed time: 22 seconds
+selectCodeEditor("birb.v", 554, 701); // cl (w, cl)
+selectCodeEditor("birb.v", 1087, 713); // cl (w, cl)
+selectCodeEditor("birb.v", 1360, 708); // cl (w, cl)
+selectCodeEditor("birb.v", 1207, 529); // cl (w, cl)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "toppo.v", 1); // k (j, cl)
+// Elapsed time: 105 seconds
+selectCodeEditor("toppo.v", 973, 387); // cl (w, cl)
+selectCodeEditor("toppo.v", 890, 347); // cl (w, cl)
+selectCodeEditor("toppo.v", 1193, 411); // cl (w, cl)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 34 seconds
+selectCodeEditor("toppo.v", 259, 494); // cl (w, cl)
+selectCodeEditor("toppo.v", 196, 525); // cl (w, cl)
+// Elapsed time: 13 seconds
+selectCodeEditor("toppo.v", 234, 538); // cl (w, cl)
+selectCodeEditor("toppo.v", 194, 513); // cl (w, cl)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "birb.v", 3); // k (j, cl)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "toppo.v", 1); // k (j, cl)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "birb.v", 3); // k (j, cl)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "toppo.v", 1); // k (j, cl)
+// Elapsed time: 10 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "birb.v", 3); // k (j, cl)
+// Elapsed time: 13 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "theWall.v", 2); // k (j, cl)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "birb.v", 3); // k (j, cl)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "theWall.v", 2); // k (j, cl)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "toppo.v", 1); // k (j, cl)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "birb.v", 3); // k (j, cl)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "toppo.v", 1); // k (j, cl)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "birb.v", 3); // k (j, cl)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "toppo.v", 1); // k (j, cl)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "birb.v", 3); // k (j, cl)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "toppo.v", 1); // k (j, cl)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "birb.v", 3); // k (j, cl)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "toppo.v", 1); // k (j, cl)
+selectCodeEditor("toppo.v", 580, 497); // cl (w, cl)
+selectCodeEditor("toppo.v", 758, 537); // cl (w, cl)
+selectCodeEditor("toppo.v", 746, 523); // cl (w, cl)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "birb.v", 3); // k (j, cl)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "toppo.v", 1); // k (j, cl)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "birb.v", 3); // k (j, cl)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "toppo.v", 1); // k (j, cl)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "birb.v", 3); // k (j, cl)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "toppo.v", 1); // k (j, cl)
+// Elapsed time: 39 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "birb.v", 3); // k (j, cl)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "toppo.v", 1); // k (j, cl)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "birb.v", 3); // k (j, cl)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "toppo.v", 1); // k (j, cl)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "birb.v", 3); // k (j, cl)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "toppo.v", 1); // k (j, cl)
+selectCodeEditor("toppo.v", 1344, 521); // cl (w, cl)
+selectCodeEditor("toppo.v", 1473, 512); // cl (w, cl)
+selectCodeEditor("toppo.v", 510, 440); // cl (w, cl)
+selectCodeEditor("toppo.v", 394, 508); // cl (w, cl)
+selectCodeEditor("toppo.v", 319, 466); // cl (w, cl)
+// Elapsed time: 20 seconds
+selectCodeEditor("toppo.v", 131, 517); // cl (w, cl)
+selectCodeEditor("toppo.v", 250, 541); // cl (w, cl)
+selectCodeEditor("toppo.v", 457, 545); // cl (w, cl)
+selectCodeEditor("toppo.v", 700, 550); // cl (w, cl)
+selectCodeEditor("toppo.v", 923, 550); // cl (w, cl)
+selectCodeEditor("toppo.v", 1073, 544); // cl (w, cl)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "birb.v", 3); // k (j, cl)
+// Elapsed time: 17 seconds
+selectCodeEditor("birb.v", 506, 641); // cl (w, cl)
+selectCodeEditor("birb.v", 657, 639); // cl (w, cl)
+selectCodeEditor("birb.v", 499, 655); // cl (w, cl)
+selectCodeEditor("birb.v", 666, 634); // cl (w, cl)
+selectCodeEditor("birb.v", 498, 668); // cl (w, cl)
+selectCodeEditor("birb.v", 676, 685); // cl (w, cl)
+selectCodeEditor("birb.v", 1186, 661); // cl (w, cl)
+selectCodeEditor("birb.v", 1298, 680); // cl (w, cl)
+selectCodeEditor("birb.v", 1134, 641); // cl (w, cl)
+selectCodeEditor("birb.v", 1309, 643); // cl (w, cl)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 12 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "toppo.v", 1); // k (j, cl)
+selectCodeEditor("toppo.v", 916, 541); // cl (w, cl)
+selectCodeEditor("toppo.v", 1105, 554); // cl (w, cl)
+// Elapsed time: 11 seconds
+selectCodeEditor("toppo.v", 491, 504); // cl (w, cl)
+// Elapsed time: 21 seconds
+selectCodeEditor("toppo.v", 1059, 584); // cl (w, cl)
+selectCodeEditor("toppo.v", 1288, 576); // cl (w, cl)
+selectCodeEditor("toppo.v", 1008, 570); // cl (w, cl)
+selectCodeEditor("toppo.v", 834, 597); // cl (w, cl)
+selectCodeEditor("toppo.v", 297, 585); // cl (w, cl)
+selectCodeEditor("toppo.v", 672, 471); // cl (w, cl)
+selectCodeEditor("toppo.v", 1009, 520); // cl (w, cl)
+selectCodeEditor("toppo.v", 636, 386); // cl (w, cl)
+// Elapsed time: 49 seconds
+selectCodeEditor("toppo.v", 1015, 511); // cl (w, cl)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "birb.v", 3); // k (j, cl)
+// Elapsed time: 27 seconds
+selectCodeEditor("birb.v", 252, 639); // cl (w, cl)
+selectCodeEditor("birb.v", 284, 180); // cl (w, cl)
+selectCodeEditor("birb.v", 284, 180, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("birb.v", 300, 218); // cl (w, cl)
+selectCodeEditor("birb.v", 300, 218, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("birb.v", 429, 311); // cl (w, cl)
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+selectCodeEditor("birb.v", 696, 628); // cl (w, cl)
+selectCodeEditor("birb.v", 1293, 639); // cl (w, cl)
+selectCodeEditor("birb.v", 678, 634); // cl (w, cl)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "toppo.v", 1); // k (j, cl)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "birb.v", 3); // k (j, cl)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "toppo.v", 1); // k (j, cl)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: update_compile_order -fileset sources_1 
+// Elapsed time: 13 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "birb.v", 3); // k (j, cl)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "toppo.v", 1); // k (j, cl)
+// Elapsed time: 269 seconds
+selectCodeEditor("toppo.v", 1236, 311); // cl (w, cl)
+selectCodeEditor("toppo.v", 521, 261); // cl (w, cl)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 30 seconds
+selectCodeEditor("toppo.v", 462, 523); // cl (w, cl)
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Program and Debug, Generate Bitstream]", 20, false); // u (O, cl)
+// Run Command: PAResourceCommand.PACommandNames_RUN_BITGEN
+// A (cl): Synthesis is Out-of-date: addNotify
+selectButton(RDIResource.BaseDialog_YES, "Yes"); // a (A)
+// by (cl):  Resetting Runs : addNotify
+dismissDialog("Synthesis is Out-of-date"); // A (cl)
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_RESET
+// Tcl Message: reset_run synth_1 
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_RESET
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+dismissDialog("Resetting Runs"); // by (cl)
+// TclEventType: RUN_LAUNCH
+// by (cl):  Generate Bitstream : addNotify
+// TclEventType: RUN_LAUNCH
+// Tcl Message: launch_runs impl_1 -to_step write_bitstream 
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_STATUS_CHANGE
+// Tcl Message: [Wed Nov 20 14:45:26 2019] Launched synth_1... Run output will be captured here: C:/Users/Julian/Documents/Work/CSE 100/Lab 7/Lab 7.runs/synth_1/runme.log [Wed Nov 20 14:45:26 2019] Launched impl_1... Run output will be captured here: C:/Users/Julian/Documents/Work/CSE 100/Lab 7/Lab 7.runs/impl_1/runme.log 
+dismissDialog("Generate Bitstream"); // by (cl)
+// TclEventType: RUN_STATUS_CHANGE
+// Elapsed time: 20 seconds
+selectCodeEditor("toppo.v", 370, 490); // cl (w, cl)
+selectCodeEditor("toppo.v", 466, 479); // cl (w, cl)
+selectCodeEditor("toppo.v", 666, 512); // cl (w, cl)
+selectCodeEditor("toppo.v", 537, 477); // cl (w, cl)
+selectCodeEditor("toppo.v", 482, 489); // cl (w, cl)
+// Elapsed time: 14 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Project Summary", 0); // k (j, cl)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "toppo.v", 1); // k (j, cl)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "theWall.v", 2); // k (j, cl)
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "toppo.v", 1); // k (j, cl)
+selectButton(PAResourceQtoS.SyntheticaStateMonitor_CANCEL, "Cancel"); // h (Q, cl)
+// aT (cl): Cancel Implementation: addNotify
+selectButton(RDIResource.BaseDialog_CANCEL, "Cancel"); // a (aT)
+dismissDialog("Cancel Implementation"); // aT (cl)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "birb.v", 3); // k (j, cl)
+selectCodeEditor("birb.v", 696, 531); // cl (w, cl)
+selectCodeEditor("birb.v", 316, 514); // cl (w, cl)
+// TclEventType: RUN_STEP_COMPLETED
+selectCodeEditor("birb.v", 189, 580); // cl (w, cl)
+selectCodeEditor("birb.v", 263, 562); // cl (w, cl)
+selectCodeEditor("birb.v", 258, 547); // cl (w, cl)
+selectCodeEditor("birb.v", 902, 589); // cl (w, cl)
+// Elapsed time: 30 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "theWall.v", 2); // k (j, cl)
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// ah (cl): Bitstream Generation Completed: addNotify
+// Elapsed time: 27 seconds
+selectButton(RDIResource.BaseDialog_CANCEL, "Cancel"); // a (ah)
+dismissDialog("Bitstream Generation Completed"); // ah (cl)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "birb.v", 3); // k (j, cl)
+// Elapsed time: 11 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "toppo.v", 1); // k (j, cl)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "theWall.v", 2); // k (j, cl)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "birb.v", 3); // k (j, cl)
+// Elapsed time: 17 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "toppo.v", 1); // k (j, cl)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "theWall.v", 2); // k (j, cl)
+// Elapsed time: 18 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "birb.v", 3); // k (j, cl)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "theWall.v", 2); // k (j, cl)
+selectTab((HResource) null, "PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "theWall.v", 2, false, true); // k (j, cl) - Double Click
+maximizeView(PAResourceOtoP.PAViews_BASE_WORKSPACE, "BaseWorkspace"); // O (aH, cl)
+unMinimizeFrame(PAResourceOtoP.PAViews_SOURCES, "Sources"); // az
+// Elapsed time: 12 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "birb.v", 3); // k (j, cl)
+// Elapsed time: 10 seconds
+selectCodeEditor("birb.v", 178, 910); // cl (w, cl)
+selectCodeEditor("birb.v", 178, 910, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("birb.v", 793, 886); // cl (w, cl)
+selectCodeEditor("birb.v", 451, 927); // cl (w, cl)
+// HMemoryUtils.trashcanNow. Engine heap size: 1,565 MB. GUI used memory: 143 MB. Current time: 11/20/19, 2:49:25 PM PST
+// Elapsed time: 11 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "toppo.v", 1); // k (j, cl)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "birb.v", 3); // k (j, cl)
+selectCodeEditor("birb.v", 672, 1053); // cl (w, cl)
+selectCodeEditor("birb.v", 531, 1050); // cl (w, cl)
+selectCodeEditor("birb.v", 706, 1064); // cl (w, cl)
+selectCodeEditor("birb.v", 672, 1035); // cl (w, cl)
+// Elapsed time: 18 seconds
+selectCodeEditor("birb.v", 407, 1038); // cl (w, cl)
+selectCodeEditor("birb.v", 794, 1053); // cl (w, cl)
+selectCodeEditor("birb.v", 639, 1044); // cl (w, cl)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "toppo.v", 1); // k (j, cl)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "birb.v", 3); // k (j, cl)
+selectCodeEditor("birb.v", 614, 1037); // cl (w, cl)
+selectCodeEditor("birb.v", 388, 999); // cl (w, cl)
+selectCodeEditor("birb.v", 624, 1049); // cl (w, cl)
+selectCodeEditor("birb.v", 559, 1075); // cl (w, cl)
+selectCodeEditor("birb.v", 615, 1058); // cl (w, cl)
+selectCodeEditor("birb.v", 627, 1049); // cl (w, cl)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "theWall.v", 2); // k (j, cl)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "birb.v", 3); // k (j, cl)
+selectCodeEditor("birb.v", 863, 1060); // cl (w, cl)
+selectCodeEditor("birb.v", 653, 1041); // cl (w, cl)
+selectCodeEditor("birb.v", 579, 1094); // cl (w, cl)
+selectCodeEditor("birb.v", 514, 1067); // cl (w, cl)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// [GUI Memory]: 149 MB (+2648kb) [06:14:52]
+// Elapsed time: 12 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "toppo.v", 1); // k (j, cl)
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("toppo.v", 595, 963); // cl (w, cl)
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Program and Debug, Generate Bitstream]", 20, false); // u (O, cl)
+// Run Command: PAResourceCommand.PACommandNames_RUN_BITGEN
+// A (cl): Synthesis is Out-of-date: addNotify
+selectButton(RDIResource.BaseDialog_YES, "Yes"); // a (A)
+// by (cl):  Resetting Runs : addNotify
+// TclEventType: RUN_MODIFY
+dismissDialog("Synthesis is Out-of-date"); // A (cl)
+// TclEventType: RUN_RESET
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_RESET
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// Tcl Message: reset_run synth_1 
+dismissDialog("Resetting Runs"); // by (cl)
+// TclEventType: RUN_LAUNCH
+// by (cl):  Generate Bitstream : addNotify
+// TclEventType: RUN_MODIFY
+// Tcl Message: launch_runs impl_1 -to_step write_bitstream 
+// Tcl Message: [Wed Nov 20 14:51:24 2019] Launched synth_1... Run output will be captured here: C:/Users/Julian/Documents/Work/CSE 100/Lab 7/Lab 7.runs/synth_1/runme.log [Wed Nov 20 14:51:24 2019] Launched impl_1... Run output will be captured here: C:/Users/Julian/Documents/Work/CSE 100/Lab 7/Lab 7.runs/impl_1/runme.log 
+dismissDialog("Generate Bitstream"); // by (cl)
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// ah (cl): Bitstream Generation Completed: addNotify
+// Elapsed time: 132 seconds
+selectRadioButton(PAResourceCommand.PACommandNames_OPEN_HARDWARE_MANAGER, "Open Hardware Manager"); // a (Q, ah)
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (ah)
+// Run Command: PAResourceCommand.PACommandNames_OPEN_HARDWARE_MANAGER
+// Tcl Command: 'rdi::info_commands get_hw_probes'
+closeView(PAResourceOtoP.PAViews_PROJECT_SUMMARY, "Project Summary"); // v
+dismissDialog("Bitstream Generation Completed"); // ah (cl)
+selectButton(PAResourceOtoP.ProgramDebugTab_PROGRAM_DEVICE, "Program device"); // h (cS, cl)
+// Run Command: PAResourceCommand.PACommandNames_PROGRAM_FPGA
+// bC (cl): Program Device: addNotify
+selectButton(PAResourceOtoP.ProgramFpgaDialog_PROGRAM, "Program"); // a (bC)
+// by (cl):  Program Device : addNotify
+dismissDialog("Program Device"); // bC (cl)
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: set_property PROBES.FILE {} [get_hw_devices xc7a35t_0] 
+// Tcl Message: set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0] 
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: set_property PROGRAM.FILE {C:/Users/Julian/Documents/Work/CSE 100/Lab 7/Lab 7.runs/impl_1/toppo.bit} [get_hw_devices xc7a35t_0] 
+// Tcl Message: program_hw_devices [get_hw_devices xc7a35t_0] 
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: INFO: [Labtools 27-3164] End of startup status: HIGH 
+// TclEventType: HW_DEVICE_CHANGE
+// TclEventType: HW_SYSMON_CHANGE
+// TclEventType: HW_DEVICE_UPDATE
+// TclEventType: HW_DEVICE_CHANGE
+// TclEventType: HW_DEVICE_PROBES_CHANGE
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// TclEventType: HW_DEVICE_PROBES_CHANGE
+// Tcl Message: refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0] 
+// Tcl Message: INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it. 
+// 'I' command handler elapsed time: 3 seconds
+dismissDialog("Program Device"); // by (cl)
+// Elapsed time: 93 seconds
+selectButton(PAResourceTtoZ.TaskBanner_CLOSE, (String) null); // k (aA, cl)
+closeTask("Program and Debug", "Hardware Manager", "DesignTask.PROGRAM_DEBUG");
+// A (cl): Confirm Close: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (A)
+// by (cl):  Close Hardware Manager : addNotify
+// TclEventType: HW_OBJECT_DELETE
+dismissDialog("Confirm Close"); // A (cl)
+// TclEventType: HW_SERVER_CLOSE
+// TclEventType: HW_SYSMON_DELETE
+// TclEventType: HW_TARGET_CLOSE
+// TclEventType: HW_TARGET_UPDATE
+// TclEventType: DEBUG_PROBE_DELETE
+// TclEventType: HW_SESSION_CLOSE
+// WARNING: HEventQueue.dispatchEvent() is taking  1297 ms.
+// Tcl Message: close_hw 
+dismissDialog("Close Hardware Manager"); // by (cl)
+// Elapsed time: 25 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "birb.v", 3); // k (j, cl)
+selectButton(PAResourceCommand.PACommandNames_ADD_SOURCES, "Sources_add_sources"); // B (f, cl)
+// Run Command: PAResourceCommand.PACommandNames_ADD_SOURCES
+// c (cl): Add Sources: addNotify
+selectButton("NEXT", "Next >"); // JButton (j, c)
+selectButton(PAResourceQtoS.SrcChooserPanel_CREATE_FILE, "Create File"); // a (E, c)
+// F (c): Create Source File: addNotify
+setText(PAResourceAtoD.CreateSrcFileDialog_FILE_NAME, "birb2"); // Y (Q, F)
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (F)
+dismissDialog("Create Source File"); // F (c)
+selectButton("FINISH", "Finish"); // JButton (j, c)
+// 'h' command handler elapsed time: 7 seconds
+dismissDialog("Add Sources"); // c (cl)
+// Tcl Message: close [ open {C:/Users/Julian/Documents/Work/CSE 100/Lab 7/Lab 7.srcs/sources_1/new/birb2.v} w ] 
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: add_files {{C:/Users/Julian/Documents/Work/CSE 100/Lab 7/Lab 7.srcs/sources_1/new/birb2.v}} 
+// I (cl): Define Module: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (I)
+// TclEventType: FILE_SET_CHANGE
+selectButton("OptionPane.button", "Yes"); // JButton (A, H)
+dismissDialog("Define Module"); // I (cl)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: update_compile_order -fileset sources_1 
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, birb2 (birb2.v)]", 6, false); // B (F, cl)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, birb2 (birb2.v)]", 6, false, false, false, false, false, true); // B (F, cl) - Double Click
+selectCodeEditor("birb2.v", 297, 787); // cl (w, cl)
+// Elapsed time: 21 seconds
+selectCodeEditor("birb2.v", 343, 821); // cl (w, cl)
+selectCodeEditor("birb2.v", 369, 834); // cl (w, cl)
+// Elapsed time: 21 seconds
+selectCodeEditor("birb2.v", 290, 926); // cl (w, cl)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 12 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "theWall.v", 2); // k (j, cl)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "toppo.v", 1); // k (j, cl)
+selectCodeEditor("toppo.v", 208, 484); // cl (w, cl)
+selectCodeEditor("toppo.v", 707, 793); // cl (w, cl)
+selectCodeEditor("toppo.v", 568, 733); // cl (w, cl)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "birb2.v", 4); // k (j, cl)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: update_compile_order -fileset sources_1 
+// [GUI Memory]: 159 MB (+2327kb) [06:21:25]
+// Elapsed time: 18 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "theWall.v", 2); // k (j, cl)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "birb2.v", 4); // k (j, cl)
+selectCodeEditor("birb2.v", 362, 917); // cl (w, cl)
+selectCodeEditor("birb2.v", 362, 917); // cl (w, cl)
+selectCodeEditor("birb2.v", 131, 1007); // cl (w, cl)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "theWall.v", 2); // k (j, cl)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "birb2.v", 4); // k (j, cl)
+// Elapsed time: 16 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "theWall.v", 2); // k (j, cl)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "birb2.v", 4); // k (j, cl)
+// Elapsed time: 16 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "theWall.v", 2); // k (j, cl)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "birb2.v", 4); // k (j, cl)
+selectCodeEditor("birb2.v", 454, 797); // cl (w, cl)
+selectCodeEditor("birb2.v", 454, 797); // cl (w, cl)
+selectCodeEditor("birb2.v", 454, 797, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("birb2.v", 534, 1062); // cl (w, cl)
+selectCodeEditor("birb2.v", 498, 1026); // cl (w, cl)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "toppo.v", 1); // k (j, cl)
+// Elapsed time: 14 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "birb2.v", 4); // k (j, cl)
+// Elapsed time: 20 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "theWall.v", 2); // k (j, cl)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "birb2.v", 4); // k (j, cl)
+// Elapsed time: 38 seconds
+selectCodeEditor("birb2.v", 129, 1013); // cl (w, cl)
+selectCodeEditor("birb2.v", 476, 1053); // cl (w, cl)
+// Elapsed time: 10 seconds
+selectCodeEditor("birb2.v", 63, 1041); // cl (w, cl)
+selectCodeEditor("birb2.v", 79, 1089); // cl (w, cl)
+selectCodeEditor("birb2.v", 79, 1089); // cl (w, cl)
+selectCodeEditor("birb2.v", 79, 1089, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("birb2.v", 79, 1089); // cl (w, cl)
+selectCodeEditor("birb2.v", 324, 1109); // cl (w, cl)
+// Elapsed time: 19 seconds
+selectCodeEditor("birb2.v", 376, 1118); // cl (w, cl)
+selectCodeEditor("birb2.v", 341, 1103); // cl (w, cl)
+// Elapsed time: 82 seconds
+selectCodeEditor("birb2.v", 748, 1100); // cl (w, cl)
+selectCodeEditor("birb2.v", 1343, 1109); // cl (w, cl)
+selectCodeEditor("birb2.v", 1113, 1117); // cl (w, cl)
+selectCodeEditor("birb2.v", 1022, 897); // cl (w, cl)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "birb.v", 3); // k (j, cl)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "theWall.v", 2); // k (j, cl)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "toppo.v", 1); // k (j, cl)
+selectCodeEditor("toppo.v", 370, 789); // cl (w, cl)
+selectCodeEditor("toppo.v", 228, 750); // cl (w, cl)
+// Elapsed time: 28 seconds
+selectCodeEditor("toppo.v", 112, 697); // cl (w, cl)
+selectCodeEditor("toppo.v", 801, 783); // cl (w, cl)
+selectCodeEditor("toppo.v", 172, 753); // cl (w, cl)
+selectCodeEditor("toppo.v", 623, 771); // cl (w, cl)
+selectCodeEditor("toppo.v", 516, 769); // cl (w, cl)
+selectCodeEditor("toppo.v", 751, 777); // cl (w, cl)
+selectCodeEditor("toppo.v", 949, 771); // cl (w, cl)
+selectCodeEditor("toppo.v", 410, 813); // cl (w, cl)
+selectCodeEditor("toppo.v", 359, 807); // cl (w, cl)
+// Elapsed time: 13 seconds
+selectCodeEditor("toppo.v", 816, 884); // cl (w, cl)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Program and Debug, Generate Bitstream]", 20, false); // u (O, cl)
+// Run Command: PAResourceCommand.PACommandNames_RUN_BITGEN
+// A (cl): Synthesis is Out-of-date: addNotify
+selectButton(RDIResource.BaseDialog_YES, "Yes"); // a (A)
+// by (cl):  Resetting Runs : addNotify
+// TclEventType: RUN_MODIFY
+dismissDialog("Synthesis is Out-of-date"); // A (cl)
+// TclEventType: RUN_RESET
+// TclEventType: RUN_STATUS_CHANGE
+// Tcl Message: reset_run synth_1 
+// TclEventType: RUN_RESET
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// TclEventType: DG_GRAPH_STALE
+dismissDialog("Resetting Runs"); // by (cl)
+// TclEventType: FILE_SET_CHANGE
+// by (cl):  Generate Bitstream : addNotify
+// Tcl Message: launch_runs impl_1 -to_step write_bitstream 
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_STATUS_CHANGE
+// Tcl Message: [Wed Nov 20 15:04:04 2019] Launched synth_1... Run output will be captured here: C:/Users/Julian/Documents/Work/CSE 100/Lab 7/Lab 7.runs/synth_1/runme.log [Wed Nov 20 15:04:04 2019] Launched impl_1... Run output will be captured here: C:/Users/Julian/Documents/Work/CSE 100/Lab 7/Lab 7.runs/impl_1/runme.log 
+// TclEventType: RUN_STATUS_CHANGE
+dismissDialog("Generate Bitstream"); // by (cl)
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// ah (cl): Bitstream Generation Completed: addNotify
+// Elapsed time: 121 seconds
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (ah)
+// Run Command: PAResourceCommand.PACommandNames_OPEN_HARDWARE_MANAGER
+// Tcl Command: 'rdi::info_commands get_hw_probes'
+// by (cl):  Open Hardware Manager : addNotify
+// TclEventType: HW_SESSION_OPEN
+// Tcl Message: open_hw 
+closeView(PAResourceOtoP.PAViews_PROJECT_SUMMARY, "Project Summary"); // v
+dismissDialog("Open Hardware Manager"); // by (cl)
+selectButton(PAResourceOtoP.ProgramDebugTab_OPEN_TARGET, "Open target"); // h (cS, cl)
+selectMenuItem(PAResourceCommand.PACommandNames_AUTO_CONNECT_TARGET, "Auto Connect"); // ah (an, cl)
+// Run Command: PAResourceCommand.PACommandNames_AUTO_CONNECT_TARGET
+// Tcl Message: connect_hw_server 
+// Tcl Message: INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121 
+// by (cl):  Auto Connect : addNotify
+// Tcl Message: INFO: [Labtools 27-2222] Launching hw_server... 
+// Tcl Message: INFO: [Labtools 27-2221] Launch Output:  ****** Xilinx hw_server v2019.1   **** Build date : May 24 2019 at 15:13:31     ** Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.   
+// TclEventType: HW_SERVER_UPDATE
+// TclEventType: HW_TARGET_CHANGE
+// TclEventType: HW_TARGET_CLOSE
+// TclEventType: HW_DEVICE_CHANGE
+// TclEventType: HW_SYSMON_ADD
+// TclEventType: HW_TARGET_UPDATE
+// Tcl Message: open_hw_target 
+// Tcl Message: INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210183A2837FA 
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: set_property PROGRAM.FILE {C:/Users/Julian/Documents/Work/CSE 100/Lab 7/Lab 7.runs/impl_1/toppo.bit} [get_hw_devices xc7a35t_0] 
+// Tcl Message: current_hw_device [get_hw_devices xc7a35t_0] 
+// TclEventType: HW_DEVICE_CHANGE
+// TclEventType: HW_SYSMON_CHANGE
+// TclEventType: HW_DEVICE_UPDATE
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7a35t_0] 0] 
+// Tcl Message: INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it. 
+dismissDialog("Auto Connect"); // by (cl)
+selectButton(PAResourceOtoP.ProgramDebugTab_PROGRAM_DEVICE, "Program device"); // h (cS, cl)
+// Run Command: PAResourceCommand.PACommandNames_PROGRAM_FPGA
+// bC (cl): Program Device: addNotify
+selectButton(PAResourceOtoP.ProgramFpgaDialog_PROGRAM, "Program"); // a (bC)
+// by (cl):  Program Device : addNotify
+// TclEventType: HW_DEVICE_CHANGE
+dismissDialog("Program Device"); // bC (cl)
+// Tcl Message: set_property PROBES.FILE {} [get_hw_devices xc7a35t_0] 
+// Tcl Message: set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0] 
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: set_property PROGRAM.FILE {C:/Users/Julian/Documents/Work/CSE 100/Lab 7/Lab 7.runs/impl_1/toppo.bit} [get_hw_devices xc7a35t_0] 
+// Tcl Message: program_hw_devices [get_hw_devices xc7a35t_0] 
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: INFO: [Labtools 27-3164] End of startup status: HIGH 
+// TclEventType: HW_DEVICE_CHANGE
+// TclEventType: HW_SYSMON_CHANGE
+// TclEventType: HW_DEVICE_UPDATE
+// TclEventType: HW_DEVICE_CHANGE
+// TclEventType: HW_DEVICE_PROBES_CHANGE
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// TclEventType: HW_DEVICE_PROBES_CHANGE
+// Tcl Message: refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0] 
+// Tcl Message: INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it. 
+dismissDialog("Program Device"); // by (cl)
+// Elapsed time: 68 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "birb2.v", 3); // k (j, cl)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "birb.v", 2); // k (j, cl)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "birb2.v", 3); // k (j, cl)
+selectCodeEditor("birb2.v", 469, 261); // cl (w, cl)
+selectCodeEditor("birb2.v", 379, 286); // cl (w, cl)
+selectCodeEditor("birb2.v", 333, 307); // cl (w, cl)
+// Elapsed time: 16 seconds
+selectCodeEditor("birb2.v", 544, 397); // cl (w, cl)
+selectCodeEditor("birb2.v", 514, 367); // cl (w, cl)
+selectCodeEditor("birb2.v", 425, 400); // cl (w, cl)
+selectCodeEditor("birb2.v", 430, 579); // cl (w, cl)
+selectCodeEditor("birb2.v", 430, 579, false, false, false, false, true); // cl (w, cl) - Double Click
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+selectCodeEditor("birb2.v", 298, 589); // cl (w, cl)
+selectCodeEditor("birb2.v", 298, 589, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("birb2.v", 737, 574); // cl (w, cl)
+selectCodeEditor("birb2.v", 737, 574, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("birb2.v", 1125, 586); // cl (w, cl)
+selectCodeEditor("birb2.v", 985, 579); // cl (w, cl)
+selectCodeEditor("birb2.v", 985, 579, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("birb2.v", 1330, 567); // cl (w, cl)
+selectCodeEditor("birb2.v", 1330, 567, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("birb2.v", 413, 285); // cl (w, cl)
+selectCodeEditor("birb2.v", 321, 314); // cl (w, cl)
+selectCodeEditor("birb2.v", 620, 502); // cl (w, cl)
+selectCodeEditor("birb2.v", 509, 133); // cl (w, cl)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "birb.v", 2); // k (j, cl)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "toppo.v", 0); // k (j, cl)
+selectCodeEditor("toppo.v", 1140, 375); // cl (w, cl)
+selectCodeEditor("toppo.v", 872, 383); // cl (w, cl)
+selectCodeEditor("toppo.v", 1024, 388); // cl (w, cl)
+selectCodeEditor("toppo.v", 1229, 373); // cl (w, cl)
+selectCodeEditor("toppo.v", 1026, 374); // cl (w, cl)
+selectCodeEditor("toppo.v", 1291, 386); // cl (w, cl)
+selectCodeEditor("toppo.v", 474, 86); // cl (w, cl)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Program and Debug, Generate Bitstream]", 20, false); // u (O, cl)
+// Run Command: PAResourceCommand.PACommandNames_RUN_BITGEN
+// A (cl): Synthesis is Out-of-date: addNotify
+selectButton(RDIResource.BaseDialog_YES, "Yes"); // a (A)
+// by (cl):  Resetting Runs : addNotify
+// TclEventType: RUN_MODIFY
+dismissDialog("Synthesis is Out-of-date"); // A (cl)
+// TclEventType: RUN_RESET
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_RESET
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// Tcl Message: reset_run synth_1 
+dismissDialog("Resetting Runs"); // by (cl)
+// TclEventType: RUN_LAUNCH
+// Tcl Message: launch_runs impl_1 -to_step write_bitstream 
+// TclEventType: RUN_MODIFY
+// Tcl Message: [Wed Nov 20 15:09:18 2019] Launched synth_1... Run output will be captured here: C:/Users/Julian/Documents/Work/CSE 100/Lab 7/Lab 7.runs/synth_1/runme.log [Wed Nov 20 15:09:18 2019] Launched impl_1... Run output will be captured here: C:/Users/Julian/Documents/Work/CSE 100/Lab 7/Lab 7.runs/impl_1/runme.log 
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// ah (cl): Bitstream Generation Completed: addNotify
+// Elapsed time: 123 seconds
+selectButton(RDIResource.BaseDialog_CANCEL, "Cancel"); // a (ah)
+dismissDialog("Bitstream Generation Completed"); // ah (cl)
+selectButton(PAResourceOtoP.ProgramDebugTab_PROGRAM_DEVICE, "Program device"); // h (cS, cl)
+// Run Command: PAResourceCommand.PACommandNames_PROGRAM_FPGA
+// bC (cl): Program Device: addNotify
+selectButton(PAResourceOtoP.ProgramFpgaDialog_PROGRAM, "Program"); // a (bC)
+// by (cl):  Program Device : addNotify
+// TclEventType: HW_DEVICE_CHANGE
+dismissDialog("Program Device"); // bC (cl)
+// Tcl Message: set_property PROBES.FILE {} [get_hw_devices xc7a35t_0] 
+// Tcl Message: set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0] 
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: set_property PROGRAM.FILE {C:/Users/Julian/Documents/Work/CSE 100/Lab 7/Lab 7.runs/impl_1/toppo.bit} [get_hw_devices xc7a35t_0] 
+// Tcl Message: program_hw_devices [get_hw_devices xc7a35t_0] 
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: INFO: [Labtools 27-3164] End of startup status: HIGH 
+// TclEventType: HW_DEVICE_CHANGE
+// TclEventType: HW_SYSMON_CHANGE
+// TclEventType: HW_DEVICE_UPDATE
+// TclEventType: HW_DEVICE_CHANGE
+// TclEventType: HW_DEVICE_PROBES_CHANGE
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// TclEventType: HW_DEVICE_PROBES_CHANGE
+// Tcl Message: refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0] 
+// Tcl Message: INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it. 
+dismissDialog("Program Device"); // by (cl)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "birb.v", 2); // k (j, cl)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "birb2.v", 3); // k (j, cl)
+// Elapsed time: 43 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "birb.v", 2); // k (j, cl)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "birb2.v", 3); // k (j, cl)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "birb.v", 2); // k (j, cl)
+// Elapsed time: 17 seconds
+selectCodeEditor("birb.v", 1067, 355); // cl (w, cl)
+selectCodeEditor("birb.v", 502, 346); // cl (w, cl)
+selectCodeEditor("birb.v", 308, 286); // cl (w, cl)
+selectCodeEditor("birb.v", 478, 323); // cl (w, cl)
+selectCodeEditor("birb.v", 363, 340); // cl (w, cl)
+typeControlKey((HResource) null, "birb.v", 'v'); // cl (w, cl)
+selectCodeEditor("birb.v", 235, 283); // cl (w, cl)
+selectCodeEditor("birb.v", 304, 281); // cl (w, cl)
+selectCodeEditor("birb.v", 109, 262); // cl (w, cl)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 32 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "birb2.v", 3); // k (j, cl)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "birb.v", 2); // k (j, cl)
+// Elapsed time: 31 seconds
+selectCodeEditor("birb.v", 466, 330); // cl (w, cl)
+// Elapsed time: 21 seconds
+selectCodeEditor("birb.v", 196, 482); // cl (w, cl)
+selectCodeEditor("birb.v", 286, 367); // cl (w, cl)
+selectCodeEditor("birb.v", 181, 482); // cl (w, cl)
+selectCodeEditor("birb.v", 181, 482); // cl (w, cl)
+selectCodeEditor("birb.v", 211, 508); // cl (w, cl)
+selectCodeEditor("birb.v", 428, 457); // cl (w, cl)
+selectCodeEditor("birb.v", 672, 438); // cl (w, cl)
+selectCodeEditor("birb.v", 442, 448); // cl (w, cl)
+selectCodeEditor("birb.v", 479, 400); // cl (w, cl)
+selectCodeEditor("birb.v", 1410, 498); // cl (w, cl)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "birb2.v", 3); // k (j, cl)
+selectCodeEditor("birb2.v", 56, 147); // cl (w, cl)
+selectCodeEditor("birb2.v", 324, 130); // cl (w, cl)
+selectCodeEditor("birb2.v", 83, 136); // cl (w, cl)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "birb.v", 2); // k (j, cl)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "birb2.v", 3); // k (j, cl)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "birb.v", 2); // k (j, cl)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "birb2.v", 3); // k (j, cl)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "birb.v", 2); // k (j, cl)
+selectCodeEditor("birb.v", 930, 542); // cl (w, cl)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "birb2.v", 3); // k (j, cl)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "birb.v", 2); // k (j, cl)
+selectCodeEditor("birb.v", 1179, 587); // cl (w, cl)
+selectCodeEditor("birb.v", 55, 375); // cl (w, cl)
+selectCodeEditor("birb.v", 1180, 592); // cl (w, cl)
+selectCodeEditor("birb.v", 1260, 570); // cl (w, cl)
+selectCodeEditor("birb.v", 1281, 521); // cl (w, cl)
+selectCodeEditor("birb.v", 172, 537); // cl (w, cl)
+selectCodeEditor("birb.v", 654, 583); // cl (w, cl)
+selectCodeEditor("birb.v", 649, 621); // cl (w, cl)
+selectCodeEditor("birb.v", 859, 612); // cl (w, cl)
+// Elapsed time: 26 seconds
+selectCodeEditor("birb.v", 277, 607); // cl (w, cl)
+selectCodeEditor("birb.v", 469, 608); // cl (w, cl)
+selectCodeEditor("birb.v", 820, 615); // cl (w, cl)
+selectCodeEditor("birb.v", 864, 606); // cl (w, cl)
+// Elapsed time: 13 seconds
+selectCodeEditor("birb.v", 1291, 510); // cl (w, cl)
+selectCodeEditor("birb.v", 1260, 523); // cl (w, cl)
+// Elapsed time: 12 seconds
+selectCodeEditor("birb.v", 416, 485); // cl (w, cl)
+selectCodeEditor("birb.v", 1259, 520); // cl (w, cl)
+selectCodeEditor("birb.v", 1395, 523); // cl (w, cl)
+// Elapsed time: 31 seconds
+selectCodeEditor("birb.v", 325, 650); // cl (w, cl)
+selectCodeEditor("birb.v", 543, 442); // cl (w, cl)
+selectCodeEditor("birb.v", 415, 483); // cl (w, cl)
+// Elapsed time: 47 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "birb2.v", 3); // k (j, cl)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "birb.v", 2); // k (j, cl)
+// HMemoryUtils.trashcanNow. Engine heap size: 1,565 MB. GUI used memory: 90 MB. Current time: 11/20/19, 3:19:26 PM PST
+// Elapsed time: 52 seconds
+selectCodeEditor("birb.v", 385, 250); // cl (w, cl)
+// Elapsed time: 33 seconds
+selectCodeEditor("birb.v", 945, 524); // cl (w, cl)
+selectCodeEditor("birb.v", 901, 515); // cl (w, cl)
+selectCodeEditor("birb.v", 783, 514); // cl (w, cl)
+selectCodeEditor("birb.v", 512, 546); // cl (w, cl)
+selectCodeEditor("birb.v", 329, 538); // cl (w, cl)
+selectCodeEditor("birb.v", 491, 540); // cl (w, cl)
+// Elapsed time: 14 seconds
+selectCodeEditor("birb.v", 944, 565); // cl (w, cl)
+selectCodeEditor("birb.v", 733, 545); // cl (w, cl)
+selectCodeEditor("birb.v", 740, 538); // cl (w, cl)
+selectCodeEditor("birb.v", 932, 551); // cl (w, cl)
+selectCodeEditor("birb.v", 312, 534); // cl (w, cl)
+typeControlKey((HResource) null, "birb.v", 'c'); // cl (w, cl)
+selectCodeEditor("birb.v", 946, 542); // cl (w, cl)
+typeControlKey((HResource) null, "birb.v", 'v'); // cl (w, cl)
+selectCodeEditor("birb.v", 966, 549); // cl (w, cl)
+selectCodeEditor("birb.v", 1212, 538); // cl (w, cl)
+selectCodeEditor("birb.v", 1069, 547); // cl (w, cl)
+selectCodeEditor("birb.v", 979, 501); // cl (w, cl)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("birb.v", 785, 381); // cl (w, cl)
+selectCodeEditor("birb.v", 1169, 545); // cl (w, cl)
+selectCodeEditor("birb.v", 848, 503); // cl (w, cl)
+typeControlKey((HResource) null, "birb.v", 'v'); // cl (w, cl)
+selectCodeEditor("birb.v", 1183, 537); // cl (w, cl)
+selectCodeEditor("birb.v", 1010, 453); // cl (w, cl)
+selectCodeEditor("birb.v", 1137, 552); // cl (w, cl)
+selectCodeEditor("birb.v", 1009, 458); // cl (w, cl)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("birb.v", 1157, 554); // cl (w, cl)
+selectCodeEditor("birb.v", 1051, 473); // cl (w, cl)
+selectCodeEditor("birb.v", 895, 518); // cl (w, cl)
+selectCodeEditor("birb.v", 1198, 563); // cl (w, cl)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "theWall.v", 1); // k (j, cl)
+selectButton(PAResourceOtoP.ProgramDebugTab_PROGRAM_DEVICE, "Program device"); // h (cS, cl)
+// Run Command: PAResourceCommand.PACommandNames_PROGRAM_FPGA
+// bC (cl): Program Device: addNotify
+selectButton(RDIResource.BaseDialog_CANCEL, "Cancel"); // a (bC)
+dismissDialog("Program Device"); // bC (cl)
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Program and Debug, Generate Bitstream]", 20, false); // u (O, cl)
+// Run Command: PAResourceCommand.PACommandNames_RUN_BITGEN
+// A (cl): Synthesis is Out-of-date: addNotify
+selectButton(RDIResource.BaseDialog_YES, "Yes"); // a (A)
+// by (cl):  Resetting Runs : addNotify
+dismissDialog("Synthesis is Out-of-date"); // A (cl)
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_RESET
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_RESET
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// Tcl Message: reset_run synth_1 
+dismissDialog("Resetting Runs"); // by (cl)
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// Tcl Message: launch_runs impl_1 -to_step write_bitstream 
+// Tcl Message: [Wed Nov 20 15:22:13 2019] Launched synth_1... Run output will be captured here: C:/Users/Julian/Documents/Work/CSE 100/Lab 7/Lab 7.runs/synth_1/runme.log [Wed Nov 20 15:22:13 2019] Launched impl_1... Run output will be captured here: C:/Users/Julian/Documents/Work/CSE 100/Lab 7/Lab 7.runs/impl_1/runme.log 
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// Elapsed time: 88 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "toppo.v", 0); // k (j, cl)
+selectCodeEditor("toppo.v", 39, 290); // cl (w, cl)
+selectCodeEditor("toppo.v", 72, 485); // cl (w, cl)
+selectCodeEditor("toppo.v", 107, 200); // cl (w, cl)
+selectCodeEditor("toppo.v", 123, 448); // cl (w, cl)
+selectCodeEditor("toppo.v", 349, 311); // cl (w, cl)
+// Elapsed time: 11 seconds
+selectCodeEditor("toppo.v", 1253, 358); // cl (w, cl)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "theWall.v", 1); // k (j, cl)
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// ah (cl): Bitstream Generation Completed: addNotify
+selectButton(RDIResource.BaseDialog_CANCEL, "Cancel"); // a (ah)
+dismissDialog("Bitstream Generation Completed"); // ah (cl)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "birb2.v", 3); // k (j, cl)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "birb.v", 2); // k (j, cl)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "toppo.v", 0); // k (j, cl)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "birb.v", 2); // k (j, cl)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "toppo.v", 0); // k (j, cl)
+selectCodeEditor("toppo.v", 1234, 351); // cl (w, cl)
+selectCodeEditor("toppo.v", 461, 389); // cl (w, cl)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "birb2.v", 3); // k (j, cl)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "birb.v", 2); // k (j, cl)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "toppo.v", 0); // k (j, cl)
+selectCodeEditor("toppo.v", 294, 378); // cl (w, cl)
+selectCodeEditor("toppo.v", 530, 385); // cl (w, cl)
+selectCodeEditor("toppo.v", 560, 437); // cl (w, cl)
+selectCodeEditor("toppo.v", 498, 289); // cl (w, cl)
+selectCodeEditor("toppo.v", 498, 289, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("toppo.v", 744, 444); // cl (w, cl)
+selectCodeEditor("toppo.v", 510, 578); // cl (w, cl)
+selectCodeEditor("toppo.v", 771, 418); // cl (w, cl)
+selectCodeEditor("toppo.v", 420, 407); // cl (w, cl)
+selectCodeEditor("toppo.v", 405, 415); // cl (w, cl)
+selectCodeEditor("toppo.v", 343, 366); // cl (w, cl)
+selectCodeEditor("toppo.v", 345, 368); // cl (w, cl)
+selectCodeEditor("toppo.v", 345, 368, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("toppo.v", 609, 381); // cl (w, cl)
+selectCodeEditor("toppo.v", 609, 381, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("toppo.v", 609, 381); // cl (w, cl)
+selectCodeEditor("toppo.v", 609, 381); // cl (w, cl)
+selectCodeEditor("toppo.v", 609, 381); // cl (w, cl)
+selectCodeEditor("toppo.v", 609, 381); // cl (w, cl)
+selectCodeEditor("toppo.v", 609, 381); // cl (w, cl)
+selectCodeEditor("toppo.v", 669, 370); // cl (w, cl)
+selectCodeEditor("toppo.v", 590, 389); // cl (w, cl)
+selectCodeEditor("toppo.v", 590, 389, false, false, false, false, true); // cl (w, cl) - Double Click
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("toppo.v", 573, 234); // cl (w, cl)
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Program and Debug]", 19, true); // u (O, cl) - Node
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Program and Debug]", 19, true); // u (O, cl) - Node
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: update_compile_order -fileset sources_1 
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Program and Debug, Generate Bitstream]", 20, false); // u (O, cl)
+// Run Command: PAResourceCommand.PACommandNames_RUN_BITGEN
+// A (cl): Synthesis is Out-of-date: addNotify
+selectButton(RDIResource.BaseDialog_YES, "Yes"); // a (A)
+// by (cl):  Resetting Runs : addNotify
+// TclEventType: RUN_MODIFY
+dismissDialog("Synthesis is Out-of-date"); // A (cl)
+// TclEventType: RUN_RESET
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_RESET
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// Tcl Message: reset_run synth_1 
+dismissDialog("Resetting Runs"); // by (cl)
+// by (cl):  Generate Bitstream : addNotify
+// Tcl Message: launch_runs impl_1 -to_step write_bitstream 
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// Tcl Message: [Wed Nov 20 15:25:40 2019] Launched synth_1... Run output will be captured here: C:/Users/Julian/Documents/Work/CSE 100/Lab 7/Lab 7.runs/synth_1/runme.log [Wed Nov 20 15:25:40 2019] Launched impl_1... Run output will be captured here: C:/Users/Julian/Documents/Work/CSE 100/Lab 7/Lab 7.runs/impl_1/runme.log 
+dismissDialog("Generate Bitstream"); // by (cl)
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_FAILED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// ah (cl): Synthesis Failed: addNotify
+// TclEventType: RUN_STATUS_CHANGE
+// Elapsed time: 21 seconds
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (ah)
+// Run Command: PAResourceCommand.PACommandNames_MESSAGE_WINDOW
+dismissDialog("Synthesis Failed"); // ah (cl)
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Synthesis, [Synth 8-6156] failed synthesizing module 'birb' [C:/Users/Julian/Documents/Work/CSE 100/Lab 7/Lab 7.srcs/sources_1/new/birb.v:23]. ]", 2, true); // ah (O, cl) - Node
+messagesViewCrossProbe(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "src;-;C:\Users\Julian\Documents\Work\CSE 100\Lab 7\Lab 7.srcs\sources_1\new\birb.v;-;;-;16;-;line;-;23;-;;-;16;-;"); // ah (O, cl)
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Synthesis, [Synth 8-448] named port connection 'birdPosx' does not exist for instance 'position' of module 'birb2' [C:/Users/Julian/Documents/Work/CSE 100/Lab 7/Lab 7.srcs/sources_1/new/birb.v:80]. ]", 1, true); // ah (O, cl) - Node
+messagesViewCrossProbe(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "src;-;C:\Users\Julian\Documents\Work\CSE 100\Lab 7\Lab 7.srcs\sources_1\new\birb.v;-;;-;16;-;line;-;80;-;;-;16;-;"); // ah (O, cl)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "birb2.v", 3); // k (j, cl)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "birb.v", 2); // k (j, cl)
+selectCodeEditor("birb.v", 249, 512); // cl (w, cl)
+selectCodeEditor("birb.v", 883, 534); // cl (w, cl)
+selectCodeEditor("birb.v", 883, 525); // cl (w, cl)
+selectCodeEditor("birb.v", 849, 503); // cl (w, cl)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 64 seconds
+selectCodeEditor("birb.v", 369, 188); // cl (w, cl)
+// Elapsed time: 18 seconds
+selectCodeEditor("birb.v", 343, 516); // cl (w, cl)
+selectCodeEditor("birb.v", 343, 516, false, false, false, false, true); // cl (w, cl) - Double Click
+// Elapsed time: 12 seconds
+selectCodeEditor("birb.v", 389, 281); // cl (w, cl)
+selectCodeEditor("birb.v", 326, 176); // cl (w, cl)
+selectCodeEditor("birb.v", 504, 317); // cl (w, cl)
+selectCodeEditor("birb.v", 292, 341); // cl (w, cl)
+selectCodeEditor("birb.v", 292, 341, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("birb.v", 304, 376); // cl (w, cl)
+selectCodeEditor("birb.v", 304, 376, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("birb.v", 1003, 360); // cl (w, cl)
+selectCodeEditor("birb.v", 1003, 360, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("birb.v", 860, 59); // cl (w, cl)
+selectCodeEditor("birb.v", 860, 59, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("birb.v", 1018, 341); // cl (w, cl)
+selectCodeEditor("birb.v", 1018, 341, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("birb.v", 990, 389); // cl (w, cl)
+selectCodeEditor("birb.v", 990, 389, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("birb.v", 343, 505); // cl (w, cl)
+selectCodeEditor("birb.v", 343, 505, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("birb.v", 1052, 55); // cl (w, cl)
+selectCodeEditor("birb.v", 1052, 55, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("birb.v", 871, 246); // cl (w, cl)
+selectCodeEditor("birb.v", 871, 246, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("birb.v", 898, 310); // cl (w, cl)
+selectCodeEditor("birb.v", 898, 310, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("birb.v", 843, 382); // cl (w, cl)
+selectCodeEditor("birb.v", 843, 382, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("birb.v", 1266, 258); // cl (w, cl)
+selectCodeEditor("birb.v", 1266, 258, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("birb.v", 1247, 324); // cl (w, cl)
+selectCodeEditor("birb.v", 1247, 324, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("birb.v", 1233, 377); // cl (w, cl)
+selectCodeEditor("birb.v", 1233, 377, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("birb.v", 1233, 377); // cl (w, cl)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "toppo.v", 0); // k (j, cl)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: update_compile_order -fileset sources_1 
+selectCodeEditor("toppo.v", 735, 375); // cl (w, cl)
+selectCodeEditor("toppo.v", 783, 386); // cl (w, cl)
+selectCodeEditor("toppo.v", 1007, 373); // cl (w, cl)
+selectCodeEditor("toppo.v", 938, 457); // cl (w, cl)
+selectCodeEditor("toppo.v", 1118, 367); // cl (w, cl)
+selectCodeEditor("toppo.v", 882, 475); // cl (w, cl)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectButton(PAResourceOtoP.ProgramDebugTab_PROGRAM_DEVICE, "Program device"); // h (cS, cl)
+// Run Command: PAResourceCommand.PACommandNames_PROGRAM_FPGA
+// bC (cl): Program Device: addNotify
+selectButton(RDIResource.BaseDialog_CANCEL, "Cancel"); // a (bC)
+dismissDialog("Program Device"); // bC (cl)
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Program and Debug, Generate Bitstream]", 20, false); // u (O, cl)
+// Run Command: PAResourceCommand.PACommandNames_RUN_BITGEN
+// A (cl): No Implementation Results Available: addNotify
+selectButton(RDIResource.BaseDialog_YES, "Yes"); // a (A)
+// by (cl):  Resetting Runs : addNotify
+// TclEventType: RUN_MODIFY
+dismissDialog("No Implementation Results Available"); // A (cl)
+// TclEventType: RUN_RESET
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// Tcl Message: reset_run synth_1 
+dismissDialog("Resetting Runs"); // by (cl)
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// Tcl Message: launch_runs impl_1 -to_step write_bitstream 
+// Tcl Message: [Wed Nov 20 15:29:33 2019] Launched synth_1... Run output will be captured here: C:/Users/Julian/Documents/Work/CSE 100/Lab 7/Lab 7.runs/synth_1/runme.log [Wed Nov 20 15:29:33 2019] Launched impl_1... Run output will be captured here: C:/Users/Julian/Documents/Work/CSE 100/Lab 7/Lab 7.runs/impl_1/runme.log 
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_FAILED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// ah (cl): Synthesis Failed: addNotify
+// TclEventType: RUN_STATUS_CHANGE
+// Elapsed time: 32 seconds
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (ah)
+// Run Command: PAResourceCommand.PACommandNames_MESSAGE_WINDOW
+dismissDialog("Synthesis Failed"); // ah (cl)
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Synthesis, [Synth 8-439] module 'birb' not found [C:/Users/Julian/Documents/Work/CSE 100/Lab 7/Lab 7.srcs/sources_1/new/toppo.v:70]. ]", 6, false); // ah (O, cl)
+messagesViewCrossProbe(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "src;-;C:\Users\Julian\Documents\Work\CSE 100\Lab 7\Lab 7.srcs\sources_1\new\toppo.v;-;;-;16;-;line;-;70;-;;-;16;-;"); // ah (O, cl)
+selectCodeEditor("toppo.v", 124, 350); // cl (w, cl)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Program and Debug, Generate Bitstream]", 20, false); // u (O, cl)
+// Run Command: PAResourceCommand.PACommandNames_RUN_BITGEN
+// A (cl): No Implementation Results Available: addNotify
+selectButton(RDIResource.BaseDialog_YES, "Yes"); // a (A)
+// by (cl):  Resetting Runs : addNotify
+// TclEventType: RUN_MODIFY
+dismissDialog("No Implementation Results Available"); // A (cl)
+// TclEventType: RUN_RESET
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// Tcl Message: reset_run synth_1 
+dismissDialog("Resetting Runs"); // by (cl)
+// TclEventType: RUN_LAUNCH
+// Tcl Message: launch_runs impl_1 -to_step write_bitstream 
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// by (cl):  Generate Bitstream : addNotify
+// Tcl Message: [Wed Nov 20 15:30:21 2019] Launched synth_1... Run output will be captured here: C:/Users/Julian/Documents/Work/CSE 100/Lab 7/Lab 7.runs/synth_1/runme.log [Wed Nov 20 15:30:21 2019] Launched impl_1... Run output will be captured here: C:/Users/Julian/Documents/Work/CSE 100/Lab 7/Lab 7.runs/impl_1/runme.log 
+dismissDialog("Generate Bitstream"); // by (cl)
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_FAILED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// ah (cl): Synthesis Failed: addNotify
+// TclEventType: RUN_STATUS_CHANGE
+// Elapsed time: 100 seconds
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (ah)
+// Run Command: PAResourceCommand.PACommandNames_MESSAGE_WINDOW
+dismissDialog("Synthesis Failed"); // ah (cl)
+selectTab((HResource) null, (HResource) null, "Sources", 0); // aK (aH, cl)
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Syntax Error Files]", 1); // B (F, cl)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Syntax Error Files, birb.v]", 2, false); // B (F, cl)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Syntax Error Files, birb.v]", 2, false, false, false, false, false, true); // B (F, cl) - Double Click
+selectCodeEditor("birb.v", 416, 525); // cl (w, cl)
+selectCodeEditor("birb.v", 445, 311); // cl (w, cl)
+selectCodeEditor("birb.v", 449, 311); // cl (w, cl)
+selectCodeEditor("birb.v", 446, 289); // cl (w, cl)
+selectCodeEditor("birb.v", 580, 405); // cl (w, cl)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "toppo.v", 0); // k (j, cl)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: update_compile_order -fileset sources_1 
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Program and Debug, Generate Bitstream]", 20, false); // u (O, cl)
+// Run Command: PAResourceCommand.PACommandNames_RUN_BITGEN
+// A (cl): No Implementation Results Available: addNotify
+selectButton(RDIResource.BaseDialog_YES, "Yes"); // a (A)
+// by (cl):  Resetting Runs : addNotify
+dismissDialog("No Implementation Results Available"); // A (cl)
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_RESET
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// Tcl Message: reset_run synth_1 
+dismissDialog("Resetting Runs"); // by (cl)
+// Tcl Message: launch_runs impl_1 -to_step write_bitstream 
+// by (cl):  Generate Bitstream : addNotify
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// Tcl Message: [Wed Nov 20 15:32:31 2019] Launched synth_1... Run output will be captured here: C:/Users/Julian/Documents/Work/CSE 100/Lab 7/Lab 7.runs/synth_1/runme.log [Wed Nov 20 15:32:31 2019] Launched impl_1... Run output will be captured here: C:/Users/Julian/Documents/Work/CSE 100/Lab 7/Lab 7.runs/impl_1/runme.log 
+dismissDialog("Generate Bitstream"); // by (cl)
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_FAILED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// ah (cl): Synthesis Failed: addNotify
+// TclEventType: RUN_STATUS_CHANGE
+// Elapsed time: 21 seconds
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (ah)
+// Run Command: PAResourceCommand.PACommandNames_MESSAGE_WINDOW
+dismissDialog("Synthesis Failed"); // ah (cl)
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Synthesis, [Synth 8-448] named port connection 'Hout' does not exist for instance 'bird1' of module 'birb' [C:/Users/Julian/Documents/Work/CSE 100/Lab 7/Lab 7.srcs/sources_1/new/toppo.v:72]. ]", 1, true); // ah (O, cl) - Node
+messagesViewCrossProbe(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "src;-;C:\Users\Julian\Documents\Work\CSE 100\Lab 7\Lab 7.srcs\sources_1\new\toppo.v;-;;-;16;-;line;-;72;-;;-;16;-;"); // ah (O, cl)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "birb.v", 2); // k (j, cl)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "toppo.v", 0); // k (j, cl)
+selectCodeEditor("toppo.v", 1003, 429); // cl (w, cl)
+selectCodeEditor("toppo.v", 997, 411); // cl (w, cl)
+selectCodeEditor("toppo.v", 1214, 409); // cl (w, cl)
+selectCodeEditor("toppo.v", 1210, 409); // cl (w, cl)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("toppo.v", 391, 228); // cl (w, cl)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "birb.v", 2); // k (j, cl)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "toppo.v", 0); // k (j, cl)
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Program and Debug, Generate Bitstream]", 20, false); // u (O, cl)
+// Run Command: PAResourceCommand.PACommandNames_RUN_BITGEN
+// A (cl): No Implementation Results Available: addNotify
+selectButton(RDIResource.BaseDialog_YES, "Yes"); // a (A)
+// by (cl):  Resetting Runs : addNotify
+// TclEventType: RUN_MODIFY
+dismissDialog("No Implementation Results Available"); // A (cl)
+// TclEventType: RUN_RESET
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// Tcl Message: reset_run synth_1 
+dismissDialog("Resetting Runs"); // by (cl)
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// Tcl Message: launch_runs impl_1 -to_step write_bitstream 
+// Tcl Message: [Wed Nov 20 15:33:28 2019] Launched synth_1... Run output will be captured here: C:/Users/Julian/Documents/Work/CSE 100/Lab 7/Lab 7.runs/synth_1/runme.log [Wed Nov 20 15:33:28 2019] Launched impl_1... Run output will be captured here: C:/Users/Julian/Documents/Work/CSE 100/Lab 7/Lab 7.runs/impl_1/runme.log 
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// Elapsed time: 57 seconds
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources]", 15); // B (F, cl)
+// TclEventType: RUN_STEP_COMPLETED
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Constraints]", 14); // B (F, cl)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Constraints, constrs_1, Basys3_Master.xdc]", 16, false); // B (F, cl)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Constraints, constrs_1, Basys3_Master.xdc]", 16, false, false, false, false, false, true); // B (F, cl) - Double Click
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "toppo.v", 0); // k (j, cl)
+// TclEventType: RUN_FAILED
+// TclEventType: RUN_STATUS_CHANGE
+// ah (cl): Bitstream Generation Failed: addNotify
+// Elapsed time: 45 seconds
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (ah)
+// Run Command: PAResourceCommand.PACommandNames_LOG_WINDOW
+dismissDialog("Bitstream Generation Failed"); // ah (cl)
+selectTab((HResource) null, (HResource) null, "Messages", 1); // aK (aH, cl)
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Implementation, Write Bitstream, DRC, Netlist, Design Level, Combinatorial Loop, [DRC LUTLP-1] Combinatorial Loop Alert: 1 LUT cells form a combinatorial loop. This can create a race condition. Timing analysis may not be accurate. The preferred resolution is to modify the design to remove combinatorial logic loops. If the loop is known and understood, this DRC can be bypassed by acknowledging the condition and setting the following XDC constraint on any one of the nets in the loop: 'set_property ALLOW_COMBINATORIAL_LOOPS TRUE [get_nets <myHier/myNet>]'. One net in the loop is bird1/position/red0_carry_i_10. Please evaluate your design. The cells in the loop are: bird1/position/s1to9[4]_i_3.. ]", 6, true); // ah (O, cl) - Node
+selectCodeEditor("toppo.v", 1045, 429); // cl (w, cl)
+selectCodeEditor("toppo.v", 1045, 429, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("toppo.v", 1076, 430); // cl (w, cl)
+selectCodeEditor("toppo.v", 1076, 430, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("toppo.v", 1062, 417); // cl (w, cl)
+selectCodeEditor("toppo.v", 1062, 417, false, false, false, false, true); // cl (w, cl) - Double Click
+// Elapsed time: 19 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "birb2.v", 3); // k (j, cl)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "birb.v", 2); // k (j, cl)
+// Elapsed time: 30 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "theWall.v", 1); // k (j, cl)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "toppo.v", 0); // k (j, cl)
+selectCodeEditor("toppo.v", 652, 431); // cl (w, cl)
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Implementation, Write Bitstream, DRC, Netlist, Design Level, Combinatorial Loop, [DRC LUTLP-1] Combinatorial Loop Alert: 1 LUT cells form a combinatorial loop. This can create a race condition. Timing analysis may not be accurate. The preferred resolution is to modify the design to remove combinatorial logic loops. If the loop is known and understood, this DRC can be bypassed by acknowledging the condition and setting the following XDC constraint on any one of the nets in the loop: 'set_property ALLOW_COMBINATORIAL_LOOPS TRUE [get_nets <myHier/myNet>]'. One net in the loop is bird1/position/red0_carry_i_10. Please evaluate your design. The cells in the loop are: bird1/position/s1to9[4]_i_3.. ]", 6, true); // ah (O, cl) - Node
+messagesViewCrossProbe(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "inst;-;bird1/position/s1to9[4]_i_3;-;;-;10;-;"); // ah (O, cl)
+selectButton("OptionPane.button", "No"); // JButton (A, G)
+// Elapsed time: 20 seconds
+selectCodeEditor("toppo.v", 604, 323); // cl (w, cl)
+// Elapsed time: 18 seconds
+selectCodeEditor("toppo.v", 441, 398); // cl (w, cl)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 24 seconds
+selectCodeEditor("toppo.v", 556, 378); // cl (w, cl)
+selectCodeEditor("toppo.v", 556, 378, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("toppo.v", 795, 243); // cl (w, cl)
+selectCodeEditor("toppo.v", 795, 243, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("toppo.v", 717, 324); // cl (w, cl)
+selectCodeEditor("toppo.v", 1111, 334); // cl (w, cl)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Program and Debug, Generate Bitstream]", 20, false); // u (O, cl)
+// Run Command: PAResourceCommand.PACommandNames_RUN_BITGEN
+// A (cl): Synthesis is Out-of-date: addNotify
+selectButton(RDIResource.BaseDialog_YES, "Yes"); // a (A)
+// by (cl):  Resetting Runs : addNotify
+// TclEventType: RUN_MODIFY
+dismissDialog("Synthesis is Out-of-date"); // A (cl)
+// TclEventType: RUN_RESET
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_RESET
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// Tcl Message: reset_run synth_1 
+dismissDialog("Resetting Runs"); // by (cl)
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// by (cl):  Generate Bitstream : addNotify
+// Tcl Message: launch_runs impl_1 -to_step write_bitstream 
+// Tcl Message: [Wed Nov 20 15:37:56 2019] Launched synth_1... Run output will be captured here: C:/Users/Julian/Documents/Work/CSE 100/Lab 7/Lab 7.runs/synth_1/runme.log [Wed Nov 20 15:37:56 2019] Launched impl_1... Run output will be captured here: C:/Users/Julian/Documents/Work/CSE 100/Lab 7/Lab 7.runs/impl_1/runme.log 
+// TclEventType: RUN_STATUS_CHANGE
+dismissDialog("Generate Bitstream"); // by (cl)
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// TclEventType: RUN_FAILED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// ah (cl): Bitstream Generation Failed: addNotify
+// Elapsed time: 118 seconds
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (ah)
+// Run Command: PAResourceCommand.PACommandNames_LOG_WINDOW
+dismissDialog("Bitstream Generation Failed"); // ah (cl)
+selectTab((HResource) null, (HResource) null, "Messages", 1); // aK (aH, cl)
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Implementation, Write Bitstream, DRC, Netlist, Design Level, Combinatorial Loop, [DRC LUTLP-1] Combinatorial Loop Alert: 1 LUT cells form a combinatorial loop. This can create a race condition. Timing analysis may not be accurate. The preferred resolution is to modify the design to remove combinatorial logic loops. If the loop is known and understood, this DRC can be bypassed by acknowledging the condition and setting the following XDC constraint on any one of the nets in the loop: 'set_property ALLOW_COMBINATORIAL_LOOPS TRUE [get_nets <myHier/myNet>]'. One net in the loop is bird1/position/red1_carry_i_15. Please evaluate your design. The cells in the loop are: bird1/position/s1to9[4]_i_3.. ]", 6, true); // ah (O, cl) - Node
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Implementation, Write Bitstream, DRC, Netlist, Design Level, Combinatorial Loop, [DRC LUTLP-1] Combinatorial Loop Alert: 1 LUT cells form a combinatorial loop. This can create a race condition. Timing analysis may not be accurate. The preferred resolution is to modify the design to remove combinatorial logic loops. If the loop is known and understood, this DRC can be bypassed by acknowledging the condition and setting the following XDC constraint on any one of the nets in the loop: 'set_property ALLOW_COMBINATORIAL_LOOPS TRUE [get_nets <myHier/myNet>]'. One net in the loop is bird1/position/red1_carry_i_15. Please evaluate your design. The cells in the loop are: bird1/position/s1to9[4]_i_3.. ]", 6, true); // ah (O, cl) - Node
+messagesViewCrossProbe(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "inst;-;bird1/position/s1to9[4]_i_3;-;;-;10;-;"); // ah (O, cl)
+selectButton("OptionPane.button", "No"); // JButton (A, G)
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Implementation, Write Bitstream, DRC, Netlist, Design Level, Combinatorial Loop, [DRC LUTLP-1] Combinatorial Loop Alert: 1 LUT cells form a combinatorial loop. This can create a race condition. Timing analysis may not be accurate. The preferred resolution is to modify the design to remove combinatorial logic loops. If the loop is known and understood, this DRC can be bypassed by acknowledging the condition and setting the following XDC constraint on any one of the nets in the loop: 'set_property ALLOW_COMBINATORIAL_LOOPS TRUE [get_nets <myHier/myNet>]'. One net in the loop is bird1/position/red1_carry_i_15. Please evaluate your design. The cells in the loop are: bird1/position/s1to9[4]_i_3.. ]", 6, true); // ah (O, cl) - Node
+collapseTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Implementation, Write Bitstream, DRC, Netlist, Design Level]", 4); // ah (O, cl)
+expandTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Implementation, Write Bitstream, DRC, Netlist, Design Level]", 4); // ah (O, cl)
+expandTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Implementation, Write Bitstream, DRC, Netlist, Design Level, Combinatorial Loop, [DRC LUTLP-1] Combinatorial Loop Alert: 1 LUT cells form a combinatorial loop. This can create a race condition. Timing analysis may not be accurate. The preferred resolution is to modify the design to remove combinatorial logic loops. If the loop is known and understood, this DRC can be bypassed by acknowledging the condition and setting the following XDC constraint on any one of the nets in the loop: 'set_property ALLOW_COMBINATORIAL_LOOPS TRUE [get_nets <myHier/myNet>]'. One net in the loop is bird1/position/red1_carry_i_15. Please evaluate your design. The cells in the loop are: bird1/position/s1to9[4]_i_3.. ]", 6); // ah (O, cl)
+// TclEventType: HW_TARGET_NEEDS_CLOSE
+// TclEventType: HW_TARGET_CLOSE
+// TclEventType: HW_SYSMON_DELETE
+// TclEventType: HW_TARGET_UPDATE
+// TclEventType: DEBUG_PROBE_DELETE
+// TclEventType: HW_TARGET_NEEDS_CLOSE
+// Tcl Message: ERROR: [Labtoolstcl 44-513] HW Target shutdown. Closing target: localhost:3121/xilinx_tcf/Digilent/210183A2837FA 
+// n (cl): Close Hardware Target: addNotify
+// TclEventType: HW_SERVER_UPDATE
+// WARNING: HEventQueue.dispatchEvent() is taking  1072653 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 1,565 MB. GUI used memory: 93 MB. Current time: 11/20/19, 3:58:27 PM PST
+// WARNING: HEventQueue.dispatchEvent() is taking  4000873 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  1515 ms.
+// WARNING: HSwingWorker (Update Runs Swing Worker) is taking 1552 ms. Increasing delay to 3000 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  1360 ms.
+// WARNING: HSwingWorker (Refresh Filesets Swing Worker) is taking 1632 ms. Increasing delay to 4896 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 1,565 MB. GUI used memory: 90 MB. Current time: 11/20/19, 5:05:16 PM PST
+// WARNING: HEventQueue.dispatchEvent() is taking  150967 ms.
+// Elapsed time: 5259 seconds
+selectButton(PAResourceAtoD.CmdMsgDialog_OK, "OK"); // f (n)
+dismissDialog("Close Hardware Target"); // n (cl)
