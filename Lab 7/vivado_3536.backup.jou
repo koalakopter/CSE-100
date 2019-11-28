@@ -1,0 +1,14 @@
+#-----------------------------------------------------------
+# Vivado v2019.1 (64-bit)
+# SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
+# IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+# Start of session at: Mon Nov 25 23:12:12 2019
+# Process ID: 3536
+# Current directory: D:/Users/Julian/Documents/UCSC Year THREE/CSE 100/Lab 7/Lab 7
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent32940 D:\Users\Julian\Documents\UCSC Year THREE\CSE 100\Lab 7\Lab 7\Lab 7.xpr
+# Log file: D:/Users/Julian/Documents/UCSC Year THREE/CSE 100/Lab 7/Lab 7/vivado.log
+# Journal file: D:/Users/Julian/Documents/UCSC Year THREE/CSE 100/Lab 7/Lab 7\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project {D:/Users/Julian/Documents/UCSC Year THREE/CSE 100/Lab 7/Lab 7/Lab 7.xpr}
+update_compile_order -fileset sources_1

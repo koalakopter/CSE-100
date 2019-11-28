@@ -30,8 +30,9 @@ module birb(
     input start,
     input timeup,
     input win,
+    input idle,
     input tagzone,
-    input [3:0] direction,
+    input [1:0] direction,
     
     //output [1:0] fun,
     output red,
@@ -60,19 +61,19 @@ module birb(
     
     //statemachines
     //idle
-    assign d[0] = (timeup & ~q[0]) | (q[0] & ~start);
+    assign d[0] = (idle & (q[1] | q[2] | q[3] | q[4])) | (q[0] & ~start);
     //upleft
-    assign d[1] = (q[0] & start & direction[3]) | (q[2] & (Hpos >= Hright) & (Vpos > Vtop)) | (q[3] & (Vpos >= Vbot) & (Hpos > Hleft)) |
-                    (q[1] & (Hpos > Hleft) & (Vpos > Vtop)) | (q[4] & Hpos >= Hright & Vpos >= Vbot);
+    assign d[1] = (q[0] & start & direction[1] & direction[0]) | (q[2] & (Hpos >= Hright) & (Vpos > Vtop)) | (q[3] & (Vpos >= Vbot) & (Hpos > Hleft)) |
+                    (q[1] & (Hpos > Hleft) & (Vpos > Vtop) & ~idle) | (q[4] & Hpos >= Hright & Vpos >= Vbot);
     //upright
-    assign d[2] = (q[0] & start & direction[2]) | (q[4] & (Vpos >= Vbot) & (Hpos < Hright)) | (q[1] & (Hpos <= Hleft) & (Vpos > Vtop)) |
-                    (q[2] & (Hpos < Hright) & (Vpos > Vtop)) | (q[3] & Hpos <= Hleft & Vpos >= Vbot); 
+    assign d[2] = (q[0] & start & direction[1] & ~direction[0]) | (q[4] & (Vpos >= Vbot) & (Hpos < Hright)) | (q[1] & (Hpos <= Hleft) & (Vpos > Vtop)) |
+                    (q[2] & (Hpos < Hright) & (Vpos > Vtop) & ~idle) | (q[3] & Hpos <= Hleft & Vpos >= Vbot); 
     //downleft
-    assign d[3] = (q[0] & start & direction[1]) | (q[1] & (Vpos <= Vtop) & (Hpos > Hleft)) | (q[4] & (Hpos >= Hright) & (Vpos > Vtop)) |
-                    (q[3] & (Hpos > Hleft) & (Vpos < Vbot)) | (q[2] & Hpos >= Hright & Vpos <= Vtop);
+    assign d[3] = (q[0] & start & ~direction[1] & direction[0]) | (q[1] & (Vpos <= Vtop) & (Hpos > Hleft)) | (q[4] & (Hpos >= Hright) & (Vpos > Vtop)) |
+                    (q[3] & (Hpos > Hleft) & (Vpos < Vbot) & ~idle) | (q[2] & Hpos >= Hright & Vpos <= Vtop);
     //downright
-    assign d[4] = (q[0] & start & direction[0]) | (q[3] & (Hpos <= Hleft) & (Vpos < Vbot)) | (q[2] & (Vpos <= Vtop) & (Hpos < Hright)) |
-                    (q[4] & (Hpos < Hright) & (Vpos < Vbot)) | (q[1] & Hpos <= Hleft & Vpos <= Vtop);
+    assign d[4] = (q[0] & start & ~direction[1] & ~direction[0]) | (q[3] & (Hpos <= Hleft) & (Vpos < Vbot)) | (q[2] & (Vpos <= Vtop) & (Hpos < Hright)) |
+                    (q[4] & (Hpos < Hright) & (Vpos < Vbot) & ~idle) | (q[1] & Hpos <= Hleft & Vpos <= Vtop);
     
     
     
@@ -89,21 +90,21 @@ module birb(
     assign hin [15:0] = {5'b0, Hstart};
     assign vin [15:0] = {5'b0, Vstart};
     
-    countUD16L Horizontal (.clock(clock), .Up((frame[1] | frame[0]) & (q[2] | q[4])), .Dw((frame[1] | frame[0]) & (q[1] | q[3])), .LD(q[0] & start), .d(hin), .q(hout));
-    countUD16L Vertical (.clock(clock), .Up((frame[1] | frame[0]) & (q[3] | q[4])), .Dw((frame[1] | frame[0]) & (q[1] | q[2])), .LD(q[0] & start), .d(vin), .q(vout));
+    countUD16L Horizontal (.clock(clock), .Up((frame[1] | frame[0]) & (q[2] | q[4])), .Dw((frame[1] | frame[0]) & (q[1] | q[3])), .LD((q[0] & start) | idle), .d(hin), .q(hout));
+    countUD16L Vertical (.clock(clock), .Up((frame[1] | frame[0]) & (q[3] | q[4])), .Dw((frame[1] | frame[0]) & (q[1] | q[2])), .LD((q[0] & start) | idle), .d(vin), .q(vout));
 
     assign Hpos [10:0] = hout [10:0];
     assign Vpos [10:0] = vout [10:0];
     
     wire [10:0] hmux, vmux;
-    m2_1x8 hchoose (.in0(Hstart), .in1(hout), .sel(q[1] | q[2] | q[3] | q[4]), .o(hmux));
-    m2_1x8 vchoose (.in0(Vstart), .in1(vout), .sel(q[1] | q[2] | q[3] | q[4]), .o(vmux));
+    m2_1x8 hchoose (.in0(Hstart), .in1(hout), .sel(~idle), .o(hmux));
+    m2_1x8 vchoose (.in0(Vstart), .in1(vout), .sel(~idle), .o(vmux));
     
     
     wire redout, blueout;
     birb2 position (.clock(clock), .Hpixel(Hpixel), .Vpixel(Vpixel), .red(redout), .blue(blueout),
             .tagzone(tagzone), .birdposx(hmux), .birdposy(vmux), .timeup(timeup), 
-            .tagged(tagged));
+            .tagged(tagged), .idle(idle));
     
     assign red = redout & (q[0] | q[1] | q[2] | q[3] | q[4]);
     assign blue = blueout & (q[0] | q[1] | q[2] | q[3] | q[4]);

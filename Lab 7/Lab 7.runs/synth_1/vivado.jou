@@ -2,8 +2,8 @@
 # Vivado v2019.1 (64-bit)
 # SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
 # IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
-# Start of session at: Sun Nov 24 16:21:35 2019
-# Process ID: 25572
+# Start of session at: Tue Nov 26 10:33:54 2019
+# Process ID: 25796
 # Current directory: C:/Users/Julian/Documents/Work/CSE 100/Lab 7/Lab 7.runs/synth_1
 # Command line: vivado.exe -log toppo.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source toppo.tcl
 # Log file: C:/Users/Julian/Documents/Work/CSE 100/Lab 7/Lab 7.runs/synth_1/toppo.vds

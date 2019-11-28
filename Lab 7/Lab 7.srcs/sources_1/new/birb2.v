@@ -26,6 +26,7 @@ module birb2(
     input [10:0] Vpixel,
     input tagzone,
     input timeup,
+    input idle, 
     
     input [10:0] birdposx,
     input [10:0] birdposy,
@@ -37,7 +38,6 @@ module birb2(
     );
     
     wire square;
-    //assign square = (Hpixel >= 
     
     wire purple;
     assign red = birdposx <= Hpixel & Hpixel <= birdposx + 15 & birdposy <= Vpixel & Vpixel <= birdposy +15;
@@ -50,9 +50,9 @@ module birb2(
     FDRE #(.INIT(1'b0)) yestag (.C(clock), .CE(1'b1), .R(1'b0), .D(d[1]), .Q(q[1]));
     
     //state 0: not tagged
-    assign d[0] = (q[1] & timeup) | (q[0] & ~(tagzone & red));
+    assign d[0] = (q[1] & (timeup | idle)) | (q[0] & ~(tagzone & red));
     //state 1: tagged
-    assign d[1] = (q[0] & (tagzone & red)) | (q[1] & ~timeup);
+    assign d[1] = (q[0] & (tagzone & red)) | (q[1] & ~(timeup | idle));
     
     //output(s) of state machine
     assign tagged = q[0] & (tagzone & red);

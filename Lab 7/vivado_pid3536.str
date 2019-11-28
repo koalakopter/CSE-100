@@ -1,0 +1,438 @@
+/*
+
+Xilinx Vivado v2019.1 (64-bit) [Major: 2019, Minor: 1]
+SW Build: 2552052 on Fri May 24 14:49:42 MDT 2019
+IP Build: 2548770 on Fri May 24 18:01:18 MDT 2019
+
+Process ID (PID): 3536
+License: Customer
+
+Current time: 	Mon Nov 25 23:13:08 PST 2019
+Time zone: 	Pacific Standard Time (America/Los_Angeles)
+
+OS: Windows 10
+OS Version: 10.0
+OS Architecture: amd64
+Available processors (cores): 8
+
+Screen size: 1920x1080
+Screen resolution (DPI): 110
+Available screens: 1
+Available disk space: 107 GB
+Default font: family=Segoe UI,name=Segoe UI,style=plain,size=13
+
+Java version: 	9.0.4 64-bit
+Java home: 	D:/Xilinx/Vivado/2019.1/tps/win64/jre9.0.4
+Java executable location: 	D:/Xilinx/Vivado/2019.1/tps/win64/jre9.0.4/bin/java.exe
+Java initial memory (-Xms): 	128 MB
+Java maximum memory (-Xmx):	 3 GB
+
+
+User name: 	OWNER
+User home directory: C:/Users/OWNER
+User working directory: D:/Users/Julian/Documents/UCSC Year THREE/CSE 100/Lab 7/Lab 7
+User country: 	US
+User language: 	en
+User locale: 	en_US
+
+RDI_BASEROOT: D:/Xilinx/Vivado
+HDI_APPROOT: D:/Xilinx/Vivado/2019.1
+RDI_DATADIR: D:/Xilinx/Vivado/2019.1/data
+RDI_BINDIR: D:/Xilinx/Vivado/2019.1/bin
+
+Vivado preferences file location: C:/Users/OWNER/AppData/Roaming/Xilinx/Vivado/2019.1/vivado.xml
+Vivado preferences directory: C:/Users/OWNER/AppData/Roaming/Xilinx/Vivado/2019.1/
+Vivado layouts directory: C:/Users/OWNER/AppData/Roaming/Xilinx/Vivado/2019.1/layouts
+PlanAhead jar file location: 	D:/Xilinx/Vivado/2019.1/lib/classes/planAhead.jar
+Vivado log file location: 	D:/Users/Julian/Documents/UCSC Year THREE/CSE 100/Lab 7/Lab 7/vivado.log
+Vivado journal file location: 	D:/Users/Julian/Documents/UCSC Year THREE/CSE 100/Lab 7/Lab 7/vivado.jou
+Engine tmp dir: 	D:/Users/Julian/Documents/UCSC Year THREE/CSE 100/Lab 7/Lab 7/.Xil/Vivado-3536-JULIAN-PC
+
+Xilinx Environment Variables
+----------------------------
+XILINX: D:/Xilinx/Vivado/2019.1/ids_lite/ISE
+XILINX_DSP: D:/Xilinx/Vivado/2019.1/ids_lite/ISE
+XILINX_PLANAHEAD: D:/Xilinx/Vivado/2019.1
+XILINX_SDK: D:/Xilinx/SDK/2019.1
+XILINX_VIVADO: D:/Xilinx/Vivado/2019.1
+XILINX_VIVADO_HLS: D:/Xilinx/Vivado/2019.1
+
+
+GUI allocated memory:	128 MB
+GUI max memory:		3,072 MB
+Engine allocated memory: 555 MB
+
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+
+*/
+
+// TclEventType: START_GUI
+// Tcl Message: start_gui 
+// TclEventType: PROJECT_OPEN_DIALOG
+// by (cl):  Open Project : addNotify
+// Opening Vivado Project: D:\Users\Julian\Documents\UCSC Year THREE\CSE 100\Lab 7\Lab 7\Lab 7.xpr. Version: Vivado v2019.1 
+// Tcl Message: open_project {D:/Users/Julian/Documents/UCSC Year THREE/CSE 100/Lab 7/Lab 7/Lab 7.xpr} 
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// HMemoryUtils.trashcanNow. Engine heap size: 558 MB. GUI used memory: 48 MB. Current time: 11/25/19, 11:13:10 PM PST
+// TclEventType: MSGMGR_MOVEMSG
+// TclEventType: FILE_SET_NEW
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_CURRENT
+// TclEventType: PROJECT_DASHBOARD_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_NEW
+// Tcl Message: open_project {D:/Users/Julian/Documents/UCSC Year THREE/CSE 100/Lab 7/Lab 7/Lab 7.xpr} 
+// Tcl Message: INFO: [Project 1-313] Project file moved from 'C:/Users/Julian/Documents/Work/CSE 100/Lab 7' since last save. 
+// Tcl Message: Scanning sources... Finished scanning sources 
+// Tcl Message: INFO: [IP_Flow 19-234] Refreshing IP repositories INFO: [IP_Flow 19-1704] No user IP repositories specified 
+// TclEventType: PROJECT_NEW
+// [GUI Memory]: 78 MB (+79638kb) [00:00:44]
+// [Engine Memory]: 639 MB (+518171kb) [00:00:44]
+// [GUI Memory]: 93 MB (+11074kb) [00:00:44]
+// [GUI Memory]: 101 MB (+3965kb) [00:00:46]
+// [Engine Memory]: 672 MB (+1266kb) [00:00:46]
+// WARNING: HEventQueue.dispatchEvent() is taking  7908 ms.
+// Tcl Message: INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/Xilinx/Vivado/2019.1/data/ip'. 
+// HMemoryUtils.trashcanNow. Engine heap size: 672 MB. GUI used memory: 55 MB. Current time: 11/25/19, 11:13:38 PM PST
+// Tcl Message: open_project: Time (s): cpu = 00:00:19 ; elapsed = 00:00:30 . Memory (MB): peak = 699.055 ; gain = 106.301 
+// Project name: Lab 7; location: D:/Users/Julian/Documents/UCSC Year THREE/CSE 100/Lab 7/Lab 7; part: xc7a35tcpg236-1
+dismissDialog("Open Project"); // by (cl)
+// a (cl): Critical Messages: addNotify
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: update_compile_order -fileset sources_1 
+// [GUI Memory]: 113 MB (+6634kb) [00:00:56]
+// Elapsed time: 381 seconds
+selectButton(PAResourceAtoD.CmdMsgDialog_OK, "OK"); // f (a)
+dismissDialog("Critical Messages"); // a (cl)
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, toppo (toppo.v)]", 2); // B (F, cl)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, toppo (toppo.v), syncer : xil_defaultlib.synchronizer]", 4, false); // B (F, cl)
+selectTab((HResource) null, (HResource) null, "Messages", 1); // aK (aH, cl)
+// Elapsed time: 33 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, toppo (toppo.v), rngMachine : xil_defaultlib.randomNumGen]", 12, false); // B (F, cl)
+// PAPropertyPanels.initPanels (net.v) elapsed time: 0.2s
+// [Engine Memory]: 707 MB (+2165kb) [00:07:57]
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, toppo (toppo.v), catcher : net (net.v)]", 13, true); // B (F, cl) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, toppo (toppo.v), catcher : net (net.v), vchoose : xil_defaultlib.m2_1x8]", 19, false, false, false, false, false, true); // B (F, cl) - Double Click
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, toppo (toppo.v), catcher : net (net.v), position : netnet (netnet.v)]", 20, false); // B (F, cl)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, toppo (toppo.v), catcher : net (net.v), position : netnet (netnet.v)]", 20, false, false, false, false, false, true); // B (F, cl) - Double Click
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "net.v", 1); // k (j, cl)
+// Elapsed time: 185 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, toppo (toppo.v), catcher : net (net.v)]", 13, true); // B (F, cl) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, toppo (toppo.v), catcher : net (net.v)]", 13, true, false, false, false, true, false); // B (F, cl) - Popup Trigger - Node
+selectMenu(PAResourceCommand.PACommandNames_AUTO_UPDATE_HIER, "Hierarchy Update"); // ae (an, cl)
+selectMenu(PAResourceQtoS.SrcMenu_IP_HIERARCHY, "IP Hierarchy"); // ae (an, cl)
+selectMenu(PAResourceQtoS.SrcMenu_IP_HIERARCHY, "IP Hierarchy"); // ae (an, cl)
+selectCodeEditor("net.v", 594, 320); // cl (w, cl)
+selectButton(PAResourceCommand.PACommandNames_ADD_SOURCES, "Sources_add_sources"); // B (f, cl)
+// Run Command: PAResourceCommand.PACommandNames_ADD_SOURCES
+// c (cl): Add Sources: addNotify
+// Elapsed time: 10 seconds
+selectButton("NEXT", "Next >"); // JButton (j, c)
+selectButton(PAResourceQtoS.SrcChooserPanel_ADD_HDL_AND_NETLIST_FILES_TO_YOUR_PROJECT, "Add Files"); // a (E, c)
+// HMemoryUtils.trashcanNow. Engine heap size: 727 MB. GUI used memory: 62 MB. Current time: 11/25/19, 11:24:20 PM PST
+// Elapsed time: 12 seconds
+dismissFileChooser();
+// Elapsed time: 25 seconds
+selectButton(PAResourceQtoS.SrcChooserPanel_ADD_HDL_AND_NETLIST_FILES_TO_YOUR_PROJECT, "Add Files"); // a (E, c)
+dismissFileChooser();
+selectCheckBox(PAResourceQtoS.SrcChooserPanel_MAKE_LOCAL_COPY_OF_THESE_FILES_INTO, "Copy sources into project", true); // g (bm, c): TRUE
+selectButton("CANCEL", "Cancel"); // JButton (j, c)
+// 'h' command handler elapsed time: 63 seconds
+dismissDialog("Add Sources"); // c (cl)
+// Elapsed time: 155 seconds
+selectCodeEditor("net.v", 846, 332); // cl (w, cl)
+// Elapsed time: 10 seconds
+selectCodeEditor("net.v", 869, 106); // cl (w, cl)
+// Elapsed time: 13 seconds
+selectCodeEditor("net.v", 519, 290); // cl (w, cl)
+// Elapsed time: 131 seconds
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Vivado Commands, General Messages, [Project 1-311] Could not find the file 'D:/Users/Julian/Documents/UCSC Year THREE/CSE 100/Lab 7/Lab 5/Lab 5/Lab 5.srcs/sources_1/new/LFSR.v', nor could it be found using path 'C:/Users/Julian/Documents/Work/CSE 100/Lab 5/Lab 5/Lab 5.srcs/sources_1/new/LFSR.v'.. ]", 3, true); // ah (O, cl) - Node
+// Elapsed time: 160 seconds
+selectCodeEditor("net.v", 839, 389); // cl (w, cl)
+selectCodeEditor("net.v", 839, 392, false, false, false, false, true); // cl (w, cl) - Double Click
+// Elapsed time: 123 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "netnet.v", 2); // k (j, cl)
+// [GUI Memory]: 119 MB (+716kb) [00:22:42]
+// Elapsed time: 27 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "net.v", 1); // k (j, cl)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "netnet.v", 2); // k (j, cl)
+selectCodeEditor("netnet.v", 158, 104); // cl (w, cl)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "net.v", 1); // k (j, cl)
+selectCodeEditor("net.v", 873, 198); // cl (w, cl)
+selectCodeEditor("net.v", 384, 131); // cl (w, cl)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "netnet.v", 2); // k (j, cl)
+// Elapsed time: 17 seconds
+selectCodeEditor("netnet.v", 935, 218); // cl (w, cl)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 121 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "net.v", 1); // k (j, cl)
+// TclEventType: DG_GRAPH_STALE
+// [Engine Memory]: 745 MB (+1818kb) [00:25:24]
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "netnet.v", 2); // k (j, cl)
+// HMemoryUtils.trashcanNow. Engine heap size: 752 MB. GUI used memory: 60 MB. Current time: 11/25/19, 11:38:15 PM PST
+selectCodeEditor("netnet.v", 346, 321); // cl (w, cl)
+selectCodeEditor("netnet.v", 373, 321); // cl (w, cl)
+selectCodeEditor("netnet.v", 346, 331); // cl (w, cl)
+// Elapsed time: 16 seconds
+selectCodeEditor("netnet.v", 346, 331); // cl (w, cl)
+// Elapsed time: 39 seconds
+selectCodeEditor("netnet.v", 855, 274); // cl (w, cl)
+selectCodeEditor("netnet.v", 236, 293); // cl (w, cl)
+selectCodeEditor("netnet.v", 327, 261); // cl (w, cl)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, toppo (toppo.v), ring : ringCounter (ringCount.v)]", 33, false); // B (F, cl)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, toppo (toppo.v), ring : ringCounter (ringCount.v)]", 33, false, false, false, false, false, true); // B (F, cl) - Double Click
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "netnet.v", 2); // k (j, cl)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "ringCount.v", 3); // k (j, cl)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "netnet.v", 2); // k (j, cl)
+selectCodeEditor("netnet.v", 526, 291); // cl (w, cl)
+selectCodeEditor("netnet.v", 587, 282); // cl (w, cl)
+selectCodeEditor("netnet.v", 507, 260); // cl (w, cl)
+selectCodeEditor("netnet.v", 507, 260, false, false, false, false, true); // cl (w, cl) - Double Click
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "ringCount.v", 3); // k (j, cl)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "netnet.v", 2); // k (j, cl)
+selectCodeEditor("netnet.v", 162, 236); // cl (w, cl)
+selectCodeEditor("netnet.v", 75, 244); // cl (w, cl)
+selectCodeEditor("netnet.v", 59, 244); // cl (w, cl)
+typeControlKey((HResource) null, "netnet.v", 'v'); // cl (w, cl)
+selectCodeEditor("netnet.v", 356, 250); // cl (w, cl)
+selectCodeEditor("netnet.v", 603, 280); // cl (w, cl)
+selectCodeEditor("netnet.v", 609, 267); // cl (w, cl)
+selectCodeEditor("netnet.v", 200, 286); // cl (w, cl)
+selectCodeEditor("netnet.v", 200, 286); // cl (w, cl)
+selectCodeEditor("netnet.v", 201, 291); // cl (w, cl)
+// Elapsed time: 12 seconds
+selectCodeEditor("netnet.v", 791, 198); // cl (w, cl)
+selectCodeEditor("netnet.v", 776, 198); // cl (w, cl)
+selectCodeEditor("netnet.v", 771, 194); // cl (w, cl)
+selectCodeEditor("netnet.v", 768, 191); // cl (w, cl)
+typeControlKey((HResource) null, "netnet.v", 'c'); // cl (w, cl)
+selectCodeEditor("netnet.v", 159, 204); // cl (w, cl)
+typeControlKey((HResource) null, "netnet.v", 'v'); // cl (w, cl)
+selectCodeEditor("netnet.v", 103, 223); // cl (w, cl)
+selectCodeEditor("netnet.v", 103, 224, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("netnet.v", 255, 221); // cl (w, cl)
+selectCodeEditor("netnet.v", 281, 218); // cl (w, cl)
+selectCodeEditor("netnet.v", 297, 221); // cl (w, cl)
+selectCodeEditor("netnet.v", 287, 224); // cl (w, cl)
+selectCodeEditor("netnet.v", 216, 235); // cl (w, cl)
+selectCodeEditor("netnet.v", 226, 235); // cl (w, cl)
+selectCodeEditor("netnet.v", 604, 218); // cl (w, cl)
+selectCodeEditor("netnet.v", 622, 220); // cl (w, cl)
+selectCodeEditor("netnet.v", 555, 244); // cl (w, cl)
+selectCodeEditor("netnet.v", 523, 362); // cl (w, cl)
+selectCodeEditor("netnet.v", 229, 328); // cl (w, cl)
+// Elapsed time: 21 seconds
+selectCodeEditor("netnet.v", 138, 328); // cl (w, cl)
+selectCodeEditor("netnet.v", 140, 335); // cl (w, cl)
+selectCodeEditor("netnet.v", 267, 335); // cl (w, cl)
+selectCodeEditor("netnet.v", 143, 361); // cl (w, cl)
+selectCodeEditor("netnet.v", 144, 348); // cl (w, cl)
+selectCodeEditor("netnet.v", 274, 359); // cl (w, cl)
+selectCodeEditor("netnet.v", 169, 355); // cl (w, cl)
+selectCodeEditor("netnet.v", 159, 353); // cl (w, cl)
+selectCodeEditor("netnet.v", 284, 350); // cl (w, cl)
+// Elapsed time: 28 seconds
+selectCodeEditor("netnet.v", 361, 333); // cl (w, cl)
+selectCodeEditor("netnet.v", 542, 322); // cl (w, cl)
+selectCodeEditor("netnet.v", 532, 341); // cl (w, cl)
+// Elapsed time: 19 seconds
+selectCodeEditor("netnet.v", 759, 313); // cl (w, cl)
+selectCodeEditor("netnet.v", 850, 328); // cl (w, cl)
+selectCodeEditor("netnet.v", 958, 332); // cl (w, cl)
+selectCodeEditor("netnet.v", 945, 331); // cl (w, cl)
+selectCodeEditor("netnet.v", 770, 366); // cl (w, cl)
+selectCodeEditor("netnet.v", 365, 339); // cl (w, cl)
+selectCodeEditor("netnet.v", 965, 327); // cl (w, cl)
+selectCodeEditor("netnet.v", 948, 337); // cl (w, cl)
+selectCodeEditor("netnet.v", 953, 337); // cl (w, cl)
+selectCodeEditor("netnet.v", 266, 332); // cl (w, cl)
+selectCodeEditor("netnet.v", 310, 330); // cl (w, cl)
+selectCodeEditor("netnet.v", 308, 329, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("netnet.v", 306, 336); // cl (w, cl)
+selectCodeEditor("netnet.v", 359, 331); // cl (w, cl)
+selectCodeEditor("netnet.v", 370, 331); // cl (w, cl)
+selectCodeEditor("netnet.v", 572, 321); // cl (w, cl)
+selectCodeEditor("netnet.v", 941, 327); // cl (w, cl)
+selectCodeEditor("netnet.v", 796, 273); // cl (w, cl)
+// Elapsed time: 19 seconds
+selectCodeEditor("netnet.v", 960, 334); // cl (w, cl)
+// Elapsed time: 63 seconds
+selectCodeEditor("netnet.v", 451, 374); // cl (w, cl)
+selectCodeEditor("netnet.v", 411, 351); // cl (w, cl)
+selectCodeEditor("netnet.v", 969, 329); // cl (w, cl)
+typeControlKey((HResource) null, "netnet.v", 'c'); // cl (w, cl)
+selectCodeEditor("netnet.v", 400, 354); // cl (w, cl)
+typeControlKey((HResource) null, "netnet.v", 'v'); // cl (w, cl)
+selectCodeEditor("netnet.v", 522, 347); // cl (w, cl)
+selectCodeEditor("netnet.v", 549, 347); // cl (w, cl)
+selectCodeEditor("netnet.v", 530, 348); // cl (w, cl)
+selectCodeEditor("netnet.v", 532, 350, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("netnet.v", 532, 350); // cl (w, cl)
+selectCodeEditor("netnet.v", 536, 350); // cl (w, cl)
+selectCodeEditor("netnet.v", 738, 348); // cl (w, cl)
+selectCodeEditor("netnet.v", 945, 347); // cl (w, cl)
+selectCodeEditor("netnet.v", 821, 360); // cl (w, cl)
+selectCodeEditor("netnet.v", 517, 334); // cl (w, cl)
+selectCodeEditor("netnet.v", 725, 328); // cl (w, cl)
+selectCodeEditor("netnet.v", 919, 335); // cl (w, cl)
+selectCodeEditor("netnet.v", 928, 331); // cl (w, cl)
+selectCodeEditor("netnet.v", 533, 352); // cl (w, cl)
+selectCodeEditor("netnet.v", 734, 359); // cl (w, cl)
+selectCodeEditor("netnet.v", 743, 356); // cl (w, cl)
+selectCodeEditor("netnet.v", 941, 354); // cl (w, cl)
+selectCodeEditor("netnet.v", 1016, 351); // cl (w, cl)
+typeControlKey((HResource) null, "netnet.v", 'c'); // cl (w, cl)
+selectCodeEditor("netnet.v", 234, 375); // cl (w, cl)
+typeControlKey((HResource) null, "netnet.v", 'v'); // cl (w, cl)
+selectCodeEditor("netnet.v", 346, 371); // cl (w, cl)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("netnet.v", 772, 312); // cl (w, cl)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "net.v", 1); // k (j, cl)
+selectCodeEditor("net.v", 862, 247); // cl (w, cl)
+// Elapsed time: 75 seconds
+selectCodeEditor("net.v", 830, 197); // cl (w, cl)
+selectCodeEditor("net.v", 830, 197, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("net.v", 875, 194); // cl (w, cl)
+selectCodeEditor("net.v", 875, 194, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("net.v", 812, 194); // cl (w, cl)
+selectCodeEditor("net.v", 812, 194, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("net.v", 825, 194); // cl (w, cl)
+selectCodeEditor("net.v", 825, 194, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("net.v", 184, 188); // cl (w, cl)
+selectCodeEditor("net.v", 204, 183); // cl (w, cl)
+selectCodeEditor("net.v", 202, 183); // cl (w, cl)
+// Elapsed time: 15 seconds
+selectCodeEditor("net.v", 858, 192); // cl (w, cl)
+selectCodeEditor("net.v", 870, 260); // cl (w, cl)
+selectCodeEditor("net.v", 863, 262); // cl (w, cl)
+selectCodeEditor("net.v", 855, 350); // cl (w, cl)
+selectCodeEditor("net.v", 994, 348); // cl (w, cl)
+selectCodeEditor("net.v", 990, 260); // cl (w, cl)
+selectCodeEditor("net.v", 991, 189); // cl (w, cl)
+selectCodeEditor("net.v", 865, 396); // cl (w, cl)
+selectCodeEditor("net.v", 864, 388); // cl (w, cl)
+selectCodeEditor("net.v", 993, 388); // cl (w, cl)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// HMemoryUtils.trashcanNow. Engine heap size: 752 MB. GUI used memory: 58 MB. Current time: 11/26/19, 12:08:16 AM PST
+// Elapsed time: 1540 seconds
+selectCodeEditor("net.v", 521, 348); // cl (w, cl)
+selectCodeEditor("net.v", 530, 347); // cl (w, cl)
+selectCodeEditor("net.v", 482, 364); // cl (w, cl)
+selectCodeEditor("net.v", 444, 372); // cl (w, cl)
+selectCodeEditor("net.v", 442, 372, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("net.v", 433, 372); // cl (w, cl)
+// Elapsed time: 132 seconds
+selectCodeEditor("net.v", 455, 212); // cl (w, cl)
+selectCodeEditor("net.v", 504, 271); // cl (w, cl)
+selectCodeEditor("net.v", 470, 213); // cl (w, cl)
+// Elapsed time: 31 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Project Summary", 0); // k (j, cl)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "net.v", 1); // k (j, cl)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, toppo (toppo.v)]", 2, true); // B (F, cl) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, toppo (toppo.v)]", 2, true, false, false, false, false, true); // B (F, cl) - Double Click - Node
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "netnet.v", 2); // k (j, cl)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "net.v", 1); // k (j, cl)
+// Elapsed time: 49 seconds
+selectCodeEditor("net.v", 812, 296); // cl (w, cl)
+selectCodeEditor("net.v", 530, 159); // cl (w, cl)
+// WARNING: HEventQueue.dispatchEvent() is taking  1466 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 752 MB. GUI used memory: 56 MB. Current time: 11/26/19, 7:34:18 AM PST
+// WARNING: HEventQueue.dispatchEvent() is taking  1642 ms.
+// WARNING: HSwingWorker (Refresh Filesets Swing Worker) is taking 2951 ms. Increasing delay to 8853 ms.
+// Elapsed time: 27161 seconds
+selectCodeEditor("net.v", 193, 96); // cl (w, cl)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 221 seconds
+selectCodeEditor("net.v", 391, 203); // cl (w, cl)
+selectCodeEditor("net.v", 564, 162); // cl (w, cl)
+// Elapsed time: 32 seconds
+selectCodeEditor("net.v", 305, 142); // cl (w, cl)
+selectCodeEditor("net.v", 305, 142, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("net.v", 369, 134); // cl (w, cl)
+selectCodeEditor("net.v", 368, 134, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("net.v", 352, 137); // cl (w, cl)
+selectCodeEditor("net.v", 352, 137, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("net.v", 371, 137); // cl (w, cl)
+selectCodeEditor("net.v", 366, 137); // cl (w, cl)
+selectCodeEditor("net.v", 366, 137, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("net.v", 742, 137); // cl (w, cl)
+// Elapsed time: 15 seconds
+selectCodeEditor("net.v", 670, 102); // cl (w, cl)
+selectCodeEditor("net.v", 286, 122); // cl (w, cl)
+selectCodeEditor("net.v", 345, 113); // cl (w, cl)
+selectCodeEditor("net.v", 278, 117); // cl (w, cl)
+// Elapsed time: 100 seconds
+selectCodeEditor("net.v", 667, 384); // cl (w, cl)
+// Elapsed time: 230 seconds
+selectCodeEditor("net.v", 250, 396); // cl (w, cl)
+selectCodeEditor("net.v", 249, 379); // cl (w, cl)
+selectCodeEditor("net.v", 249, 379, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("net.v", 239, 379); // cl (w, cl)
+selectCodeEditor("net.v", 239, 379, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("net.v", 247, 379); // cl (w, cl)
+selectCodeEditor("net.v", 247, 379, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("net.v", 261, 381); // cl (w, cl)
+selectCodeEditor("net.v", 261, 381, false, false, false, false, true); // cl (w, cl) - Double Click
+// Elapsed time: 81 seconds
+selectCodeEditor("net.v", 462, 245); // cl (w, cl)
+// Elapsed time: 21 seconds
+selectCodeEditor("net.v", 461, 287); // cl (w, cl)
+// HMemoryUtils.trashcanNow. Engine heap size: 752 MB. GUI used memory: 56 MB. Current time: 11/26/19, 8:04:20 AM PST
+// Elapsed time: 196 seconds
+selectCodeEditor("net.v", 369, 353); // cl (w, cl)
+// Elapsed time: 17 seconds
+selectCodeEditor("net.v", 485, 342); // cl (w, cl)
+selectCodeEditor("net.v", 433, 348); // cl (w, cl)
+selectCodeEditor("net.v", 399, 351); // cl (w, cl)
+selectCodeEditor("net.v", 399, 351, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("net.v", 471, 358); // cl (w, cl)
+selectCodeEditor("net.v", 471, 358, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("net.v", 431, 356); // cl (w, cl)
+selectCodeEditor("net.v", 431, 356, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("net.v", 437, 356); // cl (w, cl)
+selectCodeEditor("net.v", 502, 357); // cl (w, cl)
+selectCodeEditor("net.v", 489, 347); // cl (w, cl)
+selectCodeEditor("net.v", 489, 347); // cl (w, cl)
+typeControlKey((HResource) null, "net.v", 'c'); // cl (w, cl)
+selectCodeEditor("net.v", 850, 354); // cl (w, cl)
+typeControlKey((HResource) null, "net.v", 'v'); // cl (w, cl)
+selectCodeEditor("net.v", 886, 357); // cl (w, cl)
+selectCodeEditor("net.v", 886, 357, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("net.v", 729, 345); // cl (w, cl)
+selectCodeEditor("net.v", 939, 340); // cl (w, cl)
+selectCodeEditor("net.v", 920, 346); // cl (w, cl)
+selectCodeEditor("net.v", 742, 367); // cl (w, cl)
+selectCodeEditor("net.v", 484, 354); // cl (w, cl)
+selectCodeEditor("net.v", 362, 363); // cl (w, cl)
+selectCodeEditor("net.v", 358, 369); // cl (w, cl)
+selectCodeEditor("net.v", 346, 368); // cl (w, cl)
+selectCodeEditor("net.v", 351, 370); // cl (w, cl)
+// Elapsed time: 11 seconds
+selectCodeEditor("net.v", 819, 370); // cl (w, cl)
+selectCodeEditor("net.v", 829, 370); // cl (w, cl)
+selectCodeEditor("net.v", 816, 373); // cl (w, cl)
+selectCodeEditor("net.v", 824, 373); // cl (w, cl)
+selectCodeEditor("net.v", 835, 354); // cl (w, cl)
+selectCodeEditor("net.v", 933, 375); // cl (w, cl)
+selectCodeEditor("net.v", 917, 312); // cl (w, cl)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE

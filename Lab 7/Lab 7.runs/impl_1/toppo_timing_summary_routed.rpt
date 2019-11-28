@@ -1,7 +1,7 @@
 Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
-| Date         : Fri Nov 22 15:00:42 2019
+| Date         : Tue Nov 26 10:36:01 2019
 | Host         : JULIAN-SURFACE running 64-bit major release  (build 9200)
 | Command      : report_timing_summary -max_paths 10 -file toppo_timing_summary_routed.rpt -pb toppo_timing_summary_routed.pb -rpx toppo_timing_summary_routed.rpx -warn_on_violation
 | Design       : toppo
@@ -75,14 +75,14 @@ Table of Contents
 
 5. checking no_input_delay
 --------------------------
- There are 7 input ports with no input delay specified. (HIGH)
+ There are 15 input ports with no input delay specified. (HIGH)
 
  There are 0 input ports with no input delay but user has a false path constraint.
 
 
 6. checking no_output_delay
 ---------------------------
- There are 18 ports with no output delay specified. (HIGH)
+ There are 37 ports with no output delay specified. (HIGH)
 
  There are 0 ports with no output delay but user has a false path constraint
 
@@ -127,7 +127,7 @@ Table of Contents
 
     WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints     WPWS(ns)     TPWS(ns)  TPWS Failing Endpoints  TPWS Total Endpoints  
     -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------     --------     --------  ----------------------  --------------------  
-     32.500        0.000                      0                  210        0.163        0.000                      0                  210        3.000        0.000                       0                   126  
+     26.322        0.000                      0                  630        0.117        0.000                      0                  630        3.000        0.000                       0                   367  
 
 
 All user specified timing constraints are met.
@@ -153,7 +153,7 @@ sys_clk_pin           {0.000 5.000}      10.000          100.000
 Clock                     WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints     WPWS(ns)     TPWS(ns)  TPWS Failing Endpoints  TPWS Total Endpoints  
 -----                     -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------     --------     --------  ----------------------  --------------------  
 sys_clk_pin                                                                                                                                                             3.000        0.000                       0                     1  
-  clk_out1_clk_wiz_0       32.500        0.000                      0                  210        0.163        0.000                      0                  210       19.500        0.000                       0                   122  
+  clk_out1_clk_wiz_0       26.322        0.000                      0                  630        0.117        0.000                      0                  630       19.500        0.000                       0                   363  
   clkfbout_clk_wiz_0                                                                                                                                                    7.845        0.000                       0                     3  
 
 
@@ -212,28 +212,28 @@ High Pulse Width  Fast    MMCME2_ADV/CLKIN1  n/a            2.000         5.000 
 From Clock:  clk_out1_clk_wiz_0
   To Clock:  clk_out1_clk_wiz_0
 
-Setup :            0  Failing Endpoints,  Worst Slack       32.500ns,  Total Violation        0.000ns
-Hold  :            0  Failing Endpoints,  Worst Slack        0.163ns,  Total Violation        0.000ns
+Setup :            0  Failing Endpoints,  Worst Slack       26.322ns,  Total Violation        0.000ns
+Hold  :            0  Failing Endpoints,  Worst Slack        0.117ns,  Total Violation        0.000ns
 PW    :            0  Failing Endpoints,  Worst Slack       19.500ns,  Total Violation        0.000ns
 ---------------------------------------------------------------------------------------------------
 
 
 Max Delay Paths
 --------------------------------------------------------------------------------------
-Slack (MET) :             32.500ns  (required time - arrival time)
-  Source:                 stuffISee/Vert/count0to2/flip2/C
+Slack (MET) :             26.322ns  (required time - arrival time)
+  Source:                 funStates/s0/C
                             (rising edge-triggered cell FDRE clocked by clk_out1_clk_wiz_0  {rise@0.000ns fall@20.000ns period=40.000ns})
-  Destination:            bird1/Vertical/count3to7/flip3/D
+  Destination:            birdCounter/flip1/CE
                             (rising edge-triggered cell FDRE clocked by clk_out1_clk_wiz_0  {rise@0.000ns fall@20.000ns period=40.000ns})
   Path Group:             clk_out1_clk_wiz_0
   Path Type:              Setup (Max at Slow Process Corner)
   Requirement:            40.000ns  (clk_out1_clk_wiz_0 rise@40.000ns - clk_out1_clk_wiz_0 rise@0.000ns)
-  Data Path Delay:        7.374ns  (logic 1.702ns (23.081%)  route 5.672ns (76.919%))
-  Logic Levels:           5  (LUT3=1 LUT4=1 LUT5=1 LUT6=2)
-  Clock Path Skew:        -0.109ns (DCD - SCD + CPR)
-    Destination Clock Delay (DCD):    -1.559ns = ( 38.441 - 40.000 ) 
-    Source Clock Delay      (SCD):    -0.888ns
-    Clock Pessimism Removal (CPR):    0.562ns
+  Data Path Delay:        13.125ns  (logic 2.983ns (22.728%)  route 10.142ns (77.272%))
+  Logic Levels:           10  (CARRY4=3 LUT2=1 LUT3=1 LUT4=1 LUT6=4)
+  Clock Path Skew:        -0.050ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    -1.562ns = ( 38.438 - 40.000 ) 
+    Source Clock Delay      (SCD):    -0.949ns
+    Clock Pessimism Removal (CPR):    0.564ns
   Clock Uncertainty:      0.094ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
     Total System Jitter     (TSJ):    0.071ns
     Discrete Jitter          (DJ):    0.175ns
@@ -251,22 +251,35 @@ Slack (MET) :             32.500ns  (required time - arrival time)
                                                      -6.961    -4.269 r  not_so_slow/my_clk_inst/mmcm_adv_inst/CLKOUT0
                          net (fo=1, routed)           1.661    -2.608    not_so_slow/slowclk/fastclk
     BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.096    -2.512 r  not_so_slow/slowclk/XLXI_401/O
-                         net (fo=120, routed)         1.624    -0.888    stuffISee/Vert/count0to2/clk
-    SLICE_X63Y60         FDRE                                         r  stuffISee/Vert/count0to2/flip2/C
+                         net (fo=361, routed)         1.563    -0.949    funStates/clk_out
+    SLICE_X36Y9          FDRE                                         r  funStates/s0/C
   -------------------------------------------------------------------    -------------------
-    SLICE_X63Y60         FDRE (Prop_fdre_C_Q)         0.419    -0.469 f  stuffISee/Vert/count0to2/flip2/Q
-                         net (fo=18, routed)          1.180     0.711    stuffISee/Vert/count8to12/flip4_i_7__1
-    SLICE_X61Y58         LUT3 (Prop_lut3_I1_O)        0.327     1.038 r  stuffISee/Vert/count8to12/flip4_i_13/O
-                         net (fo=2, routed)           0.955     1.993    stuffISee/Vert/count8to12/flip1_2
-    SLICE_X64Y60         LUT5 (Prop_lut5_I0_O)        0.332     2.325 r  stuffISee/Vert/count8to12/flip2_i_4__7/O
-                         net (fo=27, routed)          1.560     3.885    bird1/Vertical/count0to2/flip0_4
-    SLICE_X55Y64         LUT6 (Prop_lut6_I4_O)        0.124     4.009 f  bird1/Vertical/count0to2/flip4_i_1__5/O
-                         net (fo=9, routed)           0.979     4.988    bird1/Vertical/count3to7/ce_0
-    SLICE_X54Y61         LUT4 (Prop_lut4_I0_O)        0.152     5.140 r  bird1/Vertical/count3to7/flip3_i_2__4/O
-                         net (fo=1, routed)           0.998     6.138    bird1/Vertical/count3to7/flip3_i_2__4_n_0
-    SLICE_X54Y63         LUT6 (Prop_lut6_I0_O)        0.348     6.486 r  bird1/Vertical/count3to7/flip3_i_1__4/O
-                         net (fo=1, routed)           0.000     6.486    bird1/Vertical/count3to7/out_3
-    SLICE_X54Y63         FDRE                                         r  bird1/Vertical/count3to7/flip3/D
+    SLICE_X36Y9          FDRE (Prop_fdre_C_Q)         0.456    -0.493 r  funStates/s0/Q
+                         net (fo=700, routed)         3.403     2.910    catcher/Vertical/count0to2/led_OBUF[0]
+    SLICE_X46Y19         LUT3 (Prop_lut3_I1_O)        0.124     3.034 r  catcher/Vertical/count0to2/bluezone0_carry_i_22/O
+                         net (fo=1, routed)           0.000     3.034    catcher/Vertical/count0to2/bluezone0_carry_i_22_n_0
+    SLICE_X46Y19         CARRY4 (Prop_carry4_S[1]_O[2])
+                                                      0.578     3.612 r  catcher/Vertical/count0to2/bluezone0_carry_i_10/O[2]
+                         net (fo=2, routed)           1.122     4.735    stuffISee/Vert/count3to7/bluezone0_carry_0[1]
+    SLICE_X47Y20         LUT4 (Prop_lut4_I0_O)        0.301     5.036 r  stuffISee/Vert/count3to7/bluezone0_carry_i_7/O
+                         net (fo=1, routed)           0.000     5.036    catcher/position/bluezone0_carry__0_1[1]
+    SLICE_X47Y20         CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.550     5.586 r  catcher/position/bluezone0_carry/CO[3]
+                         net (fo=1, routed)           0.000     5.586    catcher/position/bluezone0_carry_n_0
+    SLICE_X47Y21         CARRY4 (Prop_carry4_CI_CO[1])
+                                                      0.157     5.743 r  catcher/position/bluezone0_carry__0/CO[1]
+                         net (fo=2, routed)           1.384     7.127    catcher/position/winner/notag_i_2_1[0]
+    SLICE_X41Y27         LUT6 (Prop_lut6_I4_O)        0.329     7.456 r  catcher/position/winner/notag_i_4/O
+                         net (fo=1, routed)           0.433     7.889    catcher/position/winner/notag_i_4_n_0
+    SLICE_X41Y27         LUT6 (Prop_lut6_I5_O)        0.124     8.013 r  catcher/position/winner/notag_i_2/O
+                         net (fo=23, routed)          1.605     9.618    bird7/position/netblue
+    SLICE_X36Y13         LUT6 (Prop_lut6_I5_O)        0.124     9.742 r  bird7/position/flip4_i_5__15/O
+                         net (fo=1, routed)           0.855    10.596    bird7/position/bird7tag
+    SLICE_X37Y13         LUT6 (Prop_lut6_I0_O)        0.124    10.720 r  bird7/position/flip4_i_3__21/O
+                         net (fo=6, routed)           1.000    11.720    bird7/position/compressTag
+    SLICE_X38Y28         LUT2 (Prop_lut2_I0_O)        0.116    11.836 r  bird7/position/flip4_i_1__21/O
+                         net (fo=5, routed)           0.340    12.177    birdCounter/ce
+    SLICE_X36Y28         FDRE                                         r  birdCounter/flip1/CE
   -------------------------------------------------------------------    -------------------
 
                          (clock clk_out1_clk_wiz_0 rise edge)
@@ -279,31 +292,31 @@ Slack (MET) :             32.500ns  (required time - arrival time)
                                                      -7.217    35.332 r  not_so_slow/my_clk_inst/mmcm_adv_inst/CLKOUT0
                          net (fo=1, routed)           1.581    36.914    not_so_slow/slowclk/fastclk
     BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.091    37.005 r  not_so_slow/slowclk/XLXI_401/O
-                         net (fo=120, routed)         1.437    38.441    bird1/Vertical/count3to7/clk
-    SLICE_X54Y63         FDRE                                         r  bird1/Vertical/count3to7/flip3/C
-                         clock pessimism              0.562    39.003    
-                         clock uncertainty           -0.094    38.909    
-    SLICE_X54Y63         FDRE (Setup_fdre_C_D)        0.077    38.986    bird1/Vertical/count3to7/flip3
+                         net (fo=361, routed)         1.433    38.438    birdCounter/clk_out
+    SLICE_X36Y28         FDRE                                         r  birdCounter/flip1/C
+                         clock pessimism              0.564    39.001    
+                         clock uncertainty           -0.094    38.907    
+    SLICE_X36Y28         FDRE (Setup_fdre_C_CE)      -0.409    38.498    birdCounter/flip1
   -------------------------------------------------------------------
-                         required time                         38.986    
-                         arrival time                          -6.486    
+                         required time                         38.498    
+                         arrival time                         -12.177    
   -------------------------------------------------------------------
-                         slack                                 32.500    
+                         slack                                 26.322    
 
-Slack (MET) :             32.651ns  (required time - arrival time)
-  Source:                 stuffISee/Vert/count0to2/flip2/C
+Slack (MET) :             26.322ns  (required time - arrival time)
+  Source:                 funStates/s0/C
                             (rising edge-triggered cell FDRE clocked by clk_out1_clk_wiz_0  {rise@0.000ns fall@20.000ns period=40.000ns})
-  Destination:            catcher/Vertical/count8to12/flip0/CE
+  Destination:            birdCounter/flip2/CE
                             (rising edge-triggered cell FDRE clocked by clk_out1_clk_wiz_0  {rise@0.000ns fall@20.000ns period=40.000ns})
   Path Group:             clk_out1_clk_wiz_0
   Path Type:              Setup (Max at Slow Process Corner)
   Requirement:            40.000ns  (clk_out1_clk_wiz_0 rise@40.000ns - clk_out1_clk_wiz_0 rise@0.000ns)
-  Data Path Delay:        7.018ns  (logic 1.450ns (20.660%)  route 5.568ns (79.340%))
-  Logic Levels:           5  (LUT3=1 LUT6=4)
-  Clock Path Skew:        -0.031ns (DCD - SCD + CPR)
-    Destination Clock Delay (DCD):    -1.495ns = ( 38.505 - 40.000 ) 
-    Source Clock Delay      (SCD):    -0.888ns
-    Clock Pessimism Removal (CPR):    0.576ns
+  Data Path Delay:        13.125ns  (logic 2.983ns (22.728%)  route 10.142ns (77.272%))
+  Logic Levels:           10  (CARRY4=3 LUT2=1 LUT3=1 LUT4=1 LUT6=4)
+  Clock Path Skew:        -0.050ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    -1.562ns = ( 38.438 - 40.000 ) 
+    Source Clock Delay      (SCD):    -0.949ns
+    Clock Pessimism Removal (CPR):    0.564ns
   Clock Uncertainty:      0.094ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
     Total System Jitter     (TSJ):    0.071ns
     Discrete Jitter          (DJ):    0.175ns
@@ -321,22 +334,35 @@ Slack (MET) :             32.651ns  (required time - arrival time)
                                                      -6.961    -4.269 r  not_so_slow/my_clk_inst/mmcm_adv_inst/CLKOUT0
                          net (fo=1, routed)           1.661    -2.608    not_so_slow/slowclk/fastclk
     BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.096    -2.512 r  not_so_slow/slowclk/XLXI_401/O
-                         net (fo=120, routed)         1.624    -0.888    stuffISee/Vert/count0to2/clk
-    SLICE_X63Y60         FDRE                                         r  stuffISee/Vert/count0to2/flip2/C
+                         net (fo=361, routed)         1.563    -0.949    funStates/clk_out
+    SLICE_X36Y9          FDRE                                         r  funStates/s0/C
   -------------------------------------------------------------------    -------------------
-    SLICE_X63Y60         FDRE (Prop_fdre_C_Q)         0.419    -0.469 r  stuffISee/Vert/count0to2/flip2/Q
-                         net (fo=18, routed)          1.180     0.711    stuffISee/Vert/count8to12/flip4_i_7__1
-    SLICE_X61Y58         LUT3 (Prop_lut3_I1_O)        0.327     1.038 f  stuffISee/Vert/count8to12/flip4_i_13/O
-                         net (fo=2, routed)           1.143     2.181    stuffISee/Hori/count0to2/flip1_3
-    SLICE_X64Y60         LUT6 (Prop_lut6_I2_O)        0.332     2.513 f  stuffISee/Hori/count0to2/flip4_i_7__1/O
-                         net (fo=12, routed)          0.965     3.477    catcher/Vertical/count0to2/flip1_0
-    SLICE_X63Y64         LUT6 (Prop_lut6_I5_O)        0.124     3.601 r  catcher/Vertical/count0to2/flip1_i_2__0/O
-                         net (fo=4, routed)           0.697     4.298    catcher/Vertical/count3to7/flip1_0
-    SLICE_X65Y66         LUT6 (Prop_lut6_I0_O)        0.124     4.422 r  catcher/Vertical/count3to7/flip2_i_4__9/O
-                         net (fo=4, routed)           0.825     5.247    catcher/Vertical/count3to7/flip2_0
-    SLICE_X65Y67         LUT6 (Prop_lut6_I1_O)        0.124     5.371 r  catcher/Vertical/count3to7/flip2_i_1__13/O
-                         net (fo=3, routed)           0.759     6.131    catcher/Vertical/count8to12/ce
-    SLICE_X65Y67         FDRE                                         r  catcher/Vertical/count8to12/flip0/CE
+    SLICE_X36Y9          FDRE (Prop_fdre_C_Q)         0.456    -0.493 r  funStates/s0/Q
+                         net (fo=700, routed)         3.403     2.910    catcher/Vertical/count0to2/led_OBUF[0]
+    SLICE_X46Y19         LUT3 (Prop_lut3_I1_O)        0.124     3.034 r  catcher/Vertical/count0to2/bluezone0_carry_i_22/O
+                         net (fo=1, routed)           0.000     3.034    catcher/Vertical/count0to2/bluezone0_carry_i_22_n_0
+    SLICE_X46Y19         CARRY4 (Prop_carry4_S[1]_O[2])
+                                                      0.578     3.612 r  catcher/Vertical/count0to2/bluezone0_carry_i_10/O[2]
+                         net (fo=2, routed)           1.122     4.735    stuffISee/Vert/count3to7/bluezone0_carry_0[1]
+    SLICE_X47Y20         LUT4 (Prop_lut4_I0_O)        0.301     5.036 r  stuffISee/Vert/count3to7/bluezone0_carry_i_7/O
+                         net (fo=1, routed)           0.000     5.036    catcher/position/bluezone0_carry__0_1[1]
+    SLICE_X47Y20         CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.550     5.586 r  catcher/position/bluezone0_carry/CO[3]
+                         net (fo=1, routed)           0.000     5.586    catcher/position/bluezone0_carry_n_0
+    SLICE_X47Y21         CARRY4 (Prop_carry4_CI_CO[1])
+                                                      0.157     5.743 r  catcher/position/bluezone0_carry__0/CO[1]
+                         net (fo=2, routed)           1.384     7.127    catcher/position/winner/notag_i_2_1[0]
+    SLICE_X41Y27         LUT6 (Prop_lut6_I4_O)        0.329     7.456 r  catcher/position/winner/notag_i_4/O
+                         net (fo=1, routed)           0.433     7.889    catcher/position/winner/notag_i_4_n_0
+    SLICE_X41Y27         LUT6 (Prop_lut6_I5_O)        0.124     8.013 r  catcher/position/winner/notag_i_2/O
+                         net (fo=23, routed)          1.605     9.618    bird7/position/netblue
+    SLICE_X36Y13         LUT6 (Prop_lut6_I5_O)        0.124     9.742 r  bird7/position/flip4_i_5__15/O
+                         net (fo=1, routed)           0.855    10.596    bird7/position/bird7tag
+    SLICE_X37Y13         LUT6 (Prop_lut6_I0_O)        0.124    10.720 r  bird7/position/flip4_i_3__21/O
+                         net (fo=6, routed)           1.000    11.720    bird7/position/compressTag
+    SLICE_X38Y28         LUT2 (Prop_lut2_I0_O)        0.116    11.836 r  bird7/position/flip4_i_1__21/O
+                         net (fo=5, routed)           0.340    12.177    birdCounter/ce
+    SLICE_X36Y28         FDRE                                         r  birdCounter/flip2/CE
   -------------------------------------------------------------------    -------------------
 
                          (clock clk_out1_clk_wiz_0 rise edge)
@@ -349,31 +375,31 @@ Slack (MET) :             32.651ns  (required time - arrival time)
                                                      -7.217    35.332 r  not_so_slow/my_clk_inst/mmcm_adv_inst/CLKOUT0
                          net (fo=1, routed)           1.581    36.914    not_so_slow/slowclk/fastclk
     BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.091    37.005 r  not_so_slow/slowclk/XLXI_401/O
-                         net (fo=120, routed)         1.501    38.505    catcher/Vertical/count8to12/clk
-    SLICE_X65Y67         FDRE                                         r  catcher/Vertical/count8to12/flip0/C
-                         clock pessimism              0.576    39.081    
-                         clock uncertainty           -0.094    38.987    
-    SLICE_X65Y67         FDRE (Setup_fdre_C_CE)      -0.205    38.782    catcher/Vertical/count8to12/flip0
+                         net (fo=361, routed)         1.433    38.438    birdCounter/clk_out
+    SLICE_X36Y28         FDRE                                         r  birdCounter/flip2/C
+                         clock pessimism              0.564    39.001    
+                         clock uncertainty           -0.094    38.907    
+    SLICE_X36Y28         FDRE (Setup_fdre_C_CE)      -0.409    38.498    birdCounter/flip2
   -------------------------------------------------------------------
-                         required time                         38.782    
-                         arrival time                          -6.131    
+                         required time                         38.498    
+                         arrival time                         -12.177    
   -------------------------------------------------------------------
-                         slack                                 32.651    
+                         slack                                 26.322    
 
-Slack (MET) :             32.651ns  (required time - arrival time)
-  Source:                 stuffISee/Vert/count0to2/flip2/C
+Slack (MET) :             26.322ns  (required time - arrival time)
+  Source:                 funStates/s0/C
                             (rising edge-triggered cell FDRE clocked by clk_out1_clk_wiz_0  {rise@0.000ns fall@20.000ns period=40.000ns})
-  Destination:            catcher/Vertical/count8to12/flip1/CE
+  Destination:            birdCounter/flip3/CE
                             (rising edge-triggered cell FDRE clocked by clk_out1_clk_wiz_0  {rise@0.000ns fall@20.000ns period=40.000ns})
   Path Group:             clk_out1_clk_wiz_0
   Path Type:              Setup (Max at Slow Process Corner)
   Requirement:            40.000ns  (clk_out1_clk_wiz_0 rise@40.000ns - clk_out1_clk_wiz_0 rise@0.000ns)
-  Data Path Delay:        7.018ns  (logic 1.450ns (20.660%)  route 5.568ns (79.340%))
-  Logic Levels:           5  (LUT3=1 LUT6=4)
-  Clock Path Skew:        -0.031ns (DCD - SCD + CPR)
-    Destination Clock Delay (DCD):    -1.495ns = ( 38.505 - 40.000 ) 
-    Source Clock Delay      (SCD):    -0.888ns
-    Clock Pessimism Removal (CPR):    0.576ns
+  Data Path Delay:        13.125ns  (logic 2.983ns (22.728%)  route 10.142ns (77.272%))
+  Logic Levels:           10  (CARRY4=3 LUT2=1 LUT3=1 LUT4=1 LUT6=4)
+  Clock Path Skew:        -0.050ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    -1.562ns = ( 38.438 - 40.000 ) 
+    Source Clock Delay      (SCD):    -0.949ns
+    Clock Pessimism Removal (CPR):    0.564ns
   Clock Uncertainty:      0.094ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
     Total System Jitter     (TSJ):    0.071ns
     Discrete Jitter          (DJ):    0.175ns
@@ -391,22 +417,35 @@ Slack (MET) :             32.651ns  (required time - arrival time)
                                                      -6.961    -4.269 r  not_so_slow/my_clk_inst/mmcm_adv_inst/CLKOUT0
                          net (fo=1, routed)           1.661    -2.608    not_so_slow/slowclk/fastclk
     BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.096    -2.512 r  not_so_slow/slowclk/XLXI_401/O
-                         net (fo=120, routed)         1.624    -0.888    stuffISee/Vert/count0to2/clk
-    SLICE_X63Y60         FDRE                                         r  stuffISee/Vert/count0to2/flip2/C
+                         net (fo=361, routed)         1.563    -0.949    funStates/clk_out
+    SLICE_X36Y9          FDRE                                         r  funStates/s0/C
   -------------------------------------------------------------------    -------------------
-    SLICE_X63Y60         FDRE (Prop_fdre_C_Q)         0.419    -0.469 r  stuffISee/Vert/count0to2/flip2/Q
-                         net (fo=18, routed)          1.180     0.711    stuffISee/Vert/count8to12/flip4_i_7__1
-    SLICE_X61Y58         LUT3 (Prop_lut3_I1_O)        0.327     1.038 f  stuffISee/Vert/count8to12/flip4_i_13/O
-                         net (fo=2, routed)           1.143     2.181    stuffISee/Hori/count0to2/flip1_3
-    SLICE_X64Y60         LUT6 (Prop_lut6_I2_O)        0.332     2.513 f  stuffISee/Hori/count0to2/flip4_i_7__1/O
-                         net (fo=12, routed)          0.965     3.477    catcher/Vertical/count0to2/flip1_0
-    SLICE_X63Y64         LUT6 (Prop_lut6_I5_O)        0.124     3.601 r  catcher/Vertical/count0to2/flip1_i_2__0/O
-                         net (fo=4, routed)           0.697     4.298    catcher/Vertical/count3to7/flip1_0
-    SLICE_X65Y66         LUT6 (Prop_lut6_I0_O)        0.124     4.422 r  catcher/Vertical/count3to7/flip2_i_4__9/O
-                         net (fo=4, routed)           0.825     5.247    catcher/Vertical/count3to7/flip2_0
-    SLICE_X65Y67         LUT6 (Prop_lut6_I1_O)        0.124     5.371 r  catcher/Vertical/count3to7/flip2_i_1__13/O
-                         net (fo=3, routed)           0.759     6.131    catcher/Vertical/count8to12/ce
-    SLICE_X65Y67         FDRE                                         r  catcher/Vertical/count8to12/flip1/CE
+    SLICE_X36Y9          FDRE (Prop_fdre_C_Q)         0.456    -0.493 r  funStates/s0/Q
+                         net (fo=700, routed)         3.403     2.910    catcher/Vertical/count0to2/led_OBUF[0]
+    SLICE_X46Y19         LUT3 (Prop_lut3_I1_O)        0.124     3.034 r  catcher/Vertical/count0to2/bluezone0_carry_i_22/O
+                         net (fo=1, routed)           0.000     3.034    catcher/Vertical/count0to2/bluezone0_carry_i_22_n_0
+    SLICE_X46Y19         CARRY4 (Prop_carry4_S[1]_O[2])
+                                                      0.578     3.612 r  catcher/Vertical/count0to2/bluezone0_carry_i_10/O[2]
+                         net (fo=2, routed)           1.122     4.735    stuffISee/Vert/count3to7/bluezone0_carry_0[1]
+    SLICE_X47Y20         LUT4 (Prop_lut4_I0_O)        0.301     5.036 r  stuffISee/Vert/count3to7/bluezone0_carry_i_7/O
+                         net (fo=1, routed)           0.000     5.036    catcher/position/bluezone0_carry__0_1[1]
+    SLICE_X47Y20         CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.550     5.586 r  catcher/position/bluezone0_carry/CO[3]
+                         net (fo=1, routed)           0.000     5.586    catcher/position/bluezone0_carry_n_0
+    SLICE_X47Y21         CARRY4 (Prop_carry4_CI_CO[1])
+                                                      0.157     5.743 r  catcher/position/bluezone0_carry__0/CO[1]
+                         net (fo=2, routed)           1.384     7.127    catcher/position/winner/notag_i_2_1[0]
+    SLICE_X41Y27         LUT6 (Prop_lut6_I4_O)        0.329     7.456 r  catcher/position/winner/notag_i_4/O
+                         net (fo=1, routed)           0.433     7.889    catcher/position/winner/notag_i_4_n_0
+    SLICE_X41Y27         LUT6 (Prop_lut6_I5_O)        0.124     8.013 r  catcher/position/winner/notag_i_2/O
+                         net (fo=23, routed)          1.605     9.618    bird7/position/netblue
+    SLICE_X36Y13         LUT6 (Prop_lut6_I5_O)        0.124     9.742 r  bird7/position/flip4_i_5__15/O
+                         net (fo=1, routed)           0.855    10.596    bird7/position/bird7tag
+    SLICE_X37Y13         LUT6 (Prop_lut6_I0_O)        0.124    10.720 r  bird7/position/flip4_i_3__21/O
+                         net (fo=6, routed)           1.000    11.720    bird7/position/compressTag
+    SLICE_X38Y28         LUT2 (Prop_lut2_I0_O)        0.116    11.836 r  bird7/position/flip4_i_1__21/O
+                         net (fo=5, routed)           0.340    12.177    birdCounter/ce
+    SLICE_X36Y28         FDRE                                         r  birdCounter/flip3/CE
   -------------------------------------------------------------------    -------------------
 
                          (clock clk_out1_clk_wiz_0 rise edge)
@@ -419,31 +458,31 @@ Slack (MET) :             32.651ns  (required time - arrival time)
                                                      -7.217    35.332 r  not_so_slow/my_clk_inst/mmcm_adv_inst/CLKOUT0
                          net (fo=1, routed)           1.581    36.914    not_so_slow/slowclk/fastclk
     BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.091    37.005 r  not_so_slow/slowclk/XLXI_401/O
-                         net (fo=120, routed)         1.501    38.505    catcher/Vertical/count8to12/clk
-    SLICE_X65Y67         FDRE                                         r  catcher/Vertical/count8to12/flip1/C
-                         clock pessimism              0.576    39.081    
-                         clock uncertainty           -0.094    38.987    
-    SLICE_X65Y67         FDRE (Setup_fdre_C_CE)      -0.205    38.782    catcher/Vertical/count8to12/flip1
+                         net (fo=361, routed)         1.433    38.438    birdCounter/clk_out
+    SLICE_X36Y28         FDRE                                         r  birdCounter/flip3/C
+                         clock pessimism              0.564    39.001    
+                         clock uncertainty           -0.094    38.907    
+    SLICE_X36Y28         FDRE (Setup_fdre_C_CE)      -0.409    38.498    birdCounter/flip3
   -------------------------------------------------------------------
-                         required time                         38.782    
-                         arrival time                          -6.131    
+                         required time                         38.498    
+                         arrival time                         -12.177    
   -------------------------------------------------------------------
-                         slack                                 32.651    
+                         slack                                 26.322    
 
-Slack (MET) :             32.651ns  (required time - arrival time)
-  Source:                 stuffISee/Vert/count0to2/flip2/C
+Slack (MET) :             26.489ns  (required time - arrival time)
+  Source:                 funStates/s0/C
                             (rising edge-triggered cell FDRE clocked by clk_out1_clk_wiz_0  {rise@0.000ns fall@20.000ns period=40.000ns})
-  Destination:            catcher/Vertical/count8to12/flip2/CE
+  Destination:            birdCounter/flip0/CE
                             (rising edge-triggered cell FDRE clocked by clk_out1_clk_wiz_0  {rise@0.000ns fall@20.000ns period=40.000ns})
   Path Group:             clk_out1_clk_wiz_0
   Path Type:              Setup (Max at Slow Process Corner)
   Requirement:            40.000ns  (clk_out1_clk_wiz_0 rise@40.000ns - clk_out1_clk_wiz_0 rise@0.000ns)
-  Data Path Delay:        7.018ns  (logic 1.450ns (20.660%)  route 5.568ns (79.340%))
-  Logic Levels:           5  (LUT3=1 LUT6=4)
-  Clock Path Skew:        -0.031ns (DCD - SCD + CPR)
-    Destination Clock Delay (DCD):    -1.495ns = ( 38.505 - 40.000 ) 
-    Source Clock Delay      (SCD):    -0.888ns
-    Clock Pessimism Removal (CPR):    0.576ns
+  Data Path Delay:        12.993ns  (logic 2.983ns (22.958%)  route 10.010ns (77.042%))
+  Logic Levels:           10  (CARRY4=3 LUT2=1 LUT3=1 LUT4=1 LUT6=4)
+  Clock Path Skew:        -0.050ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    -1.562ns = ( 38.438 - 40.000 ) 
+    Source Clock Delay      (SCD):    -0.949ns
+    Clock Pessimism Removal (CPR):    0.564ns
   Clock Uncertainty:      0.094ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
     Total System Jitter     (TSJ):    0.071ns
     Discrete Jitter          (DJ):    0.175ns
@@ -461,22 +500,35 @@ Slack (MET) :             32.651ns  (required time - arrival time)
                                                      -6.961    -4.269 r  not_so_slow/my_clk_inst/mmcm_adv_inst/CLKOUT0
                          net (fo=1, routed)           1.661    -2.608    not_so_slow/slowclk/fastclk
     BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.096    -2.512 r  not_so_slow/slowclk/XLXI_401/O
-                         net (fo=120, routed)         1.624    -0.888    stuffISee/Vert/count0to2/clk
-    SLICE_X63Y60         FDRE                                         r  stuffISee/Vert/count0to2/flip2/C
+                         net (fo=361, routed)         1.563    -0.949    funStates/clk_out
+    SLICE_X36Y9          FDRE                                         r  funStates/s0/C
   -------------------------------------------------------------------    -------------------
-    SLICE_X63Y60         FDRE (Prop_fdre_C_Q)         0.419    -0.469 r  stuffISee/Vert/count0to2/flip2/Q
-                         net (fo=18, routed)          1.180     0.711    stuffISee/Vert/count8to12/flip4_i_7__1
-    SLICE_X61Y58         LUT3 (Prop_lut3_I1_O)        0.327     1.038 f  stuffISee/Vert/count8to12/flip4_i_13/O
-                         net (fo=2, routed)           1.143     2.181    stuffISee/Hori/count0to2/flip1_3
-    SLICE_X64Y60         LUT6 (Prop_lut6_I2_O)        0.332     2.513 f  stuffISee/Hori/count0to2/flip4_i_7__1/O
-                         net (fo=12, routed)          0.965     3.477    catcher/Vertical/count0to2/flip1_0
-    SLICE_X63Y64         LUT6 (Prop_lut6_I5_O)        0.124     3.601 r  catcher/Vertical/count0to2/flip1_i_2__0/O
-                         net (fo=4, routed)           0.697     4.298    catcher/Vertical/count3to7/flip1_0
-    SLICE_X65Y66         LUT6 (Prop_lut6_I0_O)        0.124     4.422 r  catcher/Vertical/count3to7/flip2_i_4__9/O
-                         net (fo=4, routed)           0.825     5.247    catcher/Vertical/count3to7/flip2_0
-    SLICE_X65Y67         LUT6 (Prop_lut6_I1_O)        0.124     5.371 r  catcher/Vertical/count3to7/flip2_i_1__13/O
-                         net (fo=3, routed)           0.759     6.131    catcher/Vertical/count8to12/ce
-    SLICE_X65Y67         FDRE                                         r  catcher/Vertical/count8to12/flip2/CE
+    SLICE_X36Y9          FDRE (Prop_fdre_C_Q)         0.456    -0.493 r  funStates/s0/Q
+                         net (fo=700, routed)         3.403     2.910    catcher/Vertical/count0to2/led_OBUF[0]
+    SLICE_X46Y19         LUT3 (Prop_lut3_I1_O)        0.124     3.034 r  catcher/Vertical/count0to2/bluezone0_carry_i_22/O
+                         net (fo=1, routed)           0.000     3.034    catcher/Vertical/count0to2/bluezone0_carry_i_22_n_0
+    SLICE_X46Y19         CARRY4 (Prop_carry4_S[1]_O[2])
+                                                      0.578     3.612 r  catcher/Vertical/count0to2/bluezone0_carry_i_10/O[2]
+                         net (fo=2, routed)           1.122     4.735    stuffISee/Vert/count3to7/bluezone0_carry_0[1]
+    SLICE_X47Y20         LUT4 (Prop_lut4_I0_O)        0.301     5.036 r  stuffISee/Vert/count3to7/bluezone0_carry_i_7/O
+                         net (fo=1, routed)           0.000     5.036    catcher/position/bluezone0_carry__0_1[1]
+    SLICE_X47Y20         CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.550     5.586 r  catcher/position/bluezone0_carry/CO[3]
+                         net (fo=1, routed)           0.000     5.586    catcher/position/bluezone0_carry_n_0
+    SLICE_X47Y21         CARRY4 (Prop_carry4_CI_CO[1])
+                                                      0.157     5.743 r  catcher/position/bluezone0_carry__0/CO[1]
+                         net (fo=2, routed)           1.384     7.127    catcher/position/winner/notag_i_2_1[0]
+    SLICE_X41Y27         LUT6 (Prop_lut6_I4_O)        0.329     7.456 r  catcher/position/winner/notag_i_4/O
+                         net (fo=1, routed)           0.433     7.889    catcher/position/winner/notag_i_4_n_0
+    SLICE_X41Y27         LUT6 (Prop_lut6_I5_O)        0.124     8.013 r  catcher/position/winner/notag_i_2/O
+                         net (fo=23, routed)          1.605     9.618    bird7/position/netblue
+    SLICE_X36Y13         LUT6 (Prop_lut6_I5_O)        0.124     9.742 r  bird7/position/flip4_i_5__15/O
+                         net (fo=1, routed)           0.855    10.596    bird7/position/bird7tag
+    SLICE_X37Y13         LUT6 (Prop_lut6_I0_O)        0.124    10.720 r  bird7/position/flip4_i_3__21/O
+                         net (fo=6, routed)           1.000    11.720    bird7/position/compressTag
+    SLICE_X38Y28         LUT2 (Prop_lut2_I0_O)        0.116    11.836 r  bird7/position/flip4_i_1__21/O
+                         net (fo=5, routed)           0.209    12.045    birdCounter/ce
+    SLICE_X38Y28         FDRE                                         r  birdCounter/flip0/CE
   -------------------------------------------------------------------    -------------------
 
                          (clock clk_out1_clk_wiz_0 rise edge)
@@ -489,31 +541,31 @@ Slack (MET) :             32.651ns  (required time - arrival time)
                                                      -7.217    35.332 r  not_so_slow/my_clk_inst/mmcm_adv_inst/CLKOUT0
                          net (fo=1, routed)           1.581    36.914    not_so_slow/slowclk/fastclk
     BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.091    37.005 r  not_so_slow/slowclk/XLXI_401/O
-                         net (fo=120, routed)         1.501    38.505    catcher/Vertical/count8to12/clk
-    SLICE_X65Y67         FDRE                                         r  catcher/Vertical/count8to12/flip2/C
-                         clock pessimism              0.576    39.081    
-                         clock uncertainty           -0.094    38.987    
-    SLICE_X65Y67         FDRE (Setup_fdre_C_CE)      -0.205    38.782    catcher/Vertical/count8to12/flip2
+                         net (fo=361, routed)         1.433    38.438    birdCounter/clk_out
+    SLICE_X38Y28         FDRE                                         r  birdCounter/flip0/C
+                         clock pessimism              0.564    39.001    
+                         clock uncertainty           -0.094    38.907    
+    SLICE_X38Y28         FDRE (Setup_fdre_C_CE)      -0.373    38.534    birdCounter/flip0
   -------------------------------------------------------------------
-                         required time                         38.782    
-                         arrival time                          -6.131    
+                         required time                         38.534    
+                         arrival time                         -12.045    
   -------------------------------------------------------------------
-                         slack                                 32.651    
+                         slack                                 26.489    
 
-Slack (MET) :             32.975ns  (required time - arrival time)
-  Source:                 stuffISee/Vert/count0to2/flip2/C
+Slack (MET) :             26.489ns  (required time - arrival time)
+  Source:                 funStates/s0/C
                             (rising edge-triggered cell FDRE clocked by clk_out1_clk_wiz_0  {rise@0.000ns fall@20.000ns period=40.000ns})
-  Destination:            bird1/Horizontal/count8to12/flip0/D
+  Destination:            birdCounter/flip4/CE
                             (rising edge-triggered cell FDRE clocked by clk_out1_clk_wiz_0  {rise@0.000ns fall@20.000ns period=40.000ns})
   Path Group:             clk_out1_clk_wiz_0
   Path Type:              Setup (Max at Slow Process Corner)
   Requirement:            40.000ns  (clk_out1_clk_wiz_0 rise@40.000ns - clk_out1_clk_wiz_0 rise@0.000ns)
-  Data Path Delay:        6.911ns  (logic 1.450ns (20.981%)  route 5.461ns (79.019%))
-  Logic Levels:           5  (LUT3=1 LUT4=1 LUT5=1 LUT6=2)
-  Clock Path Skew:        -0.048ns (DCD - SCD + CPR)
-    Destination Clock Delay (DCD):    -1.498ns = ( 38.502 - 40.000 ) 
-    Source Clock Delay      (SCD):    -0.888ns
-    Clock Pessimism Removal (CPR):    0.562ns
+  Data Path Delay:        12.993ns  (logic 2.983ns (22.958%)  route 10.010ns (77.042%))
+  Logic Levels:           10  (CARRY4=3 LUT2=1 LUT3=1 LUT4=1 LUT6=4)
+  Clock Path Skew:        -0.050ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    -1.562ns = ( 38.438 - 40.000 ) 
+    Source Clock Delay      (SCD):    -0.949ns
+    Clock Pessimism Removal (CPR):    0.564ns
   Clock Uncertainty:      0.094ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
     Total System Jitter     (TSJ):    0.071ns
     Discrete Jitter          (DJ):    0.175ns
@@ -531,22 +583,35 @@ Slack (MET) :             32.975ns  (required time - arrival time)
                                                      -6.961    -4.269 r  not_so_slow/my_clk_inst/mmcm_adv_inst/CLKOUT0
                          net (fo=1, routed)           1.661    -2.608    not_so_slow/slowclk/fastclk
     BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.096    -2.512 r  not_so_slow/slowclk/XLXI_401/O
-                         net (fo=120, routed)         1.624    -0.888    stuffISee/Vert/count0to2/clk
-    SLICE_X63Y60         FDRE                                         r  stuffISee/Vert/count0to2/flip2/C
+                         net (fo=361, routed)         1.563    -0.949    funStates/clk_out
+    SLICE_X36Y9          FDRE                                         r  funStates/s0/C
   -------------------------------------------------------------------    -------------------
-    SLICE_X63Y60         FDRE (Prop_fdre_C_Q)         0.419    -0.469 r  stuffISee/Vert/count0to2/flip2/Q
-                         net (fo=18, routed)          1.180     0.711    stuffISee/Vert/count8to12/flip4_i_7__1
-    SLICE_X61Y58         LUT3 (Prop_lut3_I1_O)        0.327     1.038 f  stuffISee/Vert/count8to12/flip4_i_13/O
-                         net (fo=2, routed)           0.955     1.993    stuffISee/Vert/count8to12/flip1_2
-    SLICE_X64Y60         LUT5 (Prop_lut5_I0_O)        0.332     2.325 f  stuffISee/Vert/count8to12/flip2_i_4__7/O
-                         net (fo=27, routed)          1.514     3.839    bird1/Horizontal/count0to2/flip2_4
-    SLICE_X57Y66         LUT6 (Prop_lut6_I3_O)        0.124     3.963 r  bird1/Horizontal/count0to2/flip4_i_4__2/O
-                         net (fo=5, routed)           0.853     4.815    bird1/Horizontal/count3to7/flip2_3
-    SLICE_X58Y67         LUT6 (Prop_lut6_I0_O)        0.124     4.939 r  bird1/Horizontal/count3to7/flip2_i_4__6/O
-                         net (fo=4, routed)           0.960     5.899    bird1/Horizontal/count3to7/flip2_0
-    SLICE_X58Y68         LUT4 (Prop_lut4_I0_O)        0.124     6.023 r  bird1/Horizontal/count3to7/flip0_i_1__16/O
-                         net (fo=1, routed)           0.000     6.023    bird1/Horizontal/count8to12/out_0
-    SLICE_X58Y68         FDRE                                         r  bird1/Horizontal/count8to12/flip0/D
+    SLICE_X36Y9          FDRE (Prop_fdre_C_Q)         0.456    -0.493 r  funStates/s0/Q
+                         net (fo=700, routed)         3.403     2.910    catcher/Vertical/count0to2/led_OBUF[0]
+    SLICE_X46Y19         LUT3 (Prop_lut3_I1_O)        0.124     3.034 r  catcher/Vertical/count0to2/bluezone0_carry_i_22/O
+                         net (fo=1, routed)           0.000     3.034    catcher/Vertical/count0to2/bluezone0_carry_i_22_n_0
+    SLICE_X46Y19         CARRY4 (Prop_carry4_S[1]_O[2])
+                                                      0.578     3.612 r  catcher/Vertical/count0to2/bluezone0_carry_i_10/O[2]
+                         net (fo=2, routed)           1.122     4.735    stuffISee/Vert/count3to7/bluezone0_carry_0[1]
+    SLICE_X47Y20         LUT4 (Prop_lut4_I0_O)        0.301     5.036 r  stuffISee/Vert/count3to7/bluezone0_carry_i_7/O
+                         net (fo=1, routed)           0.000     5.036    catcher/position/bluezone0_carry__0_1[1]
+    SLICE_X47Y20         CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.550     5.586 r  catcher/position/bluezone0_carry/CO[3]
+                         net (fo=1, routed)           0.000     5.586    catcher/position/bluezone0_carry_n_0
+    SLICE_X47Y21         CARRY4 (Prop_carry4_CI_CO[1])
+                                                      0.157     5.743 r  catcher/position/bluezone0_carry__0/CO[1]
+                         net (fo=2, routed)           1.384     7.127    catcher/position/winner/notag_i_2_1[0]
+    SLICE_X41Y27         LUT6 (Prop_lut6_I4_O)        0.329     7.456 r  catcher/position/winner/notag_i_4/O
+                         net (fo=1, routed)           0.433     7.889    catcher/position/winner/notag_i_4_n_0
+    SLICE_X41Y27         LUT6 (Prop_lut6_I5_O)        0.124     8.013 r  catcher/position/winner/notag_i_2/O
+                         net (fo=23, routed)          1.605     9.618    bird7/position/netblue
+    SLICE_X36Y13         LUT6 (Prop_lut6_I5_O)        0.124     9.742 r  bird7/position/flip4_i_5__15/O
+                         net (fo=1, routed)           0.855    10.596    bird7/position/bird7tag
+    SLICE_X37Y13         LUT6 (Prop_lut6_I0_O)        0.124    10.720 r  bird7/position/flip4_i_3__21/O
+                         net (fo=6, routed)           1.000    11.720    bird7/position/compressTag
+    SLICE_X38Y28         LUT2 (Prop_lut2_I0_O)        0.116    11.836 r  bird7/position/flip4_i_1__21/O
+                         net (fo=5, routed)           0.209    12.045    birdCounter/ce
+    SLICE_X38Y28         FDRE                                         r  birdCounter/flip4/CE
   -------------------------------------------------------------------    -------------------
 
                          (clock clk_out1_clk_wiz_0 rise edge)
@@ -559,31 +624,31 @@ Slack (MET) :             32.975ns  (required time - arrival time)
                                                      -7.217    35.332 r  not_so_slow/my_clk_inst/mmcm_adv_inst/CLKOUT0
                          net (fo=1, routed)           1.581    36.914    not_so_slow/slowclk/fastclk
     BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.091    37.005 r  not_so_slow/slowclk/XLXI_401/O
-                         net (fo=120, routed)         1.498    38.502    bird1/Horizontal/count8to12/clk
-    SLICE_X58Y68         FDRE                                         r  bird1/Horizontal/count8to12/flip0/C
-                         clock pessimism              0.562    39.064    
-                         clock uncertainty           -0.094    38.970    
-    SLICE_X58Y68         FDRE (Setup_fdre_C_D)        0.029    38.999    bird1/Horizontal/count8to12/flip0
+                         net (fo=361, routed)         1.433    38.438    birdCounter/clk_out
+    SLICE_X38Y28         FDRE                                         r  birdCounter/flip4/C
+                         clock pessimism              0.564    39.001    
+                         clock uncertainty           -0.094    38.907    
+    SLICE_X38Y28         FDRE (Setup_fdre_C_CE)      -0.373    38.534    birdCounter/flip4
   -------------------------------------------------------------------
-                         required time                         38.999    
-                         arrival time                          -6.023    
+                         required time                         38.534    
+                         arrival time                         -12.045    
   -------------------------------------------------------------------
-                         slack                                 32.975    
+                         slack                                 26.489    
 
-Slack (MET) :             32.993ns  (required time - arrival time)
-  Source:                 stuffISee/Vert/count0to2/flip2/C
+Slack (MET) :             26.568ns  (required time - arrival time)
+  Source:                 funStates/s0/C
                             (rising edge-triggered cell FDRE clocked by clk_out1_clk_wiz_0  {rise@0.000ns fall@20.000ns period=40.000ns})
-  Destination:            bird1/Horizontal/count8to12/flip1/D
+  Destination:            birdCounter/flip3/D
                             (rising edge-triggered cell FDRE clocked by clk_out1_clk_wiz_0  {rise@0.000ns fall@20.000ns period=40.000ns})
   Path Group:             clk_out1_clk_wiz_0
   Path Type:              Setup (Max at Slow Process Corner)
   Requirement:            40.000ns  (clk_out1_clk_wiz_0 rise@40.000ns - clk_out1_clk_wiz_0 rise@0.000ns)
-  Data Path Delay:        6.939ns  (logic 1.478ns (21.299%)  route 5.461ns (78.701%))
-  Logic Levels:           5  (LUT3=1 LUT5=2 LUT6=2)
-  Clock Path Skew:        -0.048ns (DCD - SCD + CPR)
-    Destination Clock Delay (DCD):    -1.498ns = ( 38.502 - 40.000 ) 
-    Source Clock Delay      (SCD):    -0.888ns
-    Clock Pessimism Removal (CPR):    0.562ns
+  Data Path Delay:        13.318ns  (logic 2.991ns (22.458%)  route 10.327ns (77.542%))
+  Logic Levels:           10  (CARRY4=3 LUT3=1 LUT4=1 LUT6=5)
+  Clock Path Skew:        -0.050ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    -1.562ns = ( 38.438 - 40.000 ) 
+    Source Clock Delay      (SCD):    -0.949ns
+    Clock Pessimism Removal (CPR):    0.564ns
   Clock Uncertainty:      0.094ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
     Total System Jitter     (TSJ):    0.071ns
     Discrete Jitter          (DJ):    0.175ns
@@ -601,22 +666,35 @@ Slack (MET) :             32.993ns  (required time - arrival time)
                                                      -6.961    -4.269 r  not_so_slow/my_clk_inst/mmcm_adv_inst/CLKOUT0
                          net (fo=1, routed)           1.661    -2.608    not_so_slow/slowclk/fastclk
     BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.096    -2.512 r  not_so_slow/slowclk/XLXI_401/O
-                         net (fo=120, routed)         1.624    -0.888    stuffISee/Vert/count0to2/clk
-    SLICE_X63Y60         FDRE                                         r  stuffISee/Vert/count0to2/flip2/C
+                         net (fo=361, routed)         1.563    -0.949    funStates/clk_out
+    SLICE_X36Y9          FDRE                                         r  funStates/s0/C
   -------------------------------------------------------------------    -------------------
-    SLICE_X63Y60         FDRE (Prop_fdre_C_Q)         0.419    -0.469 r  stuffISee/Vert/count0to2/flip2/Q
-                         net (fo=18, routed)          1.180     0.711    stuffISee/Vert/count8to12/flip4_i_7__1
-    SLICE_X61Y58         LUT3 (Prop_lut3_I1_O)        0.327     1.038 f  stuffISee/Vert/count8to12/flip4_i_13/O
-                         net (fo=2, routed)           0.955     1.993    stuffISee/Vert/count8to12/flip1_2
-    SLICE_X64Y60         LUT5 (Prop_lut5_I0_O)        0.332     2.325 f  stuffISee/Vert/count8to12/flip2_i_4__7/O
-                         net (fo=27, routed)          1.514     3.839    bird1/Horizontal/count0to2/flip2_4
-    SLICE_X57Y66         LUT6 (Prop_lut6_I3_O)        0.124     3.963 r  bird1/Horizontal/count0to2/flip4_i_4__2/O
-                         net (fo=5, routed)           0.853     4.815    bird1/Horizontal/count3to7/flip2_3
-    SLICE_X58Y67         LUT6 (Prop_lut6_I0_O)        0.124     4.939 r  bird1/Horizontal/count3to7/flip2_i_4__6/O
-                         net (fo=4, routed)           0.960     5.899    bird1/Horizontal/count3to7/flip2_0
-    SLICE_X58Y68         LUT5 (Prop_lut5_I0_O)        0.152     6.051 r  bird1/Horizontal/count3to7/flip1_i_1__20/O
-                         net (fo=1, routed)           0.000     6.051    bird1/Horizontal/count8to12/flip1_0
-    SLICE_X58Y68         FDRE                                         r  bird1/Horizontal/count8to12/flip1/D
+    SLICE_X36Y9          FDRE (Prop_fdre_C_Q)         0.456    -0.493 r  funStates/s0/Q
+                         net (fo=700, routed)         3.403     2.910    catcher/Vertical/count0to2/led_OBUF[0]
+    SLICE_X46Y19         LUT3 (Prop_lut3_I1_O)        0.124     3.034 r  catcher/Vertical/count0to2/bluezone0_carry_i_22/O
+                         net (fo=1, routed)           0.000     3.034    catcher/Vertical/count0to2/bluezone0_carry_i_22_n_0
+    SLICE_X46Y19         CARRY4 (Prop_carry4_S[1]_O[2])
+                                                      0.578     3.612 r  catcher/Vertical/count0to2/bluezone0_carry_i_10/O[2]
+                         net (fo=2, routed)           1.122     4.735    stuffISee/Vert/count3to7/bluezone0_carry_0[1]
+    SLICE_X47Y20         LUT4 (Prop_lut4_I0_O)        0.301     5.036 r  stuffISee/Vert/count3to7/bluezone0_carry_i_7/O
+                         net (fo=1, routed)           0.000     5.036    catcher/position/bluezone0_carry__0_1[1]
+    SLICE_X47Y20         CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.550     5.586 r  catcher/position/bluezone0_carry/CO[3]
+                         net (fo=1, routed)           0.000     5.586    catcher/position/bluezone0_carry_n_0
+    SLICE_X47Y21         CARRY4 (Prop_carry4_CI_CO[1])
+                                                      0.157     5.743 r  catcher/position/bluezone0_carry__0/CO[1]
+                         net (fo=2, routed)           1.384     7.127    catcher/position/winner/notag_i_2_1[0]
+    SLICE_X41Y27         LUT6 (Prop_lut6_I4_O)        0.329     7.456 r  catcher/position/winner/notag_i_4/O
+                         net (fo=1, routed)           0.433     7.889    catcher/position/winner/notag_i_4_n_0
+    SLICE_X41Y27         LUT6 (Prop_lut6_I5_O)        0.124     8.013 r  catcher/position/winner/notag_i_2/O
+                         net (fo=23, routed)          1.605     9.618    bird7/position/netblue
+    SLICE_X36Y13         LUT6 (Prop_lut6_I5_O)        0.124     9.742 r  bird7/position/flip4_i_5__15/O
+                         net (fo=1, routed)           0.855    10.596    bird7/position/bird7tag
+    SLICE_X37Y13         LUT6 (Prop_lut6_I0_O)        0.124    10.720 r  bird7/position/flip4_i_3__21/O
+                         net (fo=6, routed)           1.526    12.246    birdCounter/compressTag
+    SLICE_X36Y28         LUT6 (Prop_lut6_I1_O)        0.124    12.370 r  birdCounter/flip3_i_1__19/O
+                         net (fo=1, routed)           0.000    12.370    birdCounter/flip3_i_1__19_n_0
+    SLICE_X36Y28         FDRE                                         r  birdCounter/flip3/D
   -------------------------------------------------------------------    -------------------
 
                          (clock clk_out1_clk_wiz_0 rise edge)
@@ -629,31 +707,31 @@ Slack (MET) :             32.993ns  (required time - arrival time)
                                                      -7.217    35.332 r  not_so_slow/my_clk_inst/mmcm_adv_inst/CLKOUT0
                          net (fo=1, routed)           1.581    36.914    not_so_slow/slowclk/fastclk
     BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.091    37.005 r  not_so_slow/slowclk/XLXI_401/O
-                         net (fo=120, routed)         1.498    38.502    bird1/Horizontal/count8to12/clk
-    SLICE_X58Y68         FDRE                                         r  bird1/Horizontal/count8to12/flip1/C
-                         clock pessimism              0.562    39.064    
-                         clock uncertainty           -0.094    38.970    
-    SLICE_X58Y68         FDRE (Setup_fdre_C_D)        0.075    39.045    bird1/Horizontal/count8to12/flip1
+                         net (fo=361, routed)         1.433    38.438    birdCounter/clk_out
+    SLICE_X36Y28         FDRE                                         r  birdCounter/flip3/C
+                         clock pessimism              0.564    39.001    
+                         clock uncertainty           -0.094    38.907    
+    SLICE_X36Y28         FDRE (Setup_fdre_C_D)        0.031    38.938    birdCounter/flip3
   -------------------------------------------------------------------
-                         required time                         39.045    
-                         arrival time                          -6.051    
+                         required time                         38.938    
+                         arrival time                         -12.370    
   -------------------------------------------------------------------
-                         slack                                 32.993    
+                         slack                                 26.568    
 
-Slack (MET) :             33.069ns  (required time - arrival time)
-  Source:                 stuffISee/Vert/count0to2/flip2/C
+Slack (MET) :             26.781ns  (required time - arrival time)
+  Source:                 funStates/s0/C
                             (rising edge-triggered cell FDRE clocked by clk_out1_clk_wiz_0  {rise@0.000ns fall@20.000ns period=40.000ns})
-  Destination:            bird1/Horizontal/count8to12/flip0/CE
+  Destination:            birdCounter/flip1/D
                             (rising edge-triggered cell FDRE clocked by clk_out1_clk_wiz_0  {rise@0.000ns fall@20.000ns period=40.000ns})
   Path Group:             clk_out1_clk_wiz_0
   Path Type:              Setup (Max at Slow Process Corner)
   Requirement:            40.000ns  (clk_out1_clk_wiz_0 rise@40.000ns - clk_out1_clk_wiz_0 rise@0.000ns)
-  Data Path Delay:        6.584ns  (logic 1.450ns (22.024%)  route 5.134ns (77.976%))
-  Logic Levels:           5  (LUT3=1 LUT5=1 LUT6=3)
-  Clock Path Skew:        -0.048ns (DCD - SCD + CPR)
-    Destination Clock Delay (DCD):    -1.498ns = ( 38.502 - 40.000 ) 
-    Source Clock Delay      (SCD):    -0.888ns
-    Clock Pessimism Removal (CPR):    0.562ns
+  Data Path Delay:        13.104ns  (logic 2.991ns (22.825%)  route 10.113ns (77.174%))
+  Logic Levels:           10  (CARRY4=3 LUT3=1 LUT4=2 LUT6=4)
+  Clock Path Skew:        -0.050ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    -1.562ns = ( 38.438 - 40.000 ) 
+    Source Clock Delay      (SCD):    -0.949ns
+    Clock Pessimism Removal (CPR):    0.564ns
   Clock Uncertainty:      0.094ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
     Total System Jitter     (TSJ):    0.071ns
     Discrete Jitter          (DJ):    0.175ns
@@ -671,22 +749,35 @@ Slack (MET) :             33.069ns  (required time - arrival time)
                                                      -6.961    -4.269 r  not_so_slow/my_clk_inst/mmcm_adv_inst/CLKOUT0
                          net (fo=1, routed)           1.661    -2.608    not_so_slow/slowclk/fastclk
     BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.096    -2.512 r  not_so_slow/slowclk/XLXI_401/O
-                         net (fo=120, routed)         1.624    -0.888    stuffISee/Vert/count0to2/clk
-    SLICE_X63Y60         FDRE                                         r  stuffISee/Vert/count0to2/flip2/C
+                         net (fo=361, routed)         1.563    -0.949    funStates/clk_out
+    SLICE_X36Y9          FDRE                                         r  funStates/s0/C
   -------------------------------------------------------------------    -------------------
-    SLICE_X63Y60         FDRE (Prop_fdre_C_Q)         0.419    -0.469 r  stuffISee/Vert/count0to2/flip2/Q
-                         net (fo=18, routed)          1.180     0.711    stuffISee/Vert/count8to12/flip4_i_7__1
-    SLICE_X61Y58         LUT3 (Prop_lut3_I1_O)        0.327     1.038 f  stuffISee/Vert/count8to12/flip4_i_13/O
-                         net (fo=2, routed)           0.955     1.993    stuffISee/Vert/count8to12/flip1_2
-    SLICE_X64Y60         LUT5 (Prop_lut5_I0_O)        0.332     2.325 f  stuffISee/Vert/count8to12/flip2_i_4__7/O
-                         net (fo=27, routed)          1.514     3.839    bird1/Horizontal/count0to2/flip2_4
-    SLICE_X57Y66         LUT6 (Prop_lut6_I3_O)        0.124     3.963 r  bird1/Horizontal/count0to2/flip4_i_4__2/O
-                         net (fo=5, routed)           0.853     4.815    bird1/Horizontal/count3to7/flip2_3
-    SLICE_X58Y67         LUT6 (Prop_lut6_I0_O)        0.124     4.939 r  bird1/Horizontal/count3to7/flip2_i_4__6/O
-                         net (fo=4, routed)           0.442     5.382    bird1/Horizontal/count3to7/flip2_0
-    SLICE_X58Y68         LUT6 (Prop_lut6_I1_O)        0.124     5.506 r  bird1/Horizontal/count3to7/flip2_i_1__11/O
-                         net (fo=3, routed)           0.190     5.696    bird1/Horizontal/count8to12/ce
-    SLICE_X58Y68         FDRE                                         r  bird1/Horizontal/count8to12/flip0/CE
+    SLICE_X36Y9          FDRE (Prop_fdre_C_Q)         0.456    -0.493 r  funStates/s0/Q
+                         net (fo=700, routed)         3.403     2.910    catcher/Vertical/count0to2/led_OBUF[0]
+    SLICE_X46Y19         LUT3 (Prop_lut3_I1_O)        0.124     3.034 r  catcher/Vertical/count0to2/bluezone0_carry_i_22/O
+                         net (fo=1, routed)           0.000     3.034    catcher/Vertical/count0to2/bluezone0_carry_i_22_n_0
+    SLICE_X46Y19         CARRY4 (Prop_carry4_S[1]_O[2])
+                                                      0.578     3.612 r  catcher/Vertical/count0to2/bluezone0_carry_i_10/O[2]
+                         net (fo=2, routed)           1.122     4.735    stuffISee/Vert/count3to7/bluezone0_carry_0[1]
+    SLICE_X47Y20         LUT4 (Prop_lut4_I0_O)        0.301     5.036 r  stuffISee/Vert/count3to7/bluezone0_carry_i_7/O
+                         net (fo=1, routed)           0.000     5.036    catcher/position/bluezone0_carry__0_1[1]
+    SLICE_X47Y20         CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.550     5.586 r  catcher/position/bluezone0_carry/CO[3]
+                         net (fo=1, routed)           0.000     5.586    catcher/position/bluezone0_carry_n_0
+    SLICE_X47Y21         CARRY4 (Prop_carry4_CI_CO[1])
+                                                      0.157     5.743 r  catcher/position/bluezone0_carry__0/CO[1]
+                         net (fo=2, routed)           1.384     7.127    catcher/position/winner/notag_i_2_1[0]
+    SLICE_X41Y27         LUT6 (Prop_lut6_I4_O)        0.329     7.456 r  catcher/position/winner/notag_i_4/O
+                         net (fo=1, routed)           0.433     7.889    catcher/position/winner/notag_i_4_n_0
+    SLICE_X41Y27         LUT6 (Prop_lut6_I5_O)        0.124     8.013 r  catcher/position/winner/notag_i_2/O
+                         net (fo=23, routed)          1.605     9.618    bird7/position/netblue
+    SLICE_X36Y13         LUT6 (Prop_lut6_I5_O)        0.124     9.742 r  bird7/position/flip4_i_5__15/O
+                         net (fo=1, routed)           0.855    10.596    bird7/position/bird7tag
+    SLICE_X37Y13         LUT6 (Prop_lut6_I0_O)        0.124    10.720 r  bird7/position/flip4_i_3__21/O
+                         net (fo=6, routed)           1.311    12.031    birdCounter/compressTag
+    SLICE_X36Y28         LUT4 (Prop_lut4_I0_O)        0.124    12.155 r  birdCounter/flip1_i_1__28/O
+                         net (fo=1, routed)           0.000    12.155    birdCounter/flip1_i_1__28_n_0
+    SLICE_X36Y28         FDRE                                         r  birdCounter/flip1/D
   -------------------------------------------------------------------    -------------------
 
                          (clock clk_out1_clk_wiz_0 rise edge)
@@ -699,31 +790,31 @@ Slack (MET) :             33.069ns  (required time - arrival time)
                                                      -7.217    35.332 r  not_so_slow/my_clk_inst/mmcm_adv_inst/CLKOUT0
                          net (fo=1, routed)           1.581    36.914    not_so_slow/slowclk/fastclk
     BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.091    37.005 r  not_so_slow/slowclk/XLXI_401/O
-                         net (fo=120, routed)         1.498    38.502    bird1/Horizontal/count8to12/clk
-    SLICE_X58Y68         FDRE                                         r  bird1/Horizontal/count8to12/flip0/C
-                         clock pessimism              0.562    39.064    
-                         clock uncertainty           -0.094    38.970    
-    SLICE_X58Y68         FDRE (Setup_fdre_C_CE)      -0.205    38.765    bird1/Horizontal/count8to12/flip0
+                         net (fo=361, routed)         1.433    38.438    birdCounter/clk_out
+    SLICE_X36Y28         FDRE                                         r  birdCounter/flip1/C
+                         clock pessimism              0.564    39.001    
+                         clock uncertainty           -0.094    38.907    
+    SLICE_X36Y28         FDRE (Setup_fdre_C_D)        0.029    38.936    birdCounter/flip1
   -------------------------------------------------------------------
-                         required time                         38.765    
-                         arrival time                          -5.696    
+                         required time                         38.936    
+                         arrival time                         -12.155    
   -------------------------------------------------------------------
-                         slack                                 33.069    
+                         slack                                 26.781    
 
-Slack (MET) :             33.069ns  (required time - arrival time)
-  Source:                 stuffISee/Vert/count0to2/flip2/C
+Slack (MET) :             26.801ns  (required time - arrival time)
+  Source:                 funStates/s0/C
                             (rising edge-triggered cell FDRE clocked by clk_out1_clk_wiz_0  {rise@0.000ns fall@20.000ns period=40.000ns})
-  Destination:            bird1/Horizontal/count8to12/flip1/CE
+  Destination:            birdCounter/flip2/D
                             (rising edge-triggered cell FDRE clocked by clk_out1_clk_wiz_0  {rise@0.000ns fall@20.000ns period=40.000ns})
   Path Group:             clk_out1_clk_wiz_0
   Path Type:              Setup (Max at Slow Process Corner)
   Requirement:            40.000ns  (clk_out1_clk_wiz_0 rise@40.000ns - clk_out1_clk_wiz_0 rise@0.000ns)
-  Data Path Delay:        6.584ns  (logic 1.450ns (22.024%)  route 5.134ns (77.976%))
-  Logic Levels:           5  (LUT3=1 LUT5=1 LUT6=3)
-  Clock Path Skew:        -0.048ns (DCD - SCD + CPR)
-    Destination Clock Delay (DCD):    -1.498ns = ( 38.502 - 40.000 ) 
-    Source Clock Delay      (SCD):    -0.888ns
-    Clock Pessimism Removal (CPR):    0.562ns
+  Data Path Delay:        13.130ns  (logic 3.017ns (22.978%)  route 10.113ns (77.022%))
+  Logic Levels:           10  (CARRY4=3 LUT3=1 LUT4=1 LUT5=1 LUT6=4)
+  Clock Path Skew:        -0.050ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    -1.562ns = ( 38.438 - 40.000 ) 
+    Source Clock Delay      (SCD):    -0.949ns
+    Clock Pessimism Removal (CPR):    0.564ns
   Clock Uncertainty:      0.094ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
     Total System Jitter     (TSJ):    0.071ns
     Discrete Jitter          (DJ):    0.175ns
@@ -741,22 +832,35 @@ Slack (MET) :             33.069ns  (required time - arrival time)
                                                      -6.961    -4.269 r  not_so_slow/my_clk_inst/mmcm_adv_inst/CLKOUT0
                          net (fo=1, routed)           1.661    -2.608    not_so_slow/slowclk/fastclk
     BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.096    -2.512 r  not_so_slow/slowclk/XLXI_401/O
-                         net (fo=120, routed)         1.624    -0.888    stuffISee/Vert/count0to2/clk
-    SLICE_X63Y60         FDRE                                         r  stuffISee/Vert/count0to2/flip2/C
+                         net (fo=361, routed)         1.563    -0.949    funStates/clk_out
+    SLICE_X36Y9          FDRE                                         r  funStates/s0/C
   -------------------------------------------------------------------    -------------------
-    SLICE_X63Y60         FDRE (Prop_fdre_C_Q)         0.419    -0.469 r  stuffISee/Vert/count0to2/flip2/Q
-                         net (fo=18, routed)          1.180     0.711    stuffISee/Vert/count8to12/flip4_i_7__1
-    SLICE_X61Y58         LUT3 (Prop_lut3_I1_O)        0.327     1.038 f  stuffISee/Vert/count8to12/flip4_i_13/O
-                         net (fo=2, routed)           0.955     1.993    stuffISee/Vert/count8to12/flip1_2
-    SLICE_X64Y60         LUT5 (Prop_lut5_I0_O)        0.332     2.325 f  stuffISee/Vert/count8to12/flip2_i_4__7/O
-                         net (fo=27, routed)          1.514     3.839    bird1/Horizontal/count0to2/flip2_4
-    SLICE_X57Y66         LUT6 (Prop_lut6_I3_O)        0.124     3.963 r  bird1/Horizontal/count0to2/flip4_i_4__2/O
-                         net (fo=5, routed)           0.853     4.815    bird1/Horizontal/count3to7/flip2_3
-    SLICE_X58Y67         LUT6 (Prop_lut6_I0_O)        0.124     4.939 r  bird1/Horizontal/count3to7/flip2_i_4__6/O
-                         net (fo=4, routed)           0.442     5.382    bird1/Horizontal/count3to7/flip2_0
-    SLICE_X58Y68         LUT6 (Prop_lut6_I1_O)        0.124     5.506 r  bird1/Horizontal/count3to7/flip2_i_1__11/O
-                         net (fo=3, routed)           0.190     5.696    bird1/Horizontal/count8to12/ce
-    SLICE_X58Y68         FDRE                                         r  bird1/Horizontal/count8to12/flip1/CE
+    SLICE_X36Y9          FDRE (Prop_fdre_C_Q)         0.456    -0.493 r  funStates/s0/Q
+                         net (fo=700, routed)         3.403     2.910    catcher/Vertical/count0to2/led_OBUF[0]
+    SLICE_X46Y19         LUT3 (Prop_lut3_I1_O)        0.124     3.034 r  catcher/Vertical/count0to2/bluezone0_carry_i_22/O
+                         net (fo=1, routed)           0.000     3.034    catcher/Vertical/count0to2/bluezone0_carry_i_22_n_0
+    SLICE_X46Y19         CARRY4 (Prop_carry4_S[1]_O[2])
+                                                      0.578     3.612 r  catcher/Vertical/count0to2/bluezone0_carry_i_10/O[2]
+                         net (fo=2, routed)           1.122     4.735    stuffISee/Vert/count3to7/bluezone0_carry_0[1]
+    SLICE_X47Y20         LUT4 (Prop_lut4_I0_O)        0.301     5.036 r  stuffISee/Vert/count3to7/bluezone0_carry_i_7/O
+                         net (fo=1, routed)           0.000     5.036    catcher/position/bluezone0_carry__0_1[1]
+    SLICE_X47Y20         CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.550     5.586 r  catcher/position/bluezone0_carry/CO[3]
+                         net (fo=1, routed)           0.000     5.586    catcher/position/bluezone0_carry_n_0
+    SLICE_X47Y21         CARRY4 (Prop_carry4_CI_CO[1])
+                                                      0.157     5.743 r  catcher/position/bluezone0_carry__0/CO[1]
+                         net (fo=2, routed)           1.384     7.127    catcher/position/winner/notag_i_2_1[0]
+    SLICE_X41Y27         LUT6 (Prop_lut6_I4_O)        0.329     7.456 r  catcher/position/winner/notag_i_4/O
+                         net (fo=1, routed)           0.433     7.889    catcher/position/winner/notag_i_4_n_0
+    SLICE_X41Y27         LUT6 (Prop_lut6_I5_O)        0.124     8.013 r  catcher/position/winner/notag_i_2/O
+                         net (fo=23, routed)          1.605     9.618    bird7/position/netblue
+    SLICE_X36Y13         LUT6 (Prop_lut6_I5_O)        0.124     9.742 r  bird7/position/flip4_i_5__15/O
+                         net (fo=1, routed)           0.855    10.596    bird7/position/bird7tag
+    SLICE_X37Y13         LUT6 (Prop_lut6_I0_O)        0.124    10.720 r  bird7/position/flip4_i_3__21/O
+                         net (fo=6, routed)           1.311    12.031    birdCounter/compressTag
+    SLICE_X36Y28         LUT5 (Prop_lut5_I1_O)        0.150    12.181 r  birdCounter/flip2_i_1__50/O
+                         net (fo=1, routed)           0.000    12.181    birdCounter/flip2_i_1__50_n_0
+    SLICE_X36Y28         FDRE                                         r  birdCounter/flip2/D
   -------------------------------------------------------------------    -------------------
 
                          (clock clk_out1_clk_wiz_0 rise edge)
@@ -769,31 +873,31 @@ Slack (MET) :             33.069ns  (required time - arrival time)
                                                      -7.217    35.332 r  not_so_slow/my_clk_inst/mmcm_adv_inst/CLKOUT0
                          net (fo=1, routed)           1.581    36.914    not_so_slow/slowclk/fastclk
     BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.091    37.005 r  not_so_slow/slowclk/XLXI_401/O
-                         net (fo=120, routed)         1.498    38.502    bird1/Horizontal/count8to12/clk
-    SLICE_X58Y68         FDRE                                         r  bird1/Horizontal/count8to12/flip1/C
-                         clock pessimism              0.562    39.064    
-                         clock uncertainty           -0.094    38.970    
-    SLICE_X58Y68         FDRE (Setup_fdre_C_CE)      -0.205    38.765    bird1/Horizontal/count8to12/flip1
+                         net (fo=361, routed)         1.433    38.438    birdCounter/clk_out
+    SLICE_X36Y28         FDRE                                         r  birdCounter/flip2/C
+                         clock pessimism              0.564    39.001    
+                         clock uncertainty           -0.094    38.907    
+    SLICE_X36Y28         FDRE (Setup_fdre_C_D)        0.075    38.982    birdCounter/flip2
   -------------------------------------------------------------------
-                         required time                         38.765    
-                         arrival time                          -5.696    
+                         required time                         38.982    
+                         arrival time                         -12.181    
   -------------------------------------------------------------------
-                         slack                                 33.069    
+                         slack                                 26.801    
 
-Slack (MET) :             33.069ns  (required time - arrival time)
-  Source:                 stuffISee/Vert/count0to2/flip2/C
+Slack (MET) :             26.900ns  (required time - arrival time)
+  Source:                 funStates/s0/C
                             (rising edge-triggered cell FDRE clocked by clk_out1_clk_wiz_0  {rise@0.000ns fall@20.000ns period=40.000ns})
-  Destination:            bird1/Horizontal/count8to12/flip2/CE
+  Destination:            birdCounter/flip4/D
                             (rising edge-triggered cell FDRE clocked by clk_out1_clk_wiz_0  {rise@0.000ns fall@20.000ns period=40.000ns})
   Path Group:             clk_out1_clk_wiz_0
   Path Type:              Setup (Max at Slow Process Corner)
   Requirement:            40.000ns  (clk_out1_clk_wiz_0 rise@40.000ns - clk_out1_clk_wiz_0 rise@0.000ns)
-  Data Path Delay:        6.584ns  (logic 1.450ns (22.024%)  route 5.134ns (77.976%))
-  Logic Levels:           5  (LUT3=1 LUT5=1 LUT6=3)
-  Clock Path Skew:        -0.048ns (DCD - SCD + CPR)
-    Destination Clock Delay (DCD):    -1.498ns = ( 38.502 - 40.000 ) 
-    Source Clock Delay      (SCD):    -0.888ns
-    Clock Pessimism Removal (CPR):    0.562ns
+  Data Path Delay:        13.037ns  (logic 2.991ns (22.943%)  route 10.046ns (77.057%))
+  Logic Levels:           10  (CARRY4=3 LUT3=1 LUT4=1 LUT6=5)
+  Clock Path Skew:        -0.050ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    -1.562ns = ( 38.438 - 40.000 ) 
+    Source Clock Delay      (SCD):    -0.949ns
+    Clock Pessimism Removal (CPR):    0.564ns
   Clock Uncertainty:      0.094ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
     Total System Jitter     (TSJ):    0.071ns
     Discrete Jitter          (DJ):    0.175ns
@@ -811,22 +915,35 @@ Slack (MET) :             33.069ns  (required time - arrival time)
                                                      -6.961    -4.269 r  not_so_slow/my_clk_inst/mmcm_adv_inst/CLKOUT0
                          net (fo=1, routed)           1.661    -2.608    not_so_slow/slowclk/fastclk
     BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.096    -2.512 r  not_so_slow/slowclk/XLXI_401/O
-                         net (fo=120, routed)         1.624    -0.888    stuffISee/Vert/count0to2/clk
-    SLICE_X63Y60         FDRE                                         r  stuffISee/Vert/count0to2/flip2/C
+                         net (fo=361, routed)         1.563    -0.949    funStates/clk_out
+    SLICE_X36Y9          FDRE                                         r  funStates/s0/C
   -------------------------------------------------------------------    -------------------
-    SLICE_X63Y60         FDRE (Prop_fdre_C_Q)         0.419    -0.469 r  stuffISee/Vert/count0to2/flip2/Q
-                         net (fo=18, routed)          1.180     0.711    stuffISee/Vert/count8to12/flip4_i_7__1
-    SLICE_X61Y58         LUT3 (Prop_lut3_I1_O)        0.327     1.038 f  stuffISee/Vert/count8to12/flip4_i_13/O
-                         net (fo=2, routed)           0.955     1.993    stuffISee/Vert/count8to12/flip1_2
-    SLICE_X64Y60         LUT5 (Prop_lut5_I0_O)        0.332     2.325 f  stuffISee/Vert/count8to12/flip2_i_4__7/O
-                         net (fo=27, routed)          1.514     3.839    bird1/Horizontal/count0to2/flip2_4
-    SLICE_X57Y66         LUT6 (Prop_lut6_I3_O)        0.124     3.963 r  bird1/Horizontal/count0to2/flip4_i_4__2/O
-                         net (fo=5, routed)           0.853     4.815    bird1/Horizontal/count3to7/flip2_3
-    SLICE_X58Y67         LUT6 (Prop_lut6_I0_O)        0.124     4.939 r  bird1/Horizontal/count3to7/flip2_i_4__6/O
-                         net (fo=4, routed)           0.442     5.382    bird1/Horizontal/count3to7/flip2_0
-    SLICE_X58Y68         LUT6 (Prop_lut6_I1_O)        0.124     5.506 r  bird1/Horizontal/count3to7/flip2_i_1__11/O
-                         net (fo=3, routed)           0.190     5.696    bird1/Horizontal/count8to12/ce
-    SLICE_X58Y68         FDRE                                         r  bird1/Horizontal/count8to12/flip2/CE
+    SLICE_X36Y9          FDRE (Prop_fdre_C_Q)         0.456    -0.493 r  funStates/s0/Q
+                         net (fo=700, routed)         3.403     2.910    catcher/Vertical/count0to2/led_OBUF[0]
+    SLICE_X46Y19         LUT3 (Prop_lut3_I1_O)        0.124     3.034 r  catcher/Vertical/count0to2/bluezone0_carry_i_22/O
+                         net (fo=1, routed)           0.000     3.034    catcher/Vertical/count0to2/bluezone0_carry_i_22_n_0
+    SLICE_X46Y19         CARRY4 (Prop_carry4_S[1]_O[2])
+                                                      0.578     3.612 r  catcher/Vertical/count0to2/bluezone0_carry_i_10/O[2]
+                         net (fo=2, routed)           1.122     4.735    stuffISee/Vert/count3to7/bluezone0_carry_0[1]
+    SLICE_X47Y20         LUT4 (Prop_lut4_I0_O)        0.301     5.036 r  stuffISee/Vert/count3to7/bluezone0_carry_i_7/O
+                         net (fo=1, routed)           0.000     5.036    catcher/position/bluezone0_carry__0_1[1]
+    SLICE_X47Y20         CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.550     5.586 r  catcher/position/bluezone0_carry/CO[3]
+                         net (fo=1, routed)           0.000     5.586    catcher/position/bluezone0_carry_n_0
+    SLICE_X47Y21         CARRY4 (Prop_carry4_CI_CO[1])
+                                                      0.157     5.743 r  catcher/position/bluezone0_carry__0/CO[1]
+                         net (fo=2, routed)           1.384     7.127    catcher/position/winner/notag_i_2_1[0]
+    SLICE_X41Y27         LUT6 (Prop_lut6_I4_O)        0.329     7.456 r  catcher/position/winner/notag_i_4/O
+                         net (fo=1, routed)           0.433     7.889    catcher/position/winner/notag_i_4_n_0
+    SLICE_X41Y27         LUT6 (Prop_lut6_I5_O)        0.124     8.013 r  catcher/position/winner/notag_i_2/O
+                         net (fo=23, routed)          1.605     9.618    bird7/position/netblue
+    SLICE_X36Y13         LUT6 (Prop_lut6_I5_O)        0.124     9.742 r  bird7/position/flip4_i_5__15/O
+                         net (fo=1, routed)           0.855    10.596    bird7/position/bird7tag
+    SLICE_X37Y13         LUT6 (Prop_lut6_I0_O)        0.124    10.720 r  bird7/position/flip4_i_3__21/O
+                         net (fo=6, routed)           1.244    11.964    birdCounter/compressTag
+    SLICE_X38Y28         LUT6 (Prop_lut6_I0_O)        0.124    12.088 r  birdCounter/flip4_i_2__16/O
+                         net (fo=1, routed)           0.000    12.088    birdCounter/flip4_i_2__16_n_0
+    SLICE_X38Y28         FDRE                                         r  birdCounter/flip4/D
   -------------------------------------------------------------------    -------------------
 
                          (clock clk_out1_clk_wiz_0 rise edge)
@@ -839,31 +956,31 @@ Slack (MET) :             33.069ns  (required time - arrival time)
                                                      -7.217    35.332 r  not_so_slow/my_clk_inst/mmcm_adv_inst/CLKOUT0
                          net (fo=1, routed)           1.581    36.914    not_so_slow/slowclk/fastclk
     BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.091    37.005 r  not_so_slow/slowclk/XLXI_401/O
-                         net (fo=120, routed)         1.498    38.502    bird1/Horizontal/count8to12/clk
-    SLICE_X58Y68         FDRE                                         r  bird1/Horizontal/count8to12/flip2/C
-                         clock pessimism              0.562    39.064    
-                         clock uncertainty           -0.094    38.970    
-    SLICE_X58Y68         FDRE (Setup_fdre_C_CE)      -0.205    38.765    bird1/Horizontal/count8to12/flip2
+                         net (fo=361, routed)         1.433    38.438    birdCounter/clk_out
+    SLICE_X38Y28         FDRE                                         r  birdCounter/flip4/C
+                         clock pessimism              0.564    39.001    
+                         clock uncertainty           -0.094    38.907    
+    SLICE_X38Y28         FDRE (Setup_fdre_C_D)        0.081    38.988    birdCounter/flip4
   -------------------------------------------------------------------
-                         required time                         38.765    
-                         arrival time                          -5.696    
+                         required time                         38.988    
+                         arrival time                         -12.088    
   -------------------------------------------------------------------
-                         slack                                 33.069    
+                         slack                                 26.900    
 
-Slack (MET) :             33.071ns  (required time - arrival time)
-  Source:                 stuffISee/Vert/count0to2/flip2/C
+Slack (MET) :             27.140ns  (required time - arrival time)
+  Source:                 funStates/s0/C
                             (rising edge-triggered cell FDRE clocked by clk_out1_clk_wiz_0  {rise@0.000ns fall@20.000ns period=40.000ns})
-  Destination:            bird1/Horizontal/count0to2/flip1/D
+  Destination:            birdCounter/flip0/D
                             (rising edge-triggered cell FDRE clocked by clk_out1_clk_wiz_0  {rise@0.000ns fall@20.000ns period=40.000ns})
   Path Group:             clk_out1_clk_wiz_0
   Path Type:              Setup (Max at Slow Process Corner)
   Requirement:            40.000ns  (clk_out1_clk_wiz_0 rise@40.000ns - clk_out1_clk_wiz_0 rise@0.000ns)
-  Data Path Delay:        6.486ns  (logic 1.354ns (20.876%)  route 5.132ns (79.124%))
-  Logic Levels:           4  (LUT3=1 LUT5=3)
-  Clock Path Skew:        -0.109ns (DCD - SCD + CPR)
-    Destination Clock Delay (DCD):    -1.559ns = ( 38.441 - 40.000 ) 
-    Source Clock Delay      (SCD):    -0.888ns
-    Clock Pessimism Removal (CPR):    0.562ns
+  Data Path Delay:        12.793ns  (logic 2.991ns (23.381%)  route 9.802ns (76.619%))
+  Logic Levels:           10  (CARRY4=3 LUT3=2 LUT4=1 LUT6=4)
+  Clock Path Skew:        -0.050ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    -1.562ns = ( 38.438 - 40.000 ) 
+    Source Clock Delay      (SCD):    -0.949ns
+    Clock Pessimism Removal (CPR):    0.564ns
   Clock Uncertainty:      0.094ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
     Total System Jitter     (TSJ):    0.071ns
     Discrete Jitter          (DJ):    0.175ns
@@ -881,20 +998,35 @@ Slack (MET) :             33.071ns  (required time - arrival time)
                                                      -6.961    -4.269 r  not_so_slow/my_clk_inst/mmcm_adv_inst/CLKOUT0
                          net (fo=1, routed)           1.661    -2.608    not_so_slow/slowclk/fastclk
     BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.096    -2.512 r  not_so_slow/slowclk/XLXI_401/O
-                         net (fo=120, routed)         1.624    -0.888    stuffISee/Vert/count0to2/clk
-    SLICE_X63Y60         FDRE                                         r  stuffISee/Vert/count0to2/flip2/C
+                         net (fo=361, routed)         1.563    -0.949    funStates/clk_out
+    SLICE_X36Y9          FDRE                                         r  funStates/s0/C
   -------------------------------------------------------------------    -------------------
-    SLICE_X63Y60         FDRE (Prop_fdre_C_Q)         0.419    -0.469 r  stuffISee/Vert/count0to2/flip2/Q
-                         net (fo=18, routed)          1.180     0.711    stuffISee/Vert/count8to12/flip4_i_7__1
-    SLICE_X61Y58         LUT3 (Prop_lut3_I1_O)        0.327     1.038 f  stuffISee/Vert/count8to12/flip4_i_13/O
-                         net (fo=2, routed)           0.955     1.993    stuffISee/Vert/count8to12/flip1_2
-    SLICE_X64Y60         LUT5 (Prop_lut5_I0_O)        0.332     2.325 f  stuffISee/Vert/count8to12/flip2_i_4__7/O
-                         net (fo=27, routed)          1.980     4.305    bird1/Horizontal/count0to2/flip2_4
-    SLICE_X56Y65         LUT5 (Prop_lut5_I2_O)        0.124     4.429 r  bird1/Horizontal/count0to2/flip2_i_6/O
-                         net (fo=2, routed)           0.681     5.110    bird1/Horizontal/count0to2/flip2_i_6_n_0
-    SLICE_X56Y65         LUT5 (Prop_lut5_I1_O)        0.152     5.262 r  bird1/Horizontal/count0to2/flip1_i_1__21/O
-                         net (fo=1, routed)           0.336     5.598    bird1/Horizontal/count0to2/flip1_i_1__21_n_0
-    SLICE_X56Y65         FDRE                                         r  bird1/Horizontal/count0to2/flip1/D
+    SLICE_X36Y9          FDRE (Prop_fdre_C_Q)         0.456    -0.493 r  funStates/s0/Q
+                         net (fo=700, routed)         3.403     2.910    catcher/Vertical/count0to2/led_OBUF[0]
+    SLICE_X46Y19         LUT3 (Prop_lut3_I1_O)        0.124     3.034 r  catcher/Vertical/count0to2/bluezone0_carry_i_22/O
+                         net (fo=1, routed)           0.000     3.034    catcher/Vertical/count0to2/bluezone0_carry_i_22_n_0
+    SLICE_X46Y19         CARRY4 (Prop_carry4_S[1]_O[2])
+                                                      0.578     3.612 r  catcher/Vertical/count0to2/bluezone0_carry_i_10/O[2]
+                         net (fo=2, routed)           1.122     4.735    stuffISee/Vert/count3to7/bluezone0_carry_0[1]
+    SLICE_X47Y20         LUT4 (Prop_lut4_I0_O)        0.301     5.036 r  stuffISee/Vert/count3to7/bluezone0_carry_i_7/O
+                         net (fo=1, routed)           0.000     5.036    catcher/position/bluezone0_carry__0_1[1]
+    SLICE_X47Y20         CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.550     5.586 r  catcher/position/bluezone0_carry/CO[3]
+                         net (fo=1, routed)           0.000     5.586    catcher/position/bluezone0_carry_n_0
+    SLICE_X47Y21         CARRY4 (Prop_carry4_CI_CO[1])
+                                                      0.157     5.743 r  catcher/position/bluezone0_carry__0/CO[1]
+                         net (fo=2, routed)           1.384     7.127    catcher/position/winner/notag_i_2_1[0]
+    SLICE_X41Y27         LUT6 (Prop_lut6_I4_O)        0.329     7.456 r  catcher/position/winner/notag_i_4/O
+                         net (fo=1, routed)           0.433     7.889    catcher/position/winner/notag_i_4_n_0
+    SLICE_X41Y27         LUT6 (Prop_lut6_I5_O)        0.124     8.013 r  catcher/position/winner/notag_i_2/O
+                         net (fo=23, routed)          1.605     9.618    bird7/position/netblue
+    SLICE_X36Y13         LUT6 (Prop_lut6_I5_O)        0.124     9.742 r  bird7/position/flip4_i_5__15/O
+                         net (fo=1, routed)           0.855    10.596    bird7/position/bird7tag
+    SLICE_X37Y13         LUT6 (Prop_lut6_I0_O)        0.124    10.720 r  bird7/position/flip4_i_3__21/O
+                         net (fo=6, routed)           1.000    11.720    bird7/position/compressTag
+    SLICE_X38Y28         LUT3 (Prop_lut3_I0_O)        0.124    11.844 r  bird7/position/flip0_i_1__62/O
+                         net (fo=1, routed)           0.000    11.844    birdCounter/out_0
+    SLICE_X38Y28         FDRE                                         r  birdCounter/flip0/D
   -------------------------------------------------------------------    -------------------
 
                          (clock clk_out1_clk_wiz_0 rise edge)
@@ -907,16 +1039,16 @@ Slack (MET) :             33.071ns  (required time - arrival time)
                                                      -7.217    35.332 r  not_so_slow/my_clk_inst/mmcm_adv_inst/CLKOUT0
                          net (fo=1, routed)           1.581    36.914    not_so_slow/slowclk/fastclk
     BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.091    37.005 r  not_so_slow/slowclk/XLXI_401/O
-                         net (fo=120, routed)         1.437    38.441    bird1/Horizontal/count0to2/clk
-    SLICE_X56Y65         FDRE                                         r  bird1/Horizontal/count0to2/flip1/C
-                         clock pessimism              0.562    39.003    
-                         clock uncertainty           -0.094    38.909    
-    SLICE_X56Y65         FDRE (Setup_fdre_C_D)       -0.240    38.669    bird1/Horizontal/count0to2/flip1
+                         net (fo=361, routed)         1.433    38.438    birdCounter/clk_out
+    SLICE_X38Y28         FDRE                                         r  birdCounter/flip0/C
+                         clock pessimism              0.564    39.001    
+                         clock uncertainty           -0.094    38.907    
+    SLICE_X38Y28         FDRE (Setup_fdre_C_D)        0.077    38.984    birdCounter/flip0
   -------------------------------------------------------------------
-                         required time                         38.669    
-                         arrival time                          -5.598    
+                         required time                         38.984    
+                         arrival time                         -11.844    
   -------------------------------------------------------------------
-                         slack                                 33.071    
+                         slack                                 27.140    
 
 
 
@@ -924,20 +1056,20 @@ Slack (MET) :             33.071ns  (required time - arrival time)
 
 Min Delay Paths
 --------------------------------------------------------------------------------------
-Slack (MET) :             0.163ns  (arrival time - required time)
-  Source:                 catcher/Vertical/count0to2/flip0/C
+Slack (MET) :             0.117ns  (arrival time - required time)
+  Source:                 bird6/s1to4[1]/C
                             (rising edge-triggered cell FDRE clocked by clk_out1_clk_wiz_0  {rise@0.000ns fall@20.000ns period=40.000ns})
-  Destination:            catcher/Vertical/count0to2/flip2/D
+  Destination:            bird6/Horizontal/count0to2/flip0/D
                             (rising edge-triggered cell FDRE clocked by clk_out1_clk_wiz_0  {rise@0.000ns fall@20.000ns period=40.000ns})
   Path Group:             clk_out1_clk_wiz_0
   Path Type:              Hold (Min at Fast Process Corner)
   Requirement:            0.000ns  (clk_out1_clk_wiz_0 rise@0.000ns - clk_out1_clk_wiz_0 rise@0.000ns)
-  Data Path Delay:        0.296ns  (logic 0.186ns (62.765%)  route 0.110ns (37.235%))
+  Data Path Delay:        0.468ns  (logic 0.186ns (39.748%)  route 0.282ns (60.252%))
   Logic Levels:           1  (LUT6=1)
-  Clock Path Skew:        0.013ns (DCD - SCD - CPR)
-    Destination Clock Delay (DCD):    -0.831ns
-    Source Clock Delay      (SCD):    -0.592ns
-    Clock Pessimism Removal (CPR):    -0.252ns
+  Clock Path Skew:        0.260ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    -0.867ns
+    Source Clock Delay      (SCD):    -0.623ns
+    Clock Pessimism Removal (CPR):    -0.503ns
 
     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
   -------------------------------------------------------------------    -------------------
@@ -951,14 +1083,14 @@ Slack (MET) :             0.163ns  (arrival time - required time)
                                                      -2.360    -1.693 r  not_so_slow/my_clk_inst/mmcm_adv_inst/CLKOUT0
                          net (fo=1, routed)           0.486    -1.207    not_so_slow/slowclk/fastclk
     BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.026    -1.181 r  not_so_slow/slowclk/XLXI_401/O
-                         net (fo=120, routed)         0.589    -0.592    catcher/Vertical/count0to2/clk
-    SLICE_X65Y63         FDRE                                         r  catcher/Vertical/count0to2/flip0/C
+                         net (fo=361, routed)         0.558    -0.623    bird6/clk_out
+    SLICE_X36Y16         FDRE                                         r  bird6/s1to4[1]/C
   -------------------------------------------------------------------    -------------------
-    SLICE_X65Y63         FDRE (Prop_fdre_C_Q)         0.141    -0.451 r  catcher/Vertical/count0to2/flip0/Q
-                         net (fo=16, routed)          0.110    -0.341    catcher/Vertical/count0to2/flip0_0
-    SLICE_X64Y63         LUT6 (Prop_lut6_I3_O)        0.045    -0.296 r  catcher/Vertical/count0to2/flip2_i_2__13/O
-                         net (fo=1, routed)           0.000    -0.296    catcher/Vertical/count0to2/flip2_i_2__13_n_0
-    SLICE_X64Y63         FDRE                                         r  catcher/Vertical/count0to2/flip2/D
+    SLICE_X36Y16         FDRE (Prop_fdre_C_Q)         0.141    -0.482 r  bird6/s1to4[1]/Q
+                         net (fo=14, routed)          0.282    -0.200    bird6/Horizontal/count0to2/Q[0]
+    SLICE_X35Y17         LUT6 (Prop_lut6_I1_O)        0.045    -0.155 r  bird6/Horizontal/count0to2/flip0_i_1__38/O
+                         net (fo=1, routed)           0.000    -0.155    bird6/Horizontal/count0to2/out_0
+    SLICE_X35Y17         FDRE                                         r  bird6/Horizontal/count0to2/flip0/D
   -------------------------------------------------------------------    -------------------
 
                          (clock clk_out1_clk_wiz_0 rise edge)
@@ -971,30 +1103,30 @@ Slack (MET) :             0.163ns  (arrival time - required time)
                                                      -3.142    -2.248 r  not_so_slow/my_clk_inst/mmcm_adv_inst/CLKOUT0
                          net (fo=1, routed)           0.530    -1.718    not_so_slow/slowclk/fastclk
     BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.029    -1.689 r  not_so_slow/slowclk/XLXI_401/O
-                         net (fo=120, routed)         0.858    -0.831    catcher/Vertical/count0to2/clk
-    SLICE_X64Y63         FDRE                                         r  catcher/Vertical/count0to2/flip2/C
-                         clock pessimism              0.252    -0.579    
-    SLICE_X64Y63         FDRE (Hold_fdre_C_D)         0.120    -0.459    catcher/Vertical/count0to2/flip2
+                         net (fo=361, routed)         0.823    -0.867    bird6/Horizontal/count0to2/clk_out
+    SLICE_X35Y17         FDRE                                         r  bird6/Horizontal/count0to2/flip0/C
+                         clock pessimism              0.503    -0.363    
+    SLICE_X35Y17         FDRE (Hold_fdre_C_D)         0.091    -0.272    bird6/Horizontal/count0to2/flip0
   -------------------------------------------------------------------
-                         required time                          0.459    
-                         arrival time                          -0.296    
+                         required time                          0.272    
+                         arrival time                          -0.155    
   -------------------------------------------------------------------
-                         slack                                  0.163    
+                         slack                                  0.117    
 
-Slack (MET) :             0.198ns  (arrival time - required time)
-  Source:                 bird1/Vertical/count0to2/flip0/C
+Slack (MET) :             0.132ns  (arrival time - required time)
+  Source:                 bird6/s1to4[2]/C
                             (rising edge-triggered cell FDRE clocked by clk_out1_clk_wiz_0  {rise@0.000ns fall@20.000ns period=40.000ns})
-  Destination:            bird1/Vertical/count0to2/flip1/D
+  Destination:            bird6/Vertical/count0to2/flip0/D
                             (rising edge-triggered cell FDRE clocked by clk_out1_clk_wiz_0  {rise@0.000ns fall@20.000ns period=40.000ns})
   Path Group:             clk_out1_clk_wiz_0
   Path Type:              Hold (Min at Fast Process Corner)
   Requirement:            0.000ns  (clk_out1_clk_wiz_0 rise@0.000ns - clk_out1_clk_wiz_0 rise@0.000ns)
-  Data Path Delay:        0.331ns  (logic 0.186ns (56.236%)  route 0.145ns (43.764%))
-  Logic Levels:           1  (LUT5=1)
-  Clock Path Skew:        0.013ns (DCD - SCD - CPR)
-    Destination Clock Delay (DCD):    -0.860ns
-    Source Clock Delay      (SCD):    -0.619ns
-    Clock Pessimism Removal (CPR):    -0.254ns
+  Data Path Delay:        0.486ns  (logic 0.186ns (38.233%)  route 0.300ns (61.767%))
+  Logic Levels:           1  (LUT6=1)
+  Clock Path Skew:        0.263ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    -0.865ns
+    Source Clock Delay      (SCD):    -0.624ns
+    Clock Pessimism Removal (CPR):    -0.503ns
 
     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
   -------------------------------------------------------------------    -------------------
@@ -1008,14 +1140,14 @@ Slack (MET) :             0.198ns  (arrival time - required time)
                                                      -2.360    -1.693 r  not_so_slow/my_clk_inst/mmcm_adv_inst/CLKOUT0
                          net (fo=1, routed)           0.486    -1.207    not_so_slow/slowclk/fastclk
     BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.026    -1.181 r  not_so_slow/slowclk/XLXI_401/O
-                         net (fo=120, routed)         0.562    -0.619    bird1/Vertical/count0to2/clk
-    SLICE_X57Y64         FDRE                                         r  bird1/Vertical/count0to2/flip0/C
+                         net (fo=361, routed)         0.557    -0.624    bird6/clk_out
+    SLICE_X36Y17         FDRE                                         r  bird6/s1to4[2]/C
   -------------------------------------------------------------------    -------------------
-    SLICE_X57Y64         FDRE (Prop_fdre_C_Q)         0.141    -0.478 r  bird1/Vertical/count0to2/flip0/Q
-                         net (fo=15, routed)          0.145    -0.334    bird1/Vertical/count0to2/vout[0]
-    SLICE_X56Y64         LUT5 (Prop_lut5_I1_O)        0.045    -0.289 r  bird1/Vertical/count0to2/flip1_i_1__10/O
-                         net (fo=1, routed)           0.000    -0.289    bird1/Vertical/count0to2/out_1_0
-    SLICE_X56Y64         FDRE                                         r  bird1/Vertical/count0to2/flip1/D
+    SLICE_X36Y17         FDRE (Prop_fdre_C_Q)         0.141    -0.483 r  bird6/s1to4[2]/Q
+                         net (fo=13, routed)          0.300    -0.183    bird6/Vertical/count0to2/Q[1]
+    SLICE_X32Y16         LUT6 (Prop_lut6_I2_O)        0.045    -0.138 r  bird6/Vertical/count0to2/flip0_i_1__43/O
+                         net (fo=1, routed)           0.000    -0.138    bird6/Vertical/count0to2/out_0_0
+    SLICE_X32Y16         FDRE                                         r  bird6/Vertical/count0to2/flip0/D
   -------------------------------------------------------------------    -------------------
 
                          (clock clk_out1_clk_wiz_0 rise edge)
@@ -1028,28 +1160,205 @@ Slack (MET) :             0.198ns  (arrival time - required time)
                                                      -3.142    -2.248 r  not_so_slow/my_clk_inst/mmcm_adv_inst/CLKOUT0
                          net (fo=1, routed)           0.530    -1.718    not_so_slow/slowclk/fastclk
     BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.029    -1.689 r  not_so_slow/slowclk/XLXI_401/O
-                         net (fo=120, routed)         0.829    -0.860    bird1/Vertical/count0to2/clk
-    SLICE_X56Y64         FDRE                                         r  bird1/Vertical/count0to2/flip1/C
-                         clock pessimism              0.254    -0.606    
-    SLICE_X56Y64         FDRE (Hold_fdre_C_D)         0.120    -0.486    bird1/Vertical/count0to2/flip1
+                         net (fo=361, routed)         0.825    -0.865    bird6/Vertical/count0to2/clk_out
+    SLICE_X32Y16         FDRE                                         r  bird6/Vertical/count0to2/flip0/C
+                         clock pessimism              0.503    -0.361    
+    SLICE_X32Y16         FDRE (Hold_fdre_C_D)         0.091    -0.270    bird6/Vertical/count0to2/flip0
   -------------------------------------------------------------------
-                         required time                          0.486    
-                         arrival time                          -0.289    
+                         required time                          0.270    
+                         arrival time                          -0.138    
   -------------------------------------------------------------------
-                         slack                                  0.198    
+                         slack                                  0.132    
 
-Slack (MET) :             0.198ns  (arrival time - required time)
-  Source:                 bird1/Vertical/count3to7/flip0/C
+Slack (MET) :             0.152ns  (arrival time - required time)
+  Source:                 bird8/s1to4[1]/C
                             (rising edge-triggered cell FDRE clocked by clk_out1_clk_wiz_0  {rise@0.000ns fall@20.000ns period=40.000ns})
-  Destination:            bird1/Vertical/count3to7/flip2/D
+  Destination:            bird8/Horizontal/count0to2/flip2/D
                             (rising edge-triggered cell FDRE clocked by clk_out1_clk_wiz_0  {rise@0.000ns fall@20.000ns period=40.000ns})
   Path Group:             clk_out1_clk_wiz_0
   Path Type:              Hold (Min at Fast Process Corner)
   Requirement:            0.000ns  (clk_out1_clk_wiz_0 rise@0.000ns - clk_out1_clk_wiz_0 rise@0.000ns)
-  Data Path Delay:        0.331ns  (logic 0.186ns (56.236%)  route 0.145ns (43.764%))
+  Data Path Delay:        0.507ns  (logic 0.231ns (45.562%)  route 0.276ns (54.438%))
+  Logic Levels:           2  (LUT3=1 LUT6=1)
+  Clock Path Skew:        0.263ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    -0.861ns
+    Source Clock Delay      (SCD):    -0.620ns
+    Clock Pessimism Removal (CPR):    -0.503ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_out1_clk_wiz_0 rise edge)
+                                                      0.000     0.000 r  
+    W5                                                0.000     0.000 r  clkin (IN)
+                         net (fo=0)                   0.000     0.000    not_so_slow/my_clk_inst/clkin
+    W5                   IBUF (Prop_ibuf_I_O)         0.226     0.226 r  not_so_slow/my_clk_inst/clkin1_ibufg/O
+                         net (fo=1, routed)           0.440     0.667    not_so_slow/my_clk_inst/clk_in1_clk_wiz_0
+    MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -2.360    -1.693 r  not_so_slow/my_clk_inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=1, routed)           0.486    -1.207    not_so_slow/slowclk/fastclk
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.026    -1.181 r  not_so_slow/slowclk/XLXI_401/O
+                         net (fo=361, routed)         0.561    -0.620    bird8/clk_out
+    SLICE_X37Y10         FDRE                                         r  bird8/s1to4[1]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X37Y10         FDRE (Prop_fdre_C_Q)         0.141    -0.479 r  bird8/s1to4[1]/Q
+                         net (fo=14, routed)          0.120    -0.359    bird8/Horizontal/count0to2/Q[0]
+    SLICE_X36Y10         LUT3 (Prop_lut3_I0_O)        0.045    -0.314 r  bird8/Horizontal/count0to2/flip2_i_4__22/O
+                         net (fo=2, routed)           0.156    -0.158    bird8/Horizontal/count0to2/Dw0
+    SLICE_X35Y10         LUT6 (Prop_lut6_I2_O)        0.045    -0.113 r  bird8/Horizontal/count0to2/flip2_i_2__34/O
+                         net (fo=1, routed)           0.000    -0.113    bird8/Horizontal/count0to2/flip2_i_2__34_n_0
+    SLICE_X35Y10         FDRE                                         r  bird8/Horizontal/count0to2/flip2/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_out1_clk_wiz_0 rise edge)
+                                                      0.000     0.000 r  
+    W5                                                0.000     0.000 r  clkin (IN)
+                         net (fo=0)                   0.000     0.000    not_so_slow/my_clk_inst/clkin
+    W5                   IBUF (Prop_ibuf_I_O)         0.414     0.414 r  not_so_slow/my_clk_inst/clkin1_ibufg/O
+                         net (fo=1, routed)           0.480     0.894    not_so_slow/my_clk_inst/clk_in1_clk_wiz_0
+    MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -3.142    -2.248 r  not_so_slow/my_clk_inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=1, routed)           0.530    -1.718    not_so_slow/slowclk/fastclk
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.029    -1.689 r  not_so_slow/slowclk/XLXI_401/O
+                         net (fo=361, routed)         0.829    -0.861    bird8/Horizontal/count0to2/clk_out
+    SLICE_X35Y10         FDRE                                         r  bird8/Horizontal/count0to2/flip2/C
+                         clock pessimism              0.503    -0.357    
+    SLICE_X35Y10         FDRE (Hold_fdre_C_D)         0.092    -0.265    bird8/Horizontal/count0to2/flip2
+  -------------------------------------------------------------------
+                         required time                          0.265    
+                         arrival time                          -0.113    
+  -------------------------------------------------------------------
+                         slack                                  0.152    
+
+Slack (MET) :             0.153ns  (arrival time - required time)
+  Source:                 bird7/Vertical/count0to2/flip2/C
+                            (rising edge-triggered cell FDRE clocked by clk_out1_clk_wiz_0  {rise@0.000ns fall@20.000ns period=40.000ns})
+  Destination:            bird7/Vertical/count3to7/flip1/D
+                            (rising edge-triggered cell FDRE clocked by clk_out1_clk_wiz_0  {rise@0.000ns fall@20.000ns period=40.000ns})
+  Path Group:             clk_out1_clk_wiz_0
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (clk_out1_clk_wiz_0 rise@0.000ns - clk_out1_clk_wiz_0 rise@0.000ns)
+  Data Path Delay:        0.508ns  (logic 0.231ns (45.507%)  route 0.277ns (54.493%))
+  Logic Levels:           2  (LUT5=1 LUT6=1)
+  Clock Path Skew:        0.263ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    -0.859ns
+    Source Clock Delay      (SCD):    -0.618ns
+    Clock Pessimism Removal (CPR):    -0.503ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_out1_clk_wiz_0 rise edge)
+                                                      0.000     0.000 r  
+    W5                                                0.000     0.000 r  clkin (IN)
+                         net (fo=0)                   0.000     0.000    not_so_slow/my_clk_inst/clkin
+    W5                   IBUF (Prop_ibuf_I_O)         0.226     0.226 r  not_so_slow/my_clk_inst/clkin1_ibufg/O
+                         net (fo=1, routed)           0.440     0.667    not_so_slow/my_clk_inst/clk_in1_clk_wiz_0
+    MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -2.360    -1.693 r  not_so_slow/my_clk_inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=1, routed)           0.486    -1.207    not_so_slow/slowclk/fastclk
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.026    -1.181 r  not_so_slow/slowclk/XLXI_401/O
+                         net (fo=361, routed)         0.563    -0.618    bird7/Vertical/count0to2/clk_out
+    SLICE_X36Y6          FDRE                                         r  bird7/Vertical/count0to2/flip2/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X36Y6          FDRE (Prop_fdre_C_Q)         0.141    -0.477 f  bird7/Vertical/count0to2/flip2/Q
+                         net (fo=11, routed)          0.102    -0.376    bird7/Vertical/count0to2/flip2_0
+    SLICE_X37Y6          LUT6 (Prop_lut6_I3_O)        0.045    -0.331 r  bird7/Vertical/count0to2/flip4_i_4__17/O
+                         net (fo=8, routed)           0.175    -0.156    bird7/Vertical/count3to7/Dw03_out
+    SLICE_X35Y6          LUT5 (Prop_lut5_I1_O)        0.045    -0.111 r  bird7/Vertical/count3to7/flip1_i_1__57/O
+                         net (fo=1, routed)           0.000    -0.111    bird7/Vertical/count3to7/flip1_i_1__57_n_0
+    SLICE_X35Y6          FDRE                                         r  bird7/Vertical/count3to7/flip1/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_out1_clk_wiz_0 rise edge)
+                                                      0.000     0.000 r  
+    W5                                                0.000     0.000 r  clkin (IN)
+                         net (fo=0)                   0.000     0.000    not_so_slow/my_clk_inst/clkin
+    W5                   IBUF (Prop_ibuf_I_O)         0.414     0.414 r  not_so_slow/my_clk_inst/clkin1_ibufg/O
+                         net (fo=1, routed)           0.480     0.894    not_so_slow/my_clk_inst/clk_in1_clk_wiz_0
+    MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -3.142    -2.248 r  not_so_slow/my_clk_inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=1, routed)           0.530    -1.718    not_so_slow/slowclk/fastclk
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.029    -1.689 r  not_so_slow/slowclk/XLXI_401/O
+                         net (fo=361, routed)         0.831    -0.859    bird7/Vertical/count3to7/clk_out
+    SLICE_X35Y6          FDRE                                         r  bird7/Vertical/count3to7/flip1/C
+                         clock pessimism              0.503    -0.355    
+    SLICE_X35Y6          FDRE (Hold_fdre_C_D)         0.092    -0.263    bird7/Vertical/count3to7/flip1
+  -------------------------------------------------------------------
+                         required time                          0.263    
+                         arrival time                          -0.111    
+  -------------------------------------------------------------------
+                         slack                                  0.153    
+
+Slack (MET) :             0.153ns  (arrival time - required time)
+  Source:                 bird7/Vertical/count0to2/flip2/C
+                            (rising edge-triggered cell FDRE clocked by clk_out1_clk_wiz_0  {rise@0.000ns fall@20.000ns period=40.000ns})
+  Destination:            bird7/Vertical/count3to7/flip0/D
+                            (rising edge-triggered cell FDRE clocked by clk_out1_clk_wiz_0  {rise@0.000ns fall@20.000ns period=40.000ns})
+  Path Group:             clk_out1_clk_wiz_0
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (clk_out1_clk_wiz_0 rise@0.000ns - clk_out1_clk_wiz_0 rise@0.000ns)
+  Data Path Delay:        0.507ns  (logic 0.231ns (45.597%)  route 0.276ns (54.403%))
+  Logic Levels:           2  (LUT4=1 LUT6=1)
+  Clock Path Skew:        0.263ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    -0.859ns
+    Source Clock Delay      (SCD):    -0.618ns
+    Clock Pessimism Removal (CPR):    -0.503ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_out1_clk_wiz_0 rise edge)
+                                                      0.000     0.000 r  
+    W5                                                0.000     0.000 r  clkin (IN)
+                         net (fo=0)                   0.000     0.000    not_so_slow/my_clk_inst/clkin
+    W5                   IBUF (Prop_ibuf_I_O)         0.226     0.226 r  not_so_slow/my_clk_inst/clkin1_ibufg/O
+                         net (fo=1, routed)           0.440     0.667    not_so_slow/my_clk_inst/clk_in1_clk_wiz_0
+    MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -2.360    -1.693 r  not_so_slow/my_clk_inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=1, routed)           0.486    -1.207    not_so_slow/slowclk/fastclk
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.026    -1.181 r  not_so_slow/slowclk/XLXI_401/O
+                         net (fo=361, routed)         0.563    -0.618    bird7/Vertical/count0to2/clk_out
+    SLICE_X36Y6          FDRE                                         r  bird7/Vertical/count0to2/flip2/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X36Y6          FDRE (Prop_fdre_C_Q)         0.141    -0.477 f  bird7/Vertical/count0to2/flip2/Q
+                         net (fo=11, routed)          0.102    -0.376    bird7/Vertical/count0to2/flip2_0
+    SLICE_X37Y6          LUT6 (Prop_lut6_I3_O)        0.045    -0.331 r  bird7/Vertical/count0to2/flip4_i_4__17/O
+                         net (fo=8, routed)           0.174    -0.157    bird7/Vertical/count0to2/Dw03_out
+    SLICE_X35Y6          LUT4 (Prop_lut4_I2_O)        0.045    -0.112 r  bird7/Vertical/count0to2/flip0_i_1__48/O
+                         net (fo=1, routed)           0.000    -0.112    bird7/Vertical/count3to7/out_0_1
+    SLICE_X35Y6          FDRE                                         r  bird7/Vertical/count3to7/flip0/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_out1_clk_wiz_0 rise edge)
+                                                      0.000     0.000 r  
+    W5                                                0.000     0.000 r  clkin (IN)
+                         net (fo=0)                   0.000     0.000    not_so_slow/my_clk_inst/clkin
+    W5                   IBUF (Prop_ibuf_I_O)         0.414     0.414 r  not_so_slow/my_clk_inst/clkin1_ibufg/O
+                         net (fo=1, routed)           0.480     0.894    not_so_slow/my_clk_inst/clk_in1_clk_wiz_0
+    MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -3.142    -2.248 r  not_so_slow/my_clk_inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=1, routed)           0.530    -1.718    not_so_slow/slowclk/fastclk
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.029    -1.689 r  not_so_slow/slowclk/XLXI_401/O
+                         net (fo=361, routed)         0.831    -0.859    bird7/Vertical/count3to7/clk_out
+    SLICE_X35Y6          FDRE                                         r  bird7/Vertical/count3to7/flip0/C
+                         clock pessimism              0.503    -0.355    
+    SLICE_X35Y6          FDRE (Hold_fdre_C_D)         0.091    -0.264    bird7/Vertical/count3to7/flip0
+  -------------------------------------------------------------------
+                         required time                          0.264    
+                         arrival time                          -0.112    
+  -------------------------------------------------------------------
+                         slack                                  0.153    
+
+Slack (MET) :             0.174ns  (arrival time - required time)
+  Source:                 bird8/Horizontal/count3to7/flip1/C
+                            (rising edge-triggered cell FDRE clocked by clk_out1_clk_wiz_0  {rise@0.000ns fall@20.000ns period=40.000ns})
+  Destination:            bird8/Horizontal/count3to7/flip2/D
+                            (rising edge-triggered cell FDRE clocked by clk_out1_clk_wiz_0  {rise@0.000ns fall@20.000ns period=40.000ns})
+  Path Group:             clk_out1_clk_wiz_0
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (clk_out1_clk_wiz_0 rise@0.000ns - clk_out1_clk_wiz_0 rise@0.000ns)
+  Data Path Delay:        0.307ns  (logic 0.186ns (60.498%)  route 0.121ns (39.502%))
   Logic Levels:           1  (LUT6=1)
   Clock Path Skew:        0.013ns (DCD - SCD - CPR)
-    Destination Clock Delay (DCD):    -0.860ns
+    Destination Clock Delay (DCD):    -0.861ns
     Source Clock Delay      (SCD):    -0.621ns
     Clock Pessimism Removal (CPR):    -0.252ns
 
@@ -1065,14 +1374,14 @@ Slack (MET) :             0.198ns  (arrival time - required time)
                                                      -2.360    -1.693 r  not_so_slow/my_clk_inst/mmcm_adv_inst/CLKOUT0
                          net (fo=1, routed)           0.486    -1.207    not_so_slow/slowclk/fastclk
     BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.026    -1.181 r  not_so_slow/slowclk/XLXI_401/O
-                         net (fo=120, routed)         0.560    -0.621    bird1/Vertical/count3to7/clk
-    SLICE_X55Y64         FDRE                                         r  bird1/Vertical/count3to7/flip0/C
+                         net (fo=361, routed)         0.560    -0.621    bird8/Horizontal/count3to7/clk_out
+    SLICE_X35Y11         FDRE                                         r  bird8/Horizontal/count3to7/flip1/C
   -------------------------------------------------------------------    -------------------
-    SLICE_X55Y64         FDRE (Prop_fdre_C_Q)         0.141    -0.480 r  bird1/Vertical/count3to7/flip0/Q
-                         net (fo=18, routed)          0.145    -0.336    bird1/Vertical/count3to7/vout[0]
-    SLICE_X54Y64         LUT6 (Prop_lut6_I4_O)        0.045    -0.291 r  bird1/Vertical/count3to7/flip2_i_1__22/O
-                         net (fo=1, routed)           0.000    -0.291    bird1/Vertical/count3to7/flip2_i_1__22_n_0
-    SLICE_X54Y64         FDRE                                         r  bird1/Vertical/count3to7/flip2/D
+    SLICE_X35Y11         FDRE (Prop_fdre_C_Q)         0.141    -0.480 r  bird8/Horizontal/count3to7/flip1/Q
+                         net (fo=16, routed)          0.121    -0.359    bird8/Horizontal/count3to7/flip1_0
+    SLICE_X34Y11         LUT6 (Prop_lut6_I3_O)        0.045    -0.314 r  bird8/Horizontal/count3to7/flip2_i_1__41/O
+                         net (fo=1, routed)           0.000    -0.314    bird8/Horizontal/count3to7/out_2
+    SLICE_X34Y11         FDRE                                         r  bird8/Horizontal/count3to7/flip2/D
   -------------------------------------------------------------------    -------------------
 
                          (clock clk_out1_clk_wiz_0 rise edge)
@@ -1085,29 +1394,29 @@ Slack (MET) :             0.198ns  (arrival time - required time)
                                                      -3.142    -2.248 r  not_so_slow/my_clk_inst/mmcm_adv_inst/CLKOUT0
                          net (fo=1, routed)           0.530    -1.718    not_so_slow/slowclk/fastclk
     BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.029    -1.689 r  not_so_slow/slowclk/XLXI_401/O
-                         net (fo=120, routed)         0.829    -0.860    bird1/Vertical/count3to7/clk
-    SLICE_X54Y64         FDRE                                         r  bird1/Vertical/count3to7/flip2/C
+                         net (fo=361, routed)         0.829    -0.861    bird8/Horizontal/count3to7/clk_out
+    SLICE_X34Y11         FDRE                                         r  bird8/Horizontal/count3to7/flip2/C
                          clock pessimism              0.252    -0.608    
-    SLICE_X54Y64         FDRE (Hold_fdre_C_D)         0.120    -0.488    bird1/Vertical/count3to7/flip2
+    SLICE_X34Y11         FDRE (Hold_fdre_C_D)         0.120    -0.488    bird8/Horizontal/count3to7/flip2
   -------------------------------------------------------------------
                          required time                          0.488    
-                         arrival time                          -0.291    
+                         arrival time                          -0.314    
   -------------------------------------------------------------------
-                         slack                                  0.198    
+                         slack                                  0.174    
 
-Slack (MET) :             0.201ns  (arrival time - required time)
-  Source:                 bird1/Vertical/count0to2/flip0/C
+Slack (MET) :             0.177ns  (arrival time - required time)
+  Source:                 seconds/count3to7/flip0/C
                             (rising edge-triggered cell FDRE clocked by clk_out1_clk_wiz_0  {rise@0.000ns fall@20.000ns period=40.000ns})
-  Destination:            bird1/Vertical/count0to2/flip2/D
+  Destination:            seconds/count0to2/flip0/D
                             (rising edge-triggered cell FDRE clocked by clk_out1_clk_wiz_0  {rise@0.000ns fall@20.000ns period=40.000ns})
   Path Group:             clk_out1_clk_wiz_0
   Path Type:              Hold (Min at Fast Process Corner)
   Requirement:            0.000ns  (clk_out1_clk_wiz_0 rise@0.000ns - clk_out1_clk_wiz_0 rise@0.000ns)
-  Data Path Delay:        0.335ns  (logic 0.186ns (55.564%)  route 0.149ns (44.436%))
+  Data Path Delay:        0.310ns  (logic 0.186ns (60.083%)  route 0.124ns (39.917%))
   Logic Levels:           1  (LUT6=1)
   Clock Path Skew:        0.013ns (DCD - SCD - CPR)
-    Destination Clock Delay (DCD):    -0.860ns
-    Source Clock Delay      (SCD):    -0.619ns
+    Destination Clock Delay (DCD):    -0.870ns
+    Source Clock Delay      (SCD):    -0.628ns
     Clock Pessimism Removal (CPR):    -0.254ns
 
     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
@@ -1122,71 +1431,14 @@ Slack (MET) :             0.201ns  (arrival time - required time)
                                                      -2.360    -1.693 r  not_so_slow/my_clk_inst/mmcm_adv_inst/CLKOUT0
                          net (fo=1, routed)           0.486    -1.207    not_so_slow/slowclk/fastclk
     BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.026    -1.181 r  not_so_slow/slowclk/XLXI_401/O
-                         net (fo=120, routed)         0.562    -0.619    bird1/Vertical/count0to2/clk
-    SLICE_X57Y64         FDRE                                         r  bird1/Vertical/count0to2/flip0/C
+                         net (fo=361, routed)         0.553    -0.628    seconds/count3to7/clk
+    SLICE_X35Y29         FDRE                                         r  seconds/count3to7/flip0/C
   -------------------------------------------------------------------    -------------------
-    SLICE_X57Y64         FDRE (Prop_fdre_C_Q)         0.141    -0.478 r  bird1/Vertical/count0to2/flip0/Q
-                         net (fo=15, routed)          0.149    -0.330    bird1/Vertical/count0to2/vout[0]
-    SLICE_X56Y64         LUT6 (Prop_lut6_I2_O)        0.045    -0.285 r  bird1/Vertical/count0to2/flip2_i_2__10/O
-                         net (fo=1, routed)           0.000    -0.285    bird1/Vertical/count0to2/flip2_i_2__10_n_0
-    SLICE_X56Y64         FDRE                                         r  bird1/Vertical/count0to2/flip2/D
-  -------------------------------------------------------------------    -------------------
-
-                         (clock clk_out1_clk_wiz_0 rise edge)
-                                                      0.000     0.000 r  
-    W5                                                0.000     0.000 r  clkin (IN)
-                         net (fo=0)                   0.000     0.000    not_so_slow/my_clk_inst/clkin
-    W5                   IBUF (Prop_ibuf_I_O)         0.414     0.414 r  not_so_slow/my_clk_inst/clkin1_ibufg/O
-                         net (fo=1, routed)           0.480     0.894    not_so_slow/my_clk_inst/clk_in1_clk_wiz_0
-    MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
-                                                     -3.142    -2.248 r  not_so_slow/my_clk_inst/mmcm_adv_inst/CLKOUT0
-                         net (fo=1, routed)           0.530    -1.718    not_so_slow/slowclk/fastclk
-    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.029    -1.689 r  not_so_slow/slowclk/XLXI_401/O
-                         net (fo=120, routed)         0.829    -0.860    bird1/Vertical/count0to2/clk
-    SLICE_X56Y64         FDRE                                         r  bird1/Vertical/count0to2/flip2/C
-                         clock pessimism              0.254    -0.606    
-    SLICE_X56Y64         FDRE (Hold_fdre_C_D)         0.121    -0.485    bird1/Vertical/count0to2/flip2
-  -------------------------------------------------------------------
-                         required time                          0.485    
-                         arrival time                          -0.285    
-  -------------------------------------------------------------------
-                         slack                                  0.201    
-
-Slack (MET) :             0.215ns  (arrival time - required time)
-  Source:                 bird1/Horizontal/count0to2/flip1/C
-                            (rising edge-triggered cell FDRE clocked by clk_out1_clk_wiz_0  {rise@0.000ns fall@20.000ns period=40.000ns})
-  Destination:            bird1/Horizontal/count0to2/flip2/D
-                            (rising edge-triggered cell FDRE clocked by clk_out1_clk_wiz_0  {rise@0.000ns fall@20.000ns period=40.000ns})
-  Path Group:             clk_out1_clk_wiz_0
-  Path Type:              Hold (Min at Fast Process Corner)
-  Requirement:            0.000ns  (clk_out1_clk_wiz_0 rise@0.000ns - clk_out1_clk_wiz_0 rise@0.000ns)
-  Data Path Delay:        0.335ns  (logic 0.246ns (73.470%)  route 0.089ns (26.530%))
-  Logic Levels:           1  (LUT6=1)
-  Clock Path Skew:        0.000ns (DCD - SCD - CPR)
-    Destination Clock Delay (DCD):    -0.861ns
-    Source Clock Delay      (SCD):    -0.619ns
-    Clock Pessimism Removal (CPR):    -0.242ns
-
-    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
-  -------------------------------------------------------------------    -------------------
-                         (clock clk_out1_clk_wiz_0 rise edge)
-                                                      0.000     0.000 r  
-    W5                                                0.000     0.000 r  clkin (IN)
-                         net (fo=0)                   0.000     0.000    not_so_slow/my_clk_inst/clkin
-    W5                   IBUF (Prop_ibuf_I_O)         0.226     0.226 r  not_so_slow/my_clk_inst/clkin1_ibufg/O
-                         net (fo=1, routed)           0.440     0.667    not_so_slow/my_clk_inst/clk_in1_clk_wiz_0
-    MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
-                                                     -2.360    -1.693 r  not_so_slow/my_clk_inst/mmcm_adv_inst/CLKOUT0
-                         net (fo=1, routed)           0.486    -1.207    not_so_slow/slowclk/fastclk
-    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.026    -1.181 r  not_so_slow/slowclk/XLXI_401/O
-                         net (fo=120, routed)         0.562    -0.619    bird1/Horizontal/count0to2/clk
-    SLICE_X56Y65         FDRE                                         r  bird1/Horizontal/count0to2/flip1/C
-  -------------------------------------------------------------------    -------------------
-    SLICE_X56Y65         FDRE (Prop_fdre_C_Q)         0.148    -0.471 r  bird1/Horizontal/count0to2/flip1/Q
-                         net (fo=12, routed)          0.089    -0.382    bird1/Horizontal/count0to2/hout[1]
-    SLICE_X56Y65         LUT6 (Prop_lut6_I4_O)        0.098    -0.284 r  bird1/Horizontal/count0to2/flip2_i_2__12/O
-                         net (fo=1, routed)           0.000    -0.284    bird1/Horizontal/count0to2/flip2_i_2__12_n_0
-    SLICE_X56Y65         FDRE                                         r  bird1/Horizontal/count0to2/flip2/D
+    SLICE_X35Y29         FDRE (Prop_fdre_C_Q)         0.141    -0.487 f  seconds/count3to7/flip0/Q
+                         net (fo=10, routed)          0.124    -0.364    seconds/count3to7/flip0_0[0]
+    SLICE_X34Y29         LUT6 (Prop_lut6_I5_O)        0.045    -0.319 r  seconds/count3to7/flip0_i_1__56/O
+                         net (fo=1, routed)           0.000    -0.319    seconds/count0to2/out_0_0
+    SLICE_X34Y29         FDRE                                         r  seconds/count0to2/flip0/D
   -------------------------------------------------------------------    -------------------
 
                          (clock clk_out1_clk_wiz_0 rise edge)
@@ -1199,201 +1451,30 @@ Slack (MET) :             0.215ns  (arrival time - required time)
                                                      -3.142    -2.248 r  not_so_slow/my_clk_inst/mmcm_adv_inst/CLKOUT0
                          net (fo=1, routed)           0.530    -1.718    not_so_slow/slowclk/fastclk
     BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.029    -1.689 r  not_so_slow/slowclk/XLXI_401/O
-                         net (fo=120, routed)         0.828    -0.861    bird1/Horizontal/count0to2/clk
-    SLICE_X56Y65         FDRE                                         r  bird1/Horizontal/count0to2/flip2/C
-                         clock pessimism              0.242    -0.619    
-    SLICE_X56Y65         FDRE (Hold_fdre_C_D)         0.120    -0.499    bird1/Horizontal/count0to2/flip2
+                         net (fo=361, routed)         0.820    -0.870    seconds/count0to2/clk
+    SLICE_X34Y29         FDRE                                         r  seconds/count0to2/flip0/C
+                         clock pessimism              0.254    -0.615    
+    SLICE_X34Y29         FDRE (Hold_fdre_C_D)         0.120    -0.495    seconds/count0to2/flip0
   -------------------------------------------------------------------
-                         required time                          0.499    
-                         arrival time                          -0.284    
+                         required time                          0.495    
+                         arrival time                          -0.319    
   -------------------------------------------------------------------
-                         slack                                  0.215    
+                         slack                                  0.177    
 
-Slack (MET) :             0.217ns  (arrival time - required time)
-  Source:                 stuffISee/Hori/count8to12/flip3/C
+Slack (MET) :             0.181ns  (arrival time - required time)
+  Source:                 bird4/Horizontal/count8to12/flip1/C
                             (rising edge-triggered cell FDRE clocked by clk_out1_clk_wiz_0  {rise@0.000ns fall@20.000ns period=40.000ns})
-  Destination:            stuffISee/Hori/count8to12/flip4/D
-                            (rising edge-triggered cell FDRE clocked by clk_out1_clk_wiz_0  {rise@0.000ns fall@20.000ns period=40.000ns})
-  Path Group:             clk_out1_clk_wiz_0
-  Path Type:              Hold (Min at Fast Process Corner)
-  Requirement:            0.000ns  (clk_out1_clk_wiz_0 rise@0.000ns - clk_out1_clk_wiz_0 rise@0.000ns)
-  Data Path Delay:        0.309ns  (logic 0.227ns (73.472%)  route 0.082ns (26.528%))
-  Logic Levels:           1  (LUT6=1)
-  Clock Path Skew:        0.000ns (DCD - SCD - CPR)
-    Destination Clock Delay (DCD):    -0.827ns
-    Source Clock Delay      (SCD):    -0.589ns
-    Clock Pessimism Removal (CPR):    -0.238ns
-
-    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
-  -------------------------------------------------------------------    -------------------
-                         (clock clk_out1_clk_wiz_0 rise edge)
-                                                      0.000     0.000 r  
-    W5                                                0.000     0.000 r  clkin (IN)
-                         net (fo=0)                   0.000     0.000    not_so_slow/my_clk_inst/clkin
-    W5                   IBUF (Prop_ibuf_I_O)         0.226     0.226 r  not_so_slow/my_clk_inst/clkin1_ibufg/O
-                         net (fo=1, routed)           0.440     0.667    not_so_slow/my_clk_inst/clk_in1_clk_wiz_0
-    MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
-                                                     -2.360    -1.693 r  not_so_slow/my_clk_inst/mmcm_adv_inst/CLKOUT0
-                         net (fo=1, routed)           0.486    -1.207    not_so_slow/slowclk/fastclk
-    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.026    -1.181 r  not_so_slow/slowclk/XLXI_401/O
-                         net (fo=120, routed)         0.592    -0.589    stuffISee/Hori/count8to12/clk
-    SLICE_X65Y58         FDRE                                         r  stuffISee/Hori/count8to12/flip3/C
-  -------------------------------------------------------------------    -------------------
-    SLICE_X65Y58         FDRE (Prop_fdre_C_Q)         0.128    -0.461 r  stuffISee/Hori/count8to12/flip3/Q
-                         net (fo=4, routed)           0.082    -0.379    stuffISee/Hori/count8to12/flip4_0[0]
-    SLICE_X65Y58         LUT6 (Prop_lut6_I4_O)        0.099    -0.280 r  stuffISee/Hori/count8to12/flip4_i_2__1/O
-                         net (fo=1, routed)           0.000    -0.280    stuffISee/Hori/count8to12/out_4
-    SLICE_X65Y58         FDRE                                         r  stuffISee/Hori/count8to12/flip4/D
-  -------------------------------------------------------------------    -------------------
-
-                         (clock clk_out1_clk_wiz_0 rise edge)
-                                                      0.000     0.000 r  
-    W5                                                0.000     0.000 r  clkin (IN)
-                         net (fo=0)                   0.000     0.000    not_so_slow/my_clk_inst/clkin
-    W5                   IBUF (Prop_ibuf_I_O)         0.414     0.414 r  not_so_slow/my_clk_inst/clkin1_ibufg/O
-                         net (fo=1, routed)           0.480     0.894    not_so_slow/my_clk_inst/clk_in1_clk_wiz_0
-    MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
-                                                     -3.142    -2.248 r  not_so_slow/my_clk_inst/mmcm_adv_inst/CLKOUT0
-                         net (fo=1, routed)           0.530    -1.718    not_so_slow/slowclk/fastclk
-    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.029    -1.689 r  not_so_slow/slowclk/XLXI_401/O
-                         net (fo=120, routed)         0.862    -0.827    stuffISee/Hori/count8to12/clk
-    SLICE_X65Y58         FDRE                                         r  stuffISee/Hori/count8to12/flip4/C
-                         clock pessimism              0.238    -0.589    
-    SLICE_X65Y58         FDRE (Hold_fdre_C_D)         0.092    -0.497    stuffISee/Hori/count8to12/flip4
-  -------------------------------------------------------------------
-                         required time                          0.497    
-                         arrival time                          -0.280    
-  -------------------------------------------------------------------
-                         slack                                  0.217    
-
-Slack (MET) :             0.217ns  (arrival time - required time)
-  Source:                 syncer/sync0/C
-                            (rising edge-triggered cell FDRE clocked by clk_out1_clk_wiz_0  {rise@0.000ns fall@20.000ns period=40.000ns})
-  Destination:            bird2/Vertical/count0to2/flip0/D
+  Destination:            bird4/Horizontal/count8to12/flip2/D
                             (rising edge-triggered cell FDRE clocked by clk_out1_clk_wiz_0  {rise@0.000ns fall@20.000ns period=40.000ns})
   Path Group:             clk_out1_clk_wiz_0
   Path Type:              Hold (Min at Fast Process Corner)
   Requirement:            0.000ns  (clk_out1_clk_wiz_0 rise@0.000ns - clk_out1_clk_wiz_0 rise@0.000ns)
-  Data Path Delay:        0.374ns  (logic 0.209ns (55.859%)  route 0.165ns (44.141%))
-  Logic Levels:           1  (LUT6=1)
-  Clock Path Skew:        0.037ns (DCD - SCD - CPR)
-    Destination Clock Delay (DCD):    -0.855ns
-    Source Clock Delay      (SCD):    -0.617ns
-    Clock Pessimism Removal (CPR):    -0.275ns
-
-    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
-  -------------------------------------------------------------------    -------------------
-                         (clock clk_out1_clk_wiz_0 rise edge)
-                                                      0.000     0.000 r  
-    W5                                                0.000     0.000 r  clkin (IN)
-                         net (fo=0)                   0.000     0.000    not_so_slow/my_clk_inst/clkin
-    W5                   IBUF (Prop_ibuf_I_O)         0.226     0.226 r  not_so_slow/my_clk_inst/clkin1_ibufg/O
-                         net (fo=1, routed)           0.440     0.667    not_so_slow/my_clk_inst/clk_in1_clk_wiz_0
-    MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
-                                                     -2.360    -1.693 r  not_so_slow/my_clk_inst/mmcm_adv_inst/CLKOUT0
-                         net (fo=1, routed)           0.486    -1.207    not_so_slow/slowclk/fastclk
-    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.026    -1.181 r  not_so_slow/slowclk/XLXI_401/O
-                         net (fo=120, routed)         0.564    -0.617    syncer/clk
-    SLICE_X54Y56         FDRE                                         r  syncer/sync0/C
-  -------------------------------------------------------------------    -------------------
-    SLICE_X54Y56         FDRE (Prop_fdre_C_Q)         0.164    -0.453 f  syncer/sync0/Q
-                         net (fo=26, routed)          0.165    -0.288    bird2/Vertical/count0to2/q[0]
-    SLICE_X56Y56         LUT6 (Prop_lut6_I3_O)        0.045    -0.243 r  bird2/Vertical/count0to2/flip0_i_1__8/O
-                         net (fo=1, routed)           0.000    -0.243    bird2/Vertical/count0to2/out_0
-    SLICE_X56Y56         FDRE                                         r  bird2/Vertical/count0to2/flip0/D
-  -------------------------------------------------------------------    -------------------
-
-                         (clock clk_out1_clk_wiz_0 rise edge)
-                                                      0.000     0.000 r  
-    W5                                                0.000     0.000 r  clkin (IN)
-                         net (fo=0)                   0.000     0.000    not_so_slow/my_clk_inst/clkin
-    W5                   IBUF (Prop_ibuf_I_O)         0.414     0.414 r  not_so_slow/my_clk_inst/clkin1_ibufg/O
-                         net (fo=1, routed)           0.480     0.894    not_so_slow/my_clk_inst/clk_in1_clk_wiz_0
-    MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
-                                                     -3.142    -2.248 r  not_so_slow/my_clk_inst/mmcm_adv_inst/CLKOUT0
-                         net (fo=1, routed)           0.530    -1.718    not_so_slow/slowclk/fastclk
-    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.029    -1.689 r  not_so_slow/slowclk/XLXI_401/O
-                         net (fo=120, routed)         0.834    -0.855    bird2/Vertical/count0to2/clk
-    SLICE_X56Y56         FDRE                                         r  bird2/Vertical/count0to2/flip0/C
-                         clock pessimism              0.275    -0.580    
-    SLICE_X56Y56         FDRE (Hold_fdre_C_D)         0.120    -0.460    bird2/Vertical/count0to2/flip0
-  -------------------------------------------------------------------
-                         required time                          0.460    
-                         arrival time                          -0.243    
-  -------------------------------------------------------------------
-                         slack                                  0.217    
-
-Slack (MET) :             0.223ns  (arrival time - required time)
-  Source:                 stuffISee/Vert/count8to12/flip4/C
-                            (rising edge-triggered cell FDRE clocked by clk_out1_clk_wiz_0  {rise@0.000ns fall@20.000ns period=40.000ns})
-  Destination:            stuffISee/Vert/count13to15/flip0/D
-                            (rising edge-triggered cell FDRE clocked by clk_out1_clk_wiz_0  {rise@0.000ns fall@20.000ns period=40.000ns})
-  Path Group:             clk_out1_clk_wiz_0
-  Path Type:              Hold (Min at Fast Process Corner)
-  Requirement:            0.000ns  (clk_out1_clk_wiz_0 rise@0.000ns - clk_out1_clk_wiz_0 rise@0.000ns)
-  Data Path Delay:        0.327ns  (logic 0.186ns (56.882%)  route 0.141ns (43.118%))
-  Logic Levels:           1  (LUT5=1)
-  Clock Path Skew:        0.013ns (DCD - SCD - CPR)
-    Destination Clock Delay (DCD):    -0.827ns
-    Source Clock Delay      (SCD):    -0.589ns
-    Clock Pessimism Removal (CPR):    -0.251ns
-
-    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
-  -------------------------------------------------------------------    -------------------
-                         (clock clk_out1_clk_wiz_0 rise edge)
-                                                      0.000     0.000 r  
-    W5                                                0.000     0.000 r  clkin (IN)
-                         net (fo=0)                   0.000     0.000    not_so_slow/my_clk_inst/clkin
-    W5                   IBUF (Prop_ibuf_I_O)         0.226     0.226 r  not_so_slow/my_clk_inst/clkin1_ibufg/O
-                         net (fo=1, routed)           0.440     0.667    not_so_slow/my_clk_inst/clk_in1_clk_wiz_0
-    MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
-                                                     -2.360    -1.693 r  not_so_slow/my_clk_inst/mmcm_adv_inst/CLKOUT0
-                         net (fo=1, routed)           0.486    -1.207    not_so_slow/slowclk/fastclk
-    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.026    -1.181 r  not_so_slow/slowclk/XLXI_401/O
-                         net (fo=120, routed)         0.592    -0.589    stuffISee/Vert/count8to12/clk
-    SLICE_X62Y58         FDRE                                         r  stuffISee/Vert/count8to12/flip4/C
-  -------------------------------------------------------------------    -------------------
-    SLICE_X62Y58         FDRE (Prop_fdre_C_Q)         0.141    -0.448 r  stuffISee/Vert/count8to12/flip4/Q
-                         net (fo=7, routed)           0.141    -0.307    stuffISee/Vert/count8to12/flip4_0[1]
-    SLICE_X63Y58         LUT5 (Prop_lut5_I0_O)        0.045    -0.262 r  stuffISee/Vert/count8to12/flip0_i_1__3/O
-                         net (fo=1, routed)           0.000    -0.262    stuffISee/Vert/count13to15/out_0
-    SLICE_X63Y58         FDRE                                         r  stuffISee/Vert/count13to15/flip0/D
-  -------------------------------------------------------------------    -------------------
-
-                         (clock clk_out1_clk_wiz_0 rise edge)
-                                                      0.000     0.000 r  
-    W5                                                0.000     0.000 r  clkin (IN)
-                         net (fo=0)                   0.000     0.000    not_so_slow/my_clk_inst/clkin
-    W5                   IBUF (Prop_ibuf_I_O)         0.414     0.414 r  not_so_slow/my_clk_inst/clkin1_ibufg/O
-                         net (fo=1, routed)           0.480     0.894    not_so_slow/my_clk_inst/clk_in1_clk_wiz_0
-    MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
-                                                     -3.142    -2.248 r  not_so_slow/my_clk_inst/mmcm_adv_inst/CLKOUT0
-                         net (fo=1, routed)           0.530    -1.718    not_so_slow/slowclk/fastclk
-    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.029    -1.689 r  not_so_slow/slowclk/XLXI_401/O
-                         net (fo=120, routed)         0.862    -0.827    stuffISee/Vert/count13to15/clk
-    SLICE_X63Y58         FDRE                                         r  stuffISee/Vert/count13to15/flip0/C
-                         clock pessimism              0.251    -0.576    
-    SLICE_X63Y58         FDRE (Hold_fdre_C_D)         0.091    -0.485    stuffISee/Vert/count13to15/flip0
-  -------------------------------------------------------------------
-                         required time                          0.485    
-                         arrival time                          -0.262    
-  -------------------------------------------------------------------
-                         slack                                  0.223    
-
-Slack (MET) :             0.223ns  (arrival time - required time)
-  Source:                 stuffISee/Vert/count8to12/flip4/C
-                            (rising edge-triggered cell FDRE clocked by clk_out1_clk_wiz_0  {rise@0.000ns fall@20.000ns period=40.000ns})
-  Destination:            stuffISee/Vert/count13to15/flip1/D
-                            (rising edge-triggered cell FDRE clocked by clk_out1_clk_wiz_0  {rise@0.000ns fall@20.000ns period=40.000ns})
-  Path Group:             clk_out1_clk_wiz_0
-  Path Type:              Hold (Min at Fast Process Corner)
-  Requirement:            0.000ns  (clk_out1_clk_wiz_0 rise@0.000ns - clk_out1_clk_wiz_0 rise@0.000ns)
-  Data Path Delay:        0.328ns  (logic 0.186ns (56.708%)  route 0.142ns (43.292%))
+  Data Path Delay:        0.315ns  (logic 0.186ns (59.052%)  route 0.129ns (40.948%))
   Logic Levels:           1  (LUT6=1)
   Clock Path Skew:        0.013ns (DCD - SCD - CPR)
-    Destination Clock Delay (DCD):    -0.827ns
-    Source Clock Delay      (SCD):    -0.589ns
-    Clock Pessimism Removal (CPR):    -0.251ns
+    Destination Clock Delay (DCD):    -0.854ns
+    Source Clock Delay      (SCD):    -0.616ns
+    Clock Pessimism Removal (CPR):    -0.250ns
 
     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
   -------------------------------------------------------------------    -------------------
@@ -1407,14 +1488,14 @@ Slack (MET) :             0.223ns  (arrival time - required time)
                                                      -2.360    -1.693 r  not_so_slow/my_clk_inst/mmcm_adv_inst/CLKOUT0
                          net (fo=1, routed)           0.486    -1.207    not_so_slow/slowclk/fastclk
     BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.026    -1.181 r  not_so_slow/slowclk/XLXI_401/O
-                         net (fo=120, routed)         0.592    -0.589    stuffISee/Vert/count8to12/clk
-    SLICE_X62Y58         FDRE                                         r  stuffISee/Vert/count8to12/flip4/C
+                         net (fo=361, routed)         0.565    -0.616    bird4/Horizontal/count8to12/clk_out
+    SLICE_X51Y9          FDRE                                         r  bird4/Horizontal/count8to12/flip1/C
   -------------------------------------------------------------------    -------------------
-    SLICE_X62Y58         FDRE (Prop_fdre_C_Q)         0.141    -0.448 r  stuffISee/Vert/count8to12/flip4/Q
-                         net (fo=7, routed)           0.142    -0.306    stuffISee/Vert/count8to12/flip4_0[1]
-    SLICE_X63Y58         LUT6 (Prop_lut6_I0_O)        0.045    -0.261 r  stuffISee/Vert/count8to12/flip1_i_1__2/O
-                         net (fo=1, routed)           0.000    -0.261    stuffISee/Vert/count13to15/out_1
-    SLICE_X63Y58         FDRE                                         r  stuffISee/Vert/count13to15/flip1/D
+    SLICE_X51Y9          FDRE (Prop_fdre_C_Q)         0.141    -0.475 r  bird4/Horizontal/count8to12/flip1/Q
+                         net (fo=10, routed)          0.129    -0.346    bird4/Horizontal/count8to12/flip1_0
+    SLICE_X50Y9          LUT6 (Prop_lut6_I2_O)        0.045    -0.301 r  bird4/Horizontal/count8to12/flip2_i_2__22/O
+                         net (fo=1, routed)           0.000    -0.301    bird4/Horizontal/count8to12/flip2_i_2__22_n_0
+    SLICE_X50Y9          FDRE                                         r  bird4/Horizontal/count8to12/flip2/D
   -------------------------------------------------------------------    -------------------
 
                          (clock clk_out1_clk_wiz_0 rise edge)
@@ -1427,30 +1508,30 @@ Slack (MET) :             0.223ns  (arrival time - required time)
                                                      -3.142    -2.248 r  not_so_slow/my_clk_inst/mmcm_adv_inst/CLKOUT0
                          net (fo=1, routed)           0.530    -1.718    not_so_slow/slowclk/fastclk
     BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.029    -1.689 r  not_so_slow/slowclk/XLXI_401/O
-                         net (fo=120, routed)         0.862    -0.827    stuffISee/Vert/count13to15/clk
-    SLICE_X63Y58         FDRE                                         r  stuffISee/Vert/count13to15/flip1/C
-                         clock pessimism              0.251    -0.576    
-    SLICE_X63Y58         FDRE (Hold_fdre_C_D)         0.092    -0.484    stuffISee/Vert/count13to15/flip1
+                         net (fo=361, routed)         0.836    -0.854    bird4/Horizontal/count8to12/clk_out
+    SLICE_X50Y9          FDRE                                         r  bird4/Horizontal/count8to12/flip2/C
+                         clock pessimism              0.250    -0.603    
+    SLICE_X50Y9          FDRE (Hold_fdre_C_D)         0.121    -0.482    bird4/Horizontal/count8to12/flip2
   -------------------------------------------------------------------
-                         required time                          0.484    
-                         arrival time                          -0.261    
+                         required time                          0.482    
+                         arrival time                          -0.301    
   -------------------------------------------------------------------
-                         slack                                  0.223    
+                         slack                                  0.181    
 
-Slack (MET) :             0.227ns  (arrival time - required time)
-  Source:                 bird1/Horizontal/count8to12/flip1/C
+Slack (MET) :             0.182ns  (arrival time - required time)
+  Source:                 bird6/s1to4[2]/C
                             (rising edge-triggered cell FDRE clocked by clk_out1_clk_wiz_0  {rise@0.000ns fall@20.000ns period=40.000ns})
-  Destination:            bird1/Horizontal/count8to12/flip2/D
+  Destination:            bird6/Horizontal/count0to2/flip0/CE
                             (rising edge-triggered cell FDRE clocked by clk_out1_clk_wiz_0  {rise@0.000ns fall@20.000ns period=40.000ns})
   Path Group:             clk_out1_clk_wiz_0
   Path Type:              Hold (Min at Fast Process Corner)
   Requirement:            0.000ns  (clk_out1_clk_wiz_0 rise@0.000ns - clk_out1_clk_wiz_0 rise@0.000ns)
-  Data Path Delay:        0.319ns  (logic 0.227ns (71.097%)  route 0.092ns (28.903%))
+  Data Path Delay:        0.404ns  (logic 0.186ns (45.988%)  route 0.218ns (54.012%))
   Logic Levels:           1  (LUT6=1)
-  Clock Path Skew:        0.000ns (DCD - SCD - CPR)
-    Destination Clock Delay (DCD):    -0.837ns
-    Source Clock Delay      (SCD):    -0.596ns
-    Clock Pessimism Removal (CPR):    -0.241ns
+  Clock Path Skew:        0.261ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    -0.867ns
+    Source Clock Delay      (SCD):    -0.624ns
+    Clock Pessimism Removal (CPR):    -0.503ns
 
     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
   -------------------------------------------------------------------    -------------------
@@ -1464,14 +1545,14 @@ Slack (MET) :             0.227ns  (arrival time - required time)
                                                      -2.360    -1.693 r  not_so_slow/my_clk_inst/mmcm_adv_inst/CLKOUT0
                          net (fo=1, routed)           0.486    -1.207    not_so_slow/slowclk/fastclk
     BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.026    -1.181 r  not_so_slow/slowclk/XLXI_401/O
-                         net (fo=120, routed)         0.585    -0.596    bird1/Horizontal/count8to12/clk
-    SLICE_X58Y68         FDRE                                         r  bird1/Horizontal/count8to12/flip1/C
+                         net (fo=361, routed)         0.557    -0.624    bird6/clk_out
+    SLICE_X36Y17         FDRE                                         r  bird6/s1to4[2]/C
   -------------------------------------------------------------------    -------------------
-    SLICE_X58Y68         FDRE (Prop_fdre_C_Q)         0.128    -0.468 r  bird1/Horizontal/count8to12/flip1/Q
-                         net (fo=10, routed)          0.092    -0.376    bird1/Horizontal/count8to12/flip2_0[1]
-    SLICE_X58Y68         LUT6 (Prop_lut6_I4_O)        0.099    -0.277 r  bird1/Horizontal/count8to12/flip2_i_2__11/O
-                         net (fo=1, routed)           0.000    -0.277    bird1/Horizontal/count8to12/flip2_i_2__11_n_0
-    SLICE_X58Y68         FDRE                                         r  bird1/Horizontal/count8to12/flip2/D
+    SLICE_X36Y17         FDRE (Prop_fdre_C_Q)         0.141    -0.483 r  bird6/s1to4[2]/Q
+                         net (fo=13, routed)          0.163    -0.321    bird6/Horizontal/count0to2/Q[1]
+    SLICE_X34Y17         LUT6 (Prop_lut6_I4_O)        0.045    -0.276 r  bird6/Horizontal/count0to2/flip2_i_1__32/O
+                         net (fo=3, routed)           0.056    -0.220    bird6/Horizontal/count0to2/ce_0
+    SLICE_X35Y17         FDRE                                         r  bird6/Horizontal/count0to2/flip0/CE
   -------------------------------------------------------------------    -------------------
 
                          (clock clk_out1_clk_wiz_0 rise edge)
@@ -1484,15 +1565,72 @@ Slack (MET) :             0.227ns  (arrival time - required time)
                                                      -3.142    -2.248 r  not_so_slow/my_clk_inst/mmcm_adv_inst/CLKOUT0
                          net (fo=1, routed)           0.530    -1.718    not_so_slow/slowclk/fastclk
     BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.029    -1.689 r  not_so_slow/slowclk/XLXI_401/O
-                         net (fo=120, routed)         0.853    -0.837    bird1/Horizontal/count8to12/clk
-    SLICE_X58Y68         FDRE                                         r  bird1/Horizontal/count8to12/flip2/C
-                         clock pessimism              0.241    -0.596    
-    SLICE_X58Y68         FDRE (Hold_fdre_C_D)         0.092    -0.504    bird1/Horizontal/count8to12/flip2
+                         net (fo=361, routed)         0.823    -0.867    bird6/Horizontal/count0to2/clk_out
+    SLICE_X35Y17         FDRE                                         r  bird6/Horizontal/count0to2/flip0/C
+                         clock pessimism              0.503    -0.363    
+    SLICE_X35Y17         FDRE (Hold_fdre_C_CE)       -0.039    -0.402    bird6/Horizontal/count0to2/flip0
   -------------------------------------------------------------------
-                         required time                          0.504    
-                         arrival time                          -0.277    
+                         required time                          0.402    
+                         arrival time                          -0.220    
   -------------------------------------------------------------------
-                         slack                                  0.227    
+                         slack                                  0.182    
+
+Slack (MET) :             0.182ns  (arrival time - required time)
+  Source:                 bird6/s1to4[2]/C
+                            (rising edge-triggered cell FDRE clocked by clk_out1_clk_wiz_0  {rise@0.000ns fall@20.000ns period=40.000ns})
+  Destination:            bird6/Horizontal/count0to2/flip1/CE
+                            (rising edge-triggered cell FDRE clocked by clk_out1_clk_wiz_0  {rise@0.000ns fall@20.000ns period=40.000ns})
+  Path Group:             clk_out1_clk_wiz_0
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (clk_out1_clk_wiz_0 rise@0.000ns - clk_out1_clk_wiz_0 rise@0.000ns)
+  Data Path Delay:        0.404ns  (logic 0.186ns (45.988%)  route 0.218ns (54.012%))
+  Logic Levels:           1  (LUT6=1)
+  Clock Path Skew:        0.261ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    -0.867ns
+    Source Clock Delay      (SCD):    -0.624ns
+    Clock Pessimism Removal (CPR):    -0.503ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_out1_clk_wiz_0 rise edge)
+                                                      0.000     0.000 r  
+    W5                                                0.000     0.000 r  clkin (IN)
+                         net (fo=0)                   0.000     0.000    not_so_slow/my_clk_inst/clkin
+    W5                   IBUF (Prop_ibuf_I_O)         0.226     0.226 r  not_so_slow/my_clk_inst/clkin1_ibufg/O
+                         net (fo=1, routed)           0.440     0.667    not_so_slow/my_clk_inst/clk_in1_clk_wiz_0
+    MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -2.360    -1.693 r  not_so_slow/my_clk_inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=1, routed)           0.486    -1.207    not_so_slow/slowclk/fastclk
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.026    -1.181 r  not_so_slow/slowclk/XLXI_401/O
+                         net (fo=361, routed)         0.557    -0.624    bird6/clk_out
+    SLICE_X36Y17         FDRE                                         r  bird6/s1to4[2]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X36Y17         FDRE (Prop_fdre_C_Q)         0.141    -0.483 r  bird6/s1to4[2]/Q
+                         net (fo=13, routed)          0.163    -0.321    bird6/Horizontal/count0to2/Q[1]
+    SLICE_X34Y17         LUT6 (Prop_lut6_I4_O)        0.045    -0.276 r  bird6/Horizontal/count0to2/flip2_i_1__32/O
+                         net (fo=3, routed)           0.056    -0.220    bird6/Horizontal/count0to2/ce_0
+    SLICE_X35Y17         FDRE                                         r  bird6/Horizontal/count0to2/flip1/CE
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_out1_clk_wiz_0 rise edge)
+                                                      0.000     0.000 r  
+    W5                                                0.000     0.000 r  clkin (IN)
+                         net (fo=0)                   0.000     0.000    not_so_slow/my_clk_inst/clkin
+    W5                   IBUF (Prop_ibuf_I_O)         0.414     0.414 r  not_so_slow/my_clk_inst/clkin1_ibufg/O
+                         net (fo=1, routed)           0.480     0.894    not_so_slow/my_clk_inst/clk_in1_clk_wiz_0
+    MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -3.142    -2.248 r  not_so_slow/my_clk_inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=1, routed)           0.530    -1.718    not_so_slow/slowclk/fastclk
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.029    -1.689 r  not_so_slow/slowclk/XLXI_401/O
+                         net (fo=361, routed)         0.823    -0.867    bird6/Horizontal/count0to2/clk_out
+    SLICE_X35Y17         FDRE                                         r  bird6/Horizontal/count0to2/flip1/C
+                         clock pessimism              0.503    -0.363    
+    SLICE_X35Y17         FDRE (Hold_fdre_C_CE)       -0.039    -0.402    bird6/Horizontal/count0to2/flip1
+  -------------------------------------------------------------------
+                         required time                          0.402    
+                         arrival time                          -0.220    
+  -------------------------------------------------------------------
+                         slack                                  0.182    
 
 
 
@@ -1508,35 +1646,35 @@ Sources:            { not_so_slow/my_clk_inst/mmcm_adv_inst/CLKOUT0 }
 Check Type        Corner  Lib Pin             Reference Pin  Required(ns)  Actual(ns)  Slack(ns)  Location         Pin
 Min Period        n/a     BUFG/I              n/a            2.155         40.000      37.845     BUFGCTRL_X0Y0    not_so_slow/slowclk/XLXI_401/I
 Min Period        n/a     MMCME2_ADV/CLKOUT0  n/a            1.249         40.000      38.751     MMCME2_ADV_X1Y0  not_so_slow/my_clk_inst/mmcm_adv_inst/CLKOUT0
-Min Period        n/a     FDRE/C              n/a            1.000         40.000      39.000     SLICE_X56Y66     bird1/Horizontal/count0to2/flip0/C
-Min Period        n/a     FDRE/C              n/a            1.000         40.000      39.000     SLICE_X56Y65     bird1/Horizontal/count0to2/flip1/C
-Min Period        n/a     FDRE/C              n/a            1.000         40.000      39.000     SLICE_X56Y65     bird1/Horizontal/count0to2/flip2/C
-Min Period        n/a     FDRE/C              n/a            1.000         40.000      39.000     SLICE_X56Y63     bird1/Vertical/count8to12/flip0/C
-Min Period        n/a     FDRE/C              n/a            1.000         40.000      39.000     SLICE_X56Y63     bird1/Vertical/count8to12/flip1/C
-Min Period        n/a     FDRE/C              n/a            1.000         40.000      39.000     SLICE_X56Y63     bird1/Vertical/count8to12/flip2/C
-Min Period        n/a     FDRE/C              n/a            1.000         40.000      39.000     SLICE_X60Y67     bird1/s0/C
-Min Period        n/a     FDRE/C              n/a            1.000         40.000      39.000     SLICE_X54Y66     bird1/s1to4[1]/C
+Min Period        n/a     FDRE/C              n/a            1.000         40.000      39.000     SLICE_X42Y16     bird1/Horizontal/count0to2/flip0/C
+Min Period        n/a     FDRE/C              n/a            1.000         40.000      39.000     SLICE_X42Y16     bird1/Horizontal/count0to2/flip1/C
+Min Period        n/a     FDRE/C              n/a            1.000         40.000      39.000     SLICE_X42Y16     bird1/Horizontal/count0to2/flip2/C
+Min Period        n/a     FDRE/C              n/a            1.000         40.000      39.000     SLICE_X32Y26     bird3/Horizontal/count3to7/flip0/C
+Min Period        n/a     FDRE/C              n/a            1.000         40.000      39.000     SLICE_X32Y26     bird3/Horizontal/count3to7/flip1/C
+Min Period        n/a     FDRE/C              n/a            1.000         40.000      39.000     SLICE_X50Y8      bird4/Horizontal/count3to7/flip0/C
+Min Period        n/a     FDRE/C              n/a            1.000         40.000      39.000     SLICE_X50Y8      bird4/Horizontal/count3to7/flip1/C
+Min Period        n/a     FDRE/C              n/a            1.000         40.000      39.000     SLICE_X50Y7      bird4/Horizontal/count3to7/flip2/C
 Max Period        n/a     MMCME2_ADV/CLKOUT0  n/a            213.360       40.000      173.360    MMCME2_ADV_X1Y0  not_so_slow/my_clk_inst/mmcm_adv_inst/CLKOUT0
-Low Pulse Width   Slow    FDRE/C              n/a            0.500         20.000      19.500     SLICE_X56Y65     bird1/Horizontal/count0to2/flip1/C
-Low Pulse Width   Slow    FDRE/C              n/a            0.500         20.000      19.500     SLICE_X56Y65     bird1/Horizontal/count0to2/flip2/C
-Low Pulse Width   Slow    FDRE/C              n/a            0.500         20.000      19.500     SLICE_X60Y67     bird1/s0/C
-Low Pulse Width   Fast    FDRE/C              n/a            0.500         20.000      19.500     SLICE_X60Y67     bird1/s0/C
-Low Pulse Width   Slow    FDRE/C              n/a            0.500         20.000      19.500     SLICE_X54Y66     bird1/s1to4[1]/C
-Low Pulse Width   Slow    FDRE/C              n/a            0.500         20.000      19.500     SLICE_X54Y66     bird1/s1to4[2]/C
-Low Pulse Width   Slow    FDRE/C              n/a            0.500         20.000      19.500     SLICE_X54Y66     bird1/s1to4[3]/C
-Low Pulse Width   Slow    FDRE/C              n/a            0.500         20.000      19.500     SLICE_X61Y56     bird2/Horizontal/count3to7/flip1/C
-Low Pulse Width   Fast    FDRE/C              n/a            0.500         20.000      19.500     SLICE_X61Y56     bird2/Horizontal/count3to7/flip1/C
-Low Pulse Width   Slow    FDRE/C              n/a            0.500         20.000      19.500     SLICE_X62Y57     bird2/Horizontal/count3to7/flip3/C
-High Pulse Width  Slow    FDRE/C              n/a            0.500         20.000      19.500     SLICE_X56Y66     bird1/Horizontal/count0to2/flip0/C
-High Pulse Width  Fast    FDRE/C              n/a            0.500         20.000      19.500     SLICE_X56Y66     bird1/Horizontal/count0to2/flip0/C
-High Pulse Width  Slow    FDRE/C              n/a            0.500         20.000      19.500     SLICE_X56Y65     bird1/Horizontal/count0to2/flip1/C
-High Pulse Width  Fast    FDRE/C              n/a            0.500         20.000      19.500     SLICE_X56Y65     bird1/Horizontal/count0to2/flip1/C
-High Pulse Width  Slow    FDRE/C              n/a            0.500         20.000      19.500     SLICE_X56Y65     bird1/Horizontal/count0to2/flip2/C
-High Pulse Width  Fast    FDRE/C              n/a            0.500         20.000      19.500     SLICE_X56Y65     bird1/Horizontal/count0to2/flip2/C
-High Pulse Width  Slow    FDRE/C              n/a            0.500         20.000      19.500     SLICE_X56Y63     bird1/Vertical/count8to12/flip0/C
-High Pulse Width  Fast    FDRE/C              n/a            0.500         20.000      19.500     SLICE_X56Y63     bird1/Vertical/count8to12/flip0/C
-High Pulse Width  Slow    FDRE/C              n/a            0.500         20.000      19.500     SLICE_X56Y63     bird1/Vertical/count8to12/flip1/C
-High Pulse Width  Fast    FDRE/C              n/a            0.500         20.000      19.500     SLICE_X56Y63     bird1/Vertical/count8to12/flip1/C
+Low Pulse Width   Slow    FDRE/C              n/a            0.500         20.000      19.500     SLICE_X34Y19     bird2/Horizontal/count3to7/flip1/C
+Low Pulse Width   Slow    FDRE/C              n/a            0.500         20.000      19.500     SLICE_X32Y28     bird3/Horizontal/count8to12/flip1/C
+Low Pulse Width   Slow    FDRE/C              n/a            0.500         20.000      19.500     SLICE_X32Y28     bird3/Horizontal/count8to12/flip2/C
+Low Pulse Width   Slow    FDRE/C              n/a            0.500         20.000      19.500     SLICE_X37Y28     timer/count3to7/flip3/C
+Low Pulse Width   Slow    FDRE/C              n/a            0.500         20.000      19.500     SLICE_X38Y28     birdCounter/flip0/C
+Low Pulse Width   Slow    FDRE/C              n/a            0.500         20.000      19.500     SLICE_X36Y28     birdCounter/flip1/C
+Low Pulse Width   Slow    FDRE/C              n/a            0.500         20.000      19.500     SLICE_X36Y28     birdCounter/flip2/C
+Low Pulse Width   Slow    FDRE/C              n/a            0.500         20.000      19.500     SLICE_X36Y28     birdCounter/flip3/C
+Low Pulse Width   Slow    FDRE/C              n/a            0.500         20.000      19.500     SLICE_X38Y28     birdCounter/flip4/C
+Low Pulse Width   Fast    FDRE/C              n/a            0.500         20.000      19.500     SLICE_X42Y16     bird1/Horizontal/count0to2/flip0/C
+High Pulse Width  Slow    FDRE/C              n/a            0.500         20.000      19.500     SLICE_X42Y16     bird1/Horizontal/count0to2/flip0/C
+High Pulse Width  Slow    FDRE/C              n/a            0.500         20.000      19.500     SLICE_X42Y16     bird1/Horizontal/count0to2/flip1/C
+High Pulse Width  Slow    FDRE/C              n/a            0.500         20.000      19.500     SLICE_X42Y16     bird1/Horizontal/count0to2/flip2/C
+High Pulse Width  Slow    FDRE/C              n/a            0.500         20.000      19.500     SLICE_X32Y26     bird3/Horizontal/count3to7/flip0/C
+High Pulse Width  Fast    FDRE/C              n/a            0.500         20.000      19.500     SLICE_X32Y26     bird3/Horizontal/count3to7/flip0/C
+High Pulse Width  Slow    FDRE/C              n/a            0.500         20.000      19.500     SLICE_X32Y26     bird3/Horizontal/count3to7/flip1/C
+High Pulse Width  Fast    FDRE/C              n/a            0.500         20.000      19.500     SLICE_X32Y26     bird3/Horizontal/count3to7/flip1/C
+High Pulse Width  Fast    FDRE/C              n/a            0.500         20.000      19.500     SLICE_X50Y8      bird4/Horizontal/count3to7/flip0/C
+High Pulse Width  Fast    FDRE/C              n/a            0.500         20.000      19.500     SLICE_X50Y8      bird4/Horizontal/count3to7/flip1/C
+High Pulse Width  Fast    FDRE/C              n/a            0.500         20.000      19.500     SLICE_X50Y7      bird4/Horizontal/count3to7/flip2/C
 
 
 
